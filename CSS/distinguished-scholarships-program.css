@@ -26,41 +26,41 @@
 @keyframes anim-fade-in-from-left {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
+    -webkit-transform: none;
   }
 }
 @-webkit-keyframes anim-fade-in-from-left {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
+    -webkit-transform: none;
   }
 }
 :target {
   animation-name: animFlashHighlight;
-  animation-delay: .175s;
-  animation-duration: 2.0375s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-play-state: running;
   -webkit-animation-name: animFlashHighlight;
+  animation-delay: .175s;
   -webkit-animation-delay: .175s;
+  animation-duration: 2.0375s;
   -webkit-animation-duration: 2.0375s;
+  animation-timing-function: linear;
   -webkit-animation-timing-function: linear;
+  animation-iteration-count: 1;
   -webkit-animation-iteration-count: 1;
+  animation-direction: normal;
   -webkit-animation-direction: normal;
+  animation-play-state: running;
   -webkit-animation-play-state: running;
   background-color: rgba(198, 12, 48, 0);
   border: 1px solid rgba(198, 12, 48, 0);
@@ -248,12 +248,12 @@ div.column h1 + h2 {
 div.column h1.centered {
   text-align: center;
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 480px) {
   div.column h1 {
     font-size: 2.296875rem;
   }
 }
-@media all and (min-width: 376px) and (max-width: 1208px) {
+@media all and (min-width: 481px) and (max-width: 1208px) {
   div.column h1 {
     font-size: 2.625rem;
   }
@@ -282,22 +282,22 @@ div.column h2.centered {
 div.column h2.narrower-top-margin {
   margin-top: 1.25rem;
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 480px) {
   div.column h2 {
     font-size: 1.684375rem;
   }
 }
-@media all and (max-width: 1208px) and (min-width: 376px) {
+@media all and (max-width: 1208px) and (min-width: 481px) {
   div.column h2 {
     font-size: 1.925rem;
   }
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 480px) {
   div.column h2.article-title {
     font-size: 1.3125rem;
   }
 }
-@media all and (max-width: 1208px) and (min-width: 376px) {
+@media all and (max-width: 1208px) and (min-width: 481px) {
   div.column h2.article-title {
     font-size: 1.5rem;
   }
@@ -319,12 +319,12 @@ div.column h3 {
 div.column h3.centered {
   text-align: center;
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 480px) {
   div.column h3 {
     font-size: 1.3015625rem;
   }
 }
-@media all and (min-width: 376px) and (max-width: 1208px) {
+@media all and (min-width: 481px) and (max-width: 1208px) {
   div.column h3 {
     font-size: 1.4875rem;
   }
@@ -347,12 +347,12 @@ div.column h4 {
 div.column h4.centered {
   text-align: center;
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 480px) {
   div.column h4 {
     font-size: 1.071875rem;
   }
 }
-@media all and (min-width: 376px) and (max-width: 1208px) {
+@media all and (min-width: 481px) and (max-width: 1208px) {
   div.column h4 {
     font-size: 1.225rem;
   }
@@ -473,7 +473,7 @@ div.column a img:hover {
   border: 1px solid #981e32;
   box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
 }
-div.column:hover a:not(.subtle-link) {
+div.column:hover a.loud-link {
   border-bottom: 1px dotted rgba(79, 16, 26, 0.3);
 }
 div.column aside.article-sidebar {
@@ -1565,16 +1565,19 @@ div.read-more-target {
 h2.article-title a {
   border-bottom: none;
 }
-div.column header.article-header h1.article-title {
+div.column header.article-header h1.article-title,
+div.column header.article-header h2.article-title {
   font-size: 2rem;
 }
-@media all and (max-width: 375px) {
-  div.column header.article-header h1.article-title {
+@media all and (max-width: 480px) {
+  div.column header.article-header h1.article-title,
+  div.column header.article-header h2.article-title {
     font-size: 1.75rem;
   }
 }
-@media all and (min-width: 376px) and (max-width: 1208px) {
-  div.column header.article-header h1.article-title {
+@media all and (min-width: 481px) and (max-width: 1208px) {
+  div.column header.article-header h1.article-title,
+  div.column header.article-header h2.article-title {
     font-size: 1.53125rem;
   }
 }
@@ -1826,14 +1829,14 @@ section.article-header div.header-content {
   section.article-header div.header-content h1 {
     color: #ffffff;
     font-size: 70px;
-    line-height: 75px;
+    line-height: 1.071428571428571em;
     -webkit-font-smoothing: antialiased !important;
     text-shadow: 0 1px 0 #bbbbbb, 0 2px 0 #999999, 0 3px 0 #777777, 0 4px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 0 2px #000000, 0 4px 2px #000000;
   }
   section.article-header div.header-content h2 {
     color: #ffffff;
     font-size: 3.0238rem;
-    line-height: calc(3.0238rem * 0.8);
+    line-height: 0.8em;
     margin-bottom: .75rem;
     text-transform: uppercase;
     text-shadow: 0 1px 0 #bbbbbb, 0 2px 0 #999999, 0 3px 0 #777777, 0 4px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 0 2px #000000, 0 4px 2px #000000;
@@ -1920,10 +1923,10 @@ div.column article + article {
  */
 div .subtlePanel {
   opacity: .3333;
-  -webkit-animation: subtlePanel-FadeOut 1.5s linear 0 1;
   animation: subtlePanel-FadeOut 1.5s linear 0 1;
-  -webkit-transition: opacity .3333s;
+  -webkit-animation: subtlePanel-FadeOut 1.5s linear 0 1;
   transition: opacity .3333s;
+  -webkit-transition: opacity .3333s;
 }
 @-webkit-keyframes subtlePanel-FadeOut {
   0% {
@@ -1980,12 +1983,12 @@ a.vpue-tooltip > span {
   font-style: normal;
   border-radius: 3px;
   box-shadow: 2px 2px 2px rgba(146, 91, 41, 0.5);
-  -webkit-transition-property: opacity, margin-top, visibility, margin-left;
-  -webkit-transition-duration: 0.4s, 0.3s, 0.4s, .3s;
-  -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-property: opacity, margin-top, visibility, margin-left;
+  -webkit-transition-property: opacity, margin-top, visibility, margin-left;
   transition-duration: 0.4s, 0.3s, 0.4s, .3s;
+  -webkit-transition-duration: 0.4s, 0.3s, 0.4s, .3s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
 }
 a.vpue-tooltip:hover > span {
   opacity: 1;
@@ -2003,14 +2006,14 @@ a.vpue-tooltip span b {
   margin-top: -19px;
   display: block;
   position: absolute;
+  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  box-shadow: inset 0 1px 0 #ffffff;
   -webkit-box-shadow: inset -1px 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   -o-box-shadow: inset 0 1px 0 #ffffff;
-  box-shadow: inset 0 1px 0 #ffffff;
   /*display: none;*/
 }
 a.vpue-tooltip > span {
@@ -2032,7 +2035,20 @@ a.vpue-tooltip span b {
  * +-----------------------------------------------------------------------------------------------+
  */
 div.column div.builder-banner-content {
-  padding: 0;
+  padding: 0 0 10px 0;
+  font-size: 1rem;
+  line-height: 1.35rem;
+  transition: font-size 0.15s linear, line-height 0.15s linear;
+  -webkit-transition: font-size 0.15s linear, line-height 0.15s linear;
+}
+div.column div.builder-banner-content:hover {
+  font-size: 1.3333rem;
+  line-height: 1.799955rem;
+}
+div.column div.builder-banner-content:hover ~ .builder-banner-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: calc(3.59991rem + 20px);
+  top: calc(100% - 3.59991rem - 20px);
 }
 div.column div.builder-banner-inner-content {
   vertical-align: bottom;
@@ -2042,6 +2058,9 @@ div.column div.builder-banner-inner-content p {
   text-align: center;
   font-size: inherit;
   line-height: inherit;
+}
+div.column div.builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
+  padding-bottom: 10px;
 }
 div.column div.builder-banner-inner-content strong {
   color: #f6861f;
@@ -2056,32 +2075,14 @@ div.column div.builder-banner-inner-content a:hover {
   color: #949b9d;
   border-color: rgba(141, 149, 154, 0.4);
 }
-div.column div.builder-banner-content {
-  font-size: 1rem;
-  line-height: 1.35rem;
-  padding-bottom: 10px;
-  transition: font-size 0.15s linear, line-height 0.15s linear;
-  -webkit-transition: font-size 0.15s linear, line-height 0.15s linear;
-}
-div.column div.builder-banner-content:hover {
-  font-size: 1.3333rem;
-  line-height: 1.799955rem;
-}
 div.column div.builder-banner-overlay {
   height: calc(2.7rem + 20px);
   top: calc(100% - 2.7rem - 20px);
-}
-div.column div.builder-banner-overlay {
   background-color: rgba(0, 0, 0, 0.6667);
   border-color: rgba(0, 0, 0, 0.4);
   color: #949b9d;
   transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
   -webkit-transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
-}
-div.column div.builder-banner-content:hover ~ .builder-banner-overlay {
-  background-color: rgba(0, 0, 0, 0.9);
-  height: calc(3.59991rem + 20px);
-  top: calc(100% - 3.59991rem - 20px);
 }
 @media screen and (max-width: 1204px) {
   div.column div.builder-banner-content {
@@ -2092,16 +2093,29 @@ div.column div.builder-banner-content:hover ~ .builder-banner-overlay {
     font-size: 1.7704vw;
     line-height: 2.39004vw;
   }
-  div.column div.builder-banner-overlay {
-    height: calc(3.58506vw + 1.66vw);
-    top: calc(100% - 3.58506vw - 1.66vw);
-  }
   div.column div.builder-banner-content:hover ~ div.builder-banner-overlay {
     height: calc(4.78008vw + 1.66vw);
     top: calc(100% - 4.78008vw - 1.66vw);
   }
+  div.column div.builder-banner-overlay {
+    height: calc(3.58506vw + 1.66vw);
+    top: calc(100% - 3.58506vw - 1.66vw);
+  }
   div.column div.builder-banner-inner-content p {
-    padding: .83vw;
+    padding: 1.0vw;
+  }
+  div.column div.builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
+    padding-bottom: 1.0vw;
+  }
+}
+@media screen and (max-width: 791px) {
+  div.column div.builder-banner-content {
+    font-size: 12px;
+    line-height: 16.2px;
+  }
+  div.column div.builder-banner-content:hover {
+    font-size: 14px;
+    line-height: 18.9px;
   }
 }
 /* +===============================================================================================+
