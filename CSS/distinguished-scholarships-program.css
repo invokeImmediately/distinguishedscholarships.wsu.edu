@@ -1565,6 +1565,19 @@ div.read-more-target {
 h2.article-title a {
   border-bottom: none;
 }
+div.column header.article-header h1.article-title {
+  font-size: 2rem;
+}
+@media all and (max-width: 375px) {
+  div.column header.article-header h1.article-title {
+    font-size: 1.75rem;
+  }
+}
+@media all and (min-width: 376px) and (max-width: 1208px) {
+  div.column header.article-header h1.article-title {
+    font-size: 1.53125rem;
+  }
+}
 /* +===============================================================================================+
  * |------------------------------------------- IMAGES --------------------------------------------|
  * +===============================================================================================+
@@ -2769,36 +2782,36 @@ div.column {
   font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
 }
 div.column section.header-calendar {
-  background: url(/wp-content/uploads/sites/50/2015/10/wpbg-calendar-v2.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/10/wpbg-calendar-v2.png) no-repeat center;
 }
 div.column section.header-committees {
-  background: url(/wp-content/uploads/sites/50/2015/10/wpbg-committees.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/10/wpbg-committees.png) no-repeat center;
 }
 div.column section.header-contact {
-  background: url(/wp-content/uploads/sites/50/2015/10/wpbg-contact.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/10/wpbg-contact.png) no-repeat center;
 }
 div.column section.header-deepWebPortal {
   height: 514px;
-  background: url(/wp-content/uploads/sites/50/2015/04/wpbg-deep-web-portal.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/wpbg-deep-web-portal.png) no-repeat center;
   background-size: cover;
 }
 div.column section.header-exploreAwards {
-  background: url(/wp-content/uploads/sites/50/2015/06/wpbg-explore-awards-v3.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-explore-awards-v3.png) no-repeat center;
 }
 div.column section.header-from-the-director {
-  background: url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png) no-repeat center;
 }
 div.column section.header-newsEvents {
-  background: url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
 div.column section.header-prepare {
-  background: url(/wp-content/uploads/sites/50/2015/06/wpbg-prepare-v4.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-prepare-v4.png) no-repeat center;
 }
 div.column section.header-resources {
-  background: url(/wp-content/uploads/sites/50/2015/06/wpbg-resources-v2.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-resources-v2.png) no-repeat center;
 }
 div.column section.header-wsuRecipients {
-  background: url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
 }
 nav.spine-sitenav ul li a[href="#disabled"] {
   pointer-events: none;
