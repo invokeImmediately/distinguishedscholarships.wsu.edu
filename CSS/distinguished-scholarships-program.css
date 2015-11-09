@@ -556,14 +556,14 @@ div.column aside.article-sidebar h4:first-child {
   div.column aside.article-sidebar {
     width: 230px;
     position: absolute;
-    right: 0px;
+    right: -2rem;
     top: 0px;
     -webkit-transform-origin: 100% 0%;
     -ms-transform-origin: 100% 0%;
     transform-origin: 100% 0%;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg) translateY(-2rem);
+    -ms-transform: rotate(-90deg) translateY(-2rem);
+    transform: rotate(-90deg) translateY(-2rem);
     -webkit-transition: transform 0.25s ease-out;
     -moz-transition: transform 0.25s ease-out;
     -o-transition: transform 0.25s ease-out;
@@ -598,6 +598,9 @@ div.column ul + p {
 }
 div.column ul li {
   list-style-image: url(/wp-content/uploads/sites/906/2015/08/ico-cougar-bullet-point.png);
+}
+div.column ul li.no-bottom-pad {
+  padding-bottom: 0;
 }
 div.column p + ul {
   margin-top: .5rem;
