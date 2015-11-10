@@ -111,18 +111,18 @@ div.column {
 }
 
 table.calendar {
-  border: 1px solid #70031a;
-  border-collapse: separate;
-  border-spacing: 2px;
-  width: 85%;
-	min-width: 480px;
-  /* border-bottom: 1px solid #5E6A71; */
-  background: #fff;
+    border: 1px solid #70031a;
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 85%;
+    min-width: 480px;
+    /* border-bottom: 1px solid #5E6A71; */
+    background: #fff;
 	th {
 		width: 18%;
-			padding-bottom: 3pt;
-			padding-top: 3pt;
-			border: 1px solid #70031a;
+        padding-bottom: 3pt;
+        padding-top: 3pt;
+        border: 1px solid #70031a;
 		background: #c75d61;
 		color: #fff;
 		text-align: center;
@@ -136,20 +136,23 @@ table.calendar {
 			font-size: 16pt;
 			line-height: normal;
 		}
+        @media screen and (max-width: 979px) {
+            font-size: 12px;
+        }
 	}	
 	tr {
 		min-height: 96px;
 	}
 	td {
-		-webkit-hyphens: auto;
-			-moz-hyphens: auto;
-			-ms-hyphens: auto;
-			hyphens: auto;
+        hyphens: auto;
+		 -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+         -ms-hyphens: auto;
 		width: 18%;
 		height: 96px;
-			padding: 3px;
-			vertical-align: top;
-			border: 1px solid #70031a;
+        padding: 3px;
+        vertical-align: top;
+        border: 1px solid #70031a;
 		line-height: normal;
 		div.day{
 			color: #b52630;
@@ -159,11 +162,17 @@ table.calendar {
 			line-height: normal;
 			padding-right: 3pt;
 		}
+        p {
+            padding-bottom: 0;
+            text-align: left;
+            @media screen and (max-width: 979px) {
+                font-size: 12px;
+            }
+        }
 		&:first-of-type {
 			width: 10%;
 			background: #eae4e2;
 			text-align: center;
-			
 			div.week{
 					font-size: 18pt;
 				font-weight: bold;
