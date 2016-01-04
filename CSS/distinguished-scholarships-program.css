@@ -917,6 +917,9 @@ div.column ol ol ol {
 div.column section {
   position: relative;
 }
+div.column section + section {
+  margin-top: 2rem;
+}
 div.column .crimson-text {
   color: #981e32;
 }
