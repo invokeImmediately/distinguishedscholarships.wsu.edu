@@ -65,6 +65,31 @@ header.main-header {
 }
 
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the DSP website.                                             ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column {
+	aside {
+		font-size: .8rem;
+        &+aside {
+            margin-top: @v-dflt-spcng;
+        }
+		p, ul {
+			font-size: inherit;
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+            &:last-child:not(.no-bottom-pad) {
+                padding-bottom: 0;
+            }
+		}
+	}
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### LIST STYLES ########################################################################### ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
