@@ -3572,20 +3572,15 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-.drop-down-toggle {
-  background-color: rgba(152, 30, 50, 0);
-  background-image: url('/wp-content/uploads/sites/50/2015/09/drop-down-arrow.png');
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 22px 14px;
-  transition-property: background-color, background-size;
-  -webkit-transition-property: background-color, background-size;
-  transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-}
-.drop-down-toggle:hover {
-  background-color: rgba(152, 30, 50, 0.3333);
-  background-size: 33px 21px;
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST STYLES ########################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column ul li {
+  list-style-image: url(/wp-content/uploads/sites/706/2015/12/ico-cougar-bullet-point.png);
 }
 div.column {
   font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
