@@ -3572,6 +3572,18 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
+.drop-down-toggle {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.drop-down-toggle.activated {
+  background-color: rgba(198, 12, 48, 0.15);
+}
+.drop-down-toggle:hover {
+  background-color: rgba(198, 12, 48, 0.3);
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### LIST STYLES ########################################################################### ║
  *  ╠==============================================================================================╣
