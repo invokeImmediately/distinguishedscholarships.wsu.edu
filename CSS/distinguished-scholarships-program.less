@@ -96,7 +96,12 @@ div.column {
  *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul li { list-style-image: url(/wp-content/uploads/sites/706/2015/12/ico-cougar-bullet-point.png); }
+div.column ul {
+    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+    &.gray {
+        li { list-style-image: url(/wp-content/uploads/sites/50/2016/12/ico-cougar-bullet-point_gray.png); }
+    }
+}
 
 div.column {
 	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
