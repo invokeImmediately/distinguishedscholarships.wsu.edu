@@ -3920,6 +3920,7 @@ div.column section.header-wsuRecipients {
 }
 @media (min-width: 1050px) {
   div.column section div.header-content.large-format-friendly {
+    max-width: none;
     text-align: center;
   }
 }
