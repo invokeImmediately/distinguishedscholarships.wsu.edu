@@ -3918,6 +3918,11 @@ div.column section.header-resources {
 div.column section.header-wsuRecipients {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
 }
+@media (min-width: 1050px) {
+  div.column section div.header-content.large-format-friendly {
+    text-align: center;
+  }
+}
 table.calendar {
   border: 1px solid #70031a;
   border-collapse: separate;
