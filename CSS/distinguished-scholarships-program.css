@@ -17,6 +17,21 @@ the page, it's all good.
 .breaks-words {
   word-wrap: break-word;
 }
+.vrtcl-spcng-full {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.vrtcl-spcng-less {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.vrtcl-spcng-half {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.soft-gray-border {
+  border: 1px solid rgba(42, 48, 51, 0.5);
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
  *  ║ #### GENERIC CLASSES & SELECTORS ########################################################### ║
  *  ╠==============================================================================================╣
@@ -3585,6 +3600,31 @@ header.main-header {
   background-color: rgba(198, 12, 48, 0.3);
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the DSP website.                                             ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column aside {
+  font-size: .8rem;
+}
+div.column aside + aside {
+  margin-top: 2rem;
+}
+div.column aside p,
+div.column aside ul {
+  font-size: inherit;
+}
+div.column aside p:not(:last-child),
+div.column aside ul:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+div.column aside p:last-child:not(.no-bottom-pad),
+div.column aside ul:last-child:not(.no-bottom-pad) {
+  padding-bottom: 0;
+}
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### LIST STYLES ########################################################################### ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
@@ -3592,7 +3632,10 @@ header.main-header {
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column ul li {
-  list-style-image: url(/wp-content/uploads/sites/706/2015/12/ico-cougar-bullet-point.png);
+  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
+}
+div.column ul.gray-bullets li {
+  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
 }
 div.column {
   font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
