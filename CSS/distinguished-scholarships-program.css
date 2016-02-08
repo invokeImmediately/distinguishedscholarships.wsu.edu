@@ -234,10 +234,10 @@ img.shiftToCenter {
   background-color: rgba(198, 12, 48, 0);
   border: 1px solid rgba(198, 12, 48, 0);
   z-index: -1;
-  -webkit-animation: animFlashHighlight 1.325s linear infinite;
-  -moz-animation: animFlashHighlight 1.325s linear infinite;
-  -o-animation: animFlashHighlight 1.325s linear infinite;
-  animation: animFlashHighlight 1.325s linear infinite;
+  -webkit-animation: animFlashHighlight 1.325s linear 1;
+  -moz-animation: animFlashHighlight 1.325s linear 1;
+  -o-animation: animFlashHighlight 1.325s linear 1;
+  animation: animFlashHighlight 1.325s linear 1;
   -webkit-animation-delay: 0.175s;
   -moz-animation-delay: 0.175s;
   -o-animation-delay: 0.175s;
