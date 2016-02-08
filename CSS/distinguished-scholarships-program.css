@@ -82,10 +82,10 @@ img.shiftToCenter {
   display: none;
 }
 .fade-in-from-left {
-  -webkit-animation: anim-fade-in-from-left 1s linear infinite;
-  -moz-animation: anim-fade-in-from-left 1s linear infinite;
-  -o-animation: anim-fade-in-from-left 1s linear infinite;
-  animation: anim-fade-in-from-left 1s linear infinite;
+  -webkit-animation: anim-fade-in-from-left 1s linear 1;
+  -moz-animation: anim-fade-in-from-left 1s linear 1;
+  -o-animation: anim-fade-in-from-left 1s linear 1;
+  animation: anim-fade-in-from-left 1s linear 1;
 }
 @-webkit-keyframes anim-fade-in-from-left {
   0% {
@@ -152,10 +152,10 @@ img.shiftToCenter {
   }
 }
 .fade-in-from-right {
-  -webkit-animation: anim-fade-in-from-right 1s linear infinite;
-  -moz-animation: anim-fade-in-from-right 1s linear infinite;
-  -o-animation: anim-fade-in-from-right 1s linear infinite;
-  animation: anim-fade-in-from-right 1s linear infinite;
+  -webkit-animation: anim-fade-in-from-right 1s linear 1;
+  -moz-animation: anim-fade-in-from-right 1s linear 1;
+  -o-animation: anim-fade-in-from-right 1s linear 1;
+  animation: anim-fade-in-from-right 1s linear 1;
 }
 @-webkit-keyframes anim-fade-in-from-right {
   0% {
