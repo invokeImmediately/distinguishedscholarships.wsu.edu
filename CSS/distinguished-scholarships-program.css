@@ -4597,7 +4597,7 @@ div.calendar-legend div.legend-panel.gold a:hover {
   color: #000000;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 }
-ul.application-steps > h3:first-child {
+ul.application-steps > li > h3:first-child {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   margin-top: 0;
@@ -4607,7 +4607,7 @@ ul.application-steps > h3:first-child {
   border-radius: 4px;
   color: #4f868e;
 }
-ul.application-steps > h4:nth-child(2) {
+ul.application-steps > li > h4:nth-child(2) {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   margin-top: 0;
