@@ -2262,11 +2262,13 @@ div.recent-updates p.recent-update-3 {
 ul.external-links li {
   list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
 }
-ul.content-boxes {
+ul.content-boxes,
+ul.application-steps {
   padding-right: 0;
   padding-left: 0;
 }
-ul.content-boxes li {
+ul.content-boxes li,
+ul.application-steps li {
   position: relative;
   min-height: 320px;
   border-radius: 4px;
@@ -2277,28 +2279,33 @@ ul.content-boxes li {
   list-style-type: none;
 }
 @media all and (max-width: 1205px) {
-  ul.content-boxes li {
+  ul.content-boxes li,
+  ul.application-steps li {
     overflow-x: scroll;
   }
 }
-ul.content-boxes li p.email {
+ul.content-boxes li p.email,
+ul.application-steps li p.email {
   font-size: 0.9em;
   font-weight: bold;
 }
-ul.content-boxes li img {
+ul.content-boxes li img,
+ul.application-steps li img {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 106px;
 }
-ul.content-boxes li div.content {
+ul.content-boxes li div.content,
+ul.application-steps li div.content {
   position: relative;
   left: 121px;
   width: calc(100% - 136px);
   min-width: 189px;
   padding: 10px 10px 10px 5px;
 }
-ul.content-boxes li + li {
+ul.content-boxes li + li,
+ul.application-steps li + li {
   margin-top: 2rem;
 }
 a.vpue-tooltip {
@@ -4589,4 +4596,27 @@ div.calendar-legend div.legend-panel.gold a {
 div.calendar-legend div.legend-panel.gold a:hover {
   color: #000000;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+ul.application-steps > h3:first-child {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgba(237, 243, 244, 0.5);
+  border-top: 1px solid rgba(237, 243, 244, 0);
+  border-radius: 4px;
+  color: #4f868e;
+}
+ul.application-steps > h4:nth-child(2) {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgba(237, 243, 244, 0.5);
+  border-top: 1px solid rgba(237, 243, 244, 0);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Open Sans Condensed', 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande', sans-serif;
+  font-weight: 700;
+  color: #4f868e;
 }
