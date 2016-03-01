@@ -681,9 +681,9 @@ div.column h3.fancy,
 .gform_heading h3.gform_title.fancy {
   position: relative;
   padding: 0.3333rem 0.5rem;
-  margin-left: -0.5rem;
+  margin-left: 0;
   margin-bottom: 1rem;
-  margin-right: -0.5rem;
+  margin-right: 0;
   background-color: rgba(198, 12, 48, 0.075);
 }
 div.column h3.fancy.with-top-border,
@@ -1599,7 +1599,7 @@ div.column ol ol ol {
 div.column section {
   position: relative;
 }
-div.column section + section {
+div.column section + section:not(.no-top-margin) {
   margin-top: 2rem;
 }
 div.column .crimson-text {
