@@ -96,7 +96,7 @@ div.column {
  *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul {
+div.column ul:not(.content-boxes):not(.application-steps) {
     li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
     &.gray-bullets {
         li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
@@ -880,8 +880,9 @@ ul.application-steps {
         margin: 0;
         .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
         border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
-        border-radius: 4px;
-        color: @hex-blue;
+        border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+        color: @hex-dark-blue;
     }
     & > li > h4:nth-child(2) {
         padding-top: 1rem;
