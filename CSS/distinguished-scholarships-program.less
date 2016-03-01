@@ -870,9 +870,12 @@ div.calendar-legend {
 //     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-ul.application-steps:extend(ul.content-boxes all);
 ul.application-steps {
-    & > h3:first-child {
+    &:extend(ul.content-boxes all);
+}
+
+ul.application-steps {
+    & > li > h3:first-child {
         padding-top: 1.5rem;
          padding-bottom: 0.5rem;
         margin-top: 0;
@@ -882,7 +885,7 @@ ul.application-steps {
         border-radius: 4px;
         color: @hex-blue;
     }
-    & > h4:nth-child(2) {
+    & > li > h4:nth-child(2) {
         padding-top: 1rem;
          padding-bottom: 0.5rem;
         margin-top: 0;
