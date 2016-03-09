@@ -1957,7 +1957,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             if(proceedWithLayout && !sizerFound) proceedWithLayout = false;
             if(proceedWithLayout) {
                 var gutterSize = $thisCascade.attr("data-gutter-size");
-                if(gutterSize == undefined) gridSize = 16; // This is equivalent to half the default spacing in Chrome, i.e. 1rem.
+                if(gutterSize == undefined) gutterSize = 16; // This is equivalent to half the default spacing in Chrome, i.e. 1rem.
                 $thisCascade.masonry({
                     columnWidth: ".cascade-sizer",
                     gutter: gutterSize,
