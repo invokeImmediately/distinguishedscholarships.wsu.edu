@@ -1,8 +1,7 @@
-@import "C:\Users\CamilleandDaniel\Documents\GitHub\WSU-UE---CSS\wp-master-style-sheet.less";
+@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 body {
 	background: url(/wp-content/uploads/sites/50/2015/03/DSP-Logo-Tiling_3x3_black-red-gold_v3.png) left top fixed repeat, #fff url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
-	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
 }
 
 main {
@@ -21,9 +20,9 @@ main {
 }
 
 header.main-header {
+    &:extend(.has-dflt-font);
 	background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 	color: #fff !important;
-	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
 	@media print {
 		background: url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 	}
@@ -104,7 +103,7 @@ div.column ul:not(.content-boxes):not(.application-steps) {
 }
 
 div.column {
-	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+	:extend(.has-dflt-font);
 	section {
         &.header-annual-events {
             background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
@@ -876,6 +875,23 @@ ul.application-steps {
 
 ul.application-steps {
     & > li {
+        float: left;
+        width: 48%;
+        margin-bottom: 1%;
+        & + li {
+            margin-top: 0;
+        }
+        &.cascade-sizer, &.gutter-sizer {
+            height: 0;
+            min-height: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            box-shadow: none;
+        }
+        &.gutter-sizer {
+            width: 1%;
+        }
         & > h3:first-child {
             padding: 0.5rem;
             margin: 0;
@@ -886,17 +902,18 @@ ul.application-steps {
             color: @hex-dark-blue;
         }
         & > h4:nth-child(2) {
-            padding: 0.5rem;
+            &:extend(.has-alt-font);
+            padding: 0.1rem 0.5rem;
             margin-top: 0;
              margin-bottom: 0;
             .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
-            font-size: @v-p-sz * 1.0;
-            font-family: 'Open Sans Condensed', 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande', sans-serif;
+            font-size: @v-p-sz * 1.1;
             font-weight: 700;
             color: @hex-bright-blue;
         }
         & > p {
-            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+             padding-left: 0.5rem;
         }
     }
 }
