@@ -103,7 +103,7 @@ div.column ul:not(.content-boxes):not(.application-steps) {
 }
 
 div.column {
-	:extend(.has-dflt-font);
+	&:extend(.has-dflt-font);
 	section {
         &.header-annual-events {
             background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
@@ -877,7 +877,7 @@ ul.application-steps {
     & > li {
         float: left;
         width: 48%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
         & + li {
             margin-top: 0;
         }
@@ -890,7 +890,7 @@ ul.application-steps {
             box-shadow: none;
         }
         &.gutter-sizer {
-            width: 1%;
+            width: 2%;
         }
         & > h3:first-child {
             padding: 0.5rem;
