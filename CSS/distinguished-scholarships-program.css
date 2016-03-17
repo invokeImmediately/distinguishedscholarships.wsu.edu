@@ -413,7 +413,7 @@ ul.application-steps > li > h4:nth-child(2) {
   }
 }
 body {
-  font-size: 16px;
+  font-size: 14px;
 }
 div.column article + article {
   margin-top: 1.5em;
