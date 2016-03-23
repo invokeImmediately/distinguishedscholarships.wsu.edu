@@ -969,10 +969,13 @@ div.column p.fine-print {
 }
 div.column p.award-quote {
   margin-left: 2rem;
-  margin-bottom: 0.5rem;
   margin-right: 2rem;
 }
+div.column p.award-quote:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
 div.column p.award-quote-source {
+  font-size: 0.95em;
   font-style: italic;
   margin-right: 2rem;
   margin-left: 2rem;
