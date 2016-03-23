@@ -4596,14 +4596,14 @@ div.calendar-legend div.legend-panel.gold a:hover {
   color: #000000;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 }
-div column p.award-quote {
+div.column p.award-quote {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-div column p.award-quote:not(:last-child) {
+div.column p.award-quote:not(:last-child) {
   margin-bottom: 0.25rem;
 }
-div column p.award-quote-source {
+div.column p.award-quote-source {
   font-size: 0.95em;
   font-style: italic;
   margin-right: 2rem;
