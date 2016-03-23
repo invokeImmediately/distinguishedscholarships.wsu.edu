@@ -4653,3 +4653,6 @@ ul.application-steps > li > p {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
+ul.application-steps > li > *:last-child {
+  padding-bottom: 0.5rem;
+}
