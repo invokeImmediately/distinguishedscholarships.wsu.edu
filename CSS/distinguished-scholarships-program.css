@@ -412,8 +412,8 @@ ul.application-steps > li > h4:nth-child(2) {
     border-color: rgba(198, 12, 48, 0);
   }
 }
-body {
-  font-size: 14px;
+html {
+  font-size: 16px;
 }
 div.column article + article {
   margin-top: 1.5em;
@@ -453,12 +453,12 @@ section.article-header div.header-content {
     padding: .1rem .2rem .2rem;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: rgba(50, 30, 50, 0.95);
+    background-color: rgba(152, 30, 50, 0.95);
     border: 1px solid white;
     font-size: 1.35rem;
     text-transform: uppercase;
     color: #ffffff;
-    text-shadow: 0 0.5px 0 #aaaaaa, 0 1px 0 #888888, 0 1.5px 0.5px rgba(50, 30, 50, 0.1), 0 0 2.5px rgba(50, 30, 50, 0.1), 0 0.5px 1.5px rgba(50, 30, 50, 0.3), 0 1px 2.5px rgba(50, 30, 50, 0.2), 0 0 0.5px #000000, 0 1.5px 1px #000000;
+    text-shadow: 0 0.5px 0 #aaaaaa, 0 1px 0 #888888, 0 1.5px 0.5px rgba(152, 30, 50, 0.1), 0 0 2.5px rgba(152, 30, 50, 0.1), 0 0.5px 1.5px rgba(152, 30, 50, 0.3), 0 1px 2.5px rgba(152, 30, 50, 0.2), 0 0 0.5px #000000, 0 1.5px 1px #000000;
     -webkit-font-smoothing: antialiased !important;
   }
 }
@@ -718,8 +718,8 @@ div.column h3.fancy.with-top-border::before,
   left: 0;
   width: 100%;
   height: 0;
-  border-top: 1px solid rgba(50, 30, 50, 0.67);
-  border-bottom: 1px solid rgba(50, 30, 50, 0.375);
+  border-top: 1px solid rgba(152, 30, 50, 0.67);
+  border-bottom: 1px solid rgba(152, 30, 50, 0.375);
 }
 div.column h3.centered,
 .gform_heading h3.gform_title.centered {
@@ -1311,8 +1311,8 @@ div.column hr.spacer {
   border: none;
 }
 div.column hr.crimson {
-  border-top: 1px solid rgba(50, 30, 50, 0.67);
-  border-bottom: 1px solid rgba(50, 30, 50, 0.375);
+  border-top: 1px solid rgba(152, 30, 50, 0.67);
+  border-bottom: 1px solid rgba(152, 30, 50, 0.375);
 }
 div.column hr.dark-gray {
   border-top: 1px solid rgba(70, 78, 84, 0.6667);
@@ -1348,7 +1348,7 @@ div.column hr.thicker {
 }
 div.column a {
   margin-bottom: -3px;
-  border-bottom: 1px dotted rgba(50, 30, 50, 0.25);
+  border-bottom: 1px dotted rgba(152, 30, 50, 0.25);
   color: #981e32;
   text-decoration: none;
   transition-property: color, background, border-color;
@@ -1360,11 +1360,11 @@ div.column a {
 }
 div.column a:hover {
   background-color: rgba(239, 120, 121, 0.2);
-  border-color: rgba(50, 30, 50, 0.67);
+  border-color: rgba(152, 30, 50, 0.67);
   color: #c60c30;
 }
 div.column a.subtle-link {
-  border-bottom: 1px dotted rgba(50, 30, 50, 0);
+  border-bottom: 1px dotted rgba(152, 30, 50, 0);
   transition-property: border-color;
   -webkit-transition-property: border-color;
   transition-duration: .3s;
@@ -1373,10 +1373,10 @@ div.column a.subtle-link {
   -webkit-transition-timing-function: ease;
 }
 div.column a.subtle-link:not(.quiet):hover {
-  border-bottom: 1px dotted rgba(50, 30, 50, 0.67);
+  border-bottom: 1px dotted rgba(152, 30, 50, 0.67);
 }
 div.column a.pop-out-link {
-  border-bottom: 1px dotted rgba(50, 30, 50, 0.3);
+  border-bottom: 1px dotted rgba(152, 30, 50, 0.3);
   color: #981e32;
   text-decoration: none;
   transition-property: color, background, font-size;
@@ -1422,7 +1422,7 @@ div.column a img {
 }
 div.column a img:hover {
   border: 1px solid #981e32;
-  box-shadow: 2px 2px 2px rgba(50, 30, 50, 0.3333);
+  box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
 }
 div.column a[data-title] {
   position: relative;
