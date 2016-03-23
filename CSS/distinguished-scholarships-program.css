@@ -967,21 +967,6 @@ div.column p.article-media-contacts {
 div.column p.fine-print {
   font-size: 0.9em;
 }
-div.column p.award-quote {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-div.column p.award-quote:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-div.column p.award-quote-source {
-  font-size: 0.95em;
-  font-style: italic;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
 div.column p.banner-text-gray-with-towers {
   color: #2a3033;
   background-color: rgba(141, 149, 154, 0.5);
@@ -4610,6 +4595,21 @@ div.calendar-legend div.legend-panel.gold a {
 div.calendar-legend div.legend-panel.gold a:hover {
   color: #000000;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+div column p.award-quote {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+div column p.award-quote:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+div column p.award-quote-source {
+  font-size: 0.95em;
+  font-style: italic;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 ul.application-steps > li {
   float: left;
