@@ -4616,6 +4616,11 @@ ul.application-steps > li {
   width: 48%;
   margin-bottom: 2%;
 }
+@media all and (max-width: 1205px) {
+  ul.application-steps > li {
+    overflow-x: visible;
+  }
+}
 ul.application-steps > li + li {
   margin-top: 0;
 }
