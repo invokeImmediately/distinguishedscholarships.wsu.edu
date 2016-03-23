@@ -893,7 +893,7 @@ ul.application-steps {
             width: 2%;
         }
         & > h3:first-child {
-            padding: 0.5rem;
+            padding: (@v-dflt-spcng / 4);
             margin: 0;
             .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
             border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
@@ -903,17 +903,20 @@ ul.application-steps {
         }
         & > h4:nth-child(2) {
             &:extend(.has-alt-font);
-            padding: 0.1rem 0.5rem;
+            padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
             margin-top: 0;
              margin-bottom: 0;
             .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
             font-size: @v-p-sz * 1.1;
             font-weight: 700;
             color: @hex-bright-blue;
+            & + * {
+                margin-top: (@v-dflt-spcng / 4);
+            }
         }
         & > p {
-            padding-right: 0.5rem;
-             padding-left: 0.5rem;
+            padding-right: (@v-dflt-spcng / 4);
+             padding-left: (@v-dflt-spcng / 4);
         }
     }
 }
