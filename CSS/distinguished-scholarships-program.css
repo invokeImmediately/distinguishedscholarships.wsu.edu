@@ -4638,13 +4638,16 @@ ul.application-steps > li > h3:first-child {
   color: #3f6b72;
 }
 ul.application-steps > li > h4:nth-child(2) {
-  padding: 0.1rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
   background-color: rgba(0, 165, 189, 0.75);
   font-size: 1.1rem;
   font-weight: 700;
   color: #edf3f4;
+}
+ul.application-steps > li > h4:nth-child(2) + * {
+  margin-top: 0.5rem;
 }
 ul.application-steps > li > p {
   padding-right: 0.5rem;
