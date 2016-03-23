@@ -866,6 +866,24 @@ div.calendar-legend {
 	}
 }
 
+div column p {
+     &.award-quote {
+        margin-left: @v-dflt-spcng;
+         margin-right: @v-dflt-spcng;
+        &:not(:last-child) {
+            margin-bottom: (@v-btm-pads / 4);
+        }
+    }
+    &.award-quote-source {
+        font-size: 0.95em;
+        font-style: italic;
+        margin-right: @v-dflt-spcng;
+        margin-left: @v-dflt-spcng;
+        padding-right: @v-dflt-spcng;
+        padding-left: @v-dflt-spcng;
+    }
+}
+
 //     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
