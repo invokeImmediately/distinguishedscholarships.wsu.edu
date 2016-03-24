@@ -865,14 +865,19 @@ div.column p.align-left {
     line-height: 1.375em;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (min-width: 1050px) {
   div.column p {
     font-size: 1rem;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column p {
     font-size: 0.875rem;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column p {
+    font-size: 0.765625rem;
     text-align: left;
   }
 }
