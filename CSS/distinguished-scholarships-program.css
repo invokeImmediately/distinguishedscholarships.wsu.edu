@@ -570,7 +570,7 @@ div.column h1 {
   text-transform: uppercase;
   color: #464e54;
 }
-@media all and (min-width: 481px) and (max-width: 890px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column h1 {
     font-size: 2.625rem;
   }
@@ -603,7 +603,7 @@ div.column h2 {
   color: #464e54;
   text-transform: uppercase;
 }
-@media all and (min-width: 481px) and (max-width: 890px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column h2 {
     font-size: 1.925rem;
   }
@@ -677,7 +677,7 @@ div.column h3,
   text-transform: uppercase;
   color: #981e32;
 }
-@media all and (min-width: 481px) and (max-width: 890px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column h3,
   .gform_heading h3.gform_title {
     font-size: 1.4875rem;
@@ -741,7 +741,7 @@ div.column h4 {
   font-weight: 600;
   color: #981e32;
 }
-@media all and (min-width: 481px) and (max-width: 890px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column h4 {
     font-size: 1.225rem;
   }
