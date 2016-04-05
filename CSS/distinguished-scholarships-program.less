@@ -252,235 +252,109 @@ table.calendar {
 		}
 		&.has-an-event {
 			background-color: #ffffcc;
+            color: #ffffff;
+            a {
+                color: #ffffff;
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+                .transition(color .4s linear, border .4s ease-in);
+            }
 			&.gray {
 				background-color: #67767b;
-				color: #ffffff;
-				div.day {
+				div.day, a:hover {
 					color: #2a3033;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #2a3033;
-						border-bottom: 1px dotted rgba(42, 48, 51, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(42, 48, 51, 0.3);
 				}
 			}
 			&.crimson {
 				background-color: #be1a40;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #da91a5;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #da91a5;
-						border-bottom: 1px dotted rgba(219, 146, 166, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(219, 146, 166, 0.3);
 				}
 			}
 			&.orange {
 				background-color: #e95b34;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #492e14;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #492e14;
-						border-bottom: 1px dotted rgba(73, 46, 20, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(73, 46, 20, 0.3);
 				}
 			}
 			&.olive {
 				background-color: #9b8b28;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #e9e03c;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #e9e03c;
-						border-bottom: 1px dotted rgba(233, 244, 60, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(233, 244, 60, 0.3);
 				}
 			}
 			&.blue {
 				background-color: #127286;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #06c6ce;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #06c6ce;
-						border-bottom: 1px dotted rgba(6, 198, 206, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(6, 198, 206, 0.3);
 				}
 			}
 			&.dark-gray {
 				background-color: #373940;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #b5babe;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #b5babe;
-						border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
 				}
 			}
 			&.dark-brown {
 				background-color: #480f13;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #cb9b6e;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #cb9b6e;
-						border-bottom: 1px dotted rgba(203, 155, 110, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(203, 155, 110, 0.3);
 				}
 			}
 			&.brown {
 				background-color: #723f1f;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #ddbea1;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #ddbea1;
-						border-bottom: 1px dotted rgba(221, 190, 161, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(221, 190, 161, 0.3);
 				}
 			}
 			&.dark-olive {
 				background-color: #453a16;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #ada400;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #ada400;
-						border-bottom: 1px dotted rgba(173, 164, 0, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(173, 164, 0, 0.3);
 				}
 			}
 			&.dark-blue {
 				background-color: #12313c;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #00a5bd;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #00a5bd;
-						border-bottom: 1px dotted rgba(0, 165, 189, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(0, 165, 189, 0.3);
 				}
 			}
 			&.black {
 				background-color: #0f0f10;
-				color: #ffffff;
-				div.day{
+				div.day, a:hover {
 					color: #b5babe;
 				}
-				a {
-					color: #ffffff;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
-					&:hover {
-						color: #b5babe;
-						border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
-					}
+				a:hover {
+                    border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
 				}
 			}
 			&.gold {
@@ -491,16 +365,9 @@ table.calendar {
 				}
 				a {
 					color: #2a3033;
-					border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-					transition-property: color, border;
-						-webkit-transition-property: color, border;
-					transition-duration: .4s, .4s;
-						-webkit-transition-duration: .4s, .4s;
-					transition-timing-function: linear, ease-in;
-						-webkit-transition-timing-function: linear, ease-in;
 					&:hover {
-						color: #b5babe;
-						border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
+						color: #68777e;
+						border-bottom: 1px dotted rgba(104, 119, 126, 0.3);
 					}
 				}
 			}
