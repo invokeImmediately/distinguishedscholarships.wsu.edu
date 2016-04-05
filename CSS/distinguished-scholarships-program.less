@@ -176,7 +176,7 @@ div.column {
 	}
 }
 
-table.calendar {
+div.column table.calendar {
     border: 1px solid #70031a;
     border-collapse: separate;
     border-spacing: 2px;
@@ -256,7 +256,7 @@ table.calendar {
             a {
                 color: #ffffff;
                 border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-                .transition(color .4s linear, border .4s ease-in);
+                .transition("color .4s linear, border .4s ease-in");
             }
 			&.gray {
 				background-color: #67767b;
@@ -264,6 +264,7 @@ table.calendar {
 					color: #2a3033;
 				}
 				a:hover {
+                    background-color: rgba(42, 48, 51, 0.2);
                     border-bottom: 1px dotted rgba(42, 48, 51, 0.3);
 				}
 			}
@@ -273,6 +274,7 @@ table.calendar {
 					color: #da91a5;
 				}
 				a:hover {
+                    background-color: rgba(219, 146, 166, 0.2);
                     border-bottom: 1px dotted rgba(219, 146, 166, 0.3);
 				}
 			}
@@ -282,6 +284,7 @@ table.calendar {
 					color: #492e14;
 				}
 				a:hover {
+                    background-color: rgba(73, 46, 20, 0.2);
                     border-bottom: 1px dotted rgba(73, 46, 20, 0.3);
 				}
 			}
@@ -291,6 +294,7 @@ table.calendar {
 					color: #e9e03c;
 				}
 				a:hover {
+                    background-color: rgba(233, 244, 60, 0.2);
                     border-bottom: 1px dotted rgba(233, 244, 60, 0.3);
 				}
 			}
@@ -300,6 +304,7 @@ table.calendar {
 					color: #06c6ce;
 				}
 				a:hover {
+                    background-color: rgba(6, 198, 206, 0.2);
                     border-bottom: 1px dotted rgba(6, 198, 206, 0.3);
 				}
 			}
@@ -309,6 +314,7 @@ table.calendar {
 					color: #b5babe;
 				}
 				a:hover {
+                    background-color: rgba(181, 186, 190, 0.2);
                     border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
 				}
 			}
@@ -318,6 +324,7 @@ table.calendar {
 					color: #cb9b6e;
 				}
 				a:hover {
+                    background-color: rgba(203, 155, 110, 0.2);
                     border-bottom: 1px dotted rgba(203, 155, 110, 0.3);
 				}
 			}
@@ -327,6 +334,7 @@ table.calendar {
 					color: #ddbea1;
 				}
 				a:hover {
+                    background-color: rgba(221, 190, 161, 0.2);
                     border-bottom: 1px dotted rgba(221, 190, 161, 0.3);
 				}
 			}
@@ -336,6 +344,7 @@ table.calendar {
 					color: #ada400;
 				}
 				a:hover {
+                    background-color: rgba(173, 164, 0, 0.2);
                     border-bottom: 1px dotted rgba(173, 164, 0, 0.3);
 				}
 			}
@@ -345,6 +354,7 @@ table.calendar {
 					color: #00a5bd;
 				}
 				a:hover {
+                    background-color: rgba(0, 165, 189, 0.2);
                     border-bottom: 1px dotted rgba(0, 165, 189, 0.3);
 				}
 			}
@@ -354,6 +364,7 @@ table.calendar {
 					color: #b5babe;
 				}
 				a:hover {
+                    background-color: rgba(181, 186, 190, 0.2);
                     border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
 				}
 			}
@@ -367,6 +378,7 @@ table.calendar {
 					color: #2a3033;
 					&:hover {
 						color: #68777e;
+                        background-color: rgba(104, 119, 126, 0.2);
 						border-bottom: 1px dotted rgba(104, 119, 126, 0.3);
 					}
 				}
@@ -393,14 +405,25 @@ div.calendar-legend {
 		width: 80px;
 	}
 	div.legend-panel {
+		width: 70px;
+		height: 30px;
+		padding: 5px;
+		margin: 10px;
 		border: 1px solid #cccccc;
 		font-size: 0.8em;
-		height: 30px;
 		line-height: 30px;
-		margin: 10px;
-		padding: 5px;
 		text-align: center;
-		width: 70px;
+        color: #ffffff;
+        .transition("background .2s linear");
+        a {
+            color: #ffffff;
+            border-bottom: none;
+            &:hover {
+                background-color: transparent;
+                color: #ffffff;
+                border-bottom: none;
+            }
+        }
 		span.content {
 			display: inline-block;
 			line-height: 1.175;
@@ -408,326 +431,55 @@ div.calendar-legend {
 		}
 		&.gray {
 			background-color: #67767b;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #7d979b;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(42, 48, 51, 0);
-				transition-property: color, border-color;
-					-webkit-transition-property: color, border-color;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, linear;
-					-webkit-transition-timing-function: linear, linear;
-				&:hover {
-					color: #2a3033;
-					border-bottom: 1px dotted rgba(42, 48, 51, 0.3);
-				}
-			}
+			&:hover { background-color: #7d979b; }
 		}
 		&.crimson {
 			background-color: #be1a40;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #bf526f;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(219, 146, 166, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #da91a5;
-					border-bottom: 1px dotted rgba(219, 146, 166, 0.3);
-				}
-			}
+			&:hover { background-color: #bf526f; }
 		}
 		&.orange {
 			background-color: #e95b34;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #df8366;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(73, 46, 20, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #492e14;
-					border-bottom: 1px dotted rgba(73, 46, 20, 0.3);
-				}
-			}
+			&:hover { background-color: #df8366; }
 		}
 		&.olive {
 			background-color: #9b8b28;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #a5a75d;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(233, 244, 60, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #e9e03c;
-					border-bottom: 1px dotted rgba(233, 244, 60, 0.3);
-				}
-			}
+			&:hover { background-color: #a5a75d; }
 		}
 		&.blue {
 			background-color: #127286;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #3d94a3;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(6, 198, 206, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #06c6ce;
-					border-bottom: 1px dotted rgba(6, 198, 206, 0.3);
-				}
-			}
+			&:hover { background-color: #3d94a3; }
 		}
 		&.dark-gray {
 			background-color: #373940;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #59696f;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(181, 186, 190, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #b5babe;
-					border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
-				}
-			}
+			&:hover { background-color: #59696f; }
 		}
 		&.dark-brown {
 			background-color: #480f13;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #664a4d;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(203, 155, 110, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #cb9b6e;
-					border-bottom: 1px dotted rgba(203, 155, 110, 0.3);
-				}
-			}
+			&:hover { background-color: #664a4d; }
 		}
 		&.brown {
 			background-color: #723f1f;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #866e56;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(221, 190, 161, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #ddbea1;
-					border-bottom: 1px dotted rgba(221, 190, 161, 0.3);
-				}
-			}
+			&:hover { background-color: #866e56; }
 		}
 		&.dark-olive {
 			background-color: #453a16;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #646a4f;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(173, 164, 0, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #ada400;
-					border-bottom: 1px dotted rgba(173, 164, 0, 0.3);
-				}
-			}
+			&:hover { background-color: #646a4f; }
 		}
 		&.dark-blue {
 			background-color: #12313c;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background-color: #3d636c;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(0, 165, 189, 0);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #00a5bd;
-					border-bottom: 1px dotted rgba(0, 165, 189, 0.3);
-				}
-			}
+			&:hover { background-color: #3d636c; }
 		}
 		&.black {
 			background-color: #0f0f10;
-			color: #ffffff;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background: #30303f;
-			}
-			a {
-				color: #ffffff;
-				border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #b5babe;
-					border-bottom: 1px dotted rgba(181, 186, 190, 0.3);
-				}
-			}
+			&:hover { background: #30303f; }
 		}
 		&.gold {
 			background-color: #ffb81c;
 			color: #2a3033;
-			transition-property: background;
-				-webkit-transition-property: background;
-			transition-duration: .2s;
-				-webkit-transition-duration: .2s;
-			transition-timing-function: linear;
-				-webkit-transition-timing-function: linear;
-			&:hover {
-				background: #ffdb8d;
-			}
+			&:hover { background: #ffdb8d; }
 			a {
 				color: #2a3033;
-				border-bottom: 1px dotted rgba(42, 48, 51, 0.3);
-				transition-property: color, border;
-					-webkit-transition-property: color, border;
-				transition-duration: .4s, .4s;
-					-webkit-transition-duration: .4s, .4s;
-				transition-timing-function: linear, ease-in;
-					-webkit-transition-timing-function: linear, ease-in;
-				&:hover {
-					color: #000000;
-					border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-				}
+				&:hover { color: #2a3033; }
 			}
 		}
 	}
