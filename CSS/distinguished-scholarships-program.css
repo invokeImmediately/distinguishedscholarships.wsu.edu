@@ -3032,9 +3032,9 @@ div.column .gform_wrapper #extensions_message {
   border-right: 8px solid transparent;
   border-bottom: 8px solid #981e32;
   border-left: 8px solid transparent;
-  -webkit-transition: "all 0.3s ease";
-  -moz-transition: "all 0.3s ease";
-  transition: "all 0.3s ease";
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .drop-down-toggle:before {
   content: "Click to expand";
@@ -3042,20 +3042,21 @@ div.column .gform_wrapper #extensions_message {
   top: 0;
   right: 0;
   color: #981e32;
-  font-size: 0.85em;
+  font-size: 12px;
+  text-transform: none;
   opacity: 0;
-  -webkit-transform: "translate(-125%, -50%)";
-  -moz-transform: "translate(-125%, -50%)";
-  transform: "translate(-125%, -50%)";
-  -webkit-transition: "all 0.3s ease";
-  -moz-transition: "all 0.3s ease";
-  transition: "all 0.3s ease";
+  -webkit-transform: translate(-125%, -50%);
+  -moz-transform: translate(-125%, -50%);
+  transform: translate(-125%, -50%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .drop-down-toggle:hover:after {
   border-top: 8px solid transparent;
-  border-right: none;
+  border-right: 8px solid #c60c30;
   border-bottom: 8px solid transparent;
-  border-left: 8px solid #c60c30;
+  border-left: none;
 }
 .drop-down-toggle:hover:before {
   opacity: 0.5;
