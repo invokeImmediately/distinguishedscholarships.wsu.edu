@@ -4359,7 +4359,7 @@ div.column section.header-wsuRecipients {
 	}
 }
 
-table.calendar {
+div.column table.calendar {
 	border: 1px solid #70031a;
 	border-collapse: separate;
 	border-spacing: 2px;
@@ -4368,7 +4368,7 @@ table.calendar {
 	background: #fff;
 }
 
-table.calendar th {
+div.column table.calendar th {
 	width: 18%;
 	padding-bottom: 3pt;
 	padding-top: 3pt;
@@ -4378,29 +4378,29 @@ table.calendar th {
 	text-align: center;
 }
 
-table.calendar th:first-of-type {
+div.column table.calendar th:first-of-type {
 	width: 10%;
 	background: #a73d41;
 	color: #fff;
 	text-align: center;
 }
 
-table.calendar th div.month {
+div.column table.calendar th div.month {
 	font-size: 16pt;
 	line-height: normal;
 }
 
 @media screen and (max-width:979px) {
-	table.calendar th {
+	div.column table.calendar th {
 		font-size: 12px;
 	}
 }
 
-table.calendar tr {
+div.column table.calendar tr {
 	min-height: 96px;
 }
 
-table.calendar td {
+div.column table.calendar td {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -4413,7 +4413,7 @@ table.calendar td {
 	line-height: normal;
 }
 
-table.calendar td div.day {
+div.column table.calendar td div.day {
 	color: #b52630;
 	float: left;
 	font-size: 16pt;
@@ -4422,338 +4422,211 @@ table.calendar td div.day {
 	padding-right: 3pt;
 }
 
-table.calendar td p {
+div.column table.calendar td p {
+	clear: both;
 	padding-bottom: 0;
 	text-align: left;
 }
 
 @media screen and (max-width:979px) {
-	table.calendar td p {
+	div.column table.calendar td p {
 		font-size: 12px;
 	}
 }
 
-table.calendar td:first-of-type {
+div.column table.calendar td:first-of-type {
 	width: 10%;
 	background: #eae4e2;
 	text-align: center;
 }
 
-table.calendar td:first-of-type div.week {
+div.column table.calendar td:first-of-type div.week {
 	font-size: 18pt;
 	font-weight: 700;
 }
 
-table.calendar td.blank {
+div.column table.calendar td.blank {
 	background: rgba(94,106,113,.5);
 }
 
-table.calendar td.back-bar {
+div.column table.calendar td.back-bar {
 	background: rgba(94,106,113,.25);
 }
 
-table.calendar td.has-an-event {
+div.column table.calendar td.has-an-event {
 	background-color: #ffc;
-}
-
-table.calendar td.has-an-event.gray {
-	background-color: #67767b;
 	color: #fff;
 }
 
-table.calendar td.has-an-event.gray div.day {
-	color: #2a3033;
-}
-
-table.calendar td.has-an-event.gray a {
+div.column table.calendar td.has-an-event a {
 	color: #fff;
 	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
+	-webkit-transition: "color .4s linear,border .4s ease-in";
+	-moz-transition: "color .4s linear,border .4s ease-in";
+	-o-transition: "color .4s linear,border .4s ease-in";
+	transition: "color .4s linear,border .4s ease-in";
 }
 
-table.calendar td.has-an-event.gray a:hover {
+div.column table.calendar td.has-an-event.gray {
+	background-color: #67767b;
+}
+
+div.column table.calendar td.has-an-event.gray a:hover,div.column table.calendar td.has-an-event.gray div.day {
 	color: #2a3033;
+}
+
+div.column table.calendar td.has-an-event.gray a:hover {
+	background-color: rgba(42,48,51,.2);
 	border-bottom: 1px dotted rgba(42,48,51,.3);
 }
 
-table.calendar td.has-an-event.crimson {
+div.column table.calendar td.has-an-event.crimson {
 	background-color: #be1a40;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.crimson div.day {
+div.column table.calendar td.has-an-event.crimson a:hover,div.column table.calendar td.has-an-event.crimson div.day {
 	color: #da91a5;
 }
 
-table.calendar td.has-an-event.crimson a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.crimson a:hover {
-	color: #da91a5;
+div.column table.calendar td.has-an-event.crimson a:hover {
+	background-color: rgba(219,146,166,.2);
 	border-bottom: 1px dotted rgba(219,146,166,.3);
 }
 
-table.calendar td.has-an-event.orange {
+div.column table.calendar td.has-an-event.orange {
 	background-color: #e95b34;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.orange div.day {
+div.column table.calendar td.has-an-event.orange a:hover,div.column table.calendar td.has-an-event.orange div.day {
 	color: #492e14;
 }
 
-table.calendar td.has-an-event.orange a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.orange a:hover {
-	color: #492e14;
+div.column table.calendar td.has-an-event.orange a:hover {
+	background-color: rgba(73,46,20,.2);
 	border-bottom: 1px dotted rgba(73,46,20,.3);
 }
 
-table.calendar td.has-an-event.olive {
+div.column table.calendar td.has-an-event.olive {
 	background-color: #9b8b28;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.olive div.day {
+div.column table.calendar td.has-an-event.olive a:hover,div.column table.calendar td.has-an-event.olive div.day {
 	color: #e9e03c;
 }
 
-table.calendar td.has-an-event.olive a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.olive a:hover {
-	color: #e9e03c;
+div.column table.calendar td.has-an-event.olive a:hover {
+	background-color: rgba(233,244,60,.2);
 	border-bottom: 1px dotted rgba(233,244,60,.3);
 }
 
-table.calendar td.has-an-event.blue {
+div.column table.calendar td.has-an-event.blue {
 	background-color: #127286;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.blue div.day {
+div.column table.calendar td.has-an-event.blue a:hover,div.column table.calendar td.has-an-event.blue div.day {
 	color: #06c6ce;
 }
 
-table.calendar td.has-an-event.blue a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.blue a:hover {
-	color: #06c6ce;
+div.column table.calendar td.has-an-event.blue a:hover {
+	background-color: rgba(6,198,206,.2);
 	border-bottom: 1px dotted rgba(6,198,206,.3);
 }
 
-table.calendar td.has-an-event.dark-gray {
+div.column table.calendar td.has-an-event.dark-gray {
 	background-color: #373940;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.dark-gray div.day {
+div.column table.calendar td.has-an-event.dark-gray a:hover,div.column table.calendar td.has-an-event.dark-gray div.day {
 	color: #b5babe;
 }
 
-table.calendar td.has-an-event.dark-gray a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.dark-gray a:hover {
-	color: #b5babe;
+div.column table.calendar td.has-an-event.dark-gray a:hover {
+	background-color: rgba(181,186,190,.2);
 	border-bottom: 1px dotted rgba(181,186,190,.3);
 }
 
-table.calendar td.has-an-event.dark-brown {
+div.column table.calendar td.has-an-event.dark-brown {
 	background-color: #480f13;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.dark-brown div.day {
+div.column table.calendar td.has-an-event.dark-brown a:hover,div.column table.calendar td.has-an-event.dark-brown div.day {
 	color: #cb9b6e;
 }
 
-table.calendar td.has-an-event.dark-brown a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.dark-brown a:hover {
-	color: #cb9b6e;
+div.column table.calendar td.has-an-event.dark-brown a:hover {
+	background-color: rgba(203,155,110,.2);
 	border-bottom: 1px dotted rgba(203,155,110,.3);
 }
 
-table.calendar td.has-an-event.brown {
+div.column table.calendar td.has-an-event.brown {
 	background-color: #723f1f;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.brown div.day {
+div.column table.calendar td.has-an-event.brown a:hover,div.column table.calendar td.has-an-event.brown div.day {
 	color: #ddbea1;
 }
 
-table.calendar td.has-an-event.brown a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.brown a:hover {
-	color: #ddbea1;
+div.column table.calendar td.has-an-event.brown a:hover {
+	background-color: rgba(221,190,161,.2);
 	border-bottom: 1px dotted rgba(221,190,161,.3);
 }
 
-table.calendar td.has-an-event.dark-olive {
+div.column table.calendar td.has-an-event.dark-olive {
 	background-color: #453a16;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.dark-olive div.day {
+div.column table.calendar td.has-an-event.dark-olive a:hover,div.column table.calendar td.has-an-event.dark-olive div.day {
 	color: #ada400;
 }
 
-table.calendar td.has-an-event.dark-olive a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.dark-olive a:hover {
-	color: #ada400;
+div.column table.calendar td.has-an-event.dark-olive a:hover {
+	background-color: rgba(173,164,0,.2);
 	border-bottom: 1px dotted rgba(173,164,0,.3);
 }
 
-table.calendar td.has-an-event.dark-blue {
+div.column table.calendar td.has-an-event.dark-blue {
 	background-color: #12313c;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.dark-blue div.day {
+div.column table.calendar td.has-an-event.dark-blue a:hover,div.column table.calendar td.has-an-event.dark-blue div.day {
 	color: #00a5bd;
 }
 
-table.calendar td.has-an-event.dark-blue a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.dark-blue a:hover {
-	color: #00a5bd;
+div.column table.calendar td.has-an-event.dark-blue a:hover {
+	background-color: rgba(0,165,189,.2);
 	border-bottom: 1px dotted rgba(0,165,189,.3);
 }
 
-table.calendar td.has-an-event.black {
+div.column table.calendar td.has-an-event.black {
 	background-color: #0f0f10;
-	color: #fff;
 }
 
-table.calendar td.has-an-event.black div.day {
+div.column table.calendar td.has-an-event.black a:hover,div.column table.calendar td.has-an-event.black div.day {
 	color: #b5babe;
 }
 
-table.calendar td.has-an-event.black a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-table.calendar td.has-an-event.black a:hover {
-	color: #b5babe;
+div.column table.calendar td.has-an-event.black a:hover {
+	background-color: rgba(181,186,190,.2);
 	border-bottom: 1px dotted rgba(181,186,190,.3);
 }
 
-table.calendar td.has-an-event.gold {
+div.column table.calendar td.has-an-event.gold {
 	background-color: #ffb81c;
 	color: #2a3033;
 }
 
-table.calendar td.has-an-event.gold div.day {
+div.column table.calendar td.has-an-event.gold div.day {
 	color: #000;
 }
 
-table.calendar td.has-an-event.gold a {
+div.column table.calendar td.has-an-event.gold a {
 	color: #2a3033;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
 }
 
-table.calendar td.has-an-event.gold a:hover {
-	color: #b5babe;
-	border-bottom: 1px dotted rgba(181,186,190,.3);
+div.column table.calendar td.has-an-event.gold a:hover {
+	color: #68777e;
+	background-color: rgba(104,119,126,.2);
+	border-bottom: 1px dotted rgba(104,119,126,.3);
 }
 
 div.calendar-legend {
@@ -4777,14 +4650,30 @@ div.calendar-legend div.legend-title {
 }
 
 div.calendar-legend div.legend-panel {
+	width: 70px;
+	height: 30px;
+	padding: 5px;
+	margin: 10px;
 	border: 1px solid #ccc;
 	font-size: .8em;
-	height: 30px;
 	line-height: 30px;
-	margin: 10px;
-	padding: 5px;
 	text-align: center;
-	width: 70px;
+	color: #fff;
+	-webkit-transition: "background .2s linear";
+	-moz-transition: "background .2s linear";
+	-o-transition: "background .2s linear";
+	transition: "background .2s linear";
+}
+
+div.calendar-legend div.legend-panel a {
+	color: #fff;
+	border-bottom: none;
+}
+
+div.calendar-legend div.legend-panel a:hover {
+	background-color: transparent;
+	color: #fff;
+	border-bottom: none;
 }
 
 div.calendar-legend div.legend-panel span.content {
@@ -4795,354 +4684,95 @@ div.calendar-legend div.legend-panel span.content {
 
 div.calendar-legend div.legend-panel.gray {
 	background-color: #67767b;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.gray:hover {
 	background-color: #7d979b;
 }
 
-div.calendar-legend div.legend-panel.gray a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(42,48,51,0);
-	transition-property: color, border-color;
-	-webkit-transition-property: color, border-color;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, linear;
-	-webkit-transition-timing-function: linear, linear;
-}
-
-div.calendar-legend div.legend-panel.gray a:hover {
-	color: #2a3033;
-	border-bottom: 1px dotted rgba(42,48,51,.3);
-}
-
 div.calendar-legend div.legend-panel.crimson {
 	background-color: #be1a40;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.crimson:hover {
 	background-color: #bf526f;
 }
 
-div.calendar-legend div.legend-panel.crimson a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(219,146,166,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.crimson a:hover {
-	color: #da91a5;
-	border-bottom: 1px dotted rgba(219,146,166,.3);
-}
-
 div.calendar-legend div.legend-panel.orange {
 	background-color: #e95b34;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.orange:hover {
 	background-color: #df8366;
 }
 
-div.calendar-legend div.legend-panel.orange a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(73,46,20,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.orange a:hover {
-	color: #492e14;
-	border-bottom: 1px dotted rgba(73,46,20,.3);
-}
-
 div.calendar-legend div.legend-panel.olive {
 	background-color: #9b8b28;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.olive:hover {
 	background-color: #a5a75d;
 }
 
-div.calendar-legend div.legend-panel.olive a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(233,244,60,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.olive a:hover {
-	color: #e9e03c;
-	border-bottom: 1px dotted rgba(233,244,60,.3);
-}
-
 div.calendar-legend div.legend-panel.blue {
 	background-color: #127286;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.blue:hover {
 	background-color: #3d94a3;
 }
 
-div.calendar-legend div.legend-panel.blue a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(6,198,206,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.blue a:hover {
-	color: #06c6ce;
-	border-bottom: 1px dotted rgba(6,198,206,.3);
-}
-
 div.calendar-legend div.legend-panel.dark-gray {
 	background-color: #373940;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.dark-gray:hover {
 	background-color: #59696f;
 }
 
-div.calendar-legend div.legend-panel.dark-gray a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(181,186,190,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.dark-gray a:hover {
-	color: #b5babe;
-	border-bottom: 1px dotted rgba(181,186,190,.3);
-}
-
 div.calendar-legend div.legend-panel.dark-brown {
 	background-color: #480f13;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.dark-brown:hover {
 	background-color: #664a4d;
 }
 
-div.calendar-legend div.legend-panel.dark-brown a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(203,155,110,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.dark-brown a:hover {
-	color: #cb9b6e;
-	border-bottom: 1px dotted rgba(203,155,110,.3);
-}
-
 div.calendar-legend div.legend-panel.brown {
 	background-color: #723f1f;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.brown:hover {
 	background-color: #866e56;
 }
 
-div.calendar-legend div.legend-panel.brown a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(221,190,161,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.brown a:hover {
-	color: #ddbea1;
-	border-bottom: 1px dotted rgba(221,190,161,.3);
-}
-
 div.calendar-legend div.legend-panel.dark-olive {
 	background-color: #453a16;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.dark-olive:hover {
 	background-color: #646a4f;
 }
 
-div.calendar-legend div.legend-panel.dark-olive a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(173,164,0,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.dark-olive a:hover {
-	color: #ada400;
-	border-bottom: 1px dotted rgba(173,164,0,.3);
-}
-
 div.calendar-legend div.legend-panel.dark-blue {
 	background-color: #12313c;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.dark-blue:hover {
 	background-color: #3d636c;
 }
 
-div.calendar-legend div.legend-panel.dark-blue a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(0,165,189,0);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.dark-blue a:hover {
-	color: #00a5bd;
-	border-bottom: 1px dotted rgba(0,165,189,.3);
-}
-
 div.calendar-legend div.legend-panel.black {
 	background-color: #0f0f10;
-	color: #fff;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.black:hover {
 	background: #30303f;
 }
 
-div.calendar-legend div.legend-panel.black a {
-	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
-}
-
-div.calendar-legend div.legend-panel.black a:hover {
-	color: #b5babe;
-	border-bottom: 1px dotted rgba(181,186,190,.3);
-}
-
 div.calendar-legend div.legend-panel.gold {
 	background-color: #ffb81c;
 	color: #2a3033;
-	transition-property: background;
-	-webkit-transition-property: background;
-	transition-duration: .2s;
-	-webkit-transition-duration: .2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 div.calendar-legend div.legend-panel.gold:hover {
@@ -5151,18 +4781,10 @@ div.calendar-legend div.legend-panel.gold:hover {
 
 div.calendar-legend div.legend-panel.gold a {
 	color: #2a3033;
-	border-bottom: 1px dotted rgba(42,48,51,.3);
-	transition-property: color, border;
-	-webkit-transition-property: color, border;
-	transition-duration: .4s, .4s;
-	-webkit-transition-duration: .4s, .4s;
-	transition-timing-function: linear, ease-in;
-	-webkit-transition-timing-function: linear, ease-in;
 }
 
 div.calendar-legend div.legend-panel.gold a:hover {
-	color: #000;
-	border-bottom: 1px dotted rgba(0,0,0,.3);
+	color: #2a3033;
 }
 
 div.column p.award-quote {
