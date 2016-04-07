@@ -3039,7 +3039,7 @@ div.column .gform_wrapper #extensions_message {
 .drop-down-toggle:before {
   content: "Click to expand";
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   color: #981e32;
   font-size: 12px;
@@ -3053,10 +3053,10 @@ div.column .gform_wrapper #extensions_message {
   transition: all 0.3s ease;
 }
 .drop-down-toggle:hover:after {
-  border-top: 8px solid transparent;
-  border-right: 8px solid #c60c30;
-  border-bottom: 8px solid transparent;
-  border-left: none;
+  border-top: none;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #c60c30;
+  border-left: 8px solid transparent;
 }
 .drop-down-toggle:hover:before {
   opacity: 0.5;
@@ -3071,10 +3071,10 @@ div.column .gform_wrapper #extensions_message {
   content: "Click to collapse";
 }
 .drop-down-toggle.activated:hover:after {
-  border-top: 8px solid transparent;
-  border-right: none;
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid #c60c30;
+  border-top: 8px solid #c60c30;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  border-left: 8px solid transparent;
 }
 .flipped-content-back {
   display: none;
