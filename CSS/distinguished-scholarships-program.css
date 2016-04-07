@@ -3966,6 +3966,7 @@ div.column table.calendar td div.day {
   padding-right: 3pt;
 }
 div.column table.calendar td p {
+  clear: both;
   padding-bottom: 0;
   text-align: left;
 }
