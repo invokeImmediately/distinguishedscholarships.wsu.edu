@@ -1016,6 +1016,12 @@ div.award-banner {
            │ interface.                                                                              │
            └-----------------------------------------------------------------------------------------┘        
 */
+@media screen and (max-width: 480px) {
+  div.column div.builder-section-content.cycle-slideshow {
+    margin-left: -2em;
+    margin-right: -2em;
+  }
+}
 div.column div.builder-banner-content {
   padding: 0 0 10px 0;
   font-size: 1rem;
@@ -1029,13 +1035,16 @@ div.column div.builder-banner-content:hover {
   font-size: 1.3333rem;
   line-height: 1.799955rem;
 }
-div.column div.builder-banner-content:hover > .inner-banner-content {
-  background-color: rgba(0, 0, 0, 0.6667);
+div.column div.builder-banner-content:hover > div.builder-banner-inner-content {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 div.column div.builder-banner-inner-content {
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: inherit;
+  line-height: inherit;
 }
 div.column div.builder-banner-inner-content p {
   padding: 10px;
@@ -1073,10 +1082,6 @@ div.column div.builder-banner-overlay {
     font-size: 1.7704vw;
     line-height: 2.39004vw;
   }
-  div.column div.builder-banner-content:hover ~ div.builder-banner-overlay {
-    top: calc(100% - 4.78008vw - 1.66vw);
-    height: calc(4.78008vw + 1.66vw);
-  }
   div.column div.builder-banner-inner-content p {
     padding: 1.0vw;
   }
@@ -1096,8 +1101,6 @@ div.column div.builder-banner-overlay {
 }
 @media screen and (min-width: 906px) {
   div.readability-controlled {
-    /*      margin-right: auto;
-        margin-left: auto; */
     width: 70%;
   }
 }
@@ -4237,6 +4240,7 @@ div.column p.award-quote-source {
 ul.application-steps > li {
   float: left;
   width: 49%;
+  min-height: 198px;
   margin-bottom: 2%;
 }
 @media all and (max-width: 1205px) {
