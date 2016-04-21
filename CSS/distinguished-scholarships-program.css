@@ -1009,11 +1009,18 @@ div.award-banner {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+/*         ┌-----------------------------------------------------------------------------------------┐
+           │ ···· Builder Template Slideshows ······················································ │
+           ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+           │ Styling modifications of builder template slideshows added through the WordPress        │
+           │ interface.                                                                              │
+           └-----------------------------------------------------------------------------------------┘        
+*/
 div.column div.builder-banner-content {
   padding: 0 0 10px 0;
   font-size: 1rem;
   line-height: 1.35rem;
-  border-bottom: 0;
+  border: 0;
   -webkit-transition: font-size .15s linear, line-height .15s linear;
   -moz-transition: font-size .15s linear, line-height .15s linear;
   transition: font-size .15s linear, line-height .15s linear;
@@ -1022,14 +1029,13 @@ div.column div.builder-banner-content:hover {
   font-size: 1.3333rem;
   line-height: 1.799955rem;
 }
-div.column div.builder-banner-content:hover ~ .builder-banner-overlay {
-  background-color: rgba(0, 0, 0, 0.9);
-  height: calc(3.59991rem + 20px);
-  top: calc(100% - 3.59991rem - 20px);
+div.column div.builder-banner-content:hover > .inner-banner-content {
+  background-color: rgba(0, 0, 0, 0.6667);
 }
 div.column div.builder-banner-inner-content {
   position: absolute;
   bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 div.column div.builder-banner-inner-content p {
   padding: 10px;
@@ -1056,15 +1062,7 @@ div.column div.builder-banner-inner-content a:hover {
   border-color: rgba(106, 120, 128, 0.4);
 }
 div.column div.builder-banner-overlay {
-  height: calc(2.7rem + 20px);
-  top: calc(100% - 2.7rem - 20px);
-  background-color: rgba(0, 0, 0, 0.6667);
-  border-color: rgba(0, 0, 0, 0.4);
-  color: #949b9d;
-  transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
-  -webkit-transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
-  -moz-transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
-  -o-transition: background-color 0.4s linear, height 0.15s linear, top 0.15s linear;
+  display: none;
 }
 @media screen and (max-width: 1204px) {
   div.column div.builder-banner-content {
@@ -1078,10 +1076,6 @@ div.column div.builder-banner-overlay {
   div.column div.builder-banner-content:hover ~ div.builder-banner-overlay {
     top: calc(100% - 4.78008vw - 1.66vw);
     height: calc(4.78008vw + 1.66vw);
-  }
-  div.column div.builder-banner-overlay {
-    top: calc(100% - 3.58506vw - 1.66vw);
-    height: calc(3.58506vw + 1.66vw);
   }
   div.column div.builder-banner-inner-content p {
     padding: 1.0vw;
@@ -1099,9 +1093,6 @@ div.column div.builder-banner-overlay {
     font-size: 14px;
     line-height: 18.9px;
   }
-  div.column div.builder-banner-overlay {
-    height: auto;
-  }
 }
 @media screen and (min-width: 906px) {
   div.readability-controlled {
@@ -1114,21 +1105,51 @@ section.pad-top.half-pad,
 section.pad-top div.column.half-pad {
   padding-top: 1rem;
 }
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- *  │ ++++++++ div.column ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  ├----------------------------------------------------------------------------------------------┤
- *  │ Highly specific styling applied to div.column container elements as specified in the WSU     │
- *  │ Spine WordPress Theme.                                                                       │
- *  ├----------------------------------------------------------------------------------------------┤
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· div.column ······································································· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ Highly specific styling applied to div.column container elements as specified in the    │
+ *         │ WSU Spine WordPress Theme.                                                              │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  */
 div.column {
   font-size: 1rem;
-  /*	header.article-header {
-        display: none;
-    }
-    header.article-header.show-header {
-        display: block;
-    }*/
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │············ GENERIC CLASSES for div.column content containers ························· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │············ DEFINITION LIST elements contained within div.column containers ··········· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │···· HORIZONTAL RULE children of div.column elements ··································· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· ASIDE children of div.column elements ············································ │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· UNORDERED LIST elements contained within div.column elements ····················· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· ORDERED LIST elements contained within div.column elements ······················· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· SECTION children of div.column elements ·········································· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· ADDITIONAL CLASSES for elements contained within div.column elements ············· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
 }
 div.column:nth-child(1) {
   margin-top: 0;
@@ -1583,7 +1604,7 @@ div.column .has-smaller-text {
     max-width: 792px;
   }
 }
-/*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+/*         └-----------------------------------------------------------------------------------------┘        
  */
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
