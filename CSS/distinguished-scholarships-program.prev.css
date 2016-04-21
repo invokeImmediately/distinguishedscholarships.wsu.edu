@@ -1123,10 +1123,10 @@ div.column div.builder-banner-content {
 	padding: 0 0 10px;
 	font-size: 1rem;
 	line-height: 1.35rem;
-	transition: font-size .15s linear, line-height .15s linear;
+	border-bottom: 0;
 	-webkit-transition: font-size .15s linear, line-height .15s linear;
 	-moz-transition: font-size .15s linear, line-height .15s linear;
-	-o-transition: font-size .15s linear, line-height .15s linear;
+	transition: font-size .15s linear, line-height .15s linear;
 }
 
 div.column div.builder-banner-content:hover {
@@ -1141,7 +1141,8 @@ div.column div.builder-banner-content:hover~.builder-banner-overlay {
 }
 
 div.column div.builder-banner-inner-content {
-	vertical-align: bottom;
+	position: absolute;
+	bottom: 0;
 }
 
 div.column div.builder-banner-inner-content p {
