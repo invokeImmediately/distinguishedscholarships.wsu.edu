@@ -2376,6 +2376,10 @@ mark.highlight {
   font-style: normal;
   color: #AEC7CB;
 }
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++ SPAN selectors +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
 span.accentuated-text {
   font-weight: 700;
   font-size: 1.3em;
@@ -2406,6 +2410,16 @@ span.has-tool-tip:hover {
   background-color: rgba(0, 165, 189, 0.2);
   border-color: rgba(0, 165, 189, 0.67);
   color: #2f5055;
+}
+@media all and (max-width: 791px) {
+  span.hides-with-spine {
+    display: none;
+  }
+}
+@media all and (min-width: 792px) {
+  span.hides-from-spine {
+    display: none;
+  }
 }
 cite.article-author {
   display: none;
