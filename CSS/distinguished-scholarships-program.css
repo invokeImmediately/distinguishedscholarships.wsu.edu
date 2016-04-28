@@ -34,13 +34,13 @@ img.shiftToCenter {
   margin-bottom: 0.5rem;
 }
 .spaces-lft-nrml {
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
 .spaces-lft-half {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .spaces-lft-qrtr {
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 .pads-top-nrml {
   padding-top: 2rem;
