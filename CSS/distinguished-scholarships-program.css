@@ -12,11 +12,17 @@ img.shiftToCenter {
 .spaces-top-half {
   margin-top: 1rem;
 }
+.spaces-top-qrtr {
+  margin-top: 0.5rem;
+}
 .spaces-rgt-nrml {
   margin-right: 2rem;
 }
 .spaces-rgt-half {
   margin-right: 1rem;
+}
+.spaces-rgt-qrtr {
+  margin-right: 0.5rem;
 }
 .spaces-btm-nrml {
   margin-bottom: 2rem;
@@ -24,11 +30,17 @@ img.shiftToCenter {
 .spaces-btm-half {
   margin-bottom: 1rem;
 }
+.spaces-btm-qrtr {
+  margin-bottom: 0.5rem;
+}
 .spaces-lft-nrml {
   margin-right: 2rem;
 }
 .spaces-lft-half {
   margin-right: 1rem;
+}
+.spaces-lft-qrtr {
+  margin-right: 0.5rem;
 }
 .pads-top-nrml {
   padding-top: 2rem;
