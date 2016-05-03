@@ -383,14 +383,14 @@ section.article-header div.header-content {
   section.article-header div.header-content h1 {
     font-size: 70px;
     line-height: 1.071428571428571em;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 0 #afafaf, 0 2px 0 #989898, 0 3px 0 #7f7f7f, 0 4px 0 #686868, 0 5px 0 #4f4f4f, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
   }
   section.article-header div.header-content h2 {
     margin-bottom: .75rem;
     font-size: 3.0238rem;
     line-height: 0.8em;
     text-transform: uppercase;
-    text-shadow: 0 0.6667px 0 #cccccc, 0 1.3333px 0 #c9c9c9, 0 2px 0 #bbbbbb, 0 2.6667px 0 #b9b9b9, 0 3.3333px 0 #aaaaaa, 0 4px 0.6667px rgba(0, 0, 0, 0.1), 0 0 3.3333px rgba(0, 0, 0, 0.1), 0 0.6667px 2px rgba(0, 0, 0, 0.3), 0 2px 3.3333px rgba(0, 0, 0, 0.2), 0 3.3333px 6.6667px rgba(0, 0, 0, 0.25), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.2), 0 13.3333px 13.3333px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 0.6667px 0 #afafaf, 0 1.3333px 0 #989898, 0 2px 0 #7f7f7f, 0 2.6667px 0 #686868, 0 3.3333px 0 #4f4f4f, 0 4px 0.6667px rgba(0, 0, 0, 0.1), 0 0 3.3333px rgba(0, 0, 0, 0.1), 0 0.6667px 2px rgba(0, 0, 0, 0.3), 0 2px 3.3333px rgba(0, 0, 0, 0.2), 0 3.3333px 6.6667px rgba(0, 0, 0, 0.25), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.2), 0 13.3333px 13.3333px rgba(0, 0, 0, 0.15);
   }
   section.article-header div.header-content h3 {
     padding: .1rem .2rem .2rem;
@@ -401,7 +401,7 @@ section.article-header div.header-content {
     font-size: 1.35rem;
     text-transform: uppercase;
     color: #ffffff;
-    text-shadow: 0 0.3333px 0 #cccccc, 0 0.6667px 0 #c9c9c9, 0 1px 0 #bbbbbb, 0 1.3333px 0 #b9b9b9, 0 1.6667px 0 #aaaaaa, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 0.3333px 0 #afafaf, 0 0.6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
     /*.rgb-black(); text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888,
                      0 1.5px .5px rgba(@rval,@gval,@bval,.1),
                      0 0 2.5px rgba(@rval,@gval,@bval,.1),
@@ -410,7 +410,7 @@ section.article-header div.header-content {
                      0 0 .5px #000, 0 1.5px 1px #000;*/
   }
   section.article-header div.header-content h3 > mark.highlight {
-    text-shadow: 0 0.3333px 0 #8b9fa2, 0 0.6667px 0 #899da0, 0 1px 0 #809295, 0 1.3333px 0 #7e9093, 0 1.6667px 0 #748587, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
   }
 }
 section.halves div.column p {
