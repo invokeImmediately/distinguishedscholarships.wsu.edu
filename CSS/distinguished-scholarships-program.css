@@ -409,6 +409,9 @@ section.article-header div.header-content {
                      0 1px 2.5px rgba(@rval,@gval,@bval,.2),
                      0 0 .5px #000, 0 1.5px 1px #000;*/
   }
+  section.article-header div.header-content h3 > mark.highlight {
+    text-shadow: 0 0.3333px 0 #8b9fa2, 0 0.6667px 0 #899da0, 0 1px 0 #809295, 0 1.3333px 0 #7e9093, 0 1.6667px 0 #748587, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
+  }
 }
 section.halves div.column p {
   text-align: left;
