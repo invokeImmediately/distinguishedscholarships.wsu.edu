@@ -1,11 +1,22 @@
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 body {
-	background: url(/wp-content/uploads/sites/50/2015/03/DSP-Logo-Tiling_3x3_black-red-gold_v3.png) left top fixed repeat, #fff url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
+    @media all and (max-width: @v-wdscrn-bckgrnd) {
+        background: @hex-black;
+    }
+    @media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
+        background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png) repeat-y fixed right top, @hex-black  url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg) repeat-y fixed right top;
+    }
+    @media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
+        background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed right top, @hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed right top;
+    }
+    @media all and (min-width: (@v-wqxga-width+1)) {
+        background: @hex-black;
+    }
 }
 
 main {
-	background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+	background: @hex-white url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
 
 #binder {
