@@ -3817,8 +3817,25 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
-body {
-  background: url(/wp-content/uploads/sites/50/2015/03/DSP-Logo-Tiling_3x3_black-red-gold_v3.png) left top fixed repeat, #ffffff url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
+@media all and (max-width: 1440px) {
+  body {
+    background: #000000;
+  }
+}
+@media all and (min-width: 1441px) and (max-width: 1920px) {
+  body {
+    background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.jpg) right top fixed repeat-y, #000000 url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
+  }
+}
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  body {
+    background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.jpg) right top fixed repeat-y, #000000 url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
+  }
+}
+@media all and (min-width: 2561px) {
+  body {
+    background: #000000;
+  }
 }
 main {
   background: #ffffff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
