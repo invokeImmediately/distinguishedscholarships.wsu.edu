@@ -7,6 +7,7 @@ concat([
  '../WSU-UE---JS/jQuery.autoScrollingImages.js',
  '../WSU-UE---JS/jQuery.cookieObjs.js',
  '../WSU-UE---JS/jQuery.cycle2.js',
+ '../WSU-UE---JS/jQuery.forms.js',
  '../WSU-UE---JS/jquery.media.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.textResize.js',
