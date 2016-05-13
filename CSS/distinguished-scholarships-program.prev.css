@@ -442,12 +442,12 @@ section.article-header div.header-content {
 @media screen {
 	section.article-header div.header-content h1,section.article-header div.header-content h2 {
 		color: #fff;
-		text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 	}
 	
 	section.article-header div.header-content h1 {
 		font-size: 70px;
 		line-height: 1.0714285714286em;
+		text-shadow: 0 1px 0 #afafaf, 0 2px 0 #989898, 0 3px 0 #7f7f7f, 0 4px 0 #686868, 0 5px 0 #4f4f4f, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 	}
 	
 	section.article-header div.header-content h2 {
@@ -455,6 +455,7 @@ section.article-header div.header-content {
 		font-size: 3.0238rem;
 		line-height: .8em;
 		text-transform: uppercase;
+		text-shadow: 0 .67px 0 #afafaf, 0 1.33px 0 #989898, 0 2px 0 #7f7f7f, 0 2.67px 0 #686868, 0 3.33px 0 #4f4f4f, 0 4px .67px rgba(0,0,0,.1), 0 0 3.33px rgba(0,0,0,.1), 0 .67px 2px rgba(0,0,0,.3), 0 2px 3.33px rgba(0,0,0,.2), 0 3.33px 6.67px rgba(0,0,0,.25), 0 6.67px 6.67px rgba(0,0,0,.2), 0 13.33px 13.33px rgba(0,0,0,.15);
 	}
 	
 	section.article-header div.header-content h3 {
@@ -466,7 +467,11 @@ section.article-header div.header-content {
 		font-size: 1.35rem;
 		text-transform: uppercase;
 		color: #fff;
-		text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888, 0 1.5px .5px rgba(152,30,50,.1), 0 0 2.5px rgba(152,30,50,.1), 0 .5px 1.5px rgba(152,30,50,.3), 0 1px 2.5px rgba(152,30,50,.2), 0 0 .5px #000, 0 1.5px 1px #000;
+		text-shadow: 0 .33px 0 #afafaf, 0 .67px 0 #989898, 0 1px 0 #7f7f7f, 0 1.33px 0 #686868, 0 1.67px 0 #4f4f4f, 0 2px .33px rgba(0,0,0,.1), 0 0 1.67px rgba(0,0,0,.1), 0 .33px 1px rgba(0,0,0,.3), 0 1px 1.67px rgba(0,0,0,.2), 0 1.67px 3.33px rgba(0,0,0,.25), 0 3.33px 3.33px rgba(0,0,0,.2), 0 6.67px 6.67px rgba(0,0,0,.15);
+	}
+	
+	section.article-header div.header-content h3>mark.highlight {
+		text-shadow: 0 .33px 0 #77898b, 0 .67px 0 #687779, 0 1px 0 #576365, 0 1.33px 0 #475153, 0 1.67px 0 #363e3f, 0 2px .33px rgba(0,0,0,.1), 0 0 1.67px rgba(0,0,0,.1), 0 .33px 1px rgba(0,0,0,.3), 0 1px 1.67px rgba(0,0,0,.2), 0 1.67px 3.33px rgba(0,0,0,.25), 0 3.33px 3.33px rgba(0,0,0,.2), 0 6.67px 6.67px rgba(0,0,0,.15);
 	}
 }
 
@@ -4202,8 +4207,28 @@ div.auto-scroller ul li {
 	list-style-image: none;
 }
 
-body {
-	background: url(/wp-content/uploads/sites/50/2015/03/DSP-Logo-Tiling_3x3_black-red-gold_v3.png) left top fixed repeat, #fff url(/wp-content/uploads/sites/50/2015/03/bg-431-gray-0.26-K.jpg) left top repeat fixed;
+@media all and (max-width:1440px) {
+	body {
+		background: #000;
+	}
+}
+
+@media all and (min-width:1441px) and (max-width:1920px) {
+	body {
+		background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png) repeat-y fixed right top, #000 url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg) repeat-y fixed right top;
+	}
+}
+
+@media all and (min-width:1921px) and (max-width:2560px) {
+	body {
+		background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed right top, #000 url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed right top;
+	}
+}
+
+@media all and (min-width:2561px) {
+	body {
+		background: #000;
+	}
 }
 
 main {
