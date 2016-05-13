@@ -487,6 +487,36 @@ section.halves div.column p {
     top: 1rem;
   }
 }
+@media all and (min-width: 694px) {
+  section.thirds img.show-when-adjacent {
+    width: 100%;
+  }
+}
+@media all and (max-width: 693px) {
+  section.thirds img.show-when-adjacent {
+    display: none;
+  }
+}
+@media all and (min-width: 694px) {
+  section.thirds img.show-when-stacked {
+    display: none;
+  }
+}
+@media all and (max-width: 693px) {
+  section.thirds img.show-when-stacked {
+    width: 100%;
+  }
+}
+@media all and (min-width: 694px) {
+  section.thirds div.column p {
+    text-align: left;
+  }
+}
+@media all and (max-width: 480px) {
+  section.thirds div.column p {
+    text-align: left;
+  }
+}
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -2491,6 +2521,10 @@ span.has-tool-tip:hover {
 cite.article-author {
   display: none;
 }
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++ IMG selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
 img.autoScaled {
   height: auto;
   width: 100%;
@@ -2982,24 +3016,32 @@ div.column .gform_wrapper label.gfield_label {
 div.column .gform_wrapper ul:last-child {
   padding-bottom: 0;
 }
-div.column .gform_wrapper .gform_body > ul > li:not(.gsection):not(.gfield_html) + li:not(.gsection):not(.no-top-border)::before {
+div.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before,
+div.column .gform_wrapper .gform_body > ul > li.has-top-spacer:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
+  content: "";
   display: block;
   width: 95%;
   height: 0;
   margin: 2rem auto 0;
-  /*.rgb-dark-gray(); border-top: 1px dashed rgba(@rval,@gval,@bval,0.3333);
-                 border-bottom: 1px dashed rgba(160,160,160,0.25);*/
-  content: "";
+}
+div.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
+  border-top: 1px dashed rgba(94, 106, 113, 0.3333);
+  border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
 }
 div.column .gform_wrapper #extensions_message {
   padding-left: 1rem;
 }
+div.column li.gfield > div.ginput_complex > span > label {
+  color: #8e7f88;
+}
 .oue-gf-rqrd-input input,
 .oue-gf-rqrd-select input,
-.oue-gf-hghlghts-rqrd input,
+.oue-gf-hghlghts-rqrd-input input,
+.oue-gf-hghlghts-rqrd-select input,
 .oue-gf-rqrd-input select,
 .oue-gf-rqrd-select select,
-.oue-gf-hghlghts-rqrd select {
+.oue-gf-hghlghts-rqrd-input select,
+.oue-gf-hghlghts-rqrd-select select {
   transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
@@ -3007,18 +3049,22 @@ div.column .gform_wrapper #extensions_message {
 }
 .oue-gf-rqrd-input input:focus,
 .oue-gf-rqrd-select input:focus,
-.oue-gf-hghlghts-rqrd input:focus,
+.oue-gf-hghlghts-rqrd-input input:focus,
+.oue-gf-hghlghts-rqrd-select input:focus,
 .oue-gf-rqrd-input select:focus,
 .oue-gf-rqrd-select select:focus,
-.oue-gf-hghlghts-rqrd select:focus {
+.oue-gf-hghlghts-rqrd-input select:focus,
+.oue-gf-hghlghts-rqrd-select select:focus {
   background-color: #edf3f4;
 }
 .oue-gf-rqrd-input.gfield_contains_required input:not(.gf-value-entered):not(:focus),
 .oue-gf-rqrd-select.gfield_contains_required input:not(.gf-value-entered):not(:focus),
-.oue-gf-hghlghts-rqrd.gfield_contains_required input:not(.gf-value-entered):not(:focus),
+.oue-gf-hghlghts-rqrd-input.gfield_contains_required input:not(.gf-value-entered):not(:focus),
+.oue-gf-hghlghts-rqrd-select.gfield_contains_required input:not(.gf-value-entered):not(:focus),
 .oue-gf-rqrd-input.gfield_contains_required select:not(.gf-value-entered):not(:focus),
 .oue-gf-rqrd-select.gfield_contains_required select:not(.gf-value-entered):not(:focus),
-.oue-gf-hghlghts-rqrd.gfield_contains_required select:not(.gf-value-entered):not(:focus) {
+.oue-gf-hghlghts-rqrd-input.gfield_contains_required select:not(.gf-value-entered):not(:focus),
+.oue-gf-hghlghts-rqrd-select.gfield_contains_required select:not(.gf-value-entered):not(:focus) {
   background-color: rgba(255, 0, 0, 0.1);
 }
 .oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox,
