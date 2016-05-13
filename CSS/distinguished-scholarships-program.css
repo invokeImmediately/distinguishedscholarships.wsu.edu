@@ -3056,10 +3056,9 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 .oue-gf-rqrd-select select,
 .oue-gf-hghlghts-rqrd-input select,
 .oue-gf-hghlghts-rqrd-select select {
-  transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 .oue-gf-rqrd-input input:focus,
 .oue-gf-rqrd-select input:focus,
@@ -3069,7 +3068,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 .oue-gf-rqrd-select select:focus,
 .oue-gf-hghlghts-rqrd-input select:focus,
 .oue-gf-hghlghts-rqrd-select select:focus {
-  background-color: #edf3f4;
+  background-color: #edf3f4 !important;
 }
 .oue-gf-rqrd-input.gfield_contains_required input:not(.gf-value-entered):not(:focus),
 .oue-gf-rqrd-select.gfield_contains_required input:not(.gf-value-entered):not(:focus),
@@ -3085,10 +3084,9 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 .oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox,
 .oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_radio,
 .oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_radio {
-  transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 .oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),
 .oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),
@@ -3098,10 +3096,9 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 }
 .oue-gf-rqrd-txtarea textarea,
 .oue-gf-hghlghts-rqrd-txtarea textarea {
-  transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 .oue-gf-rqrd-txtarea textarea:focus,
 .oue-gf-hghlghts-rqrd-txtarea textarea:focus {
@@ -3112,10 +3109,9 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   background-color: rgba(255, 0, 0, 0.1);
 }
 .oue-gf-actvtr-checkbox {
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 .oue-gf-actvtr-checkbox.gf-activated {
   display: none !important;
