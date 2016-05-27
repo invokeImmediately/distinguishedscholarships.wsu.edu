@@ -447,24 +447,27 @@ section.halves div.column p {
     max-width: 800px;
   }
 }
+section.side-right div.column.two p {
+  text-align: left;
+}
 @media all and (min-width: 1051px) {
   section.side-right.large-format-friendly:first-child,
-  section.row.side-right.large-format-friendly:first-child {
+  section.side-right.row.side-right.large-format-friendly:first-child {
     padding-top: 1rem;
   }
   section.side-right.large-format-friendly div.column.one,
-  section.row.side-right.large-format-friendly div.column.one {
+  section.side-right.row.side-right.large-format-friendly div.column.one {
     width: 800px;
   }
   section.side-right.large-format-friendly div.column.two,
-  section.row.side-right.large-format-friendly div.column.two {
+  section.side-right.row.side-right.large-format-friendly div.column.two {
     width: calc(100% -  800px );
     height: 0;
     position: relative;
     opacity: 0;
   }
   section.side-right.large-format-friendly div.column.two:before,
-  section.row.side-right.large-format-friendly div.column.two:before {
+  section.side-right.row.side-right.large-format-friendly div.column.two:before {
     content: "";
     position: absolute;
     top: 0;
@@ -476,7 +479,7 @@ section.halves div.column p {
 }
 @media all and (max-width: 1050px) {
   section.side-right.large-format-friendly div.column.one,
-  section.row.side-right.large-format-friendly div.column.one {
+  section.side-right.row.side-right.large-format-friendly div.column.one {
     width: 100%;
     max-width: 800px;
     float: none;
@@ -485,7 +488,7 @@ section.halves div.column p {
     padding-right: 2rem;
   }
   section.side-right.large-format-friendly div.column.two,
-  section.row.side-right.large-format-friendly div.column.two {
+  section.side-right.row.side-right.large-format-friendly div.column.two {
     display: none;
   }
 }
@@ -4472,7 +4475,7 @@ ul.application-steps > li > p {
 ul.application-steps > li > *:last-child {
   padding-bottom: 0.5rem;
 }
-a.recommend-button {
+div.column a.recommend-button {
   display: block;
   position: relative;
   padding: 1em;
@@ -4484,7 +4487,7 @@ a.recommend-button {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-a.recommend-button:before {
+div.column a.recommend-button:before {
   content: "";
   position: absolute;
   top: 2px;
@@ -4495,7 +4498,7 @@ a.recommend-button:before {
   border-top-right-radius: 5px;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 }
-a.recommend-button:after {
+div.column a.recommend-button:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -4506,7 +4509,7 @@ a.recommend-button:after {
   border-bottom-right-radius: 7px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
-a.recommend-button:hover {
+div.column a.recommend-button:hover {
   background-color: #c60c30;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 0 10px rgba(198, 12, 48, 0.3333);
 }
