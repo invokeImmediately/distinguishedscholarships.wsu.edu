@@ -3945,7 +3945,7 @@ main {
 }
 #binder {
   border-right: 1px solid rgba(239, 241, 240, 0.5);
-  box-shadow: 5px 0 5px rgba(239, 241, 240, 0.5);
+  box-shadow: 5px 0 5px rgba(70, 84, 78, 0.5);
 }
 #jacket {
   background-repeat: no-repeat;
