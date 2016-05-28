@@ -7,6 +7,9 @@ img.shiftToCenter {
   margin-left: auto;
 }
 .spaces-top-nrml {
+  margin-top: 4rem;
+}
+.spaces-top-nrml {
   margin-top: 2rem;
 }
 .spaces-top-half {
@@ -14,6 +17,9 @@ img.shiftToCenter {
 }
 .spaces-top-qrtr {
   margin-top: 0.5rem;
+}
+.spaces-rgt-nrml {
+  margin-right: 4rem;
 }
 .spaces-rgt-nrml {
   margin-right: 2rem;
@@ -24,6 +30,9 @@ img.shiftToCenter {
 .spaces-rgt-qrtr {
   margin-right: 0.5rem;
 }
+.spaces-btm-full {
+  margin-bottom: 4rem;
+}
 .spaces-btm-nrml {
   margin-bottom: 2rem;
 }
@@ -32,6 +41,9 @@ img.shiftToCenter {
 }
 .spaces-btm-qrtr {
   margin-bottom: 0.5rem;
+}
+.spaces-lft-nrml {
+  margin-left: 4rem;
 }
 .spaces-lft-nrml {
   margin-left: 2rem;
@@ -2927,6 +2939,7 @@ input.read-more-state ~ p label.read-more-trigger:before {
 }
 label.read-more-trigger {
   display: inline-block;
+  position: relative;
   padding: 0 .5rem;
   background-color: rgba(255, 184, 28, 0.25);
   border: 1px solid #2a3033;
@@ -2934,10 +2947,9 @@ label.read-more-trigger {
   font-size: .9rem;
   line-height: 2;
   color: #5e6a71;
-  transition: .333s ease;
-  -webkit-transition: .333s ease;
-  -moz-transition: .333s ease;
-  -o-transition: .333s ease;
+  -webkit-transition: all 0.3333s ease;
+  -moz-transition: all 0.3333s ease;
+  transition: all 0.3333s ease;
   -webkit-animation: orange-glow 5s linear infinite;
   -moz-animation: orange-glow 5s linear infinite;
   animation: orange-glow 5s linear infinite;
@@ -2990,6 +3002,28 @@ label.read-more-trigger {
     background-color: rgba(255, 184, 28, 0.25);
     box-shadow: 0 0 9px rgba(255, 184, 28, 0);
   }
+}
+label.read-more-trigger:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  left: 2px;
+  height: 50%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+}
+label.read-more-trigger:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  left: 2px;
+  height: 50%;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
 label.read-more-trigger:hover {
   -webkit-animation: none;
