@@ -1021,9 +1021,6 @@ div.column p.align-left {
     text-align: left;
   }
 }
-div.column p:not(:last-child):not(.no-btm-margin) {
-  margin-bottom: 1em;
-}
 div.column p.btm-margin-override:not(:last-child) {
   margin-bottom: 0;
 }
@@ -1201,6 +1198,12 @@ div.column p.banner-text-orange-with-towers {
   div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
+}
+main section.row:not(:last-child) > div.column p:not(.no-btm-margin) {
+  margin-bottom: 1em;
+}
+main section.row:last-child > div.column > p:not(:last-child):not(.no-btm-margin) {
+  margin-bottom: 1em;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
