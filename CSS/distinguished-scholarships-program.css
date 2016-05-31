@@ -1202,7 +1202,8 @@ div.column p.banner-text-orange-with-towers {
 main section.row > div.column p:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
-main section.row:last-child > div.column > p:last-child {
+main section.row:last-child > div.column > p:last-child,
+main section.row:last-child > div.column > :not(p):last-child p:last-child {
   margin-bottom: 0;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
