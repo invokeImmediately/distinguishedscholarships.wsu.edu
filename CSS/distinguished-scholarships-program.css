@@ -1199,11 +1199,11 @@ div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
 }
-main section.row:not(:last-child) > div.column p:not(.no-btm-margin) {
+main section.row > div.column p:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
-main section.row:last-child > div.column > p:not(:last-child):not(.no-btm-margin) {
-  margin-bottom: 1em;
+main section.row:last-child > div.column > p:last-child {
+  margin-bottom: 0;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
