@@ -37,7 +37,7 @@
                 $this.val(inputText.slice(0,9));
             }
         });
-        $wsuIdInputs.change(function () {
+        $wsuIdInputs.blur(function () {
             var $this = $(this);
             var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
             var inputText = $this.val();
