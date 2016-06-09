@@ -31,6 +31,10 @@
             var inputText = $this.val();
             if (regExMask.exec(inputText) != null) {
                 $this.val(inputText.replace(regExMask, ""));
+                inputText = $this.val();
+            }
+            if (inputText.length > 9) {
+                $this.val(inputText.slice(0,8));
             }
         });
         $wsuIdInputs.change(function () {
