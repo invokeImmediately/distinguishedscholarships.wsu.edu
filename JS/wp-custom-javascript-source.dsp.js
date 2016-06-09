@@ -3,6 +3,8 @@
  CUSTOM JQUERY-BASED DYNAMIC CONTENT
  *********************************************************************************************************************/
 (function ($) {
+    "use strict";
+    
 	$(document).ready(function () {
         /**********************************************************************************************
          * Tweak HTML source to work around some quirks of WordPress setup                            *
@@ -31,7 +33,8 @@
                 $this.val(inputText.replace(regExMask, ""));
                 $this.change();
             }
-        }).blur(function () {
+        });
+        $wsuIdInputs.blur(function () {
             var $this = $(this);
             var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
             var inputText = $this.val();
