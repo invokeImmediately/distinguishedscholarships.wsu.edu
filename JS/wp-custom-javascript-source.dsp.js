@@ -34,7 +34,7 @@
                 inputText = $this.val();
             }
             if (inputText.length > 9) {
-                $this.val(inputText.slice(0,8));
+                $this.val(inputText.slice(0,9));
             }
         });
         $wsuIdInputs.change(function () {
