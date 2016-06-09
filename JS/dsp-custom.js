@@ -27,7 +27,10 @@
             var $this = $(this);
             var regExMask = /[^0-9]+/g;
             var inputText = $this.val();
-            $this.val(inputText.replace(regExMask, ""));
+            if (regExMask.exec(inputText) != null) {
+                $this.val(inputText.replace(regExMask, ""));
+                $this.change();
+            }
         }).blur(function () {
             var $this = $(this);
             var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
