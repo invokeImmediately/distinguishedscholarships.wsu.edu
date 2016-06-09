@@ -25,16 +25,15 @@
     
     function InitWsuIdInputs(slctrInputs) {
         var $wsuIdInputs = $(slctrInputs).find("input[type='text']");
-        $wsuIdInputs.change(function () {
+        $wsuIdInputs.on("keyup paste", function () {
             var $this = $(this);
             var regExMask = /[^0-9]+/g;
             var inputText = $this.val();
             if (regExMask.exec(inputText) != null) {
                 $this.val(inputText.replace(regExMask, ""));
-                $this.change();
             }
         });
-        $wsuIdInputs.blur(function () {
+        $wsuIdInputs.change(function () {
             var $this = $(this);
             var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
             var inputText = $this.val();
