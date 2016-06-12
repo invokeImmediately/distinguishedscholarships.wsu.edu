@@ -20,8 +20,8 @@ main {
 }
 
 #binder {
-	.rgb-bright-gray(); border-right: 1px solid rgba(@rval, @bval, @gval,0.5);
-	.rgb-darker-gray(); box-shadow: 5px 0 5px rgba(@rval, @bval, @gval,0.5);
+	& { .rgb-gray(); border-right: 1px solid rgba(@rval, @bval, @gval,0.5); }
+	& { .rgb-darker-gray(); box-shadow: 5px 0 5px rgba(@rval, @bval, @gval,0.5); }
 }
 
 #jacket {
@@ -593,6 +593,6 @@ div.column a.recommend-button {
         background-color: @hex-light-crimson;
         & { @shadow-clr: returned; .getRgbaForProp(@shadow-clr, @hex-black, 0.5);
          @glow-clr: returned-2; .getRgbaForProp(@glow-clr, @hex-light-crimson, 0.3333);
-         box-shadow: 0 2px 2px @@shadow-clr, 0 0 10px @@glow-clr; }
+         box-shadow: 0 2px 2px @@shadow-clr, 0 0 18px @@glow-clr; }
     }
 }
