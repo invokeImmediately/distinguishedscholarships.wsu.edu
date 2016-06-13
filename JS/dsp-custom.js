@@ -3,6 +3,8 @@
  CUSTOM JQUERY-BASED DYNAMIC CONTENT
  *********************************************************************************************************************/
 (function ($) {
+    "use strict";
+    
 	$(document).ready(function () {
         /**********************************************************************************************
          * Tweak HTML source to work around some quirks of WordPress setup                            *
@@ -23,15 +25,19 @@
     
     function InitWsuIdInputs(slctrInputs) {
         var $wsuIdInputs = $(slctrInputs).find("input[type='text']");
-        $wsuIdInputs.change(function () {
+        $wsuIdInputs.on("keyup paste", function () {
             var $this = $(this);
             var regExMask = /[^0-9]+/g;
             var inputText = $this.val();
             if (regExMask.exec(inputText) != null) {
                 $this.val(inputText.replace(regExMask, ""));
-                $this.change();
+                inputText = $this.val();
             }
-        }).blur(function () {
+            if (inputText.length > 9) {
+                $this.val(inputText.slice(0,9));
+            }
+        });
+        $wsuIdInputs.blur(function () {
             var $this = $(this);
             var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
             var inputText = $this.val();
