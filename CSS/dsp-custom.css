@@ -2586,6 +2586,26 @@ div.column h4 > a,
 .gform_heading h3.gform_title > a {
   line-height: 1.35em;
 }
+div.column h1 > a:not(.stays-underlined),
+div.column h2 > a:not(.stays-underlined),
+div.column h3 > a:not(.stays-underlined),
+div.column h4 > a:not(.stays-underlined),
+div.column h1 > a:not(.stays-underlined):hover,
+div.column h2 > a:not(.stays-underlined):hover,
+div.column h3 > a:not(.stays-underlined):hover,
+div.column h4 > a:not(.stays-underlined):hover,
+.gform_heading h3.gform_title > a:not(.stays-underlined),
+.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
+  border-bottom: none;
+  box-shadow: none;
+}
+div.column h1 > a:not(.stays-underlined):hover,
+div.column h2 > a:not(.stays-underlined):hover,
+div.column h3 > a:not(.stays-underlined):hover,
+div.column h4 > a:not(.stays-underlined):hover,
+.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
+  background: transparent;
+}
 a.vpue-tooltip {
   position: relative;
   border-bottom: dotted 1px #b67233;
