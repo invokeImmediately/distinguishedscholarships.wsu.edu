@@ -4565,38 +4565,38 @@ header.main-header {
 @media all {
   div.column aside {
     line-height: 1.25em;
-    font-size: 0.92195445em;
+    font-size: 0.85000001em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column aside {
-    font-size: 1em;
+    font-size: 0.92195445em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column aside {
-    font-size: 0.92195445em;
+    font-size: 0.85000001em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column aside {
-    font-size: 1em;
+    font-size: 0.92195445em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column aside {
-    font-size: 0.92195445em;
+    font-size: 0.85000001em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column aside {
-    font-size: 0.85000001em;
+    font-size: 0.78366129em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column aside {
-    font-size: 0.78366129em;
+    font-size: 0.72250001em;
     text-align: left;
   }
 }
