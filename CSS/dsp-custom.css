@@ -458,7 +458,7 @@ div.column .soft-gray-border {
   }
 }
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 div.column article.post {
   padding: 1em;
@@ -882,7 +882,7 @@ div.column h1 {
 }
 @media all and (min-width: 1073px) {
   div.column h1 {
-    font-size: 3.25395685em;
+    font-size: 3.19829424em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -892,7 +892,7 @@ div.column h1 {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h1 {
-    font-size: 3.25395685em;
+    font-size: 3.19829424em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -902,13 +902,13 @@ div.column h1 {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h1 {
-    font-size: 2.76586335em;
+    font-size: 2.814em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h1 {
-    font-size: 2.55000002em;
+    font-size: 2.639532em;
     text-align: left;
   }
 }
@@ -940,7 +940,7 @@ div.column h2 {
 }
 @media all and (min-width: 1073px) {
   div.column h2 {
-    font-size: 2.38623502em;
+    font-size: 2.34541578em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -950,7 +950,7 @@ div.column h2 {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h2 {
-    font-size: 2.38623502em;
+    font-size: 2.34541578em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -960,13 +960,13 @@ div.column h2 {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h2 {
-    font-size: 2.02829979em;
+    font-size: 2.0636em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h2 {
-    font-size: 1.87000002em;
+    font-size: 1.9356568em;
     text-align: left;
   }
 }
@@ -1044,7 +1044,7 @@ div.column h3,
 @media all and (min-width: 1073px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.84390888em;
+    font-size: 1.81236674em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1056,7 +1056,7 @@ div.column h3,
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.84390888em;
+    font-size: 1.81236674em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1068,14 +1068,14 @@ div.column h3,
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.56732257em;
+    font-size: 1.5946em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h3,
   .gform_heading h3.gform_title {
-    font-size: 1.44500001em;
+    font-size: 1.4957348em;
     text-align: left;
   }
 }
@@ -1142,7 +1142,7 @@ div.column h4 {
 }
 @media all and (min-width: 1073px) {
   div.column h4 {
-    font-size: 1.5185132em;
+    font-size: 1.49253731em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1152,7 +1152,7 @@ div.column h4 {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h4 {
-    font-size: 1.5185132em;
+    font-size: 1.49253731em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1162,13 +1162,13 @@ div.column h4 {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h4 {
-    font-size: 1.29073623em;
+    font-size: 1.3132em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h4 {
-    font-size: 1.19000001em;
+    font-size: 1.2317816em;
     text-align: left;
   }
 }
@@ -1205,7 +1205,7 @@ div.column h2.crimson {
 @media all and (min-width: 1073px) {
   div.column header.article-header h1.article-title,
   div.column header.article-header h2.article-title {
-    font-size: 2.16930457em;
+    font-size: 2.13219616em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1217,7 +1217,7 @@ div.column h2.crimson {
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column header.article-header h1.article-title,
   div.column header.article-header h2.article-title {
-    font-size: 2.16930457em;
+    font-size: 2.13219616em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1229,14 +1229,14 @@ div.column h2.crimson {
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column header.article-header h1.article-title,
   div.column header.article-header h2.article-title {
-    font-size: 1.8439089em;
+    font-size: 1.876em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column header.article-header h1.article-title,
   div.column header.article-header h2.article-title {
-    font-size: 1.70000002em;
+    font-size: 1.759688em;
     text-align: left;
   }
 }
@@ -1347,7 +1347,7 @@ div.column p {
 }
 @media all and (min-width: 1073px) {
   div.column p {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1357,7 +1357,7 @@ div.column p {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column p {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1367,13 +1367,13 @@ div.column p {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column p {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column p {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
     text-align: left;
   }
 }
@@ -1403,7 +1403,7 @@ div.column p.article-deck {
 }
 @media all and (min-width: 1073px) {
   div.column p.article-deck {
-    font-size: 1.30158274em;
+    font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1413,7 +1413,7 @@ div.column p.article-deck {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column p.article-deck {
-    font-size: 1.30158274em;
+    font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1423,13 +1423,13 @@ div.column p.article-deck {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column p.article-deck {
-    font-size: 1.10634534em;
+    font-size: 1.1256em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column p.article-deck {
-    font-size: 1.02000001em;
+    font-size: 1.0558128em;
     text-align: left;
   }
 }
@@ -1450,7 +1450,7 @@ div.column p.article-tagline {
 }
 @media all and (min-width: 1073px) {
   div.column p.article-tagline {
-    font-size: 1.57274581em;
+    font-size: 1.54584222em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1460,7 +1460,7 @@ div.column p.article-tagline {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column p.article-tagline {
-    font-size: 1.57274581em;
+    font-size: 1.54584222em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1470,13 +1470,13 @@ div.column p.article-tagline {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column p.article-tagline {
-    font-size: 1.33683395em;
+    font-size: 1.3601em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column p.article-tagline {
-    font-size: 1.23250001em;
+    font-size: 1.2757738em;
     text-align: left;
   }
 }
@@ -1497,7 +1497,7 @@ div.column p.article-tagline.sans > span.lead-in {
 }
 @media all and (min-width: 1073px) {
   div.column p.article-tagline.home {
-    font-size: 2.06083961em;
+    font-size: 2.02558662em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -1507,7 +1507,7 @@ div.column p.article-tagline.sans > span.lead-in {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column p.article-tagline.home {
-    font-size: 2.06083961em;
+    font-size: 2.02558662em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -1517,13 +1517,13 @@ div.column p.article-tagline.sans > span.lead-in {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column p.article-tagline.home {
-    font-size: 1.75171369em;
+    font-size: 1.78220023em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column p.article-tagline.home {
-    font-size: 1.61500023em;
+    font-size: 1.67170382em;
     text-align: left;
   }
 }
@@ -1577,7 +1577,7 @@ div.column p.banner-text-gray-with-towers {
 }
 @media all and (max-width: 1049px) {
   div.column p.banner-text-gray-with-towers {
-    font-size: 1.15244306rem;
+    font-size: 1.1725rem;
   }
 }
 div.column p.banner-text {
@@ -2544,7 +2544,7 @@ div.column ul {
 }
 @media all and (min-width: 1073px) {
   div.column ul {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -2554,7 +2554,7 @@ div.column ul {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column ul {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -2564,13 +2564,13 @@ div.column ul {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column ul {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column ul {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
     text-align: left;
   }
 }
@@ -2615,7 +2615,7 @@ ul.application-steps > li {
   ul.content-boxes > li p,
   ul.application-steps > li p {
     line-height: 1.25em;
-    font-size: 0.92195445em;
+    font-size: 0.938em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2627,7 +2627,7 @@ ul.application-steps > li {
 @media all and (min-width: 990px) and (max-width: 1072px) {
   ul.content-boxes > li p,
   ul.application-steps > li p {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
@@ -2639,20 +2639,20 @@ ul.application-steps > li {
 @media all and (min-width: 481px) and (max-width: 791px) {
   ul.content-boxes > li p,
   ul.application-steps > li p {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   ul.content-boxes > li p,
   ul.application-steps > li p {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   ul.content-boxes > li p,
   ul.application-steps > li p {
-    font-size: 0.78366129em;
+    font-size: 0.82529367em;
     text-align: left;
   }
 }
@@ -2707,7 +2707,7 @@ div.column ol {
 }
 @media all and (min-width: 1073px) {
   div.column ol {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -2717,7 +2717,7 @@ div.column ol {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column ol {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -2727,13 +2727,13 @@ div.column ol {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column ol {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column ol {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
     text-align: left;
   }
 }
@@ -2766,7 +2766,7 @@ div.column dl.faq dt {
 }
 @media all and (min-width: 1073px) {
   div.column dl.faq dt {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
@@ -2776,7 +2776,7 @@ div.column dl.faq dt {
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column dl.faq dt {
-    font-size: 1.08465228em;
+    font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
@@ -2786,13 +2786,13 @@ div.column dl.faq dt {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column dl.faq dt {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column dl.faq dt {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
     text-align: left;
   }
 }
@@ -4565,38 +4565,38 @@ header.main-header {
 @media all {
   div.column aside {
     line-height: 1.25em;
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column aside {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column aside {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column aside {
-    font-size: 0.92195445em;
+    font-size: 0.938em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column aside {
-    font-size: 0.85000001em;
+    font-size: 0.879844em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column aside {
-    font-size: 0.78366129em;
+    font-size: 0.82529367em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column aside {
-    font-size: 0.72250001em;
+    font-size: 0.77412546em;
     text-align: left;
   }
 }
