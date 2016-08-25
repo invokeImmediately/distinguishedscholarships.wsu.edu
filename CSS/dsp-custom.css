@@ -1337,7 +1337,7 @@ footer.article-footer div.author-info {
  */
 div.column p {
   padding-bottom: 0;
-  text-align: justify;
+  text-align: left;
 }
 @media all {
   div.column p {
