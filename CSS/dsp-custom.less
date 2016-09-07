@@ -55,7 +55,8 @@ header.main-header {
  */
 div.column {
 	aside {
-		font-size: .8rem;
+		// font-size: .8rem;
+		.has-responsive-font((@v-p-sz * @v-scl-dwn * @v-scl-dwn), @v-p-lnhght);
 		p, ul {
 			font-size: inherit;
             &:not(:last-child) {
@@ -64,6 +65,9 @@ div.column {
             &:last-child:not(.no-bottom-pad) {
                 padding-bottom: 0;
             }
+		}
+		& + aside {
+			margin-top: @v-dflt-spcng;
 		}
 	}
 }
