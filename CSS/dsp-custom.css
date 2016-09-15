@@ -2260,6 +2260,7 @@ div.callout {
   border: 1px solid #F1D031;
   background-color: #FFEF93;
   color: #000;
+  line-height: 1.2em;
   border-radius: 3px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
@@ -5261,7 +5262,7 @@ div.column table.calendar td.has-an-event div.day {
   color: #fff;
 }
 div.column table.calendar td.has-an-event a {
-  color: #ffffff;
+  color: #fff;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
   -webkit-transition: "color .4s linear, border .4s ease-in";
   -moz-transition: "color .4s linear, border .4s ease-in";
@@ -5404,18 +5405,19 @@ div.column table.calendar td.has-an-event.gold a:hover {
   border-bottom: 1px dotted rgba(104, 119, 126, 0.3);
 }
 div.calendar-legend {
-  background: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px rgba(194, 194, 194, 0.5);
   position: absolute;
   right: -122px;
   width: 100px;
+  box-shadow: 2px 2px 2px rgba(194, 194, 194, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
   z-index: 99164;
 }
 div.calendar-legend div.legend-title {
   color: #981e32;
-  font-size: 0.8em;
+  font-size: 0.7059em;
   font-weight: bold;
   margin: 10px;
   text-align: center;
@@ -5426,27 +5428,28 @@ div.calendar-legend div.legend-panel {
   height: 30px;
   padding: 5px;
   margin: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   font-size: 0.8em;
   line-height: 30px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   -webkit-transition: "background .2s linear";
   -moz-transition: "background .2s linear";
   transition: "background .2s linear";
 }
 div.calendar-legend div.legend-panel a {
-  color: #ffffff;
+  color: #fff;
   border-bottom: none;
+  box-shadow: none;
 }
 div.calendar-legend div.legend-panel a:hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
   border-bottom: none;
 }
 div.calendar-legend div.legend-panel span.content {
   display: inline-block;
-  line-height: 1.175;
+  line-height: 1.175em;
   vertical-align: middle;
 }
 div.calendar-legend div.legend-panel.gray {
