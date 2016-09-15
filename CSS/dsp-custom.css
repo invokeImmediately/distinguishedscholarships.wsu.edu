@@ -5254,7 +5254,7 @@ div.column table.calendar td.back-bar {
   background: rgba(94, 106, 113, 0.25);
 }
 div.column table.calendar td.has-an-event {
-  background-color: #ffffcc;
+  background-color: #464e54;
   color: #ffffff;
 }
 div.column table.calendar td.has-an-event a {
