@@ -2277,9 +2277,9 @@ div.callout.right:before {
 }
 div.callout.left {
   left: 0;
-  -webkit-transform: "~translate(-110px,-50%)";
-  -moz-transform: "~translate(-110px,-50%)";
-  transform: "~translate(-110px,-50%)";
+  -webkit-transform: translate(-110px,-50%);
+  -moz-transform: translate(-110px,-50%);
+  transform: translate(-110px,-50%);
 }
 div.callout.left:before {
   right: -20px;
@@ -2287,9 +2287,9 @@ div.callout.left:before {
 }
 div.callout.right {
   right: 0;
-  -webkit-transform: "~translate(110px,-50%)";
-  -moz-transform: "~translate(110px,-50%)";
-  transform: "~translate(110px,-50%)";
+  -webkit-transform: translate(110px,-50%);
+  -moz-transform: translate(110px,-50%);
+  transform: translate(110px,-50%);
 }
 div.callout.right:before {
   left: -20px;
