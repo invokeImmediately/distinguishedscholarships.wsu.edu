@@ -2251,7 +2251,8 @@ main > div.page > section.row:last-child > div.column {
 }
 /*         └-----------------------------------------------------------------------------------------┘        
  */
-div.callout {
+div.callout,
+span.callout {
   position: absolute;
   top: 50%;
   width: 80px;
@@ -2265,7 +2266,9 @@ div.callout {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 div.callout.left:before,
-div.callout.right:before {
+div.callout.right:before,
+span.callout.left:before,
+span.callout.right:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2276,23 +2279,27 @@ div.callout.right:before {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-div.callout.left {
+div.callout.left,
+span.callout.left {
   left: 0;
   -webkit-transform: translate(-110px,-50%);
   -moz-transform: translate(-110px,-50%);
   transform: translate(-110px,-50%);
 }
-div.callout.left:before {
+div.callout.left:before,
+span.callout.left:before {
   right: -20px;
   border-left: 10px solid #FFEF93;
 }
-div.callout.right {
+div.callout.right,
+span.callout.right {
   right: 0;
   -webkit-transform: translate(110px,-50%);
   -moz-transform: translate(110px,-50%);
   transform: translate(110px,-50%);
 }
-div.callout.right:before {
+div.callout.right:before,
+span.callout.right:before {
   left: -20px;
   border-right: 10px solid #FFEF93;
 }
