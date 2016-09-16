@@ -2321,7 +2321,7 @@ span.callout.right:before {
 div.callout.right:after,
 span.callout.right:after {
   left: -22px;
-  border-left: 11px solid #F1D031;
+  border-right: 11px solid #F1D031;
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
