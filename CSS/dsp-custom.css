@@ -5186,7 +5186,6 @@ div.column table.calendar {
   border-spacing: 2px;
   width: 85%;
   min-width: 480px;
-  /* border-bottom: 1px solid #5E6A71; */
   background: #fff;
 }
 div.column table.calendar th {
@@ -5276,6 +5275,9 @@ div.column table.calendar td.has-an-event a {
   -moz-transition: "color .4s linear, border .4s ease-in, box-shadow .4s ease-in";
   transition: "color .4s linear, border .4s ease-in, box-shadow .4s ease-in";
 }
+div.column table.calendar td.has-an-event a:hover {
+  text-shadow: 0.0625em 0.0625em 0.0625em rgba(255, 255, 255, 0.3);
+}
 div.column table.calendar td.has-an-event.gray {
   background-color: #67767b;
 }
@@ -5288,9 +5290,9 @@ div.column table.calendar td.has-an-event.gray a:hover {
   color: #2a3033;
 }
 div.column table.calendar td.has-an-event.gray a:hover {
-  background-color: rgba(42, 48, 51, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
+  background-color: rgba(42, 48, 51, 0.2);
 }
 div.column table.calendar td.has-an-event.crimson {
   background-color: #be1a40;
