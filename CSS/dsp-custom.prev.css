@@ -2305,8 +2305,7 @@ main>div.page>section.row:last-child>div.column {
 div.callout,span.callout {
 	position: absolute;
 	top: 50%;
-	width: 80px;
-	height: 100px;
+	height: auto;
 	padding: 10px;
 	border: 1px solid #F1D031;
 	background-color: #FFEF93;
@@ -2316,23 +2315,28 @@ div.callout,span.callout {
 	box-shadow: 3px 3px 8px rgba(0,0,0,.5);
 }
 
-div.callout.left:before,div.callout.right:before,span.callout.left:before,span.callout.right:before {
+div.callout.left:after,div.callout.left:before,div.callout.right:after,div.callout.right:before,span.callout.left:after,span.callout.left:before,span.callout.right:after,span.callout.right:before {
 	content: "";
 	position: absolute;
 	top: 50%;
 	width: 0;
 	height: 0;
-	border: .8em solid transparent;
+	border: 10px solid transparent;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
+div.callout.left:after,div.callout.right:after,span.callout.left:after,span.callout.right:after {
+	border: 11px solid transparent;
+	z-index: -1;
+}
+
 div.callout.left,span.callout.left {
 	left: 0;
-	-webkit-transform: translate(-110px,-50%);
-	-moz-transform: translate(-110px,-50%);
-	transform: translate(-110px,-50%);
+	-webkit-transform: translate(-100%,-50%) translateX(-10px);
+	-moz-transform: translate(-100%,-50%) translateX(-10px);
+	transform: translate(-100%,-50%) translateX(-10px);
 }
 
 div.callout.left:before,span.callout.left:before {
@@ -2340,16 +2344,26 @@ div.callout.left:before,span.callout.left:before {
 	border-left: 10px solid #FFEF93;
 }
 
+div.callout.left:after,span.callout.left:after {
+	right: -22px;
+	border-left: 10px solid #F1D031;
+}
+
 div.callout.right,span.callout.right {
 	right: 0;
-	-webkit-transform: translate(110px,-50%);
-	-moz-transform: translate(110px,-50%);
-	transform: translate(110px,-50%);
+	-webkit-transform: translate(100%,-50%) translateX(10px);
+	-moz-transform: translate(100%,-50%) translateX(10px);
+	transform: translate(100%,-50%) translateX(10px);
 }
 
 div.callout.right:before,span.callout.right:before {
 	left: -20px;
 	border-right: 10px solid #FFEF93;
+}
+
+div.callout.right:after,span.callout.right:after {
+	left: -22px;
+	border-right: 11px solid #F1D031;
 }
 
 div.interactively-flipped-panels {
@@ -5603,15 +5617,25 @@ div.column table.calendar td.has-an-event div.day {
 }
 
 div.column table.calendar td.has-an-event a {
+	border-bottom: .0625em solid rgba(255,255,255,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(255,255,255,.3);
 	color: #fff;
-	border-bottom: 1px dotted rgba(255,255,255,.3);
-	-webkit-transition: "color .4s linear,border .4s ease-in";
-	-moz-transition: "color .4s linear,border .4s ease-in";
-	transition: "color .4s linear,border .4s ease-in";
+	-webkit-transition: "color .4s linear,border .4s ease-in,box-shadow .4s ease-in";
+	-moz-transition: "color .4s linear,border .4s ease-in,box-shadow .4s ease-in";
+	transition: "color .4s linear,border .4s ease-in,box-shadow .4s ease-in";
+}
+
+div.column table.calendar td.has-an-event a:hover {
+	text-shadow: .0625em .0625em .0625em rgba(255,255,255,.3);
 }
 
 div.column table.calendar td.has-an-event.gray {
 	background-color: #67767b;
+}
+
+div.column table.calendar td.has-an-event.gray a {
+	border-bottom: .0625em solid rgba(42,48,51,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(42,48,51,.3);
 }
 
 div.column table.calendar td.has-an-event.gray a:hover,div.column table.calendar td.has-an-event.gray div.day {
@@ -5619,12 +5643,18 @@ div.column table.calendar td.has-an-event.gray a:hover,div.column table.calendar
 }
 
 div.column table.calendar td.has-an-event.gray a:hover {
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 	background-color: rgba(42,48,51,.2);
-	border-bottom: 1px dotted rgba(42,48,51,.3);
 }
 
 div.column table.calendar td.has-an-event.crimson {
 	background-color: #be1a40;
+}
+
+div.column table.calendar td.has-an-event.crimson a {
+	border-bottom: .0625em solid rgba(218,145,165,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(218,145,165,.3);
 }
 
 div.column table.calendar td.has-an-event.crimson a:hover,div.column table.calendar td.has-an-event.crimson div.day {
@@ -5633,11 +5663,17 @@ div.column table.calendar td.has-an-event.crimson a:hover,div.column table.calen
 
 div.column table.calendar td.has-an-event.crimson a:hover {
 	background-color: rgba(219,146,166,.2);
-	border-bottom: 1px dotted rgba(219,146,166,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.orange {
 	background-color: #e95b34;
+}
+
+div.column table.calendar td.has-an-event.orange a {
+	border-bottom: .0625em solid rgba(73,46,20,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(73,46,20,.3);
 }
 
 div.column table.calendar td.has-an-event.orange a:hover,div.column table.calendar td.has-an-event.orange div.day {
@@ -5646,11 +5682,17 @@ div.column table.calendar td.has-an-event.orange a:hover,div.column table.calend
 
 div.column table.calendar td.has-an-event.orange a:hover {
 	background-color: rgba(73,46,20,.2);
-	border-bottom: 1px dotted rgba(73,46,20,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.olive {
 	background-color: #9b8b28;
+}
+
+div.column table.calendar td.has-an-event.olive a {
+	border-bottom: .0625em solid rgba(233,224,60,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(233,224,60,.3);
 }
 
 div.column table.calendar td.has-an-event.olive a:hover,div.column table.calendar td.has-an-event.olive div.day {
@@ -5659,11 +5701,17 @@ div.column table.calendar td.has-an-event.olive a:hover,div.column table.calenda
 
 div.column table.calendar td.has-an-event.olive a:hover {
 	background-color: rgba(233,244,60,.2);
-	border-bottom: 1px dotted rgba(233,244,60,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.blue {
 	background-color: #127286;
+}
+
+div.column table.calendar td.has-an-event.blue a {
+	border-bottom: .0625em solid rgba(6,198,206,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(6,198,206,.3);
 }
 
 div.column table.calendar td.has-an-event.blue a:hover,div.column table.calendar td.has-an-event.blue div.day {
@@ -5672,11 +5720,17 @@ div.column table.calendar td.has-an-event.blue a:hover,div.column table.calendar
 
 div.column table.calendar td.has-an-event.blue a:hover {
 	background-color: rgba(6,198,206,.2);
-	border-bottom: 1px dotted rgba(6,198,206,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.dark-gray {
 	background-color: #373940;
+}
+
+div.column table.calendar td.has-an-event.dark-gray a {
+	border-bottom: .0625em solid rgba(181,186,190,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(181,186,190,.3);
 }
 
 div.column table.calendar td.has-an-event.dark-gray a:hover,div.column table.calendar td.has-an-event.dark-gray div.day {
@@ -5685,11 +5739,17 @@ div.column table.calendar td.has-an-event.dark-gray a:hover,div.column table.cal
 
 div.column table.calendar td.has-an-event.dark-gray a:hover {
 	background-color: rgba(181,186,190,.2);
-	border-bottom: 1px dotted rgba(181,186,190,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.dark-brown {
 	background-color: #480f13;
+}
+
+div.column table.calendar td.has-an-event.dark-brown a {
+	border-bottom: .0625em solid rgba(203,155,110,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(203,155,110,.3);
 }
 
 div.column table.calendar td.has-an-event.dark-brown a:hover,div.column table.calendar td.has-an-event.dark-brown div.day {
@@ -5698,11 +5758,17 @@ div.column table.calendar td.has-an-event.dark-brown a:hover,div.column table.ca
 
 div.column table.calendar td.has-an-event.dark-brown a:hover {
 	background-color: rgba(203,155,110,.2);
-	border-bottom: 1px dotted rgba(203,155,110,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.brown {
 	background-color: #723f1f;
+}
+
+div.column table.calendar td.has-an-event.brown a {
+	border-bottom: .0625em solid rgba(221,190,161,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(221,190,161,.3);
 }
 
 div.column table.calendar td.has-an-event.brown a:hover,div.column table.calendar td.has-an-event.brown div.day {
@@ -5711,11 +5777,17 @@ div.column table.calendar td.has-an-event.brown a:hover,div.column table.calenda
 
 div.column table.calendar td.has-an-event.brown a:hover {
 	background-color: rgba(221,190,161,.2);
-	border-bottom: 1px dotted rgba(221,190,161,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.dark-olive {
 	background-color: #453a16;
+}
+
+div.column table.calendar td.has-an-event.dark-olive a {
+	border-bottom: .0625em solid rgba(173,164,0,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(173,164,0,.3);
 }
 
 div.column table.calendar td.has-an-event.dark-olive a:hover,div.column table.calendar td.has-an-event.dark-olive div.day {
@@ -5724,11 +5796,17 @@ div.column table.calendar td.has-an-event.dark-olive a:hover,div.column table.ca
 
 div.column table.calendar td.has-an-event.dark-olive a:hover {
 	background-color: rgba(173,164,0,.2);
-	border-bottom: 1px dotted rgba(173,164,0,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.dark-blue {
 	background-color: #12313c;
+}
+
+div.column table.calendar td.has-an-event.dark-blue a {
+	border-bottom: .0625em solid rgba(0,165,189,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(0,165,189,.3);
 }
 
 div.column table.calendar td.has-an-event.dark-blue a:hover,div.column table.calendar td.has-an-event.dark-blue div.day {
@@ -5737,11 +5815,17 @@ div.column table.calendar td.has-an-event.dark-blue a:hover,div.column table.cal
 
 div.column table.calendar td.has-an-event.dark-blue a:hover {
 	background-color: rgba(0,165,189,.2);
-	border-bottom: 1px dotted rgba(0,165,189,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.black {
 	background-color: #0f0f10;
+}
+
+div.column table.calendar td.has-an-event.black a {
+	border-bottom: .0625em solid rgba(181,186,190,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(181,186,190,.3);
 }
 
 div.column table.calendar td.has-an-event.black a:hover,div.column table.calendar td.has-an-event.black div.day {
@@ -5750,7 +5834,8 @@ div.column table.calendar td.has-an-event.black a:hover,div.column table.calenda
 
 div.column table.calendar td.has-an-event.black a:hover {
 	background-color: rgba(181,186,190,.2);
-	border-bottom: 1px dotted rgba(181,186,190,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.column table.calendar td.has-an-event.gold {
@@ -5764,12 +5849,15 @@ div.column table.calendar td.has-an-event.gold div.day {
 
 div.column table.calendar td.has-an-event.gold a {
 	color: #2a3033;
+	border-bottom: .0625em solid rgba(104,119,126,.3);
+	box-shadow: inset 0 -.3125em 0 rgba(104,119,126,.3);
 }
 
 div.column table.calendar td.has-an-event.gold a:hover {
 	color: #68777e;
 	background-color: rgba(104,119,126,.2);
-	border-bottom: 1px dotted rgba(104,119,126,.3);
+	border-bottom: .0625em solid transparent;
+	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
 div.calendar-legend {
