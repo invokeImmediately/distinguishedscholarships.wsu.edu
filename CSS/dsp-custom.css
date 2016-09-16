@@ -2255,8 +2255,7 @@ div.callout,
 span.callout {
   position: absolute;
   top: 50%;
-  width: 80px;
-  height: 100px;
+  height: auto;
   padding: 10px;
   border: 1px solid #F1D031;
   background-color: #FFEF93;
@@ -2267,41 +2266,62 @@ span.callout {
 }
 div.callout.left:before,
 div.callout.right:before,
+div.callout.left:after,
+div.callout.right:after,
 span.callout.left:before,
-span.callout.right:before {
+span.callout.right:before,
+span.callout.left:after,
+span.callout.right:after {
   content: "";
   position: absolute;
   top: 50%;
   width: 0;
   height: 0;
-  border: .8em solid transparent;
+  border: 10px solid transparent;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+div.callout.left:after,
+div.callout.right:after,
+span.callout.left:after,
+span.callout.right:after {
+  border: 11px solid transparent;
+  z-index: -1;
+}
 div.callout.left,
 span.callout.left {
   left: 0;
-  -webkit-transform: translate(-110px,-50%);
-  -moz-transform: translate(-110px,-50%);
-  transform: translate(-110px,-50%);
+  -webkit-transform: translate(-100%,-50%) translateX(-10px);
+  -moz-transform: translate(-100%,-50%) translateX(-10px);
+  transform: translate(-100%,-50%) translateX(-10px);
 }
 div.callout.left:before,
 span.callout.left:before {
   right: -20px;
   border-left: 10px solid #FFEF93;
 }
+div.callout.left:after,
+span.callout.left:after {
+  right: -22px;
+  border-left: 10px solid #F1D031;
+}
 div.callout.right,
 span.callout.right {
   right: 0;
-  -webkit-transform: translate(110px,-50%);
-  -moz-transform: translate(110px,-50%);
-  transform: translate(110px,-50%);
+  -webkit-transform: translate(100%,-50%) translateX(10px);
+  -moz-transform: translate(100%,-50%) translateX(10px);
+  transform: translate(100%,-50%) translateX(10px);
 }
 div.callout.right:before,
 span.callout.right:before {
   left: -20px;
   border-right: 10px solid #FFEF93;
+}
+div.callout.right:after,
+span.callout.right:after {
+  left: -22px;
+  border-left: 11px solid #F1D031;
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
