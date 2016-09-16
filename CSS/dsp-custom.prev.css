@@ -1,4 +1,4 @@
-@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700';
+@import  "https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700";
 
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/firstyear.wsu.edu] for a repository of source code. */
 .has-mono-font {
@@ -496,7 +496,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 17px;
 }
 
 div.column article.post {
@@ -843,7 +843,7 @@ div.column h1 {
 	padding-bottom: 0;
 	margin-top: 1.5rem;
 	margin-bottom: .75rem;
-	font-size: 3em;
+	font-size: 2.82352941em;
 	font-weight: 900;
 	text-transform: uppercase;
 	color: #464e54;
@@ -852,44 +852,44 @@ div.column h1 {
 @media all {
 	div.column h1 {
 		line-height: 1.1em;
-		font-size: 3em;
+		font-size: 2.82352941em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column h1 {
-		font-size: 3.25395685em;
+		font-size: 3.01015929em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column h1 {
-		font-size: 3em;
+		font-size: 2.82352941em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column h1 {
-		font-size: 3.25395685em;
+		font-size: 3.01015929em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column h1 {
-		font-size: 3em;
+		font-size: 2.82352941em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h1 {
-		font-size: 2.76586335em;
+		font-size: 2.64847059em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h1 {
-		font-size: 2.55000002em;
+		font-size: 2.48426541em;
 		text-align: left;
 	}
 }
@@ -911,7 +911,7 @@ div.column h2 {
 	margin-top: 1.5rem;
 	margin-bottom: .75rem;
 	margin-left: -.1em;
-	font-size: 2.2em;
+	font-size: 2.07058824em;
 	line-height: 1.375em;
 	font-weight: 800;
 	color: #464e54;
@@ -921,44 +921,44 @@ div.column h2 {
 @media all {
 	div.column h2 {
 		line-height: 1.1em;
-		font-size: 2.2em;
+		font-size: 2.07058824em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column h2 {
-		font-size: 2.38623502em;
+		font-size: 2.20745014em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column h2 {
-		font-size: 2.2em;
+		font-size: 2.07058824em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column h2 {
-		font-size: 2.38623502em;
+		font-size: 2.20745014em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column h2 {
-		font-size: 2.2em;
+		font-size: 2.07058824em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h2 {
-		font-size: 2.02829979em;
+		font-size: 1.94221176em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h2 {
-		font-size: 1.87000002em;
+		font-size: 1.82179464em;
 		text-align: left;
 	}
 }
@@ -1033,7 +1033,7 @@ h2.article-title a {
 	margin-top: 1.5rem;
 	margin-bottom: .75rem;
 	margin-left: -.1em;
-	font-size: 1.7em;
+	font-size: 1.6em;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #981e32;
@@ -1042,44 +1042,44 @@ h2.article-title a {
 @media all {
 	.gform_heading h3.gform_title,div.column h3 {
 		line-height: 1.1em;
-		font-size: 1.7em;
+		font-size: 1.6em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.84390888em;
+		font-size: 1.70575693em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.7em;
+		font-size: 1.6em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.84390888em;
+		font-size: 1.70575693em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.7em;
+		font-size: 1.6em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.56732257em;
+		font-size: 1.5008em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	.gform_heading h3.gform_title,div.column h3 {
-		font-size: 1.44500001em;
+		font-size: 1.4077504em;
 		text-align: left;
 	}
 }
@@ -1132,7 +1132,7 @@ div.column h4 {
 	padding: 0;
 	margin-top: 1rem;
 	margin-bottom: .5rem;
-	font-size: 1.4em;
+	font-size: 1.31764706em;
 	font-weight: 600;
 	color: #981e32;
 }
@@ -1140,44 +1140,44 @@ div.column h4 {
 @media all {
 	div.column h4 {
 		line-height: 1.2em;
-		font-size: 1.4em;
+		font-size: 1.31764706em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column h4 {
-		font-size: 1.5185132em;
+		font-size: 1.404741em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column h4 {
-		font-size: 1.4em;
+		font-size: 1.31764706em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column h4 {
-		font-size: 1.5185132em;
+		font-size: 1.404741em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column h4 {
-		font-size: 1.4em;
+		font-size: 1.31764706em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h4 {
-		font-size: 1.29073623em;
+		font-size: 1.23595294em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h4 {
-		font-size: 1.19000001em;
+		font-size: 1.15932386em;
 		text-align: left;
 	}
 }
@@ -1213,7 +1213,7 @@ div.column h1.crimson,div.column h2.crimson {
 
 @media all and (min-width:1073px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2.16930457em;
+		font-size: 2.13219616em;
 	}
 }
 
@@ -1225,7 +1225,7 @@ div.column h1.crimson,div.column h2.crimson {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2.16930457em;
+		font-size: 2.13219616em;
 	}
 }
 
@@ -1237,14 +1237,14 @@ div.column h1.crimson,div.column h2.crimson {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 1.8439089em;
+		font-size: 1.876em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 1.70000002em;
+		font-size: 1.759688em;
 		text-align: left;
 	}
 }
@@ -1350,19 +1350,19 @@ footer.article-footer div.author-info {
 
 div.column p {
 	padding-bottom: 0;
-	text-align: justify;
+	text-align: left;
 }
 
 @media all {
 	div.column p {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column p {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -1374,7 +1374,7 @@ div.column p {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column p {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -1386,14 +1386,14 @@ div.column p {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p {
-		font-size: .92195445em;
+		font-size: .938em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p {
-		font-size: .85000001em;
+		font-size: .879844em;
 		text-align: left;
 	}
 }
@@ -1424,14 +1424,14 @@ div.column p.article-deck {
 
 @media all {
 	div.column p.article-deck {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1.2em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column p.article-deck {
-		font-size: 1.30158274em;
+		font-size: 1.2793177em;
 	}
 }
 
@@ -1443,7 +1443,7 @@ div.column p.article-deck {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column p.article-deck {
-		font-size: 1.30158274em;
+		font-size: 1.2793177em;
 	}
 }
 
@@ -1455,14 +1455,14 @@ div.column p.article-deck {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p.article-deck {
-		font-size: 1.10634534em;
+		font-size: 1.1256em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p.article-deck {
-		font-size: 1.02000001em;
+		font-size: 1.0558128em;
 		text-align: left;
 	}
 }
@@ -1480,14 +1480,14 @@ div.column p.article-tagline {
 
 @media all {
 	div.column p.article-tagline {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1.45em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column p.article-tagline {
-		font-size: 1.57274581em;
+		font-size: 1.54584222em;
 	}
 }
 
@@ -1499,7 +1499,7 @@ div.column p.article-tagline {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column p.article-tagline {
-		font-size: 1.57274581em;
+		font-size: 1.54584222em;
 	}
 }
 
@@ -1511,14 +1511,14 @@ div.column p.article-tagline {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p.article-tagline {
-		font-size: 1.33683395em;
+		font-size: 1.3601em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p.article-tagline {
-		font-size: 1.23250001em;
+		font-size: 1.2757738em;
 		text-align: left;
 	}
 }
@@ -1536,14 +1536,14 @@ div.column p.article-tagline.sans>span.lead-in {
 
 @media all {
 	div.column p.article-tagline.home {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1.90000025em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column p.article-tagline.home {
-		font-size: 2.06083961em;
+		font-size: 2.02558662em;
 	}
 }
 
@@ -1555,7 +1555,7 @@ div.column p.article-tagline.sans>span.lead-in {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column p.article-tagline.home {
-		font-size: 2.06083961em;
+		font-size: 2.02558662em;
 	}
 }
 
@@ -1567,14 +1567,14 @@ div.column p.article-tagline.sans>span.lead-in {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p.article-tagline.home {
-		font-size: 1.75171369em;
+		font-size: 1.78220023em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p.article-tagline.home {
-		font-size: 1.61500023em;
+		font-size: 1.67170382em;
 		text-align: left;
 	}
 }
@@ -1610,7 +1610,7 @@ div.column p.vpue-jump-back {
 div.column p.article-media-contacts {
 	padding-left: 2em;
 	font-size: .8em;
-	line-height: 1.25em;
+	line-height: 1.275em;
 	text-align: left;
 }
 
@@ -1637,7 +1637,7 @@ div.column p.banner-text-gray-with-towers {
 
 @media all and (max-width:1049px) {
 	div.column p.banner-text-gray-with-towers {
-		font-size: 1.15244306rem;
+		font-size: 1.1725rem;
 	}
 }
 
@@ -1649,7 +1649,7 @@ div.column p.banner-text {
 	margin-bottom: 2rem;
 	background-color: rgba(94,106,113,.5);
 	border: 1px solid #2a3033;
-	line-height: 1.25em;
+	line-height: 1.275em;
 	color: #2a3033;
 }
 
@@ -2683,14 +2683,14 @@ div.column ul {
 
 @media all {
 	div.column ul {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column ul {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2702,7 +2702,7 @@ div.column ul {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column ul {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2714,14 +2714,14 @@ div.column ul {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column ul {
-		font-size: .92195445em;
+		font-size: .938em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column ul {
-		font-size: .85000001em;
+		font-size: .879844em;
 		text-align: left;
 	}
 }
@@ -2732,6 +2732,10 @@ div.column ul.centered {
 
 div.column ul+p {
 	margin-top: 1em;
+}
+
+div.column ul li {
+	line-height: inherit;
 }
 
 div.column ul li.no-bottom-pad {
@@ -2770,8 +2774,8 @@ ul.application-steps>li,ul.content-boxes>li {
 
 @media all {
 	ul.application-steps>li p,ul.content-boxes>li p {
-		line-height: 1.25em;
-		font-size: .92195445em;
+		line-height: 1.275em;
+		font-size: .938em;
 	}
 }
 
@@ -2783,7 +2787,7 @@ ul.application-steps>li,ul.content-boxes>li {
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
-		font-size: .92195445em;
+		font-size: .938em;
 	}
 }
 
@@ -2795,20 +2799,20 @@ ul.application-steps>li,ul.content-boxes>li {
 
 @media all and (min-width:481px) and (max-width:791px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
-		font-size: .92195445em;
+		font-size: .938em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
-		font-size: .85000001em;
+		font-size: .879844em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
-		font-size: .78366129em;
+		font-size: .82529367em;
 		text-align: left;
 	}
 }
@@ -2856,14 +2860,14 @@ div.column ol {
 
 @media all {
 	div.column ol {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column ol {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2875,7 +2879,7 @@ div.column ol {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column ol {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2887,16 +2891,20 @@ div.column ol {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column ol {
-		font-size: .92195445em;
+		font-size: .938em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column ol {
-		font-size: .85000001em;
+		font-size: .879844em;
 		text-align: left;
 	}
+}
+
+div.column ol li {
+	line-height: inherit;
 }
 
 div.column ol ol {
@@ -2921,14 +2929,14 @@ div.column dl.faq dt {
 
 @media all {
 	div.column dl.faq dt {
-		line-height: 1.25em;
+		line-height: 1.275em;
 		font-size: 1em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column dl.faq dt {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2940,7 +2948,7 @@ div.column dl.faq dt {
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column dl.faq dt {
-		font-size: 1.08465228em;
+		font-size: 1.06609808em;
 	}
 }
 
@@ -2952,14 +2960,14 @@ div.column dl.faq dt {
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column dl.faq dt {
-		font-size: .92195445em;
+		font-size: .938em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column dl.faq dt {
-		font-size: .85000001em;
+		font-size: .879844em;
 		text-align: left;
 	}
 }
@@ -3530,7 +3538,7 @@ div.column table.navigational-map a {
 div.column table.navigational-map th {
 	border-bottom: 1px solid #b5babe;
 	font-size: 1.1em;
-	line-height: 1.25em;
+	line-height: 1.275em;
 	font-weight: 700;
 	text-transform: uppercase;
 	vertical-align: bottom;
@@ -4881,45 +4889,45 @@ header.main-header {
 
 @media all {
 	div.column aside {
-		line-height: 1.25em;
-		font-size: .85000001em;
+		line-height: 1.275em;
+		font-size: .879844em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column aside {
-		font-size: .92195445em;
+		font-size: .938em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column aside {
-		font-size: .85000001em;
+		font-size: .879844em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column aside {
-		font-size: .92195445em;
+		font-size: .938em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column aside {
-		font-size: .85000001em;
+		font-size: .879844em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column aside {
-		font-size: .78366129em;
+		font-size: .82529367em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column aside {
-		font-size: .72250001em;
+		font-size: .77412546em;
 		text-align: left;
 	}
 }
@@ -5553,4 +5561,31 @@ div.column a.glass-button.crimson:after,div.column a.recommend-button:after {
 div.column a.glass-button.crimson:hover,div.column a.recommend-button:hover {
 	background-color: #c60c30;
 	box-shadow: 0 2px 2px rgba(0,0,0,.5), 0 0 18px rgba(198,12,48,.3333);
+}
+
+div.callout {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 80px;
+	height: 100px;
+	padding: 10px;
+	border: 1px solid #F1D031;
+	background-color: #FFEF93;
+	color: #000;
+	border-radius: 3px;
+	box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+	transform: translate(-110px,-50%);
+}
+
+.callout.left::before {
+	content: "";
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: .8em solid transparent;
+	transform: translateY(-50%);
+	border-left: 10px solid #FFEF93;
 }
