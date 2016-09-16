@@ -2186,10 +2186,16 @@ div.award-banner {
            │ interface.                                                                              │
            └-----------------------------------------------------------------------------------------┘        
 */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  div.column div.builder-section-content.cycle-slideshow {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
 @media screen and (max-width: 360px) {
   div.column div.builder-section-content.cycle-slideshow {
-    margin-left: -2em;
-    margin-right: -2em;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 }
 div.column div.builder-banner-content {
