@@ -20,38 +20,18 @@
                 $('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
                 break;
         }
-        InitWsuIdInputs(".gf-wsu-id-input");
-	});
-    
-    function InitWsuIdInputs(slctrInputs) {
-        var $wsuIdInputs = $(slctrInputs).find("input[type='text']");
-        $wsuIdInputs.on("keyup paste", function () {
-            var $this = $(this);
-            var regExMask = /[^0-9]+/g;
-            var inputText = $this.val();
-            if (regExMask.exec(inputText) != null) {
-                $this.val(inputText.replace(regExMask, ""));
-                inputText = $this.val();
-            }
-            if (inputText.length > 9) {
-                $this.val(inputText.slice(0,9));
-            }
-        });
-        $wsuIdInputs.blur(function () {
-            var $this = $(this);
-            var regExFinalPttrn = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
-            var inputText = $this.val();
-            if (regExFinalPttrn.exec(inputText) == null) {
-                $this.val("");
-            }
-        });
-    }
+	});    
 })(jQuery);/**********************************************************************************************************************
  CUSTOM JQUERY-BASED DYNAMIC CONTENT
  *********************************************************************************************************************/
+"use strict";
+
+function isJQuery($obj) {
+	return ($obj && ($obj instanceof jQuery || $obj.constructor.prototype.jquery));
+}
+
 (function ($) {
-    "use strict";
-    
+	"use strict";
     $(document).ready(function () {
         fixDogears("#spine-sitenav", "li.current.active.dogeared", "current active dogeared");
         checkForLrgFrmtSingle(".single.large-format-friendly", "header.main-header", "div.header-group",
@@ -70,6 +50,7 @@
         initContentFlippers(".content-flipper", ".flipped-content-front", ".flipped-content-back", 500);
         initDefinitionLists("dl.toggled", ".large-format-friendly", "div.column.one", "div.column.two",
          "activated", 400, 100);
+		initQuickTabs("section.row.single.quick-tabs");
         initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
         initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
     });
@@ -209,6 +190,66 @@
         });
     }
     
+	function initQuickTabs(slctrQtSctn) {
+		var $qtSctn = $(slctrQtSctn);
+		$qtSctn.each(function () {
+			var $thisSctn = $(this);
+			var $tabCntnr = $thisSctn.find("div.column > ul");
+			var $tabs = $tabCntnr.find("li");
+			var $panelCntnr = $thisSctn.find("table");
+			var $panels = $panelCntnr.find("tbody:first-child > tr");
+			if($tabs.length == $panels.length) {
+				var idx;
+				var jdx;
+				for (idx = 0; idx < $tabs.length; idx++) {
+					$tabs.eq(idx).click(function() {
+						var $thisTab = $(this);
+						var kdx = $tabs.index($thisTab);
+						if (kdx == 0) {
+							if ($thisTab.hasClass("deactivated")) {
+								$thisTab.removeClass("deactivated");
+								$panels.eq(kdx).removeClass("deactivated");
+								for (jdx = 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						} else {
+							if (!$thisTab.hasClass("activated")) {
+								if (!$tabs.eq(0).hasClass("deactivated")) {
+									$tabs.eq(0).addClass("deactivated");
+									$panels.eq(0).addClass("deactivated");
+								}
+								for (jdx = 1; jdx < kdx; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$thisTab.addClass("activated");
+								$panels.eq(kdx).addClass("activated");
+								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						}
+					});
+				}
+			}
+		});
+	}
+
     function initReadMoreToggles(slctrToggleIn, slctrToggleOut, slctrPanel, animDuration) {
         $(slctrToggleIn).click(function () {
             var $this = $(this);
@@ -2293,12 +2334,12 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             $this = $(this);
             $this.hasClass('blue') ? qTipStyle = 'qtip-blue' : qTipStyle = 'qtip-dark';
             if ($this.hasClass('parental-neighbor-is-source')) {
-                qTipCntnt = new QTipContent($this.parent().next('div').text());
+                qTipCntnt = new QTipContent($this.parent().next('div'));
                 if (qTipCntnt.qTipTitle == null) {
                     $this.qtip({
                         style: qTipStyle,
                         content: {
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -2321,7 +2362,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                         style: qTipStyle,
                         content: {
                             title: qTipCntnt.qTipTitle,
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -2341,12 +2382,12 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                 }
             } else {
                 $this.hasClass('span-is-source') ? qTipContentSource = 'span' : qTipContentSource = 'div';
-                qTipCntnt = new QTipContent($this.next(qTipContentSource).text());
+                qTipCntnt = new QTipContent($this.next(qTipContentSource));
                 if (qTipCntnt.qTipTitle == null) {
                     $this.qtip({
                         style: qTipStyle,
                         content: {
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -2369,7 +2410,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                         style: qTipStyle,
                         content: {
                             title: qTipCntnt.qTipTitle,
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -2391,16 +2432,20 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
         });       
     });
     
-    function QTipContent(srcText) {
+    function QTipContent($qTipSlctr) {
         this.qTipTitle = null;
         this.qTipText = null;
+        this.qTipInnerHTML = null;
         var regExPttrn = /^(.+)\|(.+)$/;
-        var regExResult = regExPttrn.exec(srcText);
+        var regExResult = regExPttrn.exec($qTipSlctr.text());
         if (regExResult != null && regExResult.length == 3) {
             this.qTipTitle = regExResult[1];
-            this.qTipText = regExResult[2];            
+            this.qTipText = regExResult[2];
+            regExPttrn = /^(.+)\|/;
+            this.qTipInnerHTML = $qTipSlctr.html().replace(regExPttrn, "");
         } else {
-            this.qTipText = srcText;
+            this.qTipText = $qTipSlctr.text();
+            this.qTipInnerHTML = $qTipSlctr.html();
         }
     }
 })(jQuery);/**
@@ -2411,43 +2456,120 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
  *  (http://daverupert.com).
  */
 (function($){
+	var clmnWidth = 926; // px
+	
     $.fn.textResize = function( scalingFactor, options ) {
         // Set up default options in case the caller passed no attributes
         var scalingAmount = scalingFactor || 1,
             settings = $.extend({
-                'minFontSize' : Number.NEGATIVE_INFINITY,
-                'maxFontSize' : Number.POSITIVE_INFINITY
+                "minFontSize" : Number.NEGATIVE_INFINITY,
+                "maxFontSize" : Number.POSITIVE_INFINITY,
+				"againstSelf" : true
             }, options);
         return this.each(function () {
             var $this = $(this);
+			var $parent = undefined;
+			if(settings.measuredBy = "parent") {
+				$parent = $this.parents("div.column").first();
+			}
           
             // Resizer() keeps font-size proportional to object width as constrainted by the user
             var resizer = function () {
-                $this.css('font-size', Math.max(Math.min($this.width() / (scalingAmount*10),
-                    parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				if(!settings.againstSelf) {
+					$this.css("font-size", Math.max(Math.min($parent.innerWidth() / (scalingAmount*10),
+						parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				}
+				else {
+					$this.css("font-size", Math.max(Math.min($this.width() / (scalingAmount*10),
+						parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				}
             };
           
             // Call once to set the object's font size based on current window size, then call as
             // resize or orientation-change events are triggered.
             resizer();
-            $(window).on('resize.textresize orientationchange.textresize', resizer);
+            $(window).on("resize.textresize orientationchange.textresize", resizer);
         });
     };
-    
+	
+// TODO: write function for fitting text.
+//	$.fn.fitText = function(  )
+
+// TODO: Come up with a line-based solution
+//  Ideas: invisible absolutely positioned duplicate of element that is scaled until desired effect is
+//   achieved, then settings are applied to original; etc.
+/*	function FontShrinker($fromElem) {
+		this.maxLines = undefined;
+		this.leadingRatio = undefined;
+		this.fontSizeStart = undefined;
+		this.fontSizeThreshold = undefined;
+		
+		var validArg = isJQuery($fromElem);
+		if(validArg) {
+			this.maxLines = $this.data("max-lines");
+			var styleProps = $this.css([
+				"fontSize", "lineHeight"
+			]);
+			styleProps = $.extend({
+				"height" : $this.height()
+			}, styleProps);
+			var height = parseFloat(styleProps.height);
+			var fontSize = parseFloat(styleProps.fontSize);
+			var lineHeight = parseFloat(styleProps.lineHeight);
+			this.leadingRatio = parseFloat(styleProps.lineHeight) / parseFloat(styleProps.fontSize);
+			var curLines = height / lineHeight;
+			if(this.maxLines != undefined && curLines > maxLines) {
+				var newFontSz = 
+			} else {
+				
+			}
+		}
+	}*/
+
     // Now use the plugin on the WSU Undergraduate education website (i.e. delete or modify the
     // following statement if you are going to utilize this plugin on your own site).
     $(document).ready(function () {
-        $('section.article-header div.header-content h1').each(function () {
-            $(this).textResize(1.277142857142857, {'minFontSize' : '34.8'});
+        $("section.article-header div.header-content h1").each(function () {
+            $(this).textResize(1.277142857142857, {"minFontSize" : "34.8"});
         });
-        $('section.article-header div.header-content h2').each(function () {
-            $(this).textResize(1.847840465639262, {'minFontSize' : '24.0'});
+        $("section.article-header div.header-content h2").each(function () {
+            $(this).textResize(1.847840465639262, {"minFontSize" : "24.0"});
         });
-        $('section.article-header div.header-content h3').each(function () {
-            $(this).textResize(4.110097222222222, {'minFontSize' : '10.7'});
+        $("section.article-header div.header-content h3").each(function () {
+            $(this).textResize(4.110097222222222, {"minFontSize" : "10.7"});
         });
+		
+		var $fittedElems = $(".auto-fits-text");
+		$fittedElems.each(function() {
+			var $this = $(this);
+			var $parent = $this.parents("div.column").first();
+			var fontSz = $this.css("font-size");
+			var maxWidth = $parent.css("max-width");
+			var scalingAmt;
+			if (maxWidth == "none") {
+				var $binder = $("#binder");
+				if ($binder.length == 1) {
+					maxWidth = $binder.css("max-width");
+					if (maxWidth != "none") {
+						clmnWidth = parseFloat(maxWidth) - 198;
+					}
+				}
+				scalingAmt = clmnWidth / (parseFloat(fontSz) * 10);
+			}
+			else {
+				scalingAmt = parseFloat(maxWidth) / (parseFloat(fontSz) * 10);
+			}
+			$this.textResize(scalingAmt, {"minFontSize" : "10.7px", "againstSelf" : 0})
+		});
+		
+/*		var $shrinkingElems = $(".shrinks-with-parent");
+		$shrinkingElems.each(function() {
+			var $this = $(this);
+			
+		});*/
     });
 })(jQuery);
+// 14.4px;
 /*!
  * imagesLoaded PACKAGED v4.1.0
  * JavaScript is all like "You images are done yet or what?"
