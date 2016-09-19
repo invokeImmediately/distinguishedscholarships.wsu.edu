@@ -4368,6 +4368,17 @@ div.column li.gfield > div.ginput_complex > span > label {
 div.column li.gfield > div.ginput_container_select > div.chosen-container {
   width: 100% !important;
 }
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
+  height: 1.98em;
+}
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
+  background-position: 0 0.441258em;
+}
+@media only screen and (max-width: 641px) {
+  div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
+    background-position: 0 -0.2em;
+  }
+}
 div.column ul.gform_fields.top_label > li.gfield > div.gfield_description {
   padding-top: 0;
   margin-bottom: 3px;
