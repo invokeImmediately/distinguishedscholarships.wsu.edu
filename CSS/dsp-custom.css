@@ -4309,6 +4309,9 @@ div.read-more-target {
 div.column .gform_wrapper {
   max-width: 990px;
 }
+div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
+  margin: 0;
+}
 div.column .gform_wrapper .gsection {
   margin-bottom: 0;
 }
@@ -4326,10 +4329,6 @@ div.column .gform_wrapper .ginput_complex {
             span.address_city, span.address_state, span.address_zip {
                 margin-top: 0.75em;
             }*/
-}
-div.column .gform_wrapper .ginput_complex label {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 div.column .gform_wrapper .ginput_complex span.ginput_full:not(:first-of-type) label,
 div.column .gform_wrapper .ginput_complex span.ginput_left:not(:first-of-type) label,
@@ -4370,9 +4369,10 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container {
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
   height: 1.98em;
+  line-height: 1.98em;
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-  background-position: 0 0.441258em;
+  background-position: 0 0.4em;
 }
 @media only screen and (max-width: 641px) {
   div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
@@ -4380,8 +4380,8 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
   }
 }
 div.column ul.gform_fields.top_label > li.gfield > div.gfield_description {
-  padding-top: 0;
-  margin-bottom: 3px;
+  padding: 0;
+  margin: 0;
   color: #8e7f88;
 }
 div.column ul.gform_fields.top_label > li.gfield > div.ginput_complex {
