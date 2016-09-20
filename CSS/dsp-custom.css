@@ -4376,11 +4376,11 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
   text-shadow: none;
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-  background-position: 0 calc(-8.01px);
+  background-position: 0 calc(-9px + 1.98em / 2);
 }
 @media only screen and (max-width: 641px) {
   div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-    top: 9px;
+    top: calc(0.99em - 3px);
     background-position: 0 -7px;
   }
 }
