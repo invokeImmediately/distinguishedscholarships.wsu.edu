@@ -4382,7 +4382,13 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
 div.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
   display: none;
 }
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"] {
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Blockquote"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit link"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Remove link"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit image"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Table"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Fullscreen"] {
   display: none;
 }
 div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-last {
