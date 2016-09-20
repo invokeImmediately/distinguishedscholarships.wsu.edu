@@ -4376,11 +4376,12 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
   text-shadow: none;
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-  background-position: 0 0.4em;
+  background-position: 0 calc(-8.01px);
 }
 @media only screen and (max-width: 641px) {
   div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-    background-position: 0 -0.2em;
+    top: 9px;
+    background-position: 0 -7px;
   }
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single.chosen-with-drop > a.chosen-single {
