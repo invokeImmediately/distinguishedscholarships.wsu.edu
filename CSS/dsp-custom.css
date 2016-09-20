@@ -4369,7 +4369,11 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container {
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
   height: 1.98em;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #fff, #fff);
   line-height: 1.98em;
+}
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single:hover {
+  text-shadow: none;
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
   background-position: 0 0.4em;
@@ -4378,6 +4382,9 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
   div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
     background-position: 0 -0.2em;
   }
+}
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single.chosen-with-drop > a.chosen-single {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 20%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, #fff, #fff);
 }
 div.column ul.gform_fields.top_label > li.gfield > div.gfield_description {
   padding: 0;
