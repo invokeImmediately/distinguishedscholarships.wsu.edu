@@ -4322,14 +4322,6 @@ div.column .gform_wrapper .gfield_radio li label {
 div.column .gform_wrapper .gfield_checkbox li {
   margin-bottom: 0;
 }
-div.column .gform_wrapper .ginput_complex {
-  /*span.address_line_1 label {
-                margin-bottom: 0.75em;
-            }
-            span.address_city, span.address_state, span.address_zip {
-                margin-top: 0.75em;
-            }*/
-}
 div.column .gform_wrapper .ginput_complex span.ginput_full:not(:first-of-type) label,
 div.column .gform_wrapper .ginput_complex span.ginput_left:not(:first-of-type) label,
 div.column .gform_wrapper .ginput_complex span.ginput_right:not(:nth-of-type(2)) label {
@@ -4376,7 +4368,7 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
   text-shadow: none;
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-  background-position: 0 calc(-9px + 1.98em / 2);
+  background-position: 0 calc(-10px + 1.98em / 2);
 }
 @media only screen and (max-width: 641px) {
   div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
