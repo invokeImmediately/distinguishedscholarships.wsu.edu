@@ -4309,6 +4309,44 @@ div.read-more-target {
 div.column .gform_wrapper {
   max-width: 990px;
 }
+@media all {
+  div.column .gform_wrapper {
+    line-height: 1.275em;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1073px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  div.column .gform_wrapper {
+    font-size: 15.008px;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  div.column .gform_wrapper {
+    font-size: 14.077504px;
+    text-align: left;
+  }
+}
 div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
   margin: 0;
 }
@@ -4396,6 +4434,10 @@ div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.
 }
 div.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
   display: none;
+}
+div.column li.gfield div.ginput_container_textarea > textarea {
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
 }
 div.column ul.gform_fields.top_label > li.gfield > div.gfield_description {
   padding: 0;
