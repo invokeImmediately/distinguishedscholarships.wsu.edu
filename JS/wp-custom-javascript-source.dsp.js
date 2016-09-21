@@ -2063,10 +2063,10 @@ function isJQuery($obj) {
             //TODO: streamline functions by querying all ul.gform_fields li.gfield, then determine 
             //       how to handle object by finding div children with gfield_container_class.
 			initWsuIdInputs(".gf-is-wsu-id");
-            hghlghtRqrdInpts(".oue-gf-rqrd-input, .oue-gf-hghlghts-rqrd-input");
-            hghlghtRqrdChckbxs(".oue-gf-rqrd-checkbox, .oue-gf-hghlghts-rqrd-checkbox");
-            hghlghtRqrdTxtAreas(".oue-gf-rqrd-txtarea, .oue-gf-hghlghts-rqrd-txtarea");
-            hghlghtRqrdSelects(".oue-gf-rqrd-select, .oue-gf-hghlghts-rqrd-select");
+            hghlghtRqrdInpts("li.gfield_contains_required input");
+            hghlghtRqrdChckbxs("li.gfield_contains_required ul.gfield_checkbox, li.gfield_contains_required ul.gfield_radio");
+            hghlghtRqrdTxtAreas("li.gfield_contains_required textarea");
+            hghlghtRqrdSelects("li.gfield_contains_required input");
             setupActvtrChckbxs(".oue-gf-actvtr-checkbox");
             setupActvtrChain(".oue-gf-actvtr-chain");
             setupUploadChain(".oue-gf-upload-chain");
@@ -2079,25 +2079,21 @@ function isJQuery($obj) {
     function hghlghtRqrdInpts (selector) {
         if ($.type(selector) === "string") {
             $(selector).each(function () {
-                var $this = $(this);
-                var $inputs = $this.find("input");
-                $inputs.each(function () {
-                    var $thisChild = $(this);
-                    if ($thisChild.val() == "") {
-                        $thisChild.removeClass("gf-value-entered");
-                    }
-                    else {
-                        $thisChild.addClass("gf-value-entered");
-                    }
-                    $thisChild.blur(function () {
-                        if ($thisChild.val() == "") {
-                            $thisChild.removeClass("gf-value-entered");
-                        }
-                        else {
-                            $thisChild.addClass("gf-value-entered");
-                        }
-                    });
-                });
+                var $thisInput = $(this);
+				if ($thisInput.val() == "") {
+					$thisInput.removeClass("gf-value-entered");
+				}
+				else {
+					$thisInput.addClass("gf-value-entered");
+				}
+				$thisInput.blur(function () {
+					if ($thisInput.val() == "") {
+						$thisInput.removeClass("gf-value-entered");
+					}
+					else {
+						$thisInput.addClass("gf-value-entered");
+					}
+				});
             });
         }
     }
@@ -2139,29 +2135,7 @@ function isJQuery($obj) {
     | Highlight required TEXT AREA inputs until a value has been properly entered              |
     \******************************************************************************************/
     function hghlghtRqrdTxtAreas (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
-                var $this = $(this);
-                var $inputs = $this.find("textarea");
-                $inputs.each(function () {
-                    var $thisChild = $(this);
-                    if ($thisChild.val() == "") {
-                        $thisChild.removeClass("gf-value-entered");
-                    }
-                    else {
-                        $thisChild.addClass("gf-value-entered");
-                    }
-                    $thisChild.change(function () {
-                        if ($thisChild.val() == "") {
-                            $thisChild.removeClass("gf-value-entered");
-                        }
-                        else {
-                            $thisChild.addClass("gf-value-entered");
-                        }
-                    });
-                });
-            });
-        }
+		hghlghtRqrdInpts(selector);
     }
 
     /******************************************************************************************\
@@ -2170,29 +2144,25 @@ function isJQuery($obj) {
     function hghlghtRqrdSelects (selector) {
         if ($.type(selector) === "string") {
             $(selector).each(function () {
-                var $this = $(this);
-                var $inputs = $this.find("select");
-                $inputs.each(function () {
-                    var $thisInput = $(this);
-                    var $childSlctdOptn = $thisInput.find("option:selected");
-                    var optionVal = $childSlctdOptn.text();                        
-                    if (optionVal != "") {
-                        $thisInput.addClass("gf-value-entered");
-                    }
-                    else {
-                        $thisInput.removeClass("gf-value-entered");
-                    }
-                    $thisInput.change(function () {
-                        $childSlctdOptn = $thisInput.find("option:selected");
-                        optionVal = $childSlctdOptn.text();                        
-                        if (optionVal != "") {
-                            $thisInput.addClass("gf-value-entered");
-                        }
-                        else {
-                            $thisInput.removeClass("gf-value-entered");
-                        }
-                    });
-                });
+                var $thisInput = $(this);
+				var $childSlctdOptn = $thisInput.find("option:selected");
+				var optionVal = $childSlctdOptn.text();                        
+				if (optionVal != "") {
+					$thisInput.addClass("gf-value-entered");
+				}
+				else {
+					$thisInput.removeClass("gf-value-entered");
+				}
+				$thisInput.change(function () {
+					$childSlctdOptn = $thisInput.find("option:selected");
+					optionVal = $childSlctdOptn.text();                        
+					if (optionVal != "") {
+						$thisInput.addClass("gf-value-entered");
+					}
+					else {
+						$thisInput.removeClass("gf-value-entered");
+					}
+				});
             });
         }
     }
