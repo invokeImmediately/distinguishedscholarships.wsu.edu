@@ -8,6 +8,7 @@ concat([
  '../WSU-UE---JS/jQuery.cookieObjs.js',
  '../WSU-UE---JS/jQuery.cycle2.js',
  '../WSU-UE---JS/jQuery.forms.js',
+ '../WSU-UE---JS/jQuery.are-you-sure.js',
  '../WSU-UE---JS/jquery.media.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.textResize.js',
@@ -15,3 +16,4 @@ concat([
  ], './wp-custom-javascript-source.dsp.js', function() {
     console.log('Concatenation complete.');     
  });
+ 
