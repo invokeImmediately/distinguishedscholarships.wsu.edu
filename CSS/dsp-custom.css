@@ -6207,7 +6207,7 @@ div.column p.award-quote-source {
   padding-left: 2rem;
 }
 ul.application-steps {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 ul.application-steps > li {
   float: left;
