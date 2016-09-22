@@ -3481,6 +3481,10 @@ div.column ul {
     text-align: left;
   }
 }
+div.column ul ol,
+div.column ul ul {
+  font-size: inherit;
+}
 div.column ul.centered {
   text-align: center;
 }
@@ -3649,6 +3653,10 @@ div.column ol {
 }
 div.column ol li {
   line-height: inherit;
+}
+div.column ol ol,
+div.column ol ul {
+  font-size: inherit;
 }
 div.column ol ol {
   list-style-type: lower-alpha;
