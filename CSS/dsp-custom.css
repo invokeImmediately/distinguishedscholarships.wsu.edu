@@ -6206,6 +6206,9 @@ div.column p.award-quote-source {
   padding-right: 2rem;
   padding-left: 2rem;
 }
+ul.application-steps {
+  margin-top: 1rem;
+}
 ul.application-steps > li {
   float: left;
   width: 49%;
@@ -6215,6 +6218,7 @@ ul.application-steps > li {
 @media all and (max-width: 693px) {
   ul.application-steps > li {
     width: 98%;
+    margin-bottom: 4%;
   }
 }
 @media all and (max-width: 1205px) {
