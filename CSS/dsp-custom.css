@@ -1691,39 +1691,136 @@ div.column p.article-deck {
   color: #72652a;
 }
 @media all {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     line-height: 1.275em;
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
     font-size: 1.1256em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  div.column p.article-deck {
+  section.row.single div.column div.column p.article-deck {
+    font-size: 1.0558128em;
+    text-align: left;
+  }
+}
+@media all {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    line-height: 1.275em;
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.1256em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.side-right div.column div.column p.article-deck,
+  section.row.side-left div.column div.column p.article-deck,
+  section.row.halves div.column div.column p.article-deck {
+    font-size: 1.0558128em;
+    text-align: left;
+  }
+}
+@media all {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    line-height: 1.275em;
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    font-size: 1.1256em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    font-size: 1.2em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    font-size: 1.1256em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
+    font-size: 1.0558128em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.thirds div.column div.column p.article-deck,
+  section.row.quarters div.column div.column p.article-deck {
     font-size: 1.0558128em;
     text-align: left;
   }
