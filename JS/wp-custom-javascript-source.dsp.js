@@ -447,7 +447,7 @@ function isJQuery($obj) {
                         case '/calendar/workshops/#boren':
                             calendarCell.addClass('brown');
                             break;
-                        case '/calendar/workshops/#schwarzmann':
+                        case '/calendar/workshops/#schwarzman':
                             calendarCell.addClass('dark-olive');
                             break;
                         case '/calendar/workshops/#uk-scholarships':
