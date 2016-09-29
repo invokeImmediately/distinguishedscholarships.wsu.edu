@@ -574,11 +574,16 @@ ul.application-steps {
 }
 
 ul.application-steps {
+	margin-top: @v-btm-mrgns !important;
 	& > li {
 		float: left;
 		width: 49%;
 		min-height: 198px;
 		margin-bottom: 2%;
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: 98%;
+			margin-bottom: 4%;
+        }
 		@media all and (max-width: @v-bckgrnd-thrshld) {
 			overflow-x: visible;
 		}
@@ -604,6 +609,10 @@ ul.application-steps {
 			border-top-left-radius: 4px;
 			 border-top-right-radius: 4px;
 			color: @hex-dark-blue;
+			text-transform: none;
+			strong {
+				text-transform: uppercase;
+			}
 		}
 		& > h4:nth-child(2) {
 			&:extend(.has-alt-font);
