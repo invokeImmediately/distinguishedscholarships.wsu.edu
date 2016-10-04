@@ -6450,6 +6450,7 @@ div.column table.award-recipients {
   border-spacing: 0;
   border-top: 1px solid #5e6a71;
   border-bottom: 1px solid #5e6a71;
+  line-height: 1.275em;
 }
 @media screen and (max-width: 480px) {
   div.column table.award-recipients {
