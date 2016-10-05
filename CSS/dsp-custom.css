@@ -6394,6 +6394,10 @@ ul.application-steps > li > p {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
+ul.application-steps > li > p + ul,
+ul.application-steps > li > p + ol {
+  margin-top: -0.66666667rem;
+}
 ul.application-steps > li > *:not(:first-child) {
   margin-top: 1rem;
 }
