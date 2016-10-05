@@ -6120,6 +6120,22 @@ div.column table.calendar td.has-an-event.brown a:hover {
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.dark-gray.brown {
+  background: linear-gradient(to bottom, #373940, #723f1f);
+}
+div.column table.calendar td.has-an-event.dark-gray.brown a:first-child {
+  border-bottom: 0.0625em solid rgba(181, 186, 190, 0.3);
+  box-shadow: inset 0 -0.3125em 0 rgba(181, 186, 190, 0.3);
+}
+div.column table.calendar td.has-an-event.dark-gray.brown div.day,
+div.column table.calendar td.has-an-event.dark-gray.brown a:first-child:hover {
+  color: #b5babe;
+}
+div.column table.calendar td.has-an-event.dark-gray.brown a:first-child:hover {
+  background-color: rgba(181, 186, 190, 0.2);
+  border-bottom: 0.0625em solid transparent;
+  box-shadow: inset 0 -0.3125em 0 transparent;
+}
 div.column table.calendar td.has-an-event.dark-olive {
   background-color: #453a16;
 }
