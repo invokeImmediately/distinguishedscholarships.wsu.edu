@@ -632,9 +632,18 @@ ul.application-steps {
 			text-align: left;
 			padding-right: (@v-dflt-spcng / 4);
 			 padding-left: (@v-dflt-spcng / 4);
+			& + ul,
+			& + ol {
+				margin-top: (@v-btm-mrgns * 1 / 3) !important;
+			}
 		}
-		& > *:last-child {
-			padding-bottom: (@v-dflt-spcng / 4);
+		& > * {
+			&:not(:first-child) {
+				margin-top: @v-btm-mrgns;
+			}
+			&:last-child {
+				padding-bottom: (@v-dflt-spcng / 4);
+			}
 		}
 	}
 }
