@@ -628,6 +628,7 @@ ul.application-steps {
 			}
 		}
 		& > p {
+			font-size: inherit !important;
 			text-align: left;
 			padding-right: (@v-dflt-spcng / 4);
 			 padding-left: (@v-dflt-spcng / 4);
@@ -638,4 +639,11 @@ ul.application-steps {
 	}
 }
 
-.include-glass-button-layout(true);
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CUSTOM layouts ################################################################################## ║
+ *  ╠========================================================================================================╣
+ *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+.use-glass-button-layout();
+.use-award-recipients-tables();
