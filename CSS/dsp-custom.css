@@ -6396,7 +6396,7 @@ ul.application-steps > li > p {
 }
 ul.application-steps > li > p + ul,
 ul.application-steps > li > p + ol {
-  margin-top: -0.66666667rem !important;
+  margin-top: 0.33333333rem !important;
 }
 ul.application-steps > li > *:not(:first-child) {
   margin-top: 1rem;
