@@ -1396,6 +1396,10 @@ div.column h2.crimson {
     margin-right: 0;
   }
 }
+body.blog div.column header.article-header + * {
+  padding-top: 10px;
+  border-top: 1px solid rgba(127, 127, 127, 0.2);
+}
 @media all {
   div.column header.article-header h1.article-title,
   div.column header.article-header h2.article-title {
