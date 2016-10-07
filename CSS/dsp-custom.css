@@ -2311,7 +2311,7 @@ div.column p.article-media-contacts {
   padding-left: 2em;
   text-align: left;
 }
-body.single-post div.column p.article-media-contacts + :not(p.article-media-contacts) {
+body.single-post div.column p.article-media-contacts + :not(.article-media-contacts) {
   padding-top: 10px;
   border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
