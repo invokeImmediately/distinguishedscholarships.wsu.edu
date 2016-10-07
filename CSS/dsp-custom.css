@@ -1149,38 +1149,38 @@ div.column h2 {
 @media all {
   div.column h2.article-title {
     line-height: 1.1em;
-    font-size: 1.24235294em;
+    font-size: 0.82823529em;
   }
 }
 @media all and (min-width: 1073px) {
   div.column h2.article-title {
-    font-size: 1.32447009em;
+    font-size: 0.88298006em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   div.column h2.article-title {
-    font-size: 1.24235294em;
+    font-size: 0.82823529em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   div.column h2.article-title {
-    font-size: 1.32447009em;
+    font-size: 0.88298006em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   div.column h2.article-title {
-    font-size: 1.24235294em;
+    font-size: 0.82823529em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   div.column h2.article-title {
-    font-size: 1.16532706em;
+    font-size: 0.77688471em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
   div.column h2.article-title {
-    font-size: 1.09307678em;
+    font-size: 0.72871785em;
     text-align: left;
   }
 }
