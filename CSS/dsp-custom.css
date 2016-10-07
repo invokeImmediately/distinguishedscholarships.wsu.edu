@@ -1397,7 +1397,7 @@ div.column h2.crimson {
   }
 }
 body.blog div.column header.article-header + * {
-  padding-top: 10px;
+  padding-top: 15px;
   border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
 @media all {
@@ -2316,7 +2316,7 @@ div.column p.article-media-contacts {
   text-align: left;
 }
 body.single-post div.column p.article-media-contacts + :not(.article-media-contacts) {
-  padding-top: 10px;
+  padding-top: 15px;
   border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
 div.column p.fine-print {
