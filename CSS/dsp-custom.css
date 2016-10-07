@@ -2145,7 +2145,8 @@ div.column h2 + p.article-tagline,
 div.column h3 + p.article-tagline,
 div.column h4 + p.article-tagline,
 div.column h5 + p.article-tagline,
-div.column h6 + p.article-tagline {
+div.column h6 + p.article-tagline,
+.gform_heading h3.gform_title + p.article-tagline {
   margin-top: 1.33333333rem;
 }
 div.column p.no-bottom-pad {
@@ -2309,6 +2310,10 @@ div.column p.vpue-jump-back {
 div.column p.article-media-contacts {
   padding-left: 2em;
   text-align: left;
+}
+body.single-post div.column p.article-media-contacts + :not(p.article-media-contacts) {
+  padding-top: 10px;
+  border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
 div.column p.fine-print {
   font-size: 0.9em;
