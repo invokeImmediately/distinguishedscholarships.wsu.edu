@@ -2464,7 +2464,8 @@ div.article-summary aside.article-sidebar,
 div.article-summary img,
 div.article-summary object,
 div.article-summary p.article-media-contacts,
-div.article-summary > h3 {
+div.article-summary > h3,
+div.article-summary p.photo-caption {
   display: none;
 }
 div.article-summary img.attachment-spine-thumbnail_size {
