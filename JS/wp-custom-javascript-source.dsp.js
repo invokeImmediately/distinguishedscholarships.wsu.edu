@@ -2210,19 +2210,21 @@ function isJQuery($obj) {
     | Highlight required RICH TEXT EDITOR containters until a value has been properly entered            |
     \****************************************************************************************************/
 	function hghlghtRqrdRchTxtEdtrs($fields) {
-        if (isJQuery($fields)) {
+        if (isJQuery($fields) && $fields.length > 0) {
             $fields.each(function () {
 				var $edtrFrm = $(this).find("iframe");
-				var $edtrBdy = $edtrFrm.content().find("#tinymce");
-				$edtrBdy.css("background", "rgba(255,0,0,0.1)");
-				$edtrBdy.focus(function () {
-					$(this).css("background-color", "rgba(255,255,255,1)");
-				});
-				$edtrBdy.blur(function () {
-					var $this = $(this);
-					if($this.text().replace(/\n|\uFEFF/g, "") == "") {
-						$this.css("background-color","rgba(255,0,0,0.1)");
-					}
+				$edtrFrm.each(function () {
+					var $edtrBdy = $(this).content().find("#tinymce");
+					$edtrBdy.css("background", "rgba(255,0,0,0.1)");
+					$edtrBdy.focus(function () {
+						$(this).css("background-color", "rgba(255,255,255,1)");
+					});
+					$edtrBdy.blur(function () {
+						var $this = $(this);
+						if($this.text().replace(/\n|\uFEFF/g, "") == "") {
+							$this.css("background-color","rgba(255,0,0,0.1)");
+						}
+					});
 				});
 			});
 		}
