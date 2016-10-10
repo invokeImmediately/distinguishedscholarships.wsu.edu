@@ -2104,9 +2104,11 @@ function isJQuery($obj) {
 			hghlghtRqrdChckbxs($rqrdFlds.find("ul.gfield_checkbox, ul.gfield_radio"));
 			hghlghtRqrdTxtAreas($rqrdFlds.find("textarea"));
 			hghlghtRqrdSelects($rqrdFlds.find("select"));
-			hghlghtRqrdRchTxtEdtrs($rqrdFlds.filter(".uses-rich-editor"));
         }
     });
+	$(window).load(function () {
+		hghlghtRqrdRchTxtEdtrs($("li.gfield_contains_required.uses-rich-editor"));
+	});
     
     /****************************************************************************************************\
     | Highlight required INPUTS until a value has been properly entered                                  |
