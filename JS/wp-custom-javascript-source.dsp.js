@@ -2078,38 +2078,42 @@ function isJQuery($obj) {
         });
     }
 })(jQuery);
-/**************************************************************************************************\
-| JQUERY-MEDIATED ENHANCED INTERACTIVITY OF GRAVITY FORM FIELDS                                    |
-\**************************************************************************************************/
+/************************************************************************************************************\
+| JQUERY-MEDIATED ENHANCED INTERACTIVITY OF GRAVITY FORM FIELDS                                              |
+\************************************************************************************************************/
 (function ($) {
     "use strict";
     
 	$(document).bind("gform_post_render", function () {
-		checkRqrdInpts("li.gfield_contains_required input");
-		checkRqrdChckbxs("li.gfield_contains_required ul.gfield_checkbox, li.gfield_contains_required ul.gfield_radio");
-		checkRqrdTxtAreas("li.gfield_contains_required textarea");
+		var $rqrdFlds =  $("li.gfield_contains_required");
+		checkRqrdInpts($rqrdFlds.find("input"));
+		checkRqrdChckbxs($rqrdFlds.find("ul.gfield_checkbox, ul.gfield_radio"));
+		checkRqrdTxtAreas($rqrdFlds.find("textarea"));
 	});
 	$(document).ready(function () {
         if($("div.gform_body").length > 0) {
-            // TODO: streamline functions by querying all ul.gform_fields li.gfield, then determine 
-            //   how to handle object by finding div children with gfield_container_class.
 			initWsuIdInputs(".gf-is-wsu-id");
             setupActvtrChckbxs(".oue-gf-actvtr-checkbox");
             setupActvtrChain(".oue-gf-actvtr-chain");
             setupUploadChain(".oue-gf-upload-chain");
-			hghlghtRqrdInpts("li.gfield_contains_required input");
-			hghlghtRqrdChckbxs("li.gfield_contains_required ul.gfield_checkbox, li.gfield_contains_required ul.gfield_radio");
-			hghlghtRqrdTxtAreas("li.gfield_contains_required textarea");
-			hghlghtRqrdSelects("li.gfield_contains_required select");
+			
+            // TODO: streamline functions by querying all ul.gform_fields li.gfield, then determine 
+            //   how to handle object by finding div children with gfield_container_class.
+			var $rqrdFlds =  $("li.gfield_contains_required");
+			hghlghtRqrdInpts($rqrdFlds.find("input"));
+			hghlghtRqrdChckbxs($rqrdFlds.find("ul.gfield_checkbox, ul.gfield_radio"));
+			hghlghtRqrdTxtAreas($rqrdFlds.find("textarea"));
+			hghlghtRqrdSelects($rqrdFlds.find("select"));
+			hghlghtRqrdRchTxtEdtrs($rqrdFlds.filter(".uses-rich-editor"));
         }
     });
     
-    /******************************************************************************************\
-    | Highlight required INPUTS until a value has been properly entered                        |
-    \******************************************************************************************/
-    function checkRqrdInpts (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
+    /****************************************************************************************************\
+    | Highlight required INPUTS until a value has been properly entered                                  |
+    \****************************************************************************************************/
+    function checkRqrdInpts ($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
                 var $thisInput = $(this);
 				if ($thisInput.val() == "") {
 					$thisInput.removeClass("gf-value-entered");
@@ -2120,10 +2124,10 @@ function isJQuery($obj) {
             });
         }
     }
-
-    function hghlghtRqrdInpts (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
+	
+    function hghlghtRqrdInpts ($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
                 var $thisInput = $(this);
 				$thisInput.blur(function () {
 					if ($thisInput.val() == "") {
@@ -2137,12 +2141,12 @@ function isJQuery($obj) {
         }
     }
 
-    /******************************************************************************************\
-    | Highlight required CHECKBOXES until at least one has been checked                        |
-    \******************************************************************************************/
-    function checkRqrdChckbxs (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
+    /****************************************************************************************************\
+    | Highlight required CHECKBOXES until at least one has been checked                                  |
+    \****************************************************************************************************/
+    function checkRqrdChckbxs ($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
                 var $this = $(this);
                 var $inputs = $this.find("input");
 				var inputReady = false;
@@ -2161,9 +2165,9 @@ function isJQuery($obj) {
 		}
 	}
 
-    function hghlghtRqrdChckbxs (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
+    function hghlghtRqrdChckbxs ($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
                 var $this = $(this);
                 var $inputs = $this.find("input");
                 $inputs.each(function () {
@@ -2191,23 +2195,45 @@ function isJQuery($obj) {
         }
     }
 
-    /******************************************************************************************\
-    | Highlight required TEXT AREA inputs until a value has been properly entered              |
-    \******************************************************************************************/
-    function checkRqrdTxtAreas (selector) {
-		checkRqrdInpts(selector);
+    /****************************************************************************************************\
+    | Highlight required TEXT AREA inputs until a value has been properly entered                        |
+    \****************************************************************************************************/
+    function checkRqrdTxtAreas ($fields) {
+		checkRqrdInpts($fields);
     }
 
-    function hghlghtRqrdTxtAreas (selector) {
-		hghlghtRqrdInpts(selector);
+    function hghlghtRqrdTxtAreas ($fields) {
+		hghlghtRqrdInpts($fields);
     }
 
-    /******************************************************************************************\
-    | Highlight required SELECTS until at least one has been checked                           |
-    \******************************************************************************************/
-    function hghlghtRqrdSelects (selector) {
-        if ($.type(selector) === "string") {
-            $(selector).each(function () {
+    /****************************************************************************************************\
+    | Highlight required RICH TEXT EDITOR containters until a value has been properly entered            |
+    \****************************************************************************************************/
+	function hghlghtRqrdRchTxtEdtrs($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
+				var $edtrFrm = $(this).find("iframe");
+				var $edtrBdy = $edtrFrm.content().find("#tinymce");
+				$edtrBdy.css("background", "rgba(255,0,0,0.1)");
+				$edtrBdy.focus(function () {
+					$(this).css("background-color", "rgba(255,255,255,1)");
+				});
+				$edtrBdy.blur(function () {
+					var $this = $(this);
+					if($this.text().replace(/\n|\uFEFF/g, "") == "") {
+						$this.css("background-color","rgba(255,0,0,0.1)");
+					}
+				});
+			});
+		}
+	}
+
+    /****************************************************************************************************\
+    | Highlight required SELECTS until at least one has been checked                                     |
+    \****************************************************************************************************/
+    function hghlghtRqrdSelects ($fields) {
+        if (isJQuery($fields)) {
+            $fields.each(function () {
                 var $thisInput = $(this);
 				var $childSlctdOptn = $thisInput.find("option:selected");
 				var optionVal = $childSlctdOptn.text();                        
@@ -2231,9 +2257,9 @@ function isJQuery($obj) {
         }
     }
 
-    /******************************************************************************************\
-    | Initialize RegEx filtration of inputs that accept WSU ID numbers                         |
-    \******************************************************************************************/
+    /****************************************************************************************************\
+    | Initialize RegEx filtration of inputs that accept WSU ID numbers                                   |
+    \****************************************************************************************************/
     function initWsuIdInputs(slctrInputs) {
         var $wsuIdInputs = $(slctrInputs).find("input[type='text']");
         $wsuIdInputs.on("keyup paste", function () {
@@ -2263,9 +2289,9 @@ function isJQuery($obj) {
         });
     }
 	
-    /******************************************************************************************\
-    | Setup activator checkboxes that disappear once one is selected                           |
-    \******************************************************************************************/
+    /****************************************************************************************************\
+    | Setup activator checkboxes that disappear once one is selected                                     |
+    \****************************************************************************************************/
     function setupActvtrChckbxs (selector) {
         if ($.type(selector) === "string") {
             $(".gform_body").on("change", selector + " input", function () {
@@ -2276,10 +2302,10 @@ function isJQuery($obj) {
         }
     }
     
-    /******************************************************************************************\
-    | Setup a chain of activator checkboxes, wherein once a checkbox is activated/deactivated, |
-    | only its closest previous sibling is hidden/shown.                                       |
-    \******************************************************************************************/
+    /****************************************************************************************************\
+    | Setup a chain of activator checkboxes, wherein once a checkbox is activated/deactivated,           |
+    | only its closest previous sibling is hidden/shown.                                                 |
+    \****************************************************************************************************/
     function setupActvtrChain (selector) {
         if ($.type(selector) === "string") {
             $(".gform_body").on("change", selector + " input", function () {
@@ -2296,10 +2322,10 @@ function isJQuery($obj) {
         }
     }
 
-    /******************************************************************************************\
-    | Setup a chain of file uploading inputs, wherein only the left-most input in the tree is  |
-    | visible. As the user uploads files in sequence, the next nearest neighbor is unveiled.   |
-    \******************************************************************************************/
+    /****************************************************************************************************\
+    | Setup a chain of file uploading inputs, wherein only the left-most input in the tree is            |
+    | visible. As the user uploads files in sequence, the next nearest neighbor is unveiled.             |
+    \****************************************************************************************************/
     function setupUploadChain (selector) {
         if ($.type(selector) === "string") {
             /* CHECK IF UPLOADS ALREADY EXIST:
