@@ -2213,9 +2213,10 @@ function isJQuery($obj) {
         if (isJQuery($fields) && $fields.length > 0) {
             $fields.each(function () {
 				var $edtrFrm = $(this).find("iframe");
+				console.log($edtrFrm.length);
 				$edtrFrm.each(function () {
-					var $edtrBdy = $(this).content().find("#tinymce");
-					$edtrBdy.css("background", "rgba(255,0,0,0.1)");
+					var $edtrBdy = $(this).contents().find("#tinymce");
+					$edtrBdy.css("background-color", "rgba(255,0,0,0.1)");
 					$edtrBdy.focus(function () {
 						$(this).css("background-color", "rgba(255,255,255,1)");
 					});
