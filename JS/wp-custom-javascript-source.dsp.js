@@ -2211,6 +2211,7 @@ function isJQuery($obj) {
     \****************************************************************************************************/
 	function hghlghtRqrdRchTxtEdtrs($fields) {
         if (isJQuery($fields) && $fields.length > 0) {
+			console.log($fields.length);
             $fields.each(function () {
 				var $edtrFrm = $(this).find("iframe");
 				console.log($edtrFrm.length);
