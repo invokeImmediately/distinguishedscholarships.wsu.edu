@@ -723,7 +723,7 @@ main section.row > div.column > article > div.article-body > section > p + ol,
 main section.row > div.column > article > div.article-summary > section > p + ol,
 main section.row > div.column > section > section > p + ol,
 main section.row > div.column table > tbody > tr > td > section > p + ol {
-  margin-top: -0.75rem;
+  margin-top: -0.66666667rem;
 }
 main section.row:last-child > div.column > p:last-child,
 main section.row:last-child > div.column > article > div.article-body > p:last-child,
@@ -4606,6 +4606,12 @@ div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### INPUT FORMS ########################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Styling applied to input elements to which the gravity form classes have been applied.       ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
 input.read-more-state {
   display: none;
 }
@@ -4715,12 +4721,6 @@ div.read-more-target {
 .read-more-state:checked ~ p label.read-more-trigger:before {
   content: 'Show less';
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### INPUT FORMS ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Styling applied to input elements to which the gravity form classes have been applied.       ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
 div.column .gform_wrapper {
   max-width: 990px;
 }
