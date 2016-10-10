@@ -1126,44 +1126,44 @@ div.column h2 {
 @media all {
 	div.column h2.article-title {
 		line-height: 1.1em;
-		font-size: 1.24235294em;
+		font-size: .82823529em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column h2.article-title {
-		font-size: 1.32447009em;
+		font-size: .88298006em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column h2.article-title {
-		font-size: 1.24235294em;
+		font-size: .82823529em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column h2.article-title {
-		font-size: 1.32447009em;
+		font-size: .88298006em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column h2.article-title {
-		font-size: 1.24235294em;
+		font-size: .82823529em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h2.article-title {
-		font-size: 1.16532706em;
+		font-size: .77688471em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h2.article-title {
-		font-size: 1.09307678em;
+		font-size: .72871785em;
 		text-align: left;
 	}
 }
@@ -1401,47 +1401,52 @@ div.column h1.crimson,div.column h2.crimson {
 	}
 }
 
+body.blog div.column header.article-header+* {
+	padding-top: 15px;
+	border-top: 1px solid rgba(127,127,127,.2);
+}
+
 @media all {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
 		line-height: 1.1em;
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
 
 @media all and (min-width:1073px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2.13219616em;
+		font-size: 1.59914712em;
 	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
 
 @media all and (min-width:792px) and (max-width:989px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2.13219616em;
+		font-size: 1.59914712em;
 	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 1.876em;
+		font-size: 1.407em;
 		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
-		font-size: 1.759688em;
+		font-size: 1.319766em;
 		text-align: left;
 	}
 }
@@ -2163,7 +2168,7 @@ div.column p.article-tagline:after {
 	border-top: 1px solid rgba(70,78,84,.25);
 }
 
-div.column h1+p.article-tagline,div.column h2+p.article-tagline,div.column h3+p.article-tagline,div.column h4+p.article-tagline,div.column h5+p.article-tagline,div.column h6+p.article-tagline {
+.gform_heading h3.gform_title+p.article-tagline,div.column h1+p.article-tagline,div.column h2+p.article-tagline,div.column h3+p.article-tagline,div.column h4+p.article-tagline,div.column h5+p.article-tagline,div.column h6+p.article-tagline {
 	margin-top: 1.33333333rem;
 }
 
@@ -2334,6 +2339,11 @@ div.column p.article-media-contacts {
 	text-align: left;
 }
 
+body.single-post div.column p.article-media-contacts+:not(.article-media-contacts) {
+	padding-top: 15px;
+	border-top: 1px solid rgba(127,127,127,.2);
+}
+
 div.column p.fine-print {
 	font-size: .9em;
 }
@@ -2498,7 +2508,7 @@ div.article-body {
 	position: relative;
 }
 
-div.article-summary aside.article-sidebar,div.article-summary img,div.article-summary object,div.article-summary p.article-media-contacts,div.article-summary>h3 {
+div.article-summary aside.article-sidebar,div.article-summary img,div.article-summary object,div.article-summary p.article-media-contacts,div.article-summary p.photo-caption,div.article-summary>h3 {
 	display: none;
 }
 
