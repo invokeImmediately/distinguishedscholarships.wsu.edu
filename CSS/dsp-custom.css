@@ -1448,7 +1448,7 @@ header.main-header span.sup-header-default {
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   header.main-header span.sup-header-default {
-    font-size: 0.9rem;
+    font-size: 0.8442rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
@@ -1458,12 +1458,12 @@ header.main-header span.sup-header-default {
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   header.main-header span.sup-header-default {
-    font-size: 0.9rem;
+    font-size: 0.8442rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   header.main-header span.sup-header-default {
-    font-size: 0.8442rem;
+    font-size: 0.7918596rem;
   }
 }
 @media all and (max-width: 360px) {
@@ -1487,7 +1487,7 @@ header.main-header span.sup-header-default {
 @media all and (min-width: 990px) and (max-width: 1072px) {
   header.main-header span.sub-header-default,
   header.main-header sub.sub-header {
-    font-size: 2.5rem;
+    font-size: 2.345rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
@@ -1499,13 +1499,13 @@ header.main-header span.sup-header-default {
 @media all and (min-width: 481px) and (max-width: 791px) {
   header.main-header span.sub-header-default,
   header.main-header sub.sub-header {
-    font-size: 2.5rem;
+    font-size: 2.345rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   header.main-header span.sub-header-default,
   header.main-header sub.sub-header {
-    font-size: 2.345rem;
+    font-size: 2.19961rem;
   }
 }
 @media all and (max-width: 360px) {
