@@ -52,16 +52,17 @@ function isJQuery($obj) {
          "activated", 400, 100);
 		initQuickTabs("section.row.single.quick-tabs");
         initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
+		// initScrollingSidebars("...");
         initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
     });
     
     $(window).load(function () {
-        finalizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.two", "div.column.two",
+        finalizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.one", "div.column.two",
          1051, 100);
     });
     
     $(window).resize(function () {
-        resizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.two", "div.column.two",
+        resizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.one", "div.column.two",
          1051, 100);
     });
     
@@ -2266,18 +2267,42 @@ function isJQuery($obj) {
     \****************************************************************************************************/
     function initWsuIdInputs(slctrInputs) {
         var $wsuIdInputs = $(slctrInputs).find("input[type='text']");
-        $wsuIdInputs.on("keyup paste", function () {
+		$wsuIdInputs.keydown(function(e) {
             var $this = $(this);
-            var regExMask = /[^0-9]+/g;
             var inputText = $this.val();
+			if((e.keyCode < 48 || (e.keyCode > 57 && e.keyCode < 96) || e.keyCode > 105) &&
+			 !~[8, 9, 20, 35, 36, 37, 39, 46, 110, 144].indexOf(e.keyCode) &&
+			 !(e.keyCode == 86 && e.ctrlKey)) {
+				e.preventDefault();
+			}
+			else if (!~[8, 9, 20, 35, 36, 37, 39, 46, 110, 144].indexOf(e.keyCode) && inputText.length >= 9) {
+				e.preventDefault();
+				alert("WSU ID numbers are no greater than nine (9) digits in length.");
+			}
+		});
+        $wsuIdInputs.on("paste", function (e) {
+            var $this = $(this);
+			var clipboardData = e.originalEvent.clipboardData || window.clipboardData;
+			var inputText = clipboardData.getData('Text');
+            var regExMask = /[^0-9]+/g;
             if (regExMask.exec(inputText) != null) {
+				var errorMsg = "WSU ID numbers can only contain digits.";
+				e.stopPropagation();
+				e.preventDefault();
                 $this.val(inputText.replace(regExMask, ""));
                 inputText = $this.val();
-				alert("WSU ID numbers can only contain digts.");
+				if (inputText.length > 9) {
+					$this.val(inputText.slice(0,9));
+					errorMsg += " Also, they must be no greater than nine (9) digits in length.");
+				}
+				errorMsg += " What you pasted will automatically be corrected."
+				alert(errorMsg);
             }
-            if (inputText.length > 9) {
+            else if (inputText.length > 9) {
+				e.stopPropagation();
+				e.preventDefault();
                 $this.val(inputText.slice(0,9));
-				alert("WSU ID numbers are no greater than nine (9) digits in length.");
+				alert("WSU ID numbers are no greater than nine (9) digits in length. What you pasted will automatically be corrected.");
             }
         });
         $wsuIdInputs.blur(function () {
