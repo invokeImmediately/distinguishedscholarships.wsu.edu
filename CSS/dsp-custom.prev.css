@@ -727,7 +727,7 @@ main section.row>div.column table>tbody>tr>td>ol:not(.no-btm-margin),main sectio
 	margin-bottom: 1rem;
 }
 
-main section.row>div.column table>tbody>tr>td>p+ol,main section.row>div.column table>tbody>tr>td>p+ul,main section.row>div.column table>tbody>tr>td>section>p+ol,main section.row>div.column table>tbody>tr>td>section>p+ul,main section.row>div.column>article>div.article-body>p+ol,main section.row>div.column>article>div.article-body>p+ul,main section.row>div.column>article>div.article-body>section>p+ol,main section.row>div.column>article>div.article-body>section>p+ul,main section.row>div.column>article>div.article-summary>p+ol,main section.row>div.column>article>div.article-summary>p+ul,main section.row>div.column>article>div.article-summary>section>p+ol,main section.row>div.column>article>div.article-summary>section>p+ul,main section.row>div.column>p+ol,main section.row>div.column>p+ul,main section.row>div.column>section>p+ol,main section.row>div.column>section>p+ul,main section.row>div.column>section>section>p+ol,main section.row>div.column>section>section>p+ul {
+main section.row>div.column table>tbody>tr>td>p+ol:not(.spaces-top-full),main section.row>div.column table>tbody>tr>td>p+ul:not(.spaces-top-full),main section.row>div.column table>tbody>tr>td>section>p+ol:not(.spaces-top-full),main section.row>div.column table>tbody>tr>td>section>p+ul:not(.spaces-top-full),main section.row>div.column>article>div.article-body>p+ol:not(.spaces-top-full),main section.row>div.column>article>div.article-body>p+ul:not(.spaces-top-full),main section.row>div.column>article>div.article-body>section>p+ol:not(.spaces-top-full),main section.row>div.column>article>div.article-body>section>p+ul:not(.spaces-top-full),main section.row>div.column>article>div.article-summary>p+ol:not(.spaces-top-full),main section.row>div.column>article>div.article-summary>p+ul:not(.spaces-top-full),main section.row>div.column>article>div.article-summary>section>p+ol:not(.spaces-top-full),main section.row>div.column>article>div.article-summary>section>p+ul:not(.spaces-top-full),main section.row>div.column>p+ol:not(.spaces-top-full),main section.row>div.column>p+ul:not(.spaces-top-full),main section.row>div.column>section>p+ol:not(.spaces-top-full),main section.row>div.column>section>p+ul:not(.spaces-top-full),main section.row>div.column>section>section>p+ol:not(.spaces-top-full),main section.row>div.column>section>section>p+ul:not(.spaces-top-full) {
 	margin-top: -.66666667rem;
 }
 
@@ -1047,14 +1047,12 @@ div.column h1 {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h1 {
 		font-size: 2.64847059em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h1 {
 		font-size: 2.48426541em;
-		text-align: left;
 	}
 }
 
@@ -1112,14 +1110,12 @@ div.column h2 {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h2 {
 		font-size: 1.94221176em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h2 {
 		font-size: 1.82179464em;
-		text-align: left;
 	}
 }
 
@@ -1157,14 +1153,12 @@ div.column h2 {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h2.article-title {
 		font-size: .77688471em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h2.article-title {
 		font-size: .72871785em;
-		text-align: left;
 	}
 }
 
@@ -1270,14 +1264,12 @@ div.column h3 {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h3 {
 		font-size: 1.5008em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h3 {
 		font-size: 1.4077504em;
-		text-align: left;
 	}
 }
 
@@ -1368,14 +1360,12 @@ div.column h4 {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column h4 {
 		font-size: 1.23595294em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column h4 {
 		font-size: 1.15932386em;
-		text-align: left;
 	}
 }
 
@@ -1440,53 +1430,101 @@ body.blog div.column header.article-header+* {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
 		font-size: 1.407em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column header.article-header h1.article-title,div.column header.article-header h2.article-title {
 		font-size: 1.319766em;
-		text-align: left;
 	}
 }
 
 header.main-header span.sup-header-default {
 	margin-bottom: .5rem;
-	font-size: .9rem;
+}
+
+@media all {
+	header.main-header span.sup-header-default {
+		font-size: .9rem;
+	}
+}
+
+@media all and (min-width:1073px) {
+	header.main-header span.sup-header-default {
+		font-size: .9rem;
+	}
+}
+
+@media all and (min-width:990px) and (max-width:1072px) {
+	header.main-header span.sup-header-default {
+		font-size: .8442rem;
+	}
+}
+
+@media all and (min-width:792px) and (max-width:989px) {
+	header.main-header span.sup-header-default {
+		font-size: .9rem;
+	}
+}
+
+@media all and (min-width:481px) and (max-width:791px) {
+	header.main-header span.sup-header-default {
+		font-size: .8442rem;
+	}
+}
+
+@media all and (min-width:361px) and (max-width:480px) {
+	header.main-header span.sup-header-default {
+		font-size: .7918596rem;
+	}
 }
 
 @media all and (max-width:360px) {
 	header.main-header span.sup-header-default {
-		font-size: .75rem;
+		font-size: .7918596rem;
 	}
 }
 
 @media all {
-	header.main-header span.sub-header-default {
-		font-size: 2.5rem;
-		line-height: .8em;
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		line-height: .9em;
+		font-size: 2.35294118rem;
+	}
+}
+
+@media all and (min-width:1073px) {
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.35294118rem;
+	}
+}
+
+@media all and (min-width:990px) and (max-width:1072px) {
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.20705882rem;
+	}
+}
+
+@media all and (min-width:792px) and (max-width:989px) {
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.35294118rem;
+	}
+}
+
+@media all and (min-width:481px) and (max-width:791px) {
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.20705882rem;
+	}
+}
+
+@media all and (min-width:361px) and (max-width:480px) {
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.07022118rem;
 	}
 }
 
 @media all and (max-width:360px) {
-	header.main-header span.sub-header-default {
-		font-size: 2.08333rem;
-		line-height: 1em;
-	}
-}
-
-@media all {
-	header.main-header sub.sub-header {
-		font-size: 2.5rem;
-		line-height: .8em;
-	}
-}
-
-@media all and (max-width:360px) {
-	header.main-header sub.sub-header {
-		font-size: 2.08333rem;
-		line-height: 1em;
+	header.main-header span.sub-header-default,header.main-header sub.sub-header {
+		font-size: 2.07022118rem;
 	}
 }
 
@@ -1584,14 +1622,12 @@ footer.article-footer div.author-info {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column p {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column p {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -1629,14 +1665,12 @@ footer.article-footer div.author-info {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column p,section.row.side-left div.column p,section.row.side-right div.column p {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column p,section.row.side-left div.column p,section.row.side-right div.column p {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -1674,14 +1708,12 @@ footer.article-footer div.author-info {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column p,section.row.thirds div.column p {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column p,section.row.thirds div.column p {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -1744,14 +1776,12 @@ div.column p.half-margins:not(:last-child) {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column p.article-deck {
 		font-size: 1.1256em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column p.article-deck {
 		font-size: 1.0558128em;
-		text-align: left;
 	}
 }
 
@@ -1789,14 +1819,12 @@ div.column p.half-margins:not(:last-child) {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column p.article-deck,section.row.side-left div.column p.article-deck,section.row.side-right div.column p.article-deck {
 		font-size: 1.1256em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column p.article-deck,section.row.side-left div.column p.article-deck,section.row.side-right div.column p.article-deck {
 		font-size: 1.0558128em;
-		text-align: left;
 	}
 }
 
@@ -1834,14 +1862,12 @@ div.column p.half-margins:not(:last-child) {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column p.article-deck,section.row.thirds div.column p.article-deck {
 		font-size: 1.0558128em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column p.article-deck,section.row.thirds div.column p.article-deck {
 		font-size: 1.0558128em;
-		text-align: left;
 	}
 }
 
@@ -1887,14 +1913,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column p.article-tagline {
 		font-size: 1.22409em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column p.article-tagline {
 		font-size: 1.14819642em;
-		text-align: left;
 	}
 }
 
@@ -1932,14 +1956,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column p.article-tagline,section.row.side-left div.column p.article-tagline,section.row.side-right div.column p.article-tagline {
 		font-size: 1.22409em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column p.article-tagline,section.row.side-left div.column p.article-tagline,section.row.side-right div.column p.article-tagline {
 		font-size: 1.14819642em;
-		text-align: left;
 	}
 }
 
@@ -1977,14 +1999,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column p.article-tagline,section.row.thirds div.column p.article-tagline {
 		font-size: 1.14819642em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column p.article-tagline,section.row.thirds div.column p.article-tagline {
 		font-size: 1.14819642em;
-		text-align: left;
 	}
 }
 
@@ -2022,14 +2042,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column p.article-tagline.home {
 		font-size: 1.60398021em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column p.article-tagline.home {
 		font-size: 1.50453344em;
-		text-align: left;
 	}
 }
 
@@ -2067,14 +2085,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column p.article-tagline.home,section.row.side-left div.column p.article-tagline.home,section.row.side-right div.column p.article-tagline.home {
 		font-size: 1.60398021em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column p.article-tagline.home,section.row.side-left div.column p.article-tagline.home,section.row.side-right div.column p.article-tagline.home {
 		font-size: 1.50453344em;
-		text-align: left;
 	}
 }
 
@@ -2112,14 +2128,12 @@ div.column p.article-deck strong {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column p.article-tagline.home,section.row.thirds div.column p.article-tagline.home {
 		font-size: 1.50453344em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column p.article-tagline.home,section.row.thirds div.column p.article-tagline.home {
 		font-size: 1.50453344em;
-		text-align: left;
 	}
 }
 
@@ -2141,27 +2155,27 @@ div.column p.article-tagline.sans>span.lead-in {
 	letter-spacing: normal;
 }
 
-div.column p.article-tagline {
+div.column p.article-tagline:not(.has-no-bordering) {
 	position: relative;
 	padding-top: .33333333rem !important;
 	padding-bottom: .33333333rem !important;
 	margin-top: .33333333rem;
 }
 
-div.column p.article-tagline:after,div.column p.article-tagline:before {
+div.column p.article-tagline:not(.has-no-bordering):after,div.column p.article-tagline:not(.has-no-bordering):before {
 	content: "";
 	position: absolute;
 	left: 0;
 	width: 67%;
 }
 
-div.column p.article-tagline:before {
+div.column p.article-tagline:not(.has-no-bordering):before {
 	top: -.33333333rem;
 	height: 5px;
 	border-top: 5px solid rgba(70,78,84,.33);
 }
 
-div.column p.article-tagline:after {
+div.column p.article-tagline:not(.has-no-bordering):after {
 	bottom: -.33333333rem;
 	height: 1px;
 	width: 33%;
@@ -2228,14 +2242,12 @@ div.column p.vpue-jump-bar span.title {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column p.vpue-jump-back {
 		font-size: .644875em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column p.vpue-jump-back {
 		font-size: .60489275em;
-		text-align: left;
 	}
 }
 
@@ -2273,14 +2285,12 @@ div.column p.vpue-jump-bar span.title {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column p.vpue-jump-back,section.row.side-left div.column p.vpue-jump-back,section.row.side-right div.column p.vpue-jump-back {
 		font-size: .644875em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column p.vpue-jump-back,section.row.side-left div.column p.vpue-jump-back,section.row.side-right div.column p.vpue-jump-back {
 		font-size: .60489275em;
-		text-align: left;
 	}
 }
 
@@ -2318,14 +2328,12 @@ div.column p.vpue-jump-bar span.title {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column p.vpue-jump-back,section.row.thirds div.column p.vpue-jump-back {
 		font-size: .60489275em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column p.vpue-jump-back,section.row.thirds div.column p.vpue-jump-back {
 		font-size: .60489275em;
-		text-align: left;
 	}
 }
 
@@ -2417,14 +2425,12 @@ div.column p.banner-text {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p.banner-text {
 		font-size: 1.1725em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p.banner-text {
 		font-size: 1.099805em;
-		text-align: left;
 	}
 }
 
@@ -2493,14 +2499,12 @@ div.column p.banner-text-orange-with-towers {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column p.banner-text-orange-with-towers {
 		font-size: 1.1725em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column p.banner-text-orange-with-towers {
 		font-size: 1.099805em;
-		text-align: left;
 	}
 }
 
@@ -3606,14 +3610,12 @@ div.recent-updates p.recent-update-3 {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column ul {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column ul {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -3651,14 +3653,12 @@ div.recent-updates p.recent-update-3 {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column ul,section.row.side-left div.column ul,section.row.side-right div.column ul {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column ul,section.row.side-left div.column ul,section.row.side-right div.column ul {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -3696,14 +3696,12 @@ div.recent-updates p.recent-update-3 {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column ul,section.row.thirds div.column ul {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column ul,section.row.thirds div.column ul {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -3787,14 +3785,12 @@ ul.application-steps>li,ul.content-boxes>li {
 @media all and (min-width:361px) and (max-width:480px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	ul.application-steps>li p,ul.content-boxes>li p {
 		font-size: .82529367em;
-		text-align: left;
 	}
 }
 
@@ -3873,14 +3869,12 @@ ul.cascaded-layout>li.gutter-sizer {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.single div.column ol {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.single div.column ol {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -3918,14 +3912,12 @@ ul.cascaded-layout>li.gutter-sizer {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.halves div.column ol,section.row.side-left div.column ol,section.row.side-right div.column ol {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.halves div.column ol,section.row.side-left div.column ol,section.row.side-right div.column ol {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -3963,14 +3955,12 @@ ul.cascaded-layout>li.gutter-sizer {
 @media all and (min-width:361px) and (max-width:480px) {
 	section.row.quarters div.column ol,section.row.thirds div.column ol {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	section.row.quarters div.column ol,section.row.thirds div.column ol {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -4040,14 +4030,12 @@ div.column dl.faq dt {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column dl.faq dt {
 		font-size: .938em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column dl.faq dt {
 		font-size: .879844em;
-		text-align: left;
 	}
 }
 
@@ -4923,51 +4911,6 @@ div.read-more-target {
 
 div.column .gform_wrapper {
 	max-width: 990px;
-}
-
-@media all {
-	div.column .gform_wrapper {
-		line-height: 1.275em;
-		font-size: 16px;
-	}
-}
-
-@media all and (min-width:1073px) {
-	div.column .gform_wrapper {
-		font-size: 16px;
-	}
-}
-
-@media all and (min-width:990px) and (max-width:1072px) {
-	div.column .gform_wrapper {
-		font-size: 16px;
-	}
-}
-
-@media all and (min-width:792px) and (max-width:989px) {
-	div.column .gform_wrapper {
-		font-size: 16px;
-	}
-}
-
-@media all and (min-width:481px) and (max-width:791px) {
-	div.column .gform_wrapper {
-		font-size: 16px;
-	}
-}
-
-@media all and (min-width:361px) and (max-width:480px) {
-	div.column .gform_wrapper {
-		font-size: 15.01px;
-		text-align: left;
-	}
-}
-
-@media all and (max-width:360px) {
-	div.column .gform_wrapper {
-		font-size: 14.08px;
-		text-align: left;
-	}
 }
 
 div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
@@ -6119,14 +6062,12 @@ header.main-header {
 @media all and (min-width:361px) and (max-width:480px) {
 	div.column aside {
 		font-size: .82529367em;
-		text-align: left;
 	}
 }
 
 @media all and (max-width:360px) {
 	div.column aside {
 		font-size: .77412546em;
-		text-align: left;
 	}
 }
 
