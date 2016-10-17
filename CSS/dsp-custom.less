@@ -251,7 +251,7 @@ div.column table.calendar {
 			div.day{
 				color: @hex-white;
 			}
-			a {
+			p > a {
 				border-bottom: 0.0625em solid rgba(red(@hex-white), green(@hex-white), blue(@hex-white), .3);
 				box-shadow: inset 0 -0.3125em 0 rgba(red(@hex-white), green(@hex-white), blue(@hex-white), .3);
 				color: @hex-white;
@@ -263,183 +263,195 @@ div.column table.calendar {
 			}
 			&.gray {
 				background-color: #67767b;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#2a3033), green(#2a3033), blue(#2a3033), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#2a3033), green(#2a3033), blue(#2a3033), .3);
+					&:hover {
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+						background-color: rgba(42, 48, 51, 0.2);
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #2a3033;
-				}
-				a:hover {
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
-					background-color: rgba(42, 48, 51, 0.2);
 				}
 			}
 			&.crimson {
 				background-color: #be1a40;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#da91a5), green(#da91a5), blue(#da91a5), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#da91a5), green(#da91a5), blue(#da91a5), .3);
+					&:hover {
+						background-color: rgba(219, 146, 166, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #da91a5;
-				}
-				a:hover {
-					background-color: rgba(219, 146, 166, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.orange {
 				background-color: #e95b34;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#492e14), green(#492e14), blue(#492e14), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#492e14), green(#492e14), blue(#492e14), .3);
+					&:hover {
+						background-color: rgba(73, 46, 20, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #492e14;
-				}
-				a:hover {
-					background-color: rgba(73, 46, 20, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.olive {
 				background-color: #9b8b28;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#e9e03c), green(#e9e03c), blue(#e9e03c), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#e9e03c), green(#e9e03c), blue(#e9e03c), .3);
+					&:hover {
+						background-color: rgba(233, 244, 60, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #e9e03c;
-				}
-				a:hover {
-					background-color: rgba(233, 244, 60, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.blue {
 				background-color: #127286;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#06c6ce), green(#06c6ce), blue(#06c6ce), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#06c6ce), green(#06c6ce), blue(#06c6ce), .3);
+					&:hover {
+						background-color: rgba(6, 198, 206, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #06c6ce;
-				}
-				a:hover {
-					background-color: rgba(6, 198, 206, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.dark-gray {
 				background-color: #373940;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					&:hover {
+						background-color: rgba(181, 186, 190, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #b5babe;
-				}
-				a:hover {
-					background-color: rgba(181, 186, 190, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.dark-brown {
 				background-color: #480f13;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#cb9b6e), green(#cb9b6e), blue(#cb9b6e), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#cb9b6e), green(#cb9b6e), blue(#cb9b6e), .3);
+					&:hover {
+						background-color: rgba(203, 155, 110, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #cb9b6e;
-				}
-				a:hover {
-					background-color: rgba(203, 155, 110, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.brown {
 				background-color: #723f1f;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#ddbea1), green(#ddbea1), blue(#ddbea1), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#ddbea1), green(#ddbea1), blue(#ddbea1), .3);
+					&:hover {
+						background-color: rgba(221, 190, 161, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #ddbea1;
-				}
-				a:hover {
-					background-color: rgba(221, 190, 161, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.dark-gray.brown {
 				background: linear-gradient(to bottom, rgba(red(#373940), green(#373940), blue(#373940), 1.0),
 							  rgba(red(#723f1f), green(#723f1f), blue(#723f1f), 1.0));
-				a:first-child {
+				p > a:first-child {
 					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					&:hover {
+						background-color: rgba(181, 186, 190, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:first-child:hover {
+				div.day,
+				p > a:first-child:hover {
 					color: #b5babe;
-				}
-				a:first-child:hover {
-					background-color: rgba(181, 186, 190, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.dark-olive {
 				background-color: #453a16;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#ada400), green(#ada400), blue(#ada400), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#ada400), green(#ada400), blue(#ada400), .3);
+					&:hover {
+						background-color: rgba(173, 164, 0, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #ada400;
-				}
-				a:hover {
-					background-color: rgba(173, 164, 0, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.dark-blue {
 				background-color: #12313c;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#00a5bd), green(#00a5bd), blue(#00a5bd), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#00a5bd), green(#00a5bd), blue(#00a5bd), .3);
+					&:hover {
+						background-color: rgba(0, 165, 189, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #00a5bd;
-				}
-				a:hover {
-					background-color: rgba(0, 165, 189, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.black {
 				background-color: #0f0f10;
-				a {
+				p > a {
 					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					&:hover {
+						background-color: rgba(181, 186, 190, 0.2);
+						border-bottom: 0.0625em solid transparent;
+						box-shadow: inset 0 -.3125em 0 transparent;
+					}
 				}
-				div.day, a:hover {
+				div.day,
+				p > a:hover {
 					color: #b5babe;
-				}
-				a:hover {
-					background-color: rgba(181, 186, 190, 0.2);
-					border-bottom: 0.0625em solid transparent;
-					box-shadow: inset 0 -.3125em 0 transparent;
 				}
 			}
 			&.gold {
@@ -448,7 +460,7 @@ div.column table.calendar {
 				div.day{
 					color: #000000;
 				}
-				a {
+				p > a {
 					color: #2a3033;
 					border-bottom: 0.0625em solid rgba(red(#68777e), green(#68777e), blue(#68777e), .3);
 					box-shadow: inset 0 -0.3125em 0 rgba(red(#68777e), green(#68777e), blue(#68777e), .3);
