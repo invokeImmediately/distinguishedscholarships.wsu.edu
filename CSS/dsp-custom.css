@@ -5937,7 +5937,7 @@ div.column table.calendar td.has-an-event {
 div.column table.calendar td.has-an-event div.day {
   color: #fff;
 }
-div.column table.calendar td.has-an-event a {
+div.column table.calendar td.has-an-event p > a {
   border-bottom: 0.0625em solid rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(255, 255, 255, 0.3);
   color: #fff;
@@ -5945,200 +5945,200 @@ div.column table.calendar td.has-an-event a {
   -moz-transition: "color .4s linear, border .4s ease-in, box-shadow .4s ease-in";
   transition: "color .4s linear, border .4s ease-in, box-shadow .4s ease-in";
 }
-div.column table.calendar td.has-an-event a:hover {
+div.column table.calendar td.has-an-event p > a:hover {
   text-shadow: 0.0625em 0.0625em 0.0625em rgba(255, 255, 255, 0.3);
 }
 div.column table.calendar td.has-an-event.gray {
   background-color: #67767b;
 }
-div.column table.calendar td.has-an-event.gray a {
+div.column table.calendar td.has-an-event.gray p > a {
   border-bottom: 0.0625em solid rgba(42, 48, 51, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(42, 48, 51, 0.3);
 }
-div.column table.calendar td.has-an-event.gray div.day,
-div.column table.calendar td.has-an-event.gray a:hover {
-  color: #2a3033;
-}
-div.column table.calendar td.has-an-event.gray a:hover {
+div.column table.calendar td.has-an-event.gray p > a:hover {
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
   background-color: rgba(42, 48, 51, 0.2);
 }
+div.column table.calendar td.has-an-event.gray div.day,
+div.column table.calendar td.has-an-event.gray p > a:hover {
+  color: #2a3033;
+}
 div.column table.calendar td.has-an-event.crimson {
   background-color: #be1a40;
 }
-div.column table.calendar td.has-an-event.crimson a {
+div.column table.calendar td.has-an-event.crimson p > a {
   border-bottom: 0.0625em solid rgba(218, 145, 165, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(218, 145, 165, 0.3);
 }
-div.column table.calendar td.has-an-event.crimson div.day,
-div.column table.calendar td.has-an-event.crimson a:hover {
-  color: #da91a5;
-}
-div.column table.calendar td.has-an-event.crimson a:hover {
+div.column table.calendar td.has-an-event.crimson p > a:hover {
   background-color: rgba(219, 146, 166, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.crimson div.day,
+div.column table.calendar td.has-an-event.crimson p > a:hover {
+  color: #da91a5;
+}
 div.column table.calendar td.has-an-event.orange {
   background-color: #e95b34;
 }
-div.column table.calendar td.has-an-event.orange a {
+div.column table.calendar td.has-an-event.orange p > a {
   border-bottom: 0.0625em solid rgba(73, 46, 20, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(73, 46, 20, 0.3);
 }
-div.column table.calendar td.has-an-event.orange div.day,
-div.column table.calendar td.has-an-event.orange a:hover {
-  color: #492e14;
-}
-div.column table.calendar td.has-an-event.orange a:hover {
+div.column table.calendar td.has-an-event.orange p > a:hover {
   background-color: rgba(73, 46, 20, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.orange div.day,
+div.column table.calendar td.has-an-event.orange p > a:hover {
+  color: #492e14;
+}
 div.column table.calendar td.has-an-event.olive {
   background-color: #9b8b28;
 }
-div.column table.calendar td.has-an-event.olive a {
+div.column table.calendar td.has-an-event.olive p > a {
   border-bottom: 0.0625em solid rgba(233, 224, 60, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(233, 224, 60, 0.3);
 }
-div.column table.calendar td.has-an-event.olive div.day,
-div.column table.calendar td.has-an-event.olive a:hover {
-  color: #e9e03c;
-}
-div.column table.calendar td.has-an-event.olive a:hover {
+div.column table.calendar td.has-an-event.olive p > a:hover {
   background-color: rgba(233, 244, 60, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.olive div.day,
+div.column table.calendar td.has-an-event.olive p > a:hover {
+  color: #e9e03c;
+}
 div.column table.calendar td.has-an-event.blue {
   background-color: #127286;
 }
-div.column table.calendar td.has-an-event.blue a {
+div.column table.calendar td.has-an-event.blue p > a {
   border-bottom: 0.0625em solid rgba(6, 198, 206, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(6, 198, 206, 0.3);
 }
-div.column table.calendar td.has-an-event.blue div.day,
-div.column table.calendar td.has-an-event.blue a:hover {
-  color: #06c6ce;
-}
-div.column table.calendar td.has-an-event.blue a:hover {
+div.column table.calendar td.has-an-event.blue p > a:hover {
   background-color: rgba(6, 198, 206, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.blue div.day,
+div.column table.calendar td.has-an-event.blue p > a:hover {
+  color: #06c6ce;
+}
 div.column table.calendar td.has-an-event.dark-gray {
   background-color: #373940;
 }
-div.column table.calendar td.has-an-event.dark-gray a {
+div.column table.calendar td.has-an-event.dark-gray p > a {
   border-bottom: 0.0625em solid rgba(181, 186, 190, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(181, 186, 190, 0.3);
 }
-div.column table.calendar td.has-an-event.dark-gray div.day,
-div.column table.calendar td.has-an-event.dark-gray a:hover {
-  color: #b5babe;
-}
-div.column table.calendar td.has-an-event.dark-gray a:hover {
+div.column table.calendar td.has-an-event.dark-gray p > a:hover {
   background-color: rgba(181, 186, 190, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
+}
+div.column table.calendar td.has-an-event.dark-gray div.day,
+div.column table.calendar td.has-an-event.dark-gray p > a:hover {
+  color: #b5babe;
 }
 div.column table.calendar td.has-an-event.dark-brown {
   background-color: #480f13;
 }
-div.column table.calendar td.has-an-event.dark-brown a {
+div.column table.calendar td.has-an-event.dark-brown p > a {
   border-bottom: 0.0625em solid rgba(203, 155, 110, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(203, 155, 110, 0.3);
 }
-div.column table.calendar td.has-an-event.dark-brown div.day,
-div.column table.calendar td.has-an-event.dark-brown a:hover {
-  color: #cb9b6e;
-}
-div.column table.calendar td.has-an-event.dark-brown a:hover {
+div.column table.calendar td.has-an-event.dark-brown p > a:hover {
   background-color: rgba(203, 155, 110, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.dark-brown div.day,
+div.column table.calendar td.has-an-event.dark-brown p > a:hover {
+  color: #cb9b6e;
+}
 div.column table.calendar td.has-an-event.brown {
   background-color: #723f1f;
 }
-div.column table.calendar td.has-an-event.brown a {
+div.column table.calendar td.has-an-event.brown p > a {
   border-bottom: 0.0625em solid rgba(221, 190, 161, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(221, 190, 161, 0.3);
 }
-div.column table.calendar td.has-an-event.brown div.day,
-div.column table.calendar td.has-an-event.brown a:hover {
-  color: #ddbea1;
-}
-div.column table.calendar td.has-an-event.brown a:hover {
+div.column table.calendar td.has-an-event.brown p > a:hover {
   background-color: rgba(221, 190, 161, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.brown div.day,
+div.column table.calendar td.has-an-event.brown p > a:hover {
+  color: #ddbea1;
+}
 div.column table.calendar td.has-an-event.dark-gray.brown {
   background: linear-gradient(to bottom, #373940, #723f1f);
 }
-div.column table.calendar td.has-an-event.dark-gray.brown a:first-child {
+div.column table.calendar td.has-an-event.dark-gray.brown p > a:first-child {
   border-bottom: 0.0625em solid rgba(181, 186, 190, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(181, 186, 190, 0.3);
 }
-div.column table.calendar td.has-an-event.dark-gray.brown div.day,
-div.column table.calendar td.has-an-event.dark-gray.brown a:first-child:hover {
-  color: #b5babe;
-}
-div.column table.calendar td.has-an-event.dark-gray.brown a:first-child:hover {
+div.column table.calendar td.has-an-event.dark-gray.brown p > a:first-child:hover {
   background-color: rgba(181, 186, 190, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
+}
+div.column table.calendar td.has-an-event.dark-gray.brown div.day,
+div.column table.calendar td.has-an-event.dark-gray.brown p > a:first-child:hover {
+  color: #b5babe;
 }
 div.column table.calendar td.has-an-event.dark-olive {
   background-color: #453a16;
 }
-div.column table.calendar td.has-an-event.dark-olive a {
+div.column table.calendar td.has-an-event.dark-olive p > a {
   border-bottom: 0.0625em solid rgba(173, 164, 0, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(173, 164, 0, 0.3);
 }
-div.column table.calendar td.has-an-event.dark-olive div.day,
-div.column table.calendar td.has-an-event.dark-olive a:hover {
-  color: #ada400;
-}
-div.column table.calendar td.has-an-event.dark-olive a:hover {
+div.column table.calendar td.has-an-event.dark-olive p > a:hover {
   background-color: rgba(173, 164, 0, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.dark-olive div.day,
+div.column table.calendar td.has-an-event.dark-olive p > a:hover {
+  color: #ada400;
+}
 div.column table.calendar td.has-an-event.dark-blue {
   background-color: #12313c;
 }
-div.column table.calendar td.has-an-event.dark-blue a {
+div.column table.calendar td.has-an-event.dark-blue p > a {
   border-bottom: 0.0625em solid rgba(0, 165, 189, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(0, 165, 189, 0.3);
 }
-div.column table.calendar td.has-an-event.dark-blue div.day,
-div.column table.calendar td.has-an-event.dark-blue a:hover {
-  color: #00a5bd;
-}
-div.column table.calendar td.has-an-event.dark-blue a:hover {
+div.column table.calendar td.has-an-event.dark-blue p > a:hover {
   background-color: rgba(0, 165, 189, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
+div.column table.calendar td.has-an-event.dark-blue div.day,
+div.column table.calendar td.has-an-event.dark-blue p > a:hover {
+  color: #00a5bd;
+}
 div.column table.calendar td.has-an-event.black {
   background-color: #0f0f10;
 }
-div.column table.calendar td.has-an-event.black a {
+div.column table.calendar td.has-an-event.black p > a {
   border-bottom: 0.0625em solid rgba(181, 186, 190, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(181, 186, 190, 0.3);
 }
-div.column table.calendar td.has-an-event.black div.day,
-div.column table.calendar td.has-an-event.black a:hover {
-  color: #b5babe;
-}
-div.column table.calendar td.has-an-event.black a:hover {
+div.column table.calendar td.has-an-event.black p > a:hover {
   background-color: rgba(181, 186, 190, 0.2);
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
+}
+div.column table.calendar td.has-an-event.black div.day,
+div.column table.calendar td.has-an-event.black p > a:hover {
+  color: #b5babe;
 }
 div.column table.calendar td.has-an-event.gold {
   background-color: #ffb81c;
@@ -6147,12 +6147,12 @@ div.column table.calendar td.has-an-event.gold {
 div.column table.calendar td.has-an-event.gold div.day {
   color: #000000;
 }
-div.column table.calendar td.has-an-event.gold a {
+div.column table.calendar td.has-an-event.gold p > a {
   color: #2a3033;
   border-bottom: 0.0625em solid rgba(104, 119, 126, 0.3);
   box-shadow: inset 0 -0.3125em 0 rgba(104, 119, 126, 0.3);
 }
-div.column table.calendar td.has-an-event.gold a:hover {
+div.column table.calendar td.has-an-event.gold p > a:hover {
   color: #68777e;
   background-color: rgba(104, 119, 126, 0.2);
   border-bottom: 0.0625em solid transparent;
