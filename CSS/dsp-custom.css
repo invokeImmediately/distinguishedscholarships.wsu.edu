@@ -6376,6 +6376,23 @@ ul.application-steps > li > *:not(:first-child) {
 ul.application-steps > li > *:last-child {
   padding-bottom: 0.5rem;
 }
+div.column ol.massie-project > li {
+  font-size: 1.3em;
+  clear: both;
+}
+div.column ol.massie-project > li:not(:first-child) {
+  padding-top: 2rem;
+}
+div.column ol.massie-project > li > strong:first-of-type {
+  line-height: 1.8em;
+}
+div.column ol.massie-project > li > span.description {
+  font-size: 0.76923077em;
+}
+div.column ol.massie-project > li > img {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CUSTOM layouts ################################################################################## ║
  *  ╠========================================================================================================╣
