@@ -6381,17 +6381,43 @@ div.column ol.massie-project > li {
   clear: both;
 }
 div.column ol.massie-project > li:not(:first-child) {
-  padding-top: 2rem;
+  padding-top: 1.9rem;
 }
 div.column ol.massie-project > li > strong:first-of-type {
-  line-height: 1.8em;
+  padding-right: 8;
+  padding-bottom: 4;
+  padding-left: 8;
+  border-radius: 5px;
+  background-color: #b3d4c5;
+  line-height: 1.9em;
 }
 div.column ol.massie-project > li > span.description {
   font-size: 0.76923077em;
 }
 div.column ol.massie-project > li > img {
-  margin-left: 1rem;
+  margin-top: 0.4rem;
   margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+@media all {
+  div.column ol.massie-project > li > img {
+    width: 128px;
+  }
+}
+@media all and (max-width: 693px) {
+  div.column ol.massie-project > li > img {
+    width: 112px;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column ol.massie-project > li > img {
+    width: 96px;
+  }
+}
+@media all and (max-width: 360px) {
+  div.column ol.massie-project > li > img {
+    width: 80px;
+  }
 }
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CUSTOM layouts ################################################################################## ║
