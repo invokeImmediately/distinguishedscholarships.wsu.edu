@@ -6480,6 +6480,24 @@ span.has-tool-tip:hover:after,
 span.has-tooltip:hover:after {
   opacity: 0;
 }
+qtip-titlebar:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
+}
+qtip-titlebar:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
+}
 div.column a.recommend-button,
 div.column a.glass-button.crimson {
   display: block;
