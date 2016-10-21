@@ -4208,6 +4208,7 @@ span.accentuated-text.gray.brighter {
 }
 span.has-tool-tip,
 span.has-tooltip {
+  position: relative;
   margin-bottom: -3px;
   border-bottom: 1px dotted rgba(0, 165, 189, 0.25);
   color: #00a5bd;
@@ -6458,6 +6459,20 @@ div.column ol.massie-project > li > img {
  *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
  *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+span.has-tool-tip:after,
+span.has-tooltip:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
+  opacity: 1.0;
+  -webkit-transform: translate(-100%, -100%);
+  -moz-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%);
+}
 div.column a.recommend-button,
 div.column a.glass-button.crimson {
   display: block;
