@@ -6465,16 +6465,16 @@ span.has-tooltip:after {
   position: absolute;
   top: 0;
   right: 0;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png) no-repeat center center / 100% 100%;
   opacity: 1.0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: translate(100%, -50%);
-  -moz-transform: translate(100%, -50%);
-  transform: translate(100%, -50%);
+  -webkit-transform: translate(100%, -25%);
+  -moz-transform: translate(100%, -25%);
+  transform: translate(100%, -25%);
 }
 span.has-tool-tip:hover:after,
 span.has-tooltip:hover:after {
