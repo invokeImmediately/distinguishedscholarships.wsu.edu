@@ -6480,7 +6480,7 @@ span.has-tool-tip:hover:after,
 span.has-tooltip:hover:after {
   opacity: 0;
 }
-qtip-titlebar:after {
+.qtip-titlebar:after {
   content: "";
   position: absolute;
   top: 2px;
@@ -6489,7 +6489,7 @@ qtip-titlebar:after {
   height: 16px;
   background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
 }
-qtip-titlebar:after {
+.qtip-titlebar:after {
   content: "";
   position: absolute;
   top: 2px;
