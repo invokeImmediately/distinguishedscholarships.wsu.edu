@@ -676,11 +676,54 @@ ul.application-steps {
 	}
 }
 
+
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Custom OL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ol.massie-project {
+	div.column & > li {
+		font-size: 1.3em;
+		clear: both;
+		&:not(:first-child) {
+			padding-top: 1.9rem;
+		}
+		& > strong:first-of-type {
+			padding-right: 8;
+			padding-bottom: 4;
+			padding-left: 8;
+			border-radius: 5px;
+			background-color: #b3d4c5;
+			line-height: 1.9em;
+		}
+		& > span.description {
+			font-size: (1 / 1.3em);
+		}
+		& > img {
+			margin-top: 0.4rem;
+			.spaces-btm-half;
+			.spaces-lft-half;
+			@media all {
+				width: 128px;
+				@media (max-width: @v-rghtclmn-thrshld) {
+					width: 112px;
+				}
+				@media (max-width: @v-lg-mbl-thrshld) {
+					width: 96px;
+				}				
+				@media (max-width: @v-mbl-thrshld) {
+					width: 80px;
+				}
+			}
+		}
+	}
+}
+
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CUSTOM layouts ################################################################################## ║
  *  ╠========================================================================================================╣
  *  ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.             ║
  *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+.use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png));
 .use-glass-button-layout();
 .use-award-recipients-tables();
