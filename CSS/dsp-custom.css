@@ -2175,13 +2175,13 @@ div.column p.no-bottom-pad {
 }
 div.column p.vpue-jump-bar {
   padding: 0 1rem 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   background-color: rgba(0, 165, 189, 0.5);
   border: 1px solid rgba(63, 107, 114, 0.5);
   border-radius: 10px;
   color: #464e54;
   text-align: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 div.column p.vpue-jump-bar span.title {
   font-size: 1.18147448em;
