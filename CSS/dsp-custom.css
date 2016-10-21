@@ -6469,9 +6469,16 @@ span.has-tooltip:after {
   height: 16px;
   background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
   opacity: 1.0;
-  -webkit-transform: translate(-100%, -100%);
-  -moz-transform: translate(-100%, -100%);
-  transform: translate(-100%, -100%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translate(100%, -100%);
+  -moz-transform: translate(100%, -100%);
+  transform: translate(100%, -100%);
+}
+span.has-tool-tip:hover:after,
+span.has-tooltip:hover:after {
+  opacity: 0;
 }
 div.column a.recommend-button,
 div.column a.glass-button.crimson {
