@@ -286,16 +286,14 @@ function isJQuery($obj) {
 					$toc.width($mainHeader.width() * .8);
 					$toc.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
-						transform: "translateX(-50%)"
 					});
-//					$toc.show(400);
+					$toc.show(600);
 				}
 				else if(windowScrollPos <= tocTrigger && $toc.hasClass("floating")) {
 					$toc.removeClass("floating");
 					$toc.width(tocWidth);
 					$toc.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
-						transform: "none"
 					});
 				}
 			});
