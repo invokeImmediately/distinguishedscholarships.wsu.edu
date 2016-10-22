@@ -2182,6 +2182,9 @@ div.column p.vpue-jump-bar {
   color: #464e54;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 div.column p.vpue-jump-bar span.title {
   font-size: 1.18147448em;
