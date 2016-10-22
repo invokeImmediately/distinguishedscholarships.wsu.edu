@@ -2203,7 +2203,7 @@ div.column p.vpue-jump-bar.floating {
   margin-right: 0;
   margin-left: 0;
   background-color: rgba(127, 208, 220, 0.95);
-  font-size: 0.8em;
+  font-size: 0.8em !important;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateX(-50%) translateX(99px);
   -moz-transform: translateX(-50%) translateX(99px);
