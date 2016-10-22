@@ -282,14 +282,13 @@ function isJQuery($obj) {
 			$window.scroll(function(e) {
 				var windowScrollPos = $window.scrollTop();
 				if(windowScrollPos > tocTrigger && !$toc.hasClass("floating")) {
-					$toc.hide();
 					$toc.addClass("floating");
 					$toc.width($mainHeader.width() * .8);
 					$toc.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
 						transform: "translateX(-50%)"
 					});
-					$toc.show(400);
+//					$toc.show(400);
 				}
 				else if(windowScrollPos <= tocTrigger && $toc.hasClass("floating")) {
 					$toc.removeClass("floating");
