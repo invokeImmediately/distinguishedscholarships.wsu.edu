@@ -287,7 +287,7 @@ function isJQuery($obj) {
 					$toc.width($mainHeader.width() * .8);
 					$toc.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
-						transform: "translate(-50%, -50%)"
+						transform: "translateX(-50%)"
 					});
 					$toc.show(400);
 				}
