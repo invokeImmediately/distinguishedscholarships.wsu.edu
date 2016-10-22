@@ -2190,6 +2190,7 @@ div.column p.vpue-jump-bar span.title {
   font-variant: small-caps;
 }
 div.column p.vpue-jump-bar.floating {
+  display: none;
   position: fixed;
   top: 0;
   left: 50%;
