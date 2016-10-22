@@ -278,26 +278,19 @@ function isJQuery($obj) {
 		if($toc.length === 1 && $mainHeader.length === 1) {
 			var $window = $(window);
 			var tocTrigger = $toc.offset().top + $toc.height();
-			var tocWidth = $toc.width();
+			var $tocClone = $toc.clone().addClass("floating").insertAfter($toc)
+			
 			$window.scroll(function(e) {
 				var windowScrollPos = $window.scrollTop();
-				if(windowScrollPos > tocTrigger && !$toc.hasClass("floating")) {
-					$toc.hide();
-					$toc.addClass("floating");
-					$toc.width($mainHeader.width() * .8);
-					$toc.css({
+				if(windowScrollPos > tocTrigger && !$tocClone.is(":visible")) {
+					$tocClone.width($mainHeader.width() * .8);
+					$tocClone.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
 					});
-					$toc.fadeIn(300);
+					$tocClone.fadeIn(300);
 				}
-				else if(windowScrollPos <= tocTrigger && $toc.hasClass("floating")) {
-					$toc.hide();
-					$toc.removeClass("floating");
-					$toc.width(tocWidth);
-					$toc.css({
-						left: $mainHeader.offset().left + $mainHeader.width() / 2,
-					});
-					$toc.show(300);
+				else if(windowScrollPos <= tocTrigger && $tocClone.is(":visible")) {
+					$tocClone.hide();
 				}
 			});
 		}
