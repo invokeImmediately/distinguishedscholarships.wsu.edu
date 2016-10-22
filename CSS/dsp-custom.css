@@ -2182,9 +2182,6 @@ div.column p.vpue-jump-bar {
   color: #464e54;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  transition: all 0.6s ease;
 }
 div.column p.vpue-jump-bar span.title {
   font-size: 1.18147448em;
@@ -2193,7 +2190,6 @@ div.column p.vpue-jump-bar span.title {
   font-variant: small-caps;
 }
 div.column p.vpue-jump-bar.floating {
-  display: none;
   position: fixed;
   top: 0;
   left: 50%;
@@ -2209,6 +2205,7 @@ div.column p.vpue-jump-bar.floating {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
+  opacity: 0;
   z-index: 99352;
 }
 div.column p.vpue-jump-bar.floating span.title {
