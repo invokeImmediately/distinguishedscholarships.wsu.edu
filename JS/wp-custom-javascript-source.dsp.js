@@ -51,6 +51,7 @@ function isJQuery($obj) {
         initDefinitionLists("dl.toggled", ".large-format-friendly", "div.column.one", "div.column.two",
          "activated", 400, 100);
 		initQuickTabs("section.row.single.quick-tabs");
+		initTocFloating("p.vpue-jump-bar");
         initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
 		// initScrollingSidebars("...");
         initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
@@ -270,6 +271,38 @@ function isJQuery($obj) {
             $this.$next.next(slctrToggleIn).toggle(animDuration);
         });
     }
+	
+	function initTocFloating(slctrToc) {
+		var $toc = $(slctrToc);
+		var $mainHeader = $("header.main-header");
+		if($toc.length === 1 && $mainHeader.length === 1) {
+			var $window = $(window);
+			var tocTrigger = $toc.offset().top + $toc.height();
+			var tocWidth = $toc.width();
+			$window.scroll(function(e) {
+				var windowScrollPos = $window.scrollTop();
+				if(windowScrollPos > tocTrigger && !$toc.hasClass("floating")) {
+					$toc.addClass("floating");
+					$toc.width($mainHeader.width());
+					$toc.css({
+						left: $mainHeader.offset().left + $mainHeader.width() / 2
+					});
+				}
+				else if($toc.hasClass("floating")) {
+					$toc.removeClass("floating");
+					$toc.width(tocWidth);
+				}
+			});
+		}
+		else {
+			if($toc.length === 0) {
+				console.log("ERROR: { function: initTocFloating, description: 'cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'couldn't find the table of contents element within the DOM.' }");
+			}
+			else if($toc.length > 1) {
+				console.log("ERROR: { function: initTocFloating, description: 'cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'found more than one table of contents elements; this function only works with one table of contents.' }");
+			}
+		}
+	}
     
     function initWelcomeMessage(slctrWlcmMsg, slctrPostWlcmMsg, msgDelay, fadeOutDuration,
      fadeInDuration) {
