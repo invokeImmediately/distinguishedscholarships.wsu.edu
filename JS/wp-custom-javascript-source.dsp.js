@@ -287,7 +287,7 @@ function isJQuery($obj) {
 					$toc.css({
 						left: $mainHeader.offset().left + $mainHeader.width() / 2,
 					});
-					$toc.show(300);
+					$toc.fadeIn(300);
 				}
 				else if(windowScrollPos <= tocTrigger && $toc.hasClass("floating")) {
 					$toc.removeClass("floating");
