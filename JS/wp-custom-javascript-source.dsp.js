@@ -294,6 +294,9 @@ function isJQuery($obj) {
 			});
 			$window.resize(function () {
 				$tocClone.width($mainHeader.width() * .8);
+				$tocClone.css({
+					left: $mainHeader.offset().left + $mainHeader.width() / 2,
+				});
 			});
 		}
 		else {
