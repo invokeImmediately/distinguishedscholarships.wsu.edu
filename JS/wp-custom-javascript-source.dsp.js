@@ -277,9 +277,8 @@ function isJQuery($obj) {
 		var $mainHeader = $("header.main-header");
 		if($toc.length === 1 && $mainHeader.length === 1) {
 			var $window = $(window);
-			var tocTrigger = $toc.offset().top + $toc.height();
+			var tocTrigger = $toc.offset().top + $toc.height() + 100;
 			var $tocClone = $toc.clone().addClass("floating").insertAfter($toc)
-			
 			$window.scroll(function(e) {
 				var windowScrollPos = $window.scrollTop();
 				if(windowScrollPos > tocTrigger && !$tocClone.is(":visible")) {
@@ -292,6 +291,9 @@ function isJQuery($obj) {
 				else if(windowScrollPos <= tocTrigger && $tocClone.is(":visible")) {
 					$tocClone.hide();
 				}
+			});
+			$window.resize(function () {
+				$tocClone.width($mainHeader.width() * .8);
 			});
 		}
 		else {
