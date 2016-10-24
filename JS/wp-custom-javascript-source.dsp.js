@@ -359,7 +359,7 @@ function isJQuery($obj) {
 				var linkText = $linkToTop.text();
 				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
 				if(idxMatched !== -1) {
-					$linkToTopClone = $linkToTop.clone();
+					var $linkToTopClone = $linkToTop.clone();
 					$linkToTopClone.text(linkText.replace(/—Back to ([^—]+)—/, "$1"));
 					$tocClone.prepend(" • ");
 					$linkToTopClone.prependTo($tocClone);
