@@ -2206,7 +2206,7 @@ div.column p.vpue-jump-bar.floating {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: 5358235;
+  z-index: 99163;
 }
 @media all and (max-width: 989px) {
   div.column p.vpue-jump-bar.floating {
