@@ -32,29 +32,97 @@ function isJQuery($obj) {
 
 (function ($) {
 	"use strict";
+	var dogEarParams = {
+		slctrSiteNav: "#spine-sitenav",
+		slctrDogeared: "li.current.active.dogeared",
+		removedClasses: "current active dogeared"
+	};
+	var lrgFormatParams = {
+		slctrSingle: ".single.large-format-friendly",
+		slctrMainHdr: "header.main-header",
+		slctrHdrGroup: "div.header-group",
+        centeringClass: "centered"
+	}		
     $(document).ready(function () {
-        fixDogears("#spine-sitenav", "li.current.active.dogeared", "current active dogeared");
-        checkForLrgFrmtSingle(".single.large-format-friendly", "header.main-header", "div.header-group",
-         "centered");
-        initHrH2Motif(".column > h2:not(.fancy), .column > section > h2:not(.fancy)",
-         "hr:not(.subSection)", "no-top-margin", "narrow-bottom-margin dark-gray thicker", 250);
-        initFancyHrH2Motif(".column > h2.fancy, .column > section > h2.fancy", "hr:not(.subSection)",
-         "no-bottom-margin dark-gray thicker encroach-horizontal", 250);
-        initHrH3Motif(".column > h3:not(.fancy), .column > section > h3:not(.fancy)", "hr:not(.subSection)",
-         "narrow-bottom-margin crimson", 250);
-        initFancyHrH3Motif(".column > h3.fancy, .column > section > h3.fancy", "hr:not(.subSection)",
-         "no-bottom-margin crimson encroach-horizontal", 250);
-        initDropDownToggles(".drop-down-toggle", ".toggled-panel", "activated", 500);
-        initReadMoreToggles(".read-more-toggle-in-ctrl", '.read-more-toggle-out-ctrl',
-         ".read-more-panel", 500);
-        initContentFlippers(".content-flipper", ".flipped-content-front", ".flipped-content-back", 500);
-        initDefinitionLists("dl.toggled", ".large-format-friendly", "div.column.one", "div.column.two",
-         "activated", 400, 100);
+        fixDogears(
+			dogEarParams.slctrSiteNav,
+			dogEarParams.slctrDogeared,
+			dogEarParams.removedClasses
+		);
+        checkForLrgFrmtSingle(
+			lrgFormatParams.slctrSingle,
+			lrgFormatParams.slctrMainHdr,
+			lrgFormatParams.slctrHdrGroup,
+			lrgFormatParams.centeringClass
+		);
+        initHrH2Motif(
+			".column > h2:not(.fancy), .column > section > h2:not(.fancy)",
+			"hr:not(.subSection)",
+			"no-top-margin",
+			"narrow-bottom-margin dark-gray thicker",
+			250
+		);
+        initFancyHrH2Motif(
+			".column > h2.fancy, .column > section > h2.fancy",
+			"hr:not(.subSection)",
+			"no-bottom-margin dark-gray thicker encroach-horizontal",
+			250
+		);
+        initHrH3Motif(
+			".column > h3:not(.fancy), .column > section > h3:not(.fancy)",
+			"hr:not(.subSection)",
+			"narrow-bottom-margin crimson",
+			250
+		);
+        initFancyHrH3Motif(
+			".column > h3.fancy, .column > section > h3.fancy",
+			"hr:not(.subSection)",
+			"no-bottom-margin crimson encroach-horizontal",
+			250
+		);
+        initDropDownToggles(
+			".drop-down-toggle",
+			".toggled-panel",
+			"activated",
+			500
+		);
+        initReadMoreToggles(
+			".read-more-toggle-in-ctrl",
+			".read-more-toggle-out-ctrl",
+			".read-more-panel",
+			500
+		);
+        initContentFlippers(
+			".content-flipper",
+			".flipped-content-front",
+			".flipped-content-back",
+			500
+		);
+        initDefinitionLists(
+			"dl.toggled",
+			".large-format-friendly",
+			"div.column.one",
+			"div.column.two",
+			"activated",
+			400,
+			100
+		);
 		initQuickTabs("section.row.single.quick-tabs");
 		initTocFloating("p.vpue-jump-bar");
-        initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
+        initTriggeredByHover(
+			".triggered-on-hover",
+			".content-revealed",
+			".content-hidden",
+			200
+		);
 		// initScrollingSidebars("...");
-        initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
+        initWelcomeMessage(
+			"#welcome-message",
+			"post-welcome-message",
+			1000,
+			500,
+			500
+		);
     });
     
     $(window).load(function () {
@@ -272,13 +340,29 @@ function isJQuery($obj) {
         });
     }
 	
-	function initTocFloating(slctrToc) {
+	function initTocFloating(slctrToc, slctrBackToToc) {
 		var $toc = $(slctrToc);
+		var $backToToc = $(slctrBackToToc);
+		var $linkToTop = $backToToc.first().children("a");
 		var $mainHeader = $("header.main-header");
 		if($toc.length === 1 && $mainHeader.length === 1) {
 			var $window = $(window);
 			var tocTrigger = $toc.offset().top + $toc.height() + 100;
-			var $tocClone = $toc.clone().addClass("floating").insertAfter($toc)
+			var $tocClone = $toc.clone().addClass("floating").insertAfter($toc);
+			$tocClone.find("span.title + br").remove();
+			$tocClone.find("span.title").remove();
+			if($linkToTop.length === 1) {
+				// TODO: modify the text inside the link.
+				var linkText = $linkToTop.text()
+				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
+				if(idxMatched !== -1) {
+					$linkToTopClone = $linkToTop.clone();
+					$linkToTopClone.text(linkText.replace(/—Back to ([^—]+)—/, "$1"));
+					$tocClone.prepend(" • ");
+					$linkToTopClone.prependTo($tocClone);
+					$backToToc.remove();
+				}
+			}
 			$window.scroll(function(e) {
 				var windowScrollPos = $window.scrollTop();
 				if(windowScrollPos > tocTrigger && !$tocClone.is(":visible")) {
@@ -301,10 +385,16 @@ function isJQuery($obj) {
 		}
 		else {
 			if($toc.length === 0) {
-				console.log("ERROR: { function: initTocFloating, description: 'cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'couldn't find the table of contents element within the DOM.' }");
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Couldn't find the table of contents element within the DOM.' }");
 			}
 			else if($toc.length > 1) {
-				console.log("ERROR: { function: initTocFloating, description: 'cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'found more than one table of contents elements; this function only works with one table of contents.' }");
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Found more than one table of contents elements; this function only works with one table of contents.' }");
+			}
+			if($mainHeader.length === 0) {
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Couldn't find the main header  element within the DOM.' }");
+			}
+			else if($mainHeader.length > 1) {
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Found more than one table of contents elements; this function only works with one table of contents.' }");
 			}
 		}
 	}
