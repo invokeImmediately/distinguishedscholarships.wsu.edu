@@ -357,12 +357,15 @@ function isJQuery($obj) {
 			if($linkToTop.length === 1) {
 				var linkText = $linkToTop.text();
 				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
-				if(idxMatched !== -1) {
+				if(idxMatched != -1) {
 					var $linkToTopClone = $linkToTop.clone();
 					$linkToTopClone.text(linkText.replace(/—Back to ([^—]+)—/, "$1"));
 					$tocClone.prepend(" • ");
 					$linkToTopClone.prependTo($tocClone);
 					$backToToc.remove();
+				}
+				else {
+					console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Did not find the correct textual pattern within the link back to the top of the page.' }");
 				}
 			}
 			else {
