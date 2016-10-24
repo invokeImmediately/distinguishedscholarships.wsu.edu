@@ -360,7 +360,7 @@ function isJQuery($obj) {
 				if(idxMatched != -1) {
 					var $linkToTopClone = $linkToTop.clone();
 					$linkToTopClone.text(linkText.replace(/\u2014Back to ([^\u2014]+)\u2014/, "$1"));
-					$tocClone.prepend(" a ");
+					$tocClone.prepend(" \u2022 ");
 					$linkToTopClone.prependTo($tocClone);
 					$backToToc.remove();
 				}
