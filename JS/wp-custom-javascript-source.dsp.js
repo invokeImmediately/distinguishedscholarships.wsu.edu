@@ -108,7 +108,10 @@ function isJQuery($obj) {
 			100
 		);
 		initQuickTabs("section.row.single.quick-tabs");
-		initTocFloating("p.vpue-jump-bar");
+		initTocFloating(
+			"p.vpue-jump-bar",
+			"p.vpue-jump-back"
+		);
         initTriggeredByHover(
 			".triggered-on-hover",
 			".content-revealed",
