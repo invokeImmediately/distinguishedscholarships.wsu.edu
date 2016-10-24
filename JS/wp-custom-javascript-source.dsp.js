@@ -356,7 +356,7 @@ function isJQuery($obj) {
 			$tocClone.find("span.title").remove();
 			if($linkToTop.length === 1) {
 				// TODO: modify the text inside the link.
-				var linkText = $linkToTop.text()
+				var linkText = $linkToTop.text();
 				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
 				if(idxMatched !== -1) {
 					$linkToTopClone = $linkToTop.clone();
