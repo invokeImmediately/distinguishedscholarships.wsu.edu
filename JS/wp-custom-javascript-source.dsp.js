@@ -356,10 +356,10 @@ function isJQuery($obj) {
 			$tocClone.find("span.title").remove();
 			if($linkToTop.length === 1) {
 				var linkText = $linkToTop.text();
-				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
+				var idxMatched = linkText.search(/\u2014Back to ([^\u2014]+)\u2014/);
 				if(idxMatched != -1) {
 					var $linkToTopClone = $linkToTop.clone();
-					$linkToTopClone.text(linkText.replace(/—Back to ([^—]+)—/, "$1"));
+					$linkToTopClone.text(linkText.replace(/\u2014Back to ([^\u2014]+)\u2014/, "$1"));
 					$tocClone.prepend(" • ");
 					$linkToTopClone.prependTo($tocClone);
 					$backToToc.remove();
