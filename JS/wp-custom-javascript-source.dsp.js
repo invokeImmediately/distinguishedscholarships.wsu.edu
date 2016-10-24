@@ -355,7 +355,6 @@ function isJQuery($obj) {
 			$tocClone.find("span.title + br").remove();
 			$tocClone.find("span.title").remove();
 			if($linkToTop.length === 1) {
-				// TODO: modify the text inside the link.
 				var linkText = $linkToTop.text();
 				var idxMatched = linkText.search(/—Back to ([^—]+)—/);
 				if(idxMatched !== -1) {
@@ -365,6 +364,9 @@ function isJQuery($obj) {
 					$linkToTopClone.prependTo($tocClone);
 					$backToToc.remove();
 				}
+			}
+			else {
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Did not find a single hyperlink within the first link back to the top of the page.' }");
 			}
 			$window.scroll(function(e) {
 				var windowScrollPos = $window.scrollTop();
@@ -388,13 +390,13 @@ function isJQuery($obj) {
 		}
 		else {
 			if($toc.length === 0) {
-				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Couldn't find the table of contents element within the DOM.' }");
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Could not find the table of contents element within the DOM.' }");
 			}
 			else if($toc.length > 1) {
 				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Found more than one table of contents elements; this function only works with one table of contents.' }");
 			}
 			if($mainHeader.length === 0) {
-				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Couldn't find the main header  element within the DOM.' }");
+				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Could not find the main header  element within the DOM.' }");
 			}
 			else if($mainHeader.length > 1) {
 				console.log("ERROR: { function: initTocFloating, description: 'Cause the table of contents element to float after scrolling past a certain point', whatWentWrong: 'Found more than one table of contents elements; this function only works with one table of contents.' }");
