@@ -2208,6 +2208,11 @@ div.column p.vpue-jump-bar.floating {
   transform: translateX(-50%);
   z-index: 5358235;
 }
+@media all and (max-width: 989px) {
+  div.column p.vpue-jump-bar.floating {
+    top: 51px;
+  }
+}
 div.column p.vpue-jump-bar.floating span.title {
   display: none;
 }
