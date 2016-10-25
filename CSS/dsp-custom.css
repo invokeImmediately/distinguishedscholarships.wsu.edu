@@ -204,8 +204,8 @@ div.column .soft-gray-border {
   border-top: 1px solid rgba(70, 78, 84, 0.25);
 }
 .has-pull-quote-bordering.alt {
-  padding-left: 0.33333333rem !important;
-  padding-right: 0.33333333rem !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
   border-right: 1px solid rgba(70, 78, 84, 0.25);
   border-left: 5px solid rgba(70, 78, 84, 0.33);
 }
@@ -2168,8 +2168,8 @@ div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
   border-top: 1px solid rgba(70, 78, 84, 0.25);
 }
 div.column p.article-tagline:not(.has-no-bordering).alt {
-  padding-left: 0.33333333rem !important;
-  padding-right: 0.33333333rem !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
   border-right: 1px solid rgba(70, 78, 84, 0.25);
   border-left: 5px solid rgba(70, 78, 84, 0.33);
 }
