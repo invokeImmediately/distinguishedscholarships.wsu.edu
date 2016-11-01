@@ -6552,20 +6552,18 @@ span.has-tooltip:hover:after {
   background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
 }
 div.column a.recommend-button,
-div.column a.glass-button.crimson {
+div.column a.glass-button {
   display: block;
   position: relative;
   padding: 1em;
   border-radius: 7px;
-  background-color: #981e32;
-  color: white;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 div.column a.recommend-button:before,
-div.column a.glass-button.crimson:before {
+div.column a.glass-button:before {
   content: "";
   position: absolute;
   top: 2px;
@@ -6577,7 +6575,7 @@ div.column a.glass-button.crimson:before {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 }
 div.column a.recommend-button:after,
-div.column a.glass-button.crimson:after {
+div.column a.glass-button:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -6588,10 +6586,25 @@ div.column a.glass-button.crimson:after {
   border-bottom-right-radius: 7px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
-div.column a.recommend-button:hover,
+div.column a.recommend-button.crimson,
+div.column a.glass-button.crimson {
+  background-color: #981e32;
+  color: white;
+}
+div.column a.recommend-button.crimson:hover,
 div.column a.glass-button.crimson:hover {
   background-color: #c60c30;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 0 18px rgba(198, 12, 48, 0.3333);
+}
+div.column a.recommend-button.yellow,
+div.column a.glass-button.yellow {
+  background-color: #c69214;
+  color: #000;
+}
+div.column a.recommend-button.yellow:hover,
+div.column a.glass-button.yellow:hover {
+  background-color: #ffb81c;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 184, 28, 0.3333);
 }
 div.column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
