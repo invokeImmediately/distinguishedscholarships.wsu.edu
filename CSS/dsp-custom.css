@@ -6598,13 +6598,13 @@ div.column a.glass-button.crimson:hover {
 }
 div.column a.recommend-button.yellow,
 div.column a.glass-button.yellow {
-  background-color: #c69214;
+  background-color: #ffb81c;
   color: #000;
 }
 div.column a.recommend-button.yellow:hover,
 div.column a.glass-button.yellow:hover {
-  background-color: #ffb81c;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 184, 28, 0.3333);
+  background-color: #ffde1c;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 222, 28, 0.3333);
 }
 div.column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
