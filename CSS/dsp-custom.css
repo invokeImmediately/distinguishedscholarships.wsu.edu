@@ -4401,10 +4401,12 @@ img.auto-scaled.to-10 {
 img.autoScaledToHalf {
   width: 50%;
 }
-img.autoScaledToThird img.auto-scaled.to-33 {
+img.autoScaledToThird,
+img.auto-scaled.to-33 {
   width: 33%;
 }
-img.autoScaledToQuarter img.auto-scaled.to-25 {
+img.autoScaledToQuarter,
+img.auto-scaled.to-25 {
   width: 25%;
 }
 img.width-fixed.to-256 {
