@@ -3526,6 +3526,7 @@ div.callout,
 span.callout {
   position: absolute;
   top: 50%;
+  left: 50%;
   height: auto;
   padding: 10px;
   border: 1px solid #F1D031;
