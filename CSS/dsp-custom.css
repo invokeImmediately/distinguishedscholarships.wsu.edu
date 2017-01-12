@@ -3524,9 +3524,6 @@ main > div.page > section.row:last-child > div.column {
  */
 div.callout,
 span.callout {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   height: auto;
   padding: 10px;
   border: 1px solid #F1D031;
@@ -3586,6 +3583,8 @@ span.callout.top:after {
 }
 div.callout.left,
 span.callout.left {
+  position: absolute;
+  top: 50%;
   left: 0;
   -webkit-transform: translate(-100%,-50%) translateX(-10px);
   -moz-transform: translate(-100%,-50%) translateX(-10px);
@@ -3603,7 +3602,9 @@ span.callout.left:after {
 }
 div.callout.right,
 span.callout.right {
-  right: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
   -webkit-transform: translate(100%,-50%) translateX(10px);
   -moz-transform: translate(100%,-50%) translateX(10px);
   transform: translate(100%,-50%) translateX(10px);
@@ -3620,7 +3621,9 @@ span.callout.right:after {
 }
 div.callout.top,
 span.callout.top {
+  position: absolute;
   top: 0;
+  left: 50%;
   -webkit-transform: translate(-50%,-100%) translateY(-10px);
   -moz-transform: translate(-50%,-100%) translateY(-10px);
   transform: translate(-50%,-100%) translateY(-10px);
