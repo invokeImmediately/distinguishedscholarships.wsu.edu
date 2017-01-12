@@ -3546,8 +3546,6 @@ span.callout.left:after,
 span.callout.right:after,
 span.callout.top:after {
   content: "";
-  position: absolute;
-  top: 50%;
   width: 0;
   height: 0;
   border: 10px solid transparent;
@@ -3560,6 +3558,8 @@ span.callout.left:before,
 span.callout.right:before,
 span.callout.left:after,
 span.callout.right:after {
+  position: absolute;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -3568,6 +3568,8 @@ div.callout.top:before,
 div.callout.top:after,
 span.callout.top:before,
 span.callout.top:after {
+  position: absolute;
+  left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -3605,6 +3607,7 @@ span.callout.right {
   position: absolute;
   top: 50%;
   right: 0;
+  bottom: 0;
   -webkit-transform: translate(100%,-50%) translateX(10px);
   -moz-transform: translate(100%,-50%) translateX(10px);
   transform: translate(100%,-50%) translateX(10px);
@@ -3631,12 +3634,12 @@ span.callout.top {
 div.callout.top:before,
 span.callout.top:before {
   bottom: -20px;
-  border-bottom: 10px solid #FFEF93;
+  border-top: 10px solid #FFEF93;
 }
 div.callout.top:after,
 span.callout.top:after {
   bottom: -22px;
-  border-bottom: 11px solid #F1D031;
+  border-top: 11px solid #F1D031;
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
