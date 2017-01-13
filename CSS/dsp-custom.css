@@ -553,7 +553,7 @@ section.column-one-with-bottom-margin > div.one {
   margin-bottom: 2rem;
 }
 section:not(.row).article-header {
-  min-height: 120px;
+  height: 120px;
   margin-bottom: 1rem;
   background-size: auto 100% !important;
 }
