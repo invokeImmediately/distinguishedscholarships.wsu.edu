@@ -565,19 +565,19 @@ section:not(.row).article-header div.header-content {
   transform: translateY(-50%);
 }
 section:not(.row).article-header div.header-content h1 {
-  font-size: 70px;
-  line-height: 1.071428571428571em;
+  font-size: 4.118rem;
+  line-height: 1.071em;
 }
 section:not(.row).article-header div.header-content h2 {
   margin-bottom: .75rem;
-  font-size: 3.0238rem;
+  font-size: 2.826rem;
   line-height: 0.8em;
   text-transform: uppercase;
 }
 section:not(.row).article-header div.header-content h3 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.35rem;
+  font-size: 1.261rem;
   text-transform: uppercase;
 }
 @media screen {
