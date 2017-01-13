@@ -563,6 +563,12 @@ section:not(.row).article-header div.header-content {
   margin-left: 1rem;
   transform: translateY(-50%);
 }
+@media print {
+  section:not(.row).article-header div.header-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 @media screen {
   section:not(.row).article-header div.header-content h1,
   section:not(.row).article-header div.header-content h2 {
