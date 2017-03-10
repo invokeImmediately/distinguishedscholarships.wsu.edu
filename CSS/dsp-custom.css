@@ -538,6 +538,12 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
     border-color: rgba(219, 120, 121, 0);
   }
 }
+.row:not(.clear-none):target:before {
+  content: "";
+  width: auto;
+  height: auto;
+  visibility: visible;
+}
 html {
   font-size: 17px;
 }
@@ -3774,7 +3780,8 @@ section.pad-top div.column.half-pad {
 .column hr:first-child {
   margin-top: 0;
 }
-.column hr.subSection {
+.column hr.subSection,
+.column hr.sub-section {
   width: 85%;
   margin: 2rem auto;
   background: none;
@@ -5157,6 +5164,32 @@ img.symbolic-image {
 figure figcaption {
   font-size: 0.85em;
   text-align: center;
+}
+@media print {
+  .column .decoration {
+    display: none;
+  }
+}
+@media screen {
+  .column .decoration {
+    display: block;
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 0;
+    padding-bottom: 45%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background-color: #464e54;
+  }
+}
+@media screen and (max-width: 480px) {
+  .column .decoration {
+    float: none;
+    width: 100%;
+    padding-bottom: 40%;
+    margin-left: 0;
+  }
 }
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ IFRAMES rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -6764,6 +6797,30 @@ header.main-header {
 }
 .column aside + aside {
   margin-top: 2rem;
+}
+@media screen {
+  .column aside.decoration.international-scholarships {
+    padding-bottom: 45.0622%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center / auto 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .column aside.decoration.international-scholarships {
+    padding-bottom: 38%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center / 100% auto;
+  }
+}
+@media screen {
+  .column aside.decoration.daca-scholarships {
+    padding-bottom: 43.8023%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center / 100% auto no-repeat;
+  }
+}
+@media screen and (max-width: 480px) {
+  .column aside.decoration.daca-scholarships {
+    padding-bottom: 38%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center / 100% auto no-repeat;
+  }
 }
 .column section.header-annual-events {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
