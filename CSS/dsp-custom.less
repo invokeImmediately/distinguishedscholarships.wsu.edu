@@ -102,6 +102,28 @@ header.main-header {
 		& + aside {
 			margin-top: @v-dflt-spcng;
 		}
+		&.decoration {
+			&.international-scholarships {
+				@media screen {
+					padding-bottom: 45.0622%;
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center/auto 100%;
+					@media (max-width: @v-lg-mbl-thrshld) {
+						padding-bottom: 38%;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center/100% auto;
+					}
+				}
+			}
+			&.daca-scholarships {
+				@media screen {
+					padding-bottom: 43.8023%;
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center/100% auto no-repeat;
+					@media (max-width: @v-lg-mbl-thrshld) {
+						padding-bottom: 38%;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center/100% auto no-repeat;
+					}
+				}
+			}
+		}
 	}
 }
 //
