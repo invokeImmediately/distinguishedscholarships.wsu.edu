@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
 	gcmq = require('gulp-group-css-media-queries'),
-	insertLines = require('gulp-insert-lines');
+	insertLines = require('gulp-insert-lines'),
+  cleanCss = require('gulp-clean-css'),
+  dest = require('gulp-dest');
 
 gulp.task('default', function () {
 	gulp.src('./CSS/dsp-custom.css')
@@ -10,5 +12,7 @@ gulp.task('default', function () {
 			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ####################################################################################################### ║\r\n*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝\r\n*/',
       'stopAfterFirstMatch': true
 		}))
-		.pipe(gulp.dest('CSS'));
+    .pipe(cleanCss())
+    .pipe(dest('CSS/:name.min.css'))
+		.pipe(gulp.dest('.'));
 });
