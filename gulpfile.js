@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	insert = require('gulp-insert'),
 	extName = require('gulp-extname');
 
-gulp.task('default', function () {
+gulp.task('buildCss', function () {
 	gulp.src('./CSS/dsp-custom.css')
 		.pipe(gcmq())
 		.pipe(insertLines({
