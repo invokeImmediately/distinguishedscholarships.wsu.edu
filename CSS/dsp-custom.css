@@ -1309,7 +1309,7 @@ aside.widget_archive label.screen-reader-text {
 .row.side-right .column.two aside p:not(.centered) {
   text-align: left;
 }
-body.single-post #wsuwp-main .row .column aside {
+body.single-post #wsuwp-main .row .column.one aside {
   float: right;
   width: 33%;
   padding: 0.5rem;
