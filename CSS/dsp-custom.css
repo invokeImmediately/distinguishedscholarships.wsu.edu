@@ -1,9 +1,9 @@
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### COMMON LAYOUTS ################################################################################## ║
- *  ╠========================================================================================================╣
- *  ║ Import layouts common to all OUE websites.                                                             ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### COMMON LAYOUTS ################################################################################################# ║
+*   ╠=======================================================================================================================╣
+*   ║ Import layouts common to all OUE websites.                                                                            ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif);
 .has-mono-font {
   font-family: 'Roboto Mono', monospace, sans-serif;
@@ -1207,15 +1207,10 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
  */
 /*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
- */
-aside {
-  /*    &:not(:first-child).widget header {
-			margin-top: 1rem;
-		}*/
-}
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ ASIDES layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 aside.widget {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
@@ -1229,32 +1224,18 @@ aside.widget header {
 aside.widget_archive label.screen-reader-text {
   display: none;
 }
-.row.side-right .column.two aside {
-  padding: 1rem;
-  background: rgba(215, 218, 219, 0.8);
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
-}
-.row.side-right .column.two aside p:not(.centered) {
-  text-align: left;
-}
-/*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ ···· ASIDE children of div.column elements ············································ │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
 .column aside.article-sidebar {
   float: right;
   width: 33%;
   min-width: 230px;
   padding: .8rem;
-  margin-left: 1rem;
   margin-bottom: 1rem;
-  background: #f8f1eb;
+  margin-left: 1rem;
   border: 1px solid #6d441f;
-  box-shadow: 1px 1px 2px rgba(109, 68, 31, 0.5);
-  font-size: .8rem;
+  background: #f8f1eb;
   color: #464e54;
+  font-size: .8rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .column aside.article-sidebar:first-child + h1,
 .column aside.article-sidebar:first-child + h2,
@@ -1299,8 +1280,8 @@ aside.widget_archive label.screen-reader-text {
 @media all and (max-width: 693px) {
   .row.single .column aside.article-sidebar {
     position: absolute;
-    right: -2rem;
     top: 0px;
+    right: -2rem;
     width: 230px;
     -webkit-transform-origin: 100% 0% 0;
     -ms-transform-origin: 100% 0% 0;
@@ -1318,6 +1299,32 @@ aside.widget_archive label.screen-reader-text {
     transform: none;
   }
 }
+.row.side-right .column.two aside {
+  padding: 1rem;
+  background: rgba(215, 218, 219, 0.8);
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.row.side-right .column.two aside p:not(.centered) {
+  text-align: left;
+}
+body.single-post #wsuwp-main .row .column aside {
+  float: right;
+  width: 33%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  border-left: 4px solid #d7dadb;
+  background: #eff0f1;
+  font-size: 0.9rem;
+}
+body.blog .article-summary aside {
+  display: none;
+}
+/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 .column h1 {
   padding-bottom: 0;
   margin-top: 1.5rem;
@@ -6947,12 +6954,16 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### CUSTOM LAYOUTS ################################################################################## ║
- *  ╠========================================================================================================╣
- *  ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                  ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### CUSTOM LAYOUTS ################################################################################################# ║
+*   ╠=======================================================================================================================╣
+*   ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                                 ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ ++++ Custom ID-TARGETED layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 #binder {
   border-right: 1px solid rgba(106, 128, 120, 0.5);
   box-shadow: 5px 0 5px rgba(70, 84, 78, 0.5);
@@ -6962,6 +6973,10 @@ div.auto-scroller ul li {
   background-position: right bottom;
   background-attachment: fixed;
 }
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom BODY layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 @media all and (max-width: 1440px) {
   body {
     background: #000;
@@ -6982,9 +6997,17 @@ div.auto-scroller ul li {
     background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed 1800px top, #000 url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed 1800px top;
   }
 }
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom MAIN layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 main {
   background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom HEADER layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 header.main-header {
   background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   color: #fff !important;
