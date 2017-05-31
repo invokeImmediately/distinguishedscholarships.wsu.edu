@@ -3833,6 +3833,10 @@ ul.cascaded-layout.blank > li.gutter-sizer {
  */
 div.article-body {
   position: relative;
+  line-height: 1.375em;
+}
+div.article-summary {
+  line-height: 1.375em;
 }
 div.article-summary aside.article-sidebar,
 div.article-summary img,
