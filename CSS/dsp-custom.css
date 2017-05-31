@@ -1230,9 +1230,17 @@ aside.widget.widget_recent_entries ul {
 aside.widget.widget_recent_entries ul li {
   padding-bottom: 0.5em;
 }
+aside.widget.widget_recent_entries ul li a {
+  border-bottom: none;
+  box-shadow: none;
+}
 aside.widget.widget_recent_entries .post-date:before {
   font-weight: bold;
   content: "/ ";
+}
+aside.widget.widget_tag_cloud a {
+  border-bottom: none;
+  box-shadow: none;
 }
 aside.widget_archive label.screen-reader-text {
   display: none;
