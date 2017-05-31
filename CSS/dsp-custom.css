@@ -1341,6 +1341,14 @@ body.single-post #wsuwp-main .row .column.one aside {
   background: #eff0f1;
   font-size: 0.9rem;
 }
+@media all and (max-width: 693px) {
+  body.single-post #wsuwp-main .row .column.one aside {
+    width: 94%;
+    width: calc(100% - 0.5rem * 2);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
 body.blog .article-summary aside {
   display: none;
 }
