@@ -683,16 +683,8 @@ div.column article.post + article.post {
   margin-top: 1.5em;
 }
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++++++ SECTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    ├------------------------------------------------------------------------------------------------------------------┤
-*    │ Rule-sets for styling section elements within OUE pages built using the Builder template within the Spine theme  │
-*    │ for WordPress.                                                                                                   │
-*    │  ╘═» This file assumes the following LESS files have been imported upstream:                                     │
-*    │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                                             │
-*    │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                                          │
-*    │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                                  │
-*    │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                                 │
-*    ├------------------------------------------------------------------------------------------------------------------┤
+*    │ SECTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 section.column-one-with-bottom-margin > .column.one {
   margin-bottom: 2rem;
@@ -1897,18 +1889,10 @@ header.main-header .header-group {
 footer.article-footer div.author-info {
   display: none;
 }
-/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++++++ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     ├-------------------------------------------------------------------------------------------------┤
- *     │ Rule-sets for styling paragraph elements within OUE pages built using the WSU Spine theme for   │
- *     │ WordPress.                                                                                      │
- *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
- *     ├-------------------------------------------------------------------------------------------------┤
- */
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p {
     line-height: 1.375em;
@@ -3069,73 +3053,73 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.85287846em;
+    font-size: 0.85287846rem;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.85287846em;
+    font-size: 0.85287846rem;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.7504em;
+    font-size: 0.7504rem;
   }
 }
 @media all and (max-width: 360px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.7038752em;
+    font-size: 0.7038752rem;
   }
 }
 @media all {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.7504em;
+    font-size: 0.7504rem;
   }
 }
 @media all and (max-width: 360px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.7038752em;
+    font-size: 0.7038752rem;
   }
 }
 @media all {
@@ -3143,92 +3127,92 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.7504em;
+    font-size: 0.7504rem;
   }
 }
 @media all and (max-width: 360px) {
   .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.7038752em;
+    font-size: 0.7038752rem;
   }
 }
 @media all {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7504em;
+    font-size: 0.7504rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7504em;
+    font-size: 0.7504rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7038752em;
+    font-size: 0.7038752rem;
   }
 }
 @media all and (max-width: 360px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7038752em;
+    font-size: 0.7038752rem;
   }
 }
 .column p.article-media-contacts {
@@ -3242,24 +3226,12 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   padding-top: 15px;
   border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
-/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
- */
-/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++++++ LISTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     ├-------------------------------------------------------------------------------------------------┤
- *     │ Rule-sets for styling list elements within OUE pages built using the WSU Spine theme for        │
- *     │ WordPress.                                                                                      │
- *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
- *     ├-------------------------------------------------------------------------------------------------┤
- */
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· UNORDERED list elements ·························································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
+/*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column ul {
     line-height: 1.375em;
@@ -3597,10 +3569,6 @@ ul.cascaded-layout.blank > li + li {
 ul.cascaded-layout.blank > li.gutter-sizer {
   width: 3% !important;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· ORDERED list elements ···························································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column ol {
     line-height: 1.375em;
@@ -3782,10 +3750,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .column ol ol ol {
   list-style-type: lower-roman;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· DEFINITION list elements and children ············································ │
- *         └-----------------------------------------------------------------------------------------┘
- */
 .column dl.faq {
   position: relative;
 }
@@ -4006,8 +3970,8 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .column dl.faq > .collapse-all-button {
   right: 0;
 }
-/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
- */
+/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 div.article-body {
   position: relative;
   line-height: 1.375em;
@@ -6334,11 +6298,11 @@ div.read-more-target {
     opacity: 1;
   }
 }
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### SCRIPTING ####################################################################################### ║
- *  ╠========================================================================================================╣
- *  ║ Rule-sets for interactive elements that do not function as intended without the support of JavaScript. ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### SCRIPTING ###################################################################################################### ║
+ *  ╠=======================================================================================================================╣
+ *  ║ Rule-sets for interactive elements that do not function as intended without the support of JavaScript.                ║
+ *  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 .drop-down-toggle {
   position: relative;
