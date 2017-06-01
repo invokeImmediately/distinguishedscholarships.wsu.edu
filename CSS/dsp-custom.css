@@ -1982,7 +1982,7 @@ footer.article-footer div.author-info {
   }
 }
 @media all {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     line-height: 1.375em;
@@ -1990,42 +1990,42 @@ footer.article-footer div.author-info {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p,
+  .row.side-right .column p,
   .row.side-left .column p,
   .row.halves .column p {
     font-size: 0.879844em;
@@ -2392,7 +2392,7 @@ footer.article-footer div.author-info {
   }
 }
 @media all {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     line-height: 1.375em;
@@ -2400,42 +2400,42 @@ footer.article-footer div.author-info {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p.article-deck,
+  .row.side-right .column p.article-deck,
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     font-size: 1.0558128em;
@@ -2563,7 +2563,7 @@ footer.article-footer div.author-info {
   }
 }
 @media all {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     line-height: 1.375em;
@@ -2571,42 +2571,42 @@ footer.article-footer div.author-info {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p.article-tagline,
+  .row.side-right .column p.article-tagline,
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     font-size: 1.14819642em;
@@ -2728,7 +2728,7 @@ footer.article-footer div.author-info {
   }
 }
 @media all {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     line-height: 1.375em;
@@ -2736,42 +2736,42 @@ footer.article-footer div.author-info {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p.article-tagline.home,
+  .row.side-right .column p.article-tagline.home,
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     font-size: 1.50453344em;
@@ -2970,7 +2970,7 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   }
 }
 @media all {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     line-height: 1.375em;
@@ -2978,42 +2978,42 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p.vpue-jump-back,
+  .row.side-right .column p.vpue-jump-back,
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     font-size: 0.60489275em;
@@ -3139,7 +3139,7 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   }
 }
 @media all {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     line-height: 1.375em;
@@ -3147,42 +3147,42 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.8em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.8em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.8em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.8em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.7504em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column p.article-media-contacts,
+  .row.side-right .column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     font-size: 0.7038752em;
@@ -3330,7 +3330,7 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   }
 }
 @media all {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     line-height: 1.375em;
@@ -3338,42 +3338,42 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column ul,
+  .row.side-right .column ul,
   .row.side-left .column ul,
   .row.halves .column ul {
     font-size: 0.879844em;
@@ -3671,7 +3671,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   }
 }
 @media all {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     line-height: 1.375em;
@@ -3679,42 +3679,42 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   }
 }
 @media all and (min-width: 1073px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  .row.side-right.column ol,
+  .row.side-right .column ol,
   .row.side-left .column ol,
   .row.halves .column ol {
     font-size: 0.879844em;
