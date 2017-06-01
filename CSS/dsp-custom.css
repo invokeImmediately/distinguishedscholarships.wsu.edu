@@ -3069,73 +3069,73 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 1073px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.85287846rem;
+    font-size: 0.85287846em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.85287846rem;
+    font-size: 0.85287846em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.7504rem;
+    font-size: 0.7504em;
   }
 }
 @media all and (max-width: 360px) {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-    font-size: 0.7038752rem;
+    font-size: 0.7038752em;
   }
 }
 @media all {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 1073px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.7504rem;
+    font-size: 0.7504em;
   }
 }
 @media all and (max-width: 360px) {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
-    font-size: 0.7038752rem;
+    font-size: 0.7038752em;
   }
 }
 @media all {
@@ -3143,92 +3143,92 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 1073px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.7504rem;
+    font-size: 0.7504em;
   }
 }
 @media all and (max-width: 360px) {
   .row.side-right.column p.article-media-contacts,
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
-    font-size: 0.7038752rem;
+    font-size: 0.7038752em;
   }
 }
 @media all {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 1073px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7504rem;
+    font-size: 0.7504em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7504rem;
+    font-size: 0.7504em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7038752rem;
+    font-size: 0.7038752em;
   }
 }
 @media all and (max-width: 360px) {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
-    font-size: 0.7038752rem;
+    font-size: 0.7038752em;
   }
 }
 .column p.article-media-contacts {
