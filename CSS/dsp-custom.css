@@ -3235,6 +3235,9 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   padding-left: 2em;
   text-align: left;
 }
+.column p.article-media-contacts:first-child {
+  margin-top: 1rem;
+}
 body.single-post .column p.article-media-contacts + :not(.article-media-contacts) {
   padding-top: 15px;
   border-top: 1px solid rgba(127, 127, 127, 0.2);
