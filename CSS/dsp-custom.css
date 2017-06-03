@@ -8022,7 +8022,7 @@ span.has-tooltip:hover:after {
 .column a.recommend-button.crimson:hover,
 .column a.glass-button.crimson:hover {
   background-color: #c60c30;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 0 18px rgba(198, 12, 48, 0.3333);
+  box-shadow: 0 0 18px rgba(198, 12, 48, 0.3333);
 }
 .column a.recommend-button.yellow,
 .column a.glass-button.yellow {
