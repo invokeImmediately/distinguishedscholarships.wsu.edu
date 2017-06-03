@@ -7131,6 +7131,12 @@ div.auto-scroller ul li {
   border-right: 1px solid rgba(106, 128, 120, 0.5);
   box-shadow: 5px 0 5px rgba(70, 84, 78, 0.5);
 }
+@media all and (max-width: 1440px) {
+  #binder {
+    border-right: none;
+    box-shadow: none;
+  }
+}
 #jacket {
   background-repeat: no-repeat;
   background-position: right bottom;
