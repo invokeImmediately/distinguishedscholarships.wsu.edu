@@ -4846,11 +4846,21 @@ div.page-covering-notice-js div.notice-content p + p {
  * Styling and animations for the CSS3-driven "recent updates" section of the homepage.
  * ===============================================================================================================
  */
+.row.single.has-recent-updates {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #eff0f1;
+}
 div.recent-updates {
   position: relative;
   left: 0;
   top: 0;
-  height: 2em;
+  height: 4em;
+}
+@media all and (max-width: 693px) {
+  div.recent-updates {
+    height: 7em;
+  }
 }
 div.recent-updates p + p {
   margin-top: 0;
