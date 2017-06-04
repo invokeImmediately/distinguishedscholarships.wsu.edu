@@ -1,4 +1,7 @@
-var gulp = require('gulp'),
+var compiledCssSrcFileName = 'dsp-custom.css',
+	minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */\r\n',
+	gulp = require('gulp'),
+	lessc = require('gulp-less'),
 	gcmq = require('gulp-group-css-media-queries'),
 	insertLines = require('gulp-insert-lines'),
 	cleanCss = require('gulp-clean-css'),
@@ -6,7 +9,11 @@ var gulp = require('gulp'),
 	extName = require('gulp-extname');
 
 gulp.task('buildMinCss', function () {
-	gulp.src('./CSS/dsp-custom.css')
+	gulp.src('./CSS/*.less')
+		.pipe(lessc({
+			paths: ['./WSU-UE---CSS/']
+		}))
+		.pipe(gulp.dest('./CSS/'))
 		.pipe(gcmq())
 		.pipe(insertLines({
 			'before': /^@media/,
@@ -14,7 +21,7 @@ gulp.task('buildMinCss', function () {
 			'stopAfterFirstMatch': true
 		}))
 		.pipe(cleanCss())
-		.pipe(insert.prepend('/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */\r\n'))
+		.pipe(insert.prepend(minCssFileHeaderStr))
 		.pipe(extName('.min.css'))
-		.pipe(gulp.dest('CSS'));
+		.pipe(gulp.dest('./CSS/'));
 });
