@@ -4209,16 +4209,16 @@ div.award-banner {
 }
 .column .builder-banner-content {
   padding: 0 0 10px 0;
-  font-size: 1rem;
-  line-height: 1.35rem;
+  font-size: 1.5rem;
+  line-height: 1.35em;
   border: 0;
   -webkit-transition: font-size .15s linear, line-height .15s linear;
   -moz-transition: font-size .15s linear, line-height .15s linear;
   transition: font-size .15s linear, line-height .15s linear;
 }
 .column .builder-banner-content:hover {
-  font-size: 1.3333rem;
-  line-height: 1.799955rem;
+  font-size: 1.3333em;
+  line-height: 1.799955em;
 }
 .column .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.9);
@@ -4233,8 +4233,8 @@ div.award-banner {
 }
 .column .builder-banner-inner-content p {
   padding: 10px;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: inherit !important;
+  line-height: inherit !important;
   text-align: center;
 }
 .column .builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
