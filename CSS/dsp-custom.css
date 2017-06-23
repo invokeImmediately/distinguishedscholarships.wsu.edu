@@ -4217,8 +4217,7 @@ div.award-banner {
   transition: font-size .15s linear, line-height .15s linear;
 }
 .column .builder-banner-content:hover {
-  font-size: 1.3333em;
-  line-height: 1.799955em;
+  font-size: 2rem;
 }
 .column .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.9);
