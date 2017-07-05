@@ -7571,15 +7571,18 @@ header.main-header {
 *         │ ···· Builder Template Slideshows ········································································ │
 *         └-----------------------------------------------------------------------------------------------------------┘
 */
-.row.builder-section-banner.has-interaction-message:before {
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before {
   content: "Click/tap to learn more >>";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 144px;
-  padding-left: 48px;
+  top: 5px;
+  right: 5px;
+  width: 96px;
+  padding-left: 37px;
   font-size: 12px;
-  background: transparent url(/wp-content/uploads/sites/50/2017/06/icon_click-or-tap.png) left top / 48px auto no-repeat;
+  line-height: 1em;
+  color: #fff;
+  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow.png) right top / 32px auto no-repeat;
+  z-index: 101;
 }
 /*!    ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 *      │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
