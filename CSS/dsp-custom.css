@@ -4188,12 +4188,9 @@ div.award-banner {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
-           │ ···· Builder Template Slideshows ······················································ │
-           ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-           │ Styling modifications of builder template slideshows added through the WordPress        │
-           │ interface.                                                                              │
-           └-----------------------------------------------------------------------------------------┘        
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
 @media all and (min-width: 361px) and (max-width: 480px) {
   .column .builder-section-content.cycle-slideshow {
@@ -7569,6 +7566,20 @@ header.main-header {
     max-width: none;
     text-align: center;
   }
+}
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+.row.builder-section-banner.has-interaction-message:before {
+  content: "Click/tap to learn more >>";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 144px;
+  padding-left: 48px;
+  font-size: 12px;
+  background: transparent url(/wp-content/uploads/sites/50/2017/06/icon_click-or-tap.png) left top / 48px auto no-repeat;
 }
 /*!    ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 *      │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
