@@ -7577,11 +7577,12 @@ header.main-header {
   top: 5px;
   right: 5px;
   width: 96px;
-  padding-left: 37px;
+  min-height: 32px;
+  padding-right: 37px;
   font-size: 12px;
   line-height: 1em;
   color: #fff;
-  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow.png) right top / 32px auto no-repeat;
+  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_28x32.png) right top / auto 32px no-repeat;
   z-index: 101;
 }
 /*!    ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
