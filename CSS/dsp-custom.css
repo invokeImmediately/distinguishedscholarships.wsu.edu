@@ -7616,6 +7616,15 @@ header.main-header {
   #homepage-slideshow .builder-banner-slide {
     padding-bottom: 60.41666667%;
   }
+  #homepage-slideshow .builder-banner-slide:nth-child(4) {
+    background-position: left center;
+  }
+  #homepage-slideshow .builder-banner-slide:nth-child(5) {
+    background-position: right center;
+  }
+  #homepage-slideshow .builder-banner-slide:nth-child(7) {
+    background-position: right center;
+  }
 }
 /*!    ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 *      │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
