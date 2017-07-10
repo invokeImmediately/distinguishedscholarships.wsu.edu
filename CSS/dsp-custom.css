@@ -7597,14 +7597,17 @@ header.main-header {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before,
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
   color: #f6861f;
   background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_with-drop-shadow_29x32.png);
   z-index: 102;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:hover:after {
   opacity: 1;
