@@ -4282,6 +4282,16 @@ div.award-banner {
     line-height: 4.6411vw;
   }
 }
+@media all and (max-width: 360px) {
+  .column .builder-banner-content {
+    font-size: 5.1568vw;
+    line-height: 6.9616vw;
+  }
+  .column .builder-banner-content:hover {
+    font-size: 6.8758vw;
+    line-height: 9.2822vw;
+  }
+}
 @media all and (min-width: 906px) {
   .readability-controlled {
     width: 70%;
