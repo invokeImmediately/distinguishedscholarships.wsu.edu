@@ -4258,12 +4258,12 @@ div.award-banner {
 }
 @media all and (max-width: 1204px) {
   .column .builder-banner-content {
-    font-size: 1.3278vw;
-    line-height: 1.79253vw;
+    font-size: 2.1179vw;
+    line-height: 2.8592vw;
   }
   .column .builder-banner-content:hover {
-    font-size: 1.7704vw;
-    line-height: 2.39004vw;
+    font-size: 2.8239vw;
+    line-height: 3.8122vw;
   }
   .column .builder-banner-inner-content p {
     padding: 1.0vw;
