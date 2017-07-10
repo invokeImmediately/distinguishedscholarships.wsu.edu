@@ -7609,6 +7609,9 @@ header.main-header {
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:hover:after {
   opacity: 1;
 }
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:hover:before {
+  opacity: 0;
+}
 #homepage-slideshow .builder-banner-slide {
   padding-bottom: 30.20833333%;
 }
