@@ -4274,12 +4274,12 @@ div.award-banner {
 }
 @media all and (max-width: 989px) {
   .column .builder-banner-content {
-    font-size: 12px;
-    line-height: 16.2px;
+    font-size: 2.5784vw;
+    line-height: 3.4808vw;
   }
   .column .builder-banner-content:hover {
-    font-size: 14px;
-    line-height: 18.9px;
+    font-size: 3.4379vw;
+    line-height: 4.6411vw;
   }
 }
 @media all and (min-width: 906px) {
