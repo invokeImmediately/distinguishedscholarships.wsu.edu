@@ -8422,7 +8422,7 @@ body.page.has-short-main-header main .row.single.article-header .column.show-hea
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
-    font-size: 3.0000005rem;
+    font-size: 2.850001rem;
   }
 }
 @media all and (max-width: 360px) {
