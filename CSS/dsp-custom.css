@@ -4432,7 +4432,11 @@ body.page main > .page > .row:last-child > .column:last-child {
 }
 @media all and (min-width: 694px) {
   body.home main > .page > .row:last-child.halves > .column:first-child,
-  body.page main > .page > .row:last-child.halves > .column:first-child {
+  body.page main > .page > .row:last-child.halves > .column:first-child,
+  body.home main > .page > .row:last-child.side-right > .column:first-child,
+  body.page main > .page > .row:last-child.side-right > .column:first-child,
+  body.home main > .page > .row:last-child.side-left > .column:first-child,
+  body.page main > .page > .row:last-child.side-left > .column:first-child {
     padding-bottom: 2rem;
   }
 }
