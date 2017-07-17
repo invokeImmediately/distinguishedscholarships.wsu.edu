@@ -212,6 +212,69 @@ header.main-header {
 	}
 }
 
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+.row.builder-section-banner.has-interaction-message {
+	@icon-height: 32px;
+	@icon-spacing: 5px;
+	@z-index: 101;
+	.builder-section-content.cycle-slideshow {
+		&:before,
+		&:after {
+			content: "Click/tap to learn more >>";
+			position: absolute;
+			top: @icon-spacing;
+			right: @icon-spacing;
+			width: (@icon-height * 3);
+			min-height: @icon-height;
+			padding-right: (@icon-height + 5px);
+			font-size: 12px;
+			line-height: 1em;
+			color: @hex-white;
+			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
+			& { text-shadow: 1px 1px 2px @rgba; .getRgbaStr(@hex-black, 0.5); }
+			z-index: @z-index;
+		}
+		&:before,
+		&:after {
+			.transition(~"opacity 0.3s ease");
+		}
+		&:after {
+			color: @hex-accent-orange;
+			background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_with-drop-shadow_29x32.png);
+			z-index: (@z-index + 1);
+			opacity: 0;
+		}
+		&:hover:after {
+			opacity: 1;
+		}
+		&:hover:before {
+			opacity: 0;
+		}
+	}
+}
+
+#homepage-slideshow {
+	@padding-amount: 30.208333333333%;
+	.builder-banner-slide {
+		padding-bottom: @padding-amount;
+		@media all and (max-width: @v-lg-mbl-thrshld) {
+			padding-bottom: (30.208333333333% * 2);
+			&:nth-child(4) {
+				background-position: left center;
+			}
+			&:nth-child(5) {
+				background-position: right center;
+			}
+			&:nth-child(7) {
+				background-position: right center;
+			}
+		}
+	}
+}
+
 /*!    ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 *      │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *      └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -795,5 +858,6 @@ ol.massie-project {
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png));
+.use-sectional-article-headers();
 .use-glass-button-layout();
 .use-award-recipients-tables();
