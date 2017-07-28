@@ -8402,7 +8402,6 @@ body.page.has-short-main-header main .row.single.article-header .column.show-hea
 body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
   color: #fff;
   margin: 0;
-  line-height: ;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 @media all {
@@ -8439,6 +8438,12 @@ body.page.has-short-main-header main .row.single.article-header .column.show-hea
   body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
     font-size: 2.500001rem;
   }
+}
+body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * .subtitle {
+  display: block;
+  text-transform: none;
+  font-size: 0.5em;
+  line-height: 1.1em;
 }
 .column a.recommend-button,
 .column a.glass-button {
