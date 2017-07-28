@@ -8505,9 +8505,18 @@ span.has-tooltip:hover:after {
 }
 .column a.recommend-button .icon,
 .column a.glass-button .icon {
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
   margin: 5px;
+  border: 0;
+  width: 48px;
+}
+.column a.recommend-button .icon + .label,
+.column a.glass-button .icon + .label {
+  display: inline-block;
+  width: 100%;
+  width: calc(100% - 50px);
+  box-sizing: border-box;
 }
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
