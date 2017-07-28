@@ -8503,6 +8503,12 @@ span.has-tooltip:hover:after {
   background-color: #ffde1c;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 222, 28, 0.8);
 }
+.column a.recommend-button .icon,
+.column a.glass-button .icon {
+  display: inline;
+  vertical-align: middle;
+  margin: 5px;
+}
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
   border-collapse: separate;
