@@ -8505,18 +8505,25 @@ span.has-tooltip:hover:after {
 }
 .column a.recommend-button .icon,
 .column a.glass-button .icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 5px;
+  width: 55px;
+  padding-right: 1em;
   border: 0;
-  width: 48px;
+  box-shadow: none;
+}
+.column a.recommend-button .icon,
+.column a.glass-button .icon,
+.column a.recommend-button .icon + .label,
+.column a.glass-button .icon + .label {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 .column a.recommend-button .icon + .label,
 .column a.glass-button .icon + .label {
   display: inline-block;
-  width: 100%;
-  width: calc(100% - 50px);
   box-sizing: border-box;
+  width: 100%;
+  width: calc(100% - 55px - 1em);
 }
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
