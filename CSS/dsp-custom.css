@@ -8397,6 +8397,7 @@ span.has-tooltip:hover:after {
 @media all and (max-width: 480px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header {
     padding-left: .5rem;
+    padding-right: .5rem;
   }
 }
 .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
