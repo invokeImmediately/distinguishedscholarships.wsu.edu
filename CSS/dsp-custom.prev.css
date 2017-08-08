@@ -1,30 +1,32 @@
-@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
 
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
-/*! +-----------------------------------------------------------------------------------------------------------------------+
-*   � MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### �
-*   �=======================================================================================================================�
-*   � DESCRIPTION: Intended for use with all elements regardless of semantics                                               �
-*   � LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       �
-*   �          https://www.w3.org/TR/html5/ for more information). Rule-sets are generally declared in the                  �
-*   �          same sequence as their matching elements appear in the HTML5 spec. Moreover, style                           �
-*   �          declarations are made according to browser rendering sequence; styles for controlling layout                 �
-*   �          are followed by those related to painting and then by those associated with dynamic changes to               �
-*   �          the DOM tree.                                                                                                �
-*   +-----------------------------------------------------------------------------------------------------------------------+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### ║
+*   ╠=======================================================================================================================╣
+*   ║ AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)                                    ║
+*   ║                                                                                                                       ║
+*   ║ DESCRIPTION: Intended for use with all elements regardless of semantics                                               ║
+*   ║                                                                                                                       ║
+*   ║ LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       ║
+*   ║          https://www.w3.org/TR/html5/ for more information). Rulesets are generally declared in the same sequence as  ║
+*   ║          their matching elements appear in the HTML5 spec. Moreover, style declarations are made according to browser ║
+*   ║          rendering sequence; styles for controlling layout are followed by those related to painting and then by      ║
+*   ║          those associated with dynamic behaviors to the DOM tree.                                                     ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*     � #### GLOBAL LESS VARIABLES, LESS MIXINS, AND CSS3 RULE-SETS ##################################################### �
-*     �===================================================================================================================�
-*     � LESS variables and mixins and low-specificity CSS3 rule-sets designed for either styling nodes without            �
-*     � regard to semantics or being included within LESS dependencies.                                                   �
-*     +-------------------------------------------------------------------------------------------------------------------+
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### Global LESS VARIABLES, LESS MIXINS, and CLASS SPECIFIC rulesets ############################################ ║
+*     ╠===================================================================================================================╣
+*     ║ LESS variables and mixins and low-specificity CSS3 rulesets designed for either styling nodes without             ║
+*     ║ regard to semantics or being included within LESS dependencies.                                                   ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ ADDITIONAL FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       �   LESS variables and parametric mixins designed for inclusion in dependencies to specify                      �
-*       �   coloring of backgrounds, borders, text, and outlines.                                                       �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ Additional FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │   CSS classes and LESS variables and parametric mixins designed for inclusion in dependencies to facilitate   │
+*       │   typographical design of dependent layouts.                                                                  │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .has-mono-font {
 	font-family: 'Roboto Mono', monospace, sans-serif;
@@ -51,24 +53,6 @@
 	font-family: 'PT Serif', Palatino, serif;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ COLOR VARIABLES AND MIXINS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       �   LESS variables and parametric mixins designed for inclusion in dependencies to specify                      �
-*       �   coloring of backgrounds, borders, text, and outlines.                                                       �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ ALL OTHER VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       �   LESS variables intended for use within media queries and style declarations to specify                      �
-*       �   spacing, padding, and sizing, and to facilitate responsive behaviors.                                       �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ MIXINS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       �   LESS mixins designed for inclusion within dependencies, regardless of semantics, to specify                 �
-*       �   spacing, padding, sizing, textual flow, and responsive behaviors.                                           �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
 .column .initially-hidden,.initially-hidden {
 	display: none;
 }
@@ -358,11 +342,9 @@
 	background-color: rgba(70,78,84,.75757576);
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ ANIMATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       �   LESS mixins designed for efficiently declaring animations, transitions, and transformations                 �
-*       �   with automatic cross-platform support.                                                                      �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ ANIMATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .fade-in-from-top {
 	opacity: 0;
@@ -625,9 +607,9 @@
 	}
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ Purely CLASS SPECIFIC CSS3 rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CLASS SPECIFIC rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 :target:not(.no-anchor-highlighting) {
 	position: relative;
@@ -772,24 +754,29 @@
 	visibility: visible;
 }
 
-/*!   +-------------------------------------------------------------------------------------------------------------------+ 
-*     � #### DOCUMENT SECTIONS ########################################################################################## �
-*     �===================================================================================================================�
-*     � Rule-sets that target section-level nodes.                                                                        �
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### SEMANTICALLY SPECIFIC RULESETS: DOCUMENT SECTIONS ########################################################## ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets that target section-level nodes.                                                                         ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-+-------------------------------------------------------------------------------------------------------------------+ +---------------------------------------------------------------------------------------------------------------+ html {
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ HTML rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+html {
 	font-size: 17px;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ BODY rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ ARTICLE rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ ARTICLE rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-div.column article.post {
+.column article.post {
 	padding: 1em;
 	border: 1px solid rgba(0,0,0,.3333);
 	border-radius: 5px;
@@ -797,17 +784,13 @@ div.column article.post {
 	box-shadow: 1px 2px 3px rgba(0,0,0,.25);
 }
 
-div.column article.post+article.post {
+.column article.post+article.post {
 	margin-top: 1.5em;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ SECTION rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!  +------------------------------------------------------------------------------------------------------------------+
-*    � SECTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*    +------------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ SECTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 section.column-one-with-bottom-margin>.column.one {
 	margin-bottom: 2rem;
@@ -870,7 +853,7 @@ main section.row>.column table>tbody>tr>td>div>p+ol:not(.spaces-top-full),main s
 	margin-top: -.66666667rem;
 }
 
-main section.row:last-child>.column>article>.article-body>div>ol:last-child,main section.row:last-child>.column>article>.article-body>div>p:last-child,main section.row:last-child>.column>article>.article-body>div>ul:last-child,main section.row:last-child>.column>article>.article-body>ol:last-child,main section.row:last-child>.column>article>.article-body>p:last-child,main section.row:last-child>.column>article>.article-body>section>ol:last-child,main section.row:last-child>.column>article>.article-body>section>p:last-child,main section.row:last-child>.column>article>.article-body>section>ul:last-child,main section.row:last-child>.column>article>.article-body>ul:last-child,main section.row:last-child>.column>article>.article-summary>div>ol:last-child,main section.row:last-child>.column>article>.article-summary>div>p:last-child,main section.row:last-child>.column>article>.article-summary>div>ul:last-child,main section.row:last-child>.column>article>.article-summary>ol:last-child,main section.row:last-child>.column>article>.article-summary>p:last-child,main section.row:last-child>.column>article>.article-summary>section>ol:last-child,main section.row:last-child>.column>article>.article-summary>section>p:last-child,main section.row:last-child>.column>article>.article-summary>section>ul:last-child,main section.row:last-child>.column>article>.article-summary>ul:last-child,main section.row:last-child>.column>div>ol:last-child,main section.row:last-child>.column>div>p:last-child,main section.row:last-child>.column>div>ul:last-child,main section.row:last-child>.column>ol:last-child,main section.row:last-child>.column>p:last-child,main section.row:last-child>.column>section>div>ol:last-child,main section.row:last-child>.column>section>div>p:last-child,main section.row:last-child>.column>section>div>ul:last-child,main section.row:last-child>.column>section>ol:last-child,main section.row:last-child>.column>section>p:last-child,main section.row:last-child>.column>section>section>ol:last-child,main section.row:last-child>.column>section>section>p:last-child,main section.row:last-child>.column>section>section>ul:last-child,main section.row:last-child>.column>section>ul:last-child,main section.row:last-child>.column>ul:last-child {
+main section.row:last-child>.column>.column>article>.article-body>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>div>p:last-child,main section.row:last-child>.column>.column>article>.article-body>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>p:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>p:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>p:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>p:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>p:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ul:last-child,main section.row:last-child>.column>.column>section>div>ol:last-child,main section.row:last-child>.column>.column>section>div>p:last-child,main section.row:last-child>.column>.column>section>div>ul:last-child,main section.row:last-child>.column>.column>section>ol:last-child,main section.row:last-child>.column>.column>section>p:last-child,main section.row:last-child>.column>.column>section>section>ol:last-child,main section.row:last-child>.column>.column>section>section>p:last-child,main section.row:last-child>.column>.column>section>section>ul:last-child,main section.row:last-child>.column>.column>section>ul:last-child,main section.row:last-child>.column>div>ol:last-child,main section.row:last-child>.column>div>p:last-child,main section.row:last-child>.column>div>ul:last-child,main section.row:last-child>.column>ol:last-child,main section.row:last-child>.column>p:last-child,main section.row:last-child>.column>section>ol:last-child,main section.row:last-child>.column>section>p:last-child,main section.row:last-child>.column>section>ul:last-child,main section.row:last-child>.column>ul:last-child {
 	margin-bottom: 0;
 }
 
@@ -878,15 +861,9 @@ main section.row>.column table>tbody>tr>td>div>ol:last-child,main section.row>.c
 	margin-bottom: 0;
 }
 
-/*!  +------------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ ASIDE rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*     � ASIDES layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*     +-------------------------------------------------------------------------------------------------------------------+
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 aside.widget {
 	box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0,0,0,.2), 3px 4px 4px rgba(0,0,0,.25) !important;
@@ -1002,7 +979,7 @@ aside.widget_archive label.screen-reader-text {
 	text-align: left;
 }
 
-body.single-post #wsuwp-main .row .column.one aside {
+.column>aside.quote,body.single-post #wsuwp-main .row .column.one aside {
 	float: right;
 	clear: right;
 	width: 33%;
@@ -1019,11 +996,9 @@ body.blog .article-summary aside {
 	display: none;
 }
 
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ H1-H6 & HEADER rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ H1-H6 & HEADER rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column h1 {
 	padding-bottom: 0;
@@ -1059,7 +1034,15 @@ body.blog .article-summary aside {
 	text-align: center;
 }
 
-.column h2.fancy {
+.column h2.narrower-top-margin {
+	margin-top: 1.25rem;
+}
+
+.column h2.no-top-margin {
+	margin-top: 0;
+}
+
+.column h2.fancy,.column.show-header.has-fancy-header>header:first-child>h2 {
 	position: relative;
 	padding: .3333rem .5rem;
 	margin-left: -.5rem;
@@ -1068,15 +1051,15 @@ body.blog .article-summary aside {
 	background-color: rgba(94,106,113,.2);
 }
 
-.column h2.fancy.with-top-border {
+.column h2.fancy.with-top-border,.column.show-header.has-fancy-header>header:first-child>h2 {
 	padding-top: .5rem;
 }
 
-.column h2.fancy.with-top-border:not(:first-child) {
+.column h2.fancy.with-top-border:not(:first-child),.column.show-header.has-fancy-header>header:first-child>h2:not(:first-child) {
 	margin-top: 2rem;
 }
 
-.column h2.fancy.with-top-border::before {
+.column h2.fancy.with-top-border::before,.column.show-header.has-fancy-header>header:first-child>h2::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1086,14 +1069,6 @@ body.blog .article-summary aside {
 	border-top: 1px solid rgba(70,78,84,.6667);
 	border-bottom: 1px solid rgba(70,78,84,.3333);
 	border-top-width: 2px;
-}
-
-.column h2.narrower-top-margin {
-	margin-top: 1.25rem;
-}
-
-.column h2.no-top-margin {
-	margin-top: 0;
 }
 
 .column h2:first-child,.column header:first-child+h2,.column header:first-child+h2.fancy.with-top-border:not(:first-child) {
@@ -1135,7 +1110,11 @@ h2.article-title a {
 	margin-top: 0;
 }
 
-.column h3.fancy,.column h4.fancy,.gform_heading h3.gform_title,.gform_heading h3.gform_title.fancy {
+.column h3.lowercase,.column.show-header.has-lowercase-header>header:first-child>h3,.gform_heading h3.gform_title.lowercase {
+	text-transform: none;
+}
+
+.column h3.fancy,.column h4.fancy,.column.show-header.has-fancy-header>header:first-child>h3,.gform_heading h3.gform_title,.gform_heading h3.gform_title.fancy {
 	position: relative;
 	padding: .3333rem .5rem;
 	margin-left: 0;
@@ -1144,15 +1123,15 @@ h2.article-title a {
 	background-color: rgba(219,120,121,.075);
 }
 
-.column h3.fancy.with-top-border,.column h4.fancy.with-top-border,.gform_heading h3.gform_title,.gform_heading h3.gform_title.fancy.with-top-border,.gform_heading h3.gform_title.with-top-border {
+.column h3.fancy.with-top-border,.column h4.fancy.with-top-border,.column.show-header.has-fancy-header>header:first-child>h3,.gform_heading h3.gform_title,.gform_heading h3.gform_title.fancy.with-top-border,.gform_heading h3.gform_title.with-top-border {
 	padding-top: .4375rem;
 }
 
-.column h3.fancy.with-top-border:not(:first-child),.column h4.fancy.with-top-border:not(:first-child),.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),.gform_heading h3.gform_title.with-top-border:not(:first-child),.gform_heading h3.gform_title:not(:first-child) {
+.column h3.fancy.with-top-border:not(:first-child),.column h4.fancy.with-top-border:not(:first-child),.column.show-header.has-fancy-header>header:first-child>h3:not(:first-child),.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),.gform_heading h3.gform_title.with-top-border:not(:first-child),.gform_heading h3.gform_title:not(:first-child) {
 	margin-top: 2rem;
 }
 
-.column h3.fancy.with-top-border::before,.column h4.fancy.with-top-border::before,.gform_heading h3.gform_title.fancy.with-top-border::before,.gform_heading h3.gform_title.with-top-border::before,.gform_heading h3.gform_title::before {
+.column h3.fancy.with-top-border::before,.column h4.fancy.with-top-border::before,.column.show-header.has-fancy-header>header:first-child>h3::before,.gform_heading h3.gform_title.fancy.with-top-border::before,.gform_heading h3.gform_title.with-top-border::before,.gform_heading h3.gform_title::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1213,27 +1192,19 @@ header.main-header .header-group {
 	margin-top: 0;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ FOOTER rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
 footer.article-footer div.author-info {
 	display: none;
 }
 
-/*!   +-------------------------------------------------------------------------------------------------------------------+ 
-*     � #### CONTENT GROUPING NODES ##################################################################################### �
-*     �===================================================================================================================�
-*     � Rule-sets that target nodes for grouping content.                                                                 �
-*     +-------------------------------------------------------------------------------------------------------------------+
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### CONTENT GROUPING NODES ##################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets that target nodes for grouping content.                                                                  ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ PARAGRAPH rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!  +------------------------------------------------------------------------------------------------------------------+
-*    � PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*    +------------------------------------------------------------------------------------------------------------------+
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column p {
 	padding-bottom: 0;
@@ -1477,15 +1448,11 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 	border-top: 1px solid rgba(127,127,127,.2);
 }
 
-/*!  +------------------------------------------------------------------------------------------------------------------+
+/*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ LIST rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*     � LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*     +-------------------------------------------------------------------------------------------------------------------+
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column ul {
 	padding-bottom: 0;
@@ -1776,11 +1743,7 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	right: 0;
 }
 
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ DIV rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 div.article-body {
 	position: relative;
@@ -1804,10 +1767,14 @@ div.award-banner {
 	margin-bottom: 1rem;
 }
 
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 .column .builder-banner-content {
 	padding: 0 0 10px;
-	font-size: 1rem;
-	line-height: 1.35rem;
+	font-size: 1.5rem;
+	line-height: 1.35em;
 	border: 0;
 	-webkit-transition: font-size .15s linear, line-height .15s linear;
 	-moz-transition: font-size .15s linear, line-height .15s linear;
@@ -1815,8 +1782,7 @@ div.award-banner {
 }
 
 .column .builder-banner-content:hover {
-	font-size: 1.3333rem;
-	line-height: 1.799955rem;
+	font-size: 2rem;
 }
 
 .column .builder-banner-content:hover>div.builder-banner-inner-content {
@@ -1834,8 +1800,8 @@ div.award-banner {
 
 .column .builder-banner-inner-content p {
 	padding: 10px;
-	font-size: inherit;
-	line-height: inherit;
+	font-size: inherit !important;
+	line-height: inherit !important;
 	text-align: center;
 }
 
@@ -1865,6 +1831,10 @@ div.award-banner {
 	display: none;
 }
 
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· (div).column rulesets ·············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 section.pad-top div.column.half-pad,section.pad-top.half-pad {
 	padding-top: 1rem;
 }
@@ -2006,7 +1976,7 @@ section.pad-top div.column.half-pad,section.pad-top.half-pad {
 	font-size: smaller !important;
 }
 
-main>.page>.row:last-child>.column:last-child {
+body.home main>.page>.row:last-child>.column:last-child,body.page main>.page>.row:last-child>.column:last-child {
 	padding-bottom: 2rem;
 }
 
@@ -2681,19 +2651,11 @@ div.recent-updates p.recent-update-3 {
 	}
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ MAIN rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!   +-------------------------------------------------------------------------------------------------------------------+ 
-*     � #### TEXT-LEVEL NODES ########################################################################################### �
-*     �===================================================================================================================�
-*     � Rule-sets that target nodes with text-level semantics.                                                            �
-*     +-------------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ A rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### TEXT-LEVEL NODES ########################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets that target nodes with text-level semantics.                                                             ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 .column a {
 	border-bottom-right-radius: .25em;
@@ -2902,9 +2864,9 @@ a.vpue-tooltip span b {
 	border-right: 1px solid #925b29;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ STRONG rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ STRONG rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 strong.opening-line {
 	font-size: 1.0625em;
@@ -2917,9 +2879,9 @@ strong.stands-out {
 	font-size: 1.2em;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ MARK rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ MARK rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 mark.highlight {
 	background-color: transparent;
@@ -2927,9 +2889,9 @@ mark.highlight {
 	color: #aec7cb;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ SPAN rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ SPAN rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 span.accentuated-text {
 	font-weight: 700;
@@ -2973,23 +2935,19 @@ span.has-tool-tip:hover,span.has-tooltip:hover {
 	color: #2f5055;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ CITE rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CITE rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 cite.article-author {
 	display: none;
 }
 
-/*!   +-------------------------------------------------------------------------------------------------------------------+ 
-*     � #### EMBEDDED CONTENT ########################################################################################### �
-*     �===================================================================================================================�
-*     � Rule-sets that target nodes representing embedded content.                                                        �
-*     +-------------------------------------------------------------------------------------------------------------------+
-*/
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ IMG rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### EMBEDDED CONTENT ########################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets that target nodes representing embedded content.                                                         ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 img {
 	height: auto;
@@ -3181,10 +3139,6 @@ figure figcaption {
 	text-align: center;
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ IFRAME rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
 .column .pdf-wrapper {
 	position: relative;
 	width: 100%;
@@ -3214,6 +3168,12 @@ figure figcaption {
 	height: 100%;
 }
 
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### TABULAR DATA ############################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets that nodes for representing tabular data.                                                                ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 .column table.plain {
 	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
 	border-collapse: separate;
@@ -3397,6 +3357,16 @@ figure figcaption {
 	line-height: normal;
 }
 
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### FORMS ###################################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Styling applied to nodes representing a form's user interface.                                                    ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ FORM ELEMENT LAYOUTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 input.read-more-state {
 	display: none;
 }
@@ -3609,7 +3579,7 @@ div.read-more-target {
 }
 
 .column li.gfield>div.ginput_complex>span>label {
-	color: #8e7f88;
+	color: #360b12;
 }
 
 .column li.gfield>div.ginput_container_select>div.chosen-container {
@@ -3650,7 +3620,15 @@ div.read-more-target {
 .column ul.gform_fields.top_label>li.gfield>div.gfield_description {
 	padding: 0;
 	margin: 0;
-	color: #8e7f88;
+	color: #360b12;
+}
+
+.column ul.gform_fields.top_label>li.gfield>div.gfield_description ul li {
+	list-style: disc inside none !important;
+}
+
+.column ul.gform_fields.top_label>li.gfield>div.gfield_description p+ul {
+	margin-top: 0;
 }
 
 .column ul.gform_fields.top_label>li.gfield>div.ginput_complex {
@@ -3805,13 +3783,19 @@ div.read-more-target {
 	}
 }
 
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ Purely CLASS SPECIFIC CSS3 rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### SCRIPTING ################################################################################################## ║
+*     ╠===================================================================================================================╣
+*     ║ Rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� Drop-down toggle: upon click, either drops down or pulls up a related element ���������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CLASS SPECIFIC rulesets related to script-driven elements ++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Drop-down toggle: upon click, either drops down or pulls up a related element ······················ │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
 .drop-down-toggle {
 	position: relative;
@@ -4005,23 +3989,19 @@ div.read-more-target {
 	border-left: 1px solid rgba(0,165,189,.2);
 }
 
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� Subtle Panels: Content panels with highly faded appearence until mousehover ������������������������ �
-*         +-----------------------------------------------------------------------------------------------------------+
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Subtle Panels: Content panels with highly faded appearence until mousehover ························ │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� Flipped content panels ����������������������������������������������������������������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Flipped content panels ············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
 .flipped-content-back {
 	display: none;
 	width: 100%;
 }
 
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� qTip tooltips �������������������������������������������������������������������������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
-*/
 .is-qtip {
 	display: none;
 }
@@ -4519,10 +4499,6 @@ div.read-more-target {
 	position: absolute !important;
 }
 
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� jQuery-based photo slideshows ���������������������������������������������������������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
-*/
 .cycle2-slideshow,.cycle2-slideshow * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -4679,17 +4655,13 @@ div.read-more-target {
 	opacity: .5;
 }
 
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� Quick-tabs panels ���������������������������������������������������������������������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     +---------------------------------------------------------------------------------------------------------------+
-*       � ++++ DIV rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*       +---------------------------------------------------------------------------------------------------------------+
-*/
-/*!       +-----------------------------------------------------------------------------------------------------------+
-*         � ���� Auto-scrolling image containers �������������������������������������������������������������������� �
-*         +-----------------------------------------------------------------------------------------------------------+
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Auto-scrolling image containers ···································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
 div.auto-scroller {
 	position: relative;
@@ -4718,15 +4690,15 @@ div.auto-scroller ul li {
 	list-style-image: none;
 }
 
-/*! +-----------------------------------------------------------------------------------------------------------------------+ 
-*   � #### CUSTOM LAYOUTS ################################################################################################# �
-*   �=======================================================================================================================�
-*   � The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                                 �
-*   +-----------------------------------------------------------------------------------------------------------------------+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### CUSTOM LAYOUTS ################################################################################################# ║
+*   ╠=======================================================================================================================╣
+*   ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                                 ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!   +-------------------------------------------------------------------------------------------------------------------+
-*     � ++++ Custom ID-TARGETED layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*     +-------------------------------------------------------------------------------------------------------------------+
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ ++++ Custom ID-TARGETED layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 #binder {
 	border-right: 1px solid rgba(0,0,0,.6667);
@@ -4739,21 +4711,21 @@ div.auto-scroller ul li {
 	background-attachment: fixed;
 }
 
-/*!  +-------------------------------------------------------------------------------------------------------------------+
-*    � ++++ Custom BODY layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*    +-------------------------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom BODY layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!  +-------------------------------------------------------------------------------------------------------------------+
-*    � ++++ Custom MAIN layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*    +-------------------------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom MAIN layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 main {
 	background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
 
-/*!  +-------------------------------------------------------------------------------------------------------------------+
-*    � ++++ Custom HEADER layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*    +-------------------------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom HEADER layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 header.main-header {
 	background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
@@ -4764,9 +4736,9 @@ header.main-header {
 	color: #fff !important;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom ASIDE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom ASIDE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column aside p,.column aside ul {
 	font-size: inherit;
@@ -4784,9 +4756,9 @@ header.main-header {
 	margin-top: 2rem;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom SECTION layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom SECTION layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column section.header-annual-events {
 	background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
@@ -4846,9 +4818,54 @@ header.main-header {
 	background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after,.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before {
+	content: "Click/tap to learn more >>";
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 96px;
+	min-height: 32px;
+	padding-right: 37px;
+	font-size: 12px;
+	line-height: 1em;
+	color: #fff;
+	background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top/auto 32px no-repeat;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+	z-index: 101;
+}
+
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after,.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before {
+	-webkit-transition: opacity .3s ease;
+	-moz-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+}
+
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
+	color: #f6861f;
+	background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_with-drop-shadow_29x32.png);
+	z-index: 102;
+	opacity: 0;
+}
+
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:hover:after {
+	opacity: 1;
+}
+
+.row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:hover:before {
+	opacity: 0;
+}
+
+#homepage-slideshow .builder-banner-slide {
+	padding-bottom: 30.20833333%;
+}
+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column table.calendar {
 	border: 1px solid #70031a;
@@ -5204,9 +5221,9 @@ header.main-header {
 	box-shadow: inset 0 -.3125em 0 transparent;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom DIV layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom DIV layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 div.calendar-legend {
 	position: absolute;
@@ -5367,9 +5384,9 @@ div.calendar-legend div.legend-panel.gold a:hover {
 	color: #2a3033;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom PARAGRAPH layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom PARAGRAPH layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column p.award-quote {
 	margin-left: 2rem;
@@ -5400,9 +5417,9 @@ div.calendar-legend div.legend-panel.gold a:hover {
 	color: #77580c;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom UL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom UL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column ul:not(.content-boxes):not(.application-steps) li {
 	list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
@@ -5488,9 +5505,9 @@ ul.application-steps>li>:last-child {
 	padding-bottom: .5rem;
 }
 
-/*!    +-------------------------------------------------------------------------------------------------+
-*      � ++++ Custom OL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ �
-*      +-------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom OL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column ol.massie-project>li {
 	font-size: 1.3em;
@@ -5520,11 +5537,11 @@ ul.application-steps>li>:last-child {
 	margin-left: 1rem;
 }
 
-/*! +-----------------------------------------------------------------------------------------------------------------------+ 
-*   � #### MIXIN-TOGGLED layouts ########################################################################################## �
-*   �=======================================================================================================================�
-*   � Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.                            �
-*   +-----------------------------------------------------------------------------------------------------------------------+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### MIXIN-TOGGLED layouts ########################################################################################## ║
+*   ╠=======================================================================================================================╣
+*   ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.                            ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 span.has-tool-tip:after,span.has-tooltip:after {
 	content: "";
@@ -5555,6 +5572,121 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	width: 16px;
 	height: 16px;
 	background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png);
+}
+
+.page.has-short-main-header .main-header {
+	height: 85px;
+}
+
+.page.has-short-main-header .main-header>.header-group {
+	padding-bottom: 1em !important;
+}
+
+.page.has-short-main-header .row.halves.article-header,.page.has-short-main-header .row.single.article-header {
+	position: relative;
+}
+
+.page.has-short-main-header .row.halves.article-header.gutter .column:not(.gutterless),.page.has-short-main-header .row.single.article-header.gutter .column:not(.gutterless) {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.page.has-short-main-header .row.halves.article-header.pad-top .column,.page.has-short-main-header .row.single.article-header.pad-top .column {
+	padding-top: 0;
+}
+
+.page.has-short-main-header .row.halves.article-header {
+	height: 230px;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one {
+	position: absolute;
+	right: 40%;
+	left: 0;
+	width: auto;
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	background: #5e6a71;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one header:first-child+*,.page.has-short-main-header .row.halves.article-header .column.one>:first-child {
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	left: 2rem;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one h1 {
+	margin-top: 0;
+	color: #fff;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one p.parent-page {
+	margin-bottom: .125em;
+	color: #eff0f1;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one>:not(:first-child):not(header:first-child+*) {
+	display: none;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.one>:not(h1):not(div) {
+	display: none;
+}
+
+.page.has-short-main-header .row.halves.article-header .column.two {
+	position: absolute;
+	right: 0;
+	left: 60%;
+	width: auto;
+	height: 100%;
+	background-color: #8d959a;
+	background-position: center center;
+	background-size: cover;
+}
+
+.page.has-short-main-header .row.single.article-header {
+	height: 340px;
+}
+
+.page.has-short-main-header .row.single.article-header .column {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #8d959a;
+	background-position: center center;
+	background-size: cover;
+}
+
+.page.has-short-main-header .row.single.article-header .column.show-header>header {
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 2rem 2rem 0;
+}
+
+.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+	color: #fff;
+	margin: 0;
+	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
+}
+
+.page.has-short-main-header .row.single.article-header .column.show-header>header>* .subtitle {
+	display: block;
+	font-size: .5em;
+	padding: .25em;
+	margin-top: .25em;
+	line-height: 1.1em;
+	text-transform: none;
+	background-color: rgba(0,0,0,.75);
 }
 
 .column a.glass-button,.column a.recommend-button {
@@ -5612,6 +5744,26 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	box-shadow: 0 2px 2px rgba(0,0,0,.25), 0 0 18px rgba(255,222,28,.8);
 }
 
+.column a.glass-button .icon,.column a.recommend-button .icon {
+	width: 55px;
+	padding-right: 1em;
+	border: 0;
+	box-shadow: none;
+}
+
+.column a.glass-button .icon,.column a.glass-button .icon+.label,.column a.recommend-button .icon,.column a.recommend-button .icon+.label {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.column a.glass-button .icon+.label,.column a.recommend-button .icon+.label {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	width: calc(100% - 55px - 1em);
+}
+
 .column table.award-recipients {
 	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
 	border-collapse: separate;
@@ -5652,9 +5804,17 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	vertical-align: top;
 }
 
-/*! +-----------------------------------------------------------------------------------------------------------------------+
-*   � MEDIA QUERIES ####################################################################################################### �
-*   +-----------------------------------------------------------------------------------------------------------------------+
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+.page.has-short-main-header .row.single.article-header.opportunity-fund {
+	height: 450px;
+}
+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ MEDIA QUERIES ####################################################################################################### ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 @media all and (min-width:481px) {
 	.interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
@@ -5719,7 +5879,15 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 		margin-right: 0;
 	}
 	
-	main>.page>.row:last-child.halves>.column:first-child {
+	body.home main>.page>.row:last-child.halves>.column:first-child,body.home main>.page>.row:last-child.side-left>.column:first-child,body.home main>.page>.row:last-child.side-right>.column:first-child,body.page main>.page>.row:last-child.halves>.column:first-child,body.page main>.page>.row:last-child.side-left>.column:first-child,body.page main>.page>.row:last-child.side-right>.column:first-child {
+		padding-bottom: 2rem;
+	}
+	
+	body.home main>.page>.row:last-child.thirds>.column:first-child,body.page main>.page>.row:last-child.thirds>.column:first-child {
+		padding-bottom: 2rem;
+	}
+	
+	body.home main>.page>.row:last-child.thirds>.column:nth-child(2),body.page main>.page>.row:last-child.thirds>.column:nth-child(2) {
 		padding-bottom: 2rem;
 	}
 	
@@ -6029,6 +6197,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	.column aside {
 		font-size: .938em;
 	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 3.5rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 3rem;
+	}
 }
 
 @media only screen and (min-width:1073px) {
@@ -6076,13 +6252,13 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 
 @media all and (max-width:1204px) {
 	.column .builder-banner-content {
-		font-size: 1.3278vw;
-		line-height: 1.79253vw;
+		font-size: 2.1179vw;
+		line-height: 2.8592vw;
 	}
 	
 	.column .builder-banner-content:hover {
-		font-size: 1.7704vw;
-		line-height: 2.39004vw;
+		font-size: 2.8239vw;
+		line-height: 3.8122vw;
 	}
 	
 	.column .builder-banner-inner-content p {
@@ -6167,13 +6343,13 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.column .builder-banner-content {
-		font-size: 12px;
-		line-height: 16.2px;
+		font-size: 2.5784vw;
+		line-height: 3.4808vw;
 	}
 	
 	.column .builder-banner-content:hover {
-		font-size: 14px;
-		line-height: 18.9px;
+		font-size: 3.4379vw;
+		line-height: 4.6411vw;
 	}
 	
 	span.hides-with-spine {
@@ -6228,6 +6404,10 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 		width: 100%;
 	}
 	
+	main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>div>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>div>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>div>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>div>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>div>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>div>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>section>ol:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>section>p:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>section>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>ul:last-child,main section.row:last-child.halves>.column:not(:last-child)>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>div>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>div>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>div>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>div>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>div>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>div>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>section>ol:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>section>p:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>section>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>ul:last-child,main section.row:last-child.quarters>.column:not(:last-child)>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>div>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>div>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>div>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>div>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>div>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>div>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>section>ol:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>section>p:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>section>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>ul:last-child,main section.row:last-child.side-left>.column:not(:last-child)>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>div>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>div>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>div>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>div>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>div>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>div>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>section>ol:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>section>p:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>section>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>ul:last-child,main section.row:last-child.side-right>.column:not(:last-child)>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>div>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>div>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>div>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>div>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>div>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>div>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>section>ol:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>section>p:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>section>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>ul:last-child,main section.row:last-child.thirds>.column:not(:last-child)>ul:last-child {
+		margin-bottom: 1rem;
+	}
+	
 	.row.single .column aside.article-sidebar {
 		position: absolute;
 		top: 0;
@@ -6250,7 +6430,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 		transform: none;
 	}
 	
-	body.single-post #wsuwp-main .row .column.one aside {
+	.column>aside.quote,body.single-post #wsuwp-main .row .column.one aside {
 		width: 94%;
 		width: calc(100% - .5rem * 2);
 		margin-top: 1rem;
@@ -6277,6 +6457,24 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.column ol.massie-project>li>img {
 		width: 112px;
+	}
+	
+	.page.has-short-main-header .row.halves.article-header .column.one header:first-child+*,.page.has-short-main-header .row.halves.article-header .column.one>:first-child {
+		right: 1rem;
+		left: 1rem;
+	}
+	
+	.page.has-short-main-header .row.halves.article-header .column.one h1 {
+		font-size: 6.5vw;
+	}
+	
+	.page.has-short-main-header .row.halves.article-header .column.one p.parent-page {
+		font-size: 3.25vw;
+	}
+	
+	.page.has-short-main-header .row.halves.article-header .column.one,.page.has-short-main-header .row.halves.article-header .column.two {
+		float: left;
+		clear: none;
 	}
 }
 
@@ -6321,6 +6519,16 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 @media all and (max-width:480px) {
+	.column .builder-banner-content {
+		font-size: 5.1568vw;
+		line-height: 6.9616vw;
+	}
+	
+	.column .builder-banner-content:hover {
+		font-size: 6.8758vw;
+		line-height: 9.2822vw;
+	}
+	
 	.interactively-flipped-panels .container {
 		width: 100%;
 		padding-bottom: 320%;
@@ -6412,8 +6620,28 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 		margin-left: 0;
 	}
 	
+	#homepage-slideshow .builder-banner-slide {
+		padding-bottom: 60.41666667%;
+	}
+	
+	#homepage-slideshow .builder-banner-slide:nth-child(4) {
+		background-position: left center;
+	}
+	
+	#homepage-slideshow .builder-banner-slide:nth-child(5) {
+		background-position: right center;
+	}
+	
+	#homepage-slideshow .builder-banner-slide:nth-child(7) {
+		background-position: right center;
+	}
+	
 	.column ol.massie-project>li>img {
 		width: 96px;
+	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header {
+		padding-left: .5rem;
 	}
 	
 	.column table.award-recipients {
@@ -6673,6 +6901,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	.column ol.massie-project>li>img {
 		width: 80px;
 	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 2.500001rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 2.142858rem;
+	}
 }
 
 @media all and (min-width:990px) and (max-width:1049px) {
@@ -6891,6 +7127,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.column aside {
 		font-size: .938em;
+	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 3.5rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 3rem;
 	}
 }
 
@@ -7184,6 +7428,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	.column aside {
 		font-size: .879844em;
 	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 3.5rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 3rem;
+	}
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
@@ -7373,6 +7625,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.column aside {
 		font-size: .879844em;
+	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 3.5rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 3rem;
 	}
 }
 
@@ -7569,6 +7829,14 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	.column aside {
 		font-size: .82529367em;
 	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		font-size: 2.850001rem;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		font-size: 2.442858rem;
+	}
 }
 
 @media all and (min-width:792px) and (max-width:1049px) {
@@ -7650,32 +7918,26 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.column h1 {
 		line-height: 1.1em;
-		font-size: 2.82352941em;
 	}
 	
 	.column h2 {
 		line-height: 1.1em;
-		font-size: 2.07058824em;
 	}
 	
 	.column h2.article-title {
 		line-height: 1.1em;
-		font-size: .82823529em;
 	}
 	
 	.column h3,.gform_heading h3.gform_title {
 		line-height: 1.1em;
-		font-size: 1.6em;
 	}
 	
 	.column h4 {
 		line-height: 1.2em;
-		font-size: 1.31764706em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
 		line-height: 1.1em;
-		font-size: 1.5em;
 	}
 	
 	header.main-header .sup-header-default {
@@ -7684,192 +7946,154 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	header.main-header .sub-header,header.main-header .sub-header-default {
 		line-height: .9em;
-		font-size: 2.35294118rem;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.quarters .column p,.row.thirds .column p {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.column p.banner-text {
 		line-height: 1.375em;
-		font-size: 1.25em;
 	}
 	
 	.column p.banner-text-orange-with-towers {
 		line-height: 1.375em;
-		font-size: 1.25em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-deck {
 		line-height: 1.375em;
-		font-size: 1.2em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-deck {
 		line-height: 1.375em;
-		font-size: 1.2em;
 	}
 	
 	.row.halves .column p.article-deck,.row.side-left .column p.article-deck,.row.side-right .column p.article-deck {
 		line-height: 1.375em;
-		font-size: 1.2em;
 	}
 	
 	.row.quarters .column p.article-deck,.row.thirds .column p.article-deck {
 		line-height: 1.375em;
-		font-size: 1.2em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
 		line-height: 1.375em;
-		font-size: 1.305em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-tagline {
 		line-height: 1.375em;
-		font-size: 1.305em;
 	}
 	
 	.row.halves .column p.article-tagline,.row.side-left .column p.article-tagline,.row.side-right .column p.article-tagline {
 		line-height: 1.375em;
-		font-size: 1.305em;
 	}
 	
 	.row.quarters .column p.article-tagline,.row.thirds .column p.article-tagline {
 		line-height: 1.375em;
-		font-size: 1.305em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
 		line-height: 1.375em;
-		font-size: 1.71000023em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-tagline.home {
 		line-height: 1.375em;
-		font-size: 1.71000023em;
 	}
 	
 	.row.halves .column p.article-tagline.home,.row.side-left .column p.article-tagline.home,.row.side-right .column p.article-tagline.home {
 		line-height: 1.375em;
-		font-size: 1.71000023em;
 	}
 	
 	.row.quarters .column p.article-tagline.home,.row.thirds .column p.article-tagline.home {
 		line-height: 1.375em;
-		font-size: 1.71000023em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
 		line-height: 1.375em;
-		font-size: .6875em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.vpue-jump-back {
 		line-height: 1.375em;
-		font-size: .6875em;
 	}
 	
 	.row.halves .column p.vpue-jump-back,.row.side-left .column p.vpue-jump-back,.row.side-right .column p.vpue-jump-back {
 		line-height: 1.375em;
-		font-size: .6875em;
 	}
 	
 	.row.quarters .column p.vpue-jump-back,.row.thirds .column p.vpue-jump-back {
 		line-height: 1.375em;
-		font-size: .6875em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
 		line-height: 1.375em;
-		font-size: .8rem;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-media-contacts {
 		line-height: 1.375em;
-		font-size: .8rem;
 	}
 	
 	.row.halves .column p.article-media-contacts,.row.side-left .column p.article-media-contacts,.row.side-right .column p.article-media-contacts {
 		line-height: 1.375em;
-		font-size: .8rem;
 	}
 	
 	.row.quarters .column p.article-media-contacts,.row.thirds .column p.article-media-contacts {
 		line-height: 1.375em;
-		font-size: .8rem;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column ul {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.single.mimic-two-column-sections .column ul {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.halves .column ul,.row.side-left .column ul,.row.side-right .column ul {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.quarters .column ul,.row.thirds .column ul {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	ul.application-steps>li p,ul.content-boxes>li p {
 		line-height: 1.375em;
-		font-size: .938em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column ol {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.single.mimic-two-column-sections .column ol {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.halves .column ol,.row.side-left .column ol,.row.side-right .column ol {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.row.quarters .column ol,.row.thirds .column ol {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.column dl.faq dt {
 		line-height: 1.375em;
-		font-size: 1em;
 	}
 	
 	.column dl.faq>.collapse-all-button,.column dl.faq>.expand-all-button {
 		line-height: 12px;
-		font-size: 12px;
 	}
 	
 	.column .decoration {
@@ -7886,16 +8110,22 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.column .gform_wrapper {
 		line-height: 1.375em;
-		font-size: 16px;
 	}
 	
 	.column aside {
 		line-height: 1.375em;
-		font-size: .879844em;
 	}
 	
 	.column ol.massie-project>li>img {
 		width: 128px;
+	}
+	
+	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
+		line-height: .9em;
+	}
+	
+	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
+		line-height: .9em;
 	}
 }
 
