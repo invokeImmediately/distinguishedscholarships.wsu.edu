@@ -3100,6 +3100,9 @@ p.article-tagline:not(.has-no-bordering).crimson.alt:after {
 p.article-tagline:not(.has-no-bordering).crimson .has-gray-text {
   color: #464e54;
 }
+p.article-tagline:not(.has-no-bordering).bold {
+  font-weight: bold;
+}
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     line-height: 1.375em;
