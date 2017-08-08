@@ -8403,6 +8403,7 @@ span.has-tooltip:hover:after {
   color: #fff;
   margin: 0;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 @media all {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
