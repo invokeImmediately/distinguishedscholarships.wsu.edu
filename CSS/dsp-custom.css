@@ -3097,6 +3097,9 @@ p.article-tagline:not(.has-no-bordering).crimson.alt:after {
   right: 3px;
   background-color: rgba(152, 30, 50, 0.37878788);
 }
+p.article-tagline:not(.has-no-bordering).crimson .has-gray-text {
+  color: #464e54;
+}
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     line-height: 1.375em;
