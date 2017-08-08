@@ -8401,6 +8401,7 @@ span.has-tooltip:hover:after {
 }
 .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
   color: #fff;
+  padding: 0.25em;
   margin: 0;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
   background-color: rgba(0, 0, 0, 0.75);
