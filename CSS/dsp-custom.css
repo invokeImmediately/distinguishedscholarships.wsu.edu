@@ -8433,12 +8433,12 @@ span.has-tooltip:hover:after {
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 2.6871438rem;
+    font-size: 2.3571438rem;
   }
 }
 @media all and (max-width: 360px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 2.3571438rem;
+    font-size: 1.68367482rem;
   }
 }
 .page.has-short-main-header .row.single.article-header .column.show-header > header > * .subtitle {
