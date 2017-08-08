@@ -9181,6 +9181,6 @@ span.has-tooltip:hover:after {
 .row.has-linked-columns.linked-announcement .column:hover > :first-child:not(header),
 .row.has-linked-columns.linked-announcement .column:hover > header:first-child + *,
 .row.has-linked-columns.linked-announcement .column:hover > .shift-to-bottom:first-of-type {
-  color: #4f3a08;
+  color: #77580c;
   text-shadow: 0 0 18px rgba(255, 255, 255, 0.3333);
 }
