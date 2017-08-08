@@ -5675,8 +5675,10 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 
 .page.has-short-main-header .row.single.article-header .column.show-header>header>* {
 	color: #fff;
+	padding: .25em;
 	margin: 0;
 	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
+	background-color: rgba(0,0,0,.75);
 }
 
 .page.has-short-main-header .row.single.article-header .column.show-header>header>* .subtitle {
@@ -6193,6 +6195,20 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	height: 450px;
 }
 
+.row.has-linked-columns.linked-announcement {
+	background-color: #ffb81c;
+}
+
+.row.has-linked-columns.linked-announcement .column>.shift-to-bottom:first-of-type,.row.has-linked-columns.linked-announcement .column>:first-child:not(header),.row.has-linked-columns.linked-announcement .column>header:first-child+* {
+	color: #4f3a08;
+	text-shadow: none;
+}
+
+.row.has-linked-columns.linked-announcement .column:hover>.shift-to-bottom:first-of-type,.row.has-linked-columns.linked-announcement .column:hover>:first-child:not(header),.row.has-linked-columns.linked-announcement .column:hover>header:first-child+* {
+	color: #77580c;
+	text-shadow: 0 0 18px #fff;
+}
+
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *   ║ MEDIA QUERIES ####################################################################################################### ║
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -6600,7 +6616,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 3.5rem;
+		font-size: 3.3rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
@@ -7091,6 +7107,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header {
 		padding-left: .5rem;
+		padding-right: .5rem;
 	}
 	
 	.column table.award-recipients {
@@ -7402,7 +7419,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 2.500001rem;
+		font-size: 1.68367482rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
@@ -7629,7 +7646,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 3.5rem;
+		font-size: 3.3rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
@@ -7929,7 +7946,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 3.5rem;
+		font-size: 3.3rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
@@ -8127,7 +8144,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 3.5rem;
+		font-size: 3.3rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
@@ -8330,7 +8347,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	}
 	
 	.page.has-short-main-header .row.single.article-header .column.show-header>header>* {
-		font-size: 2.850001rem;
+		font-size: 2.3571438rem;
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
