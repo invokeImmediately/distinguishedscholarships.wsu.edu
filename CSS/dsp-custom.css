@@ -8413,32 +8413,32 @@ span.has-tooltip:hover:after {
 }
 @media all and (min-width: 1073px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 2.850001rem;
+    font-size: 2.6871438rem;
   }
 }
 @media all and (max-width: 360px) {
   .page.has-short-main-header .row.single.article-header .column.show-header > header > * {
-    font-size: 2.500001rem;
+    font-size: 2.3571438rem;
   }
 }
 .page.has-short-main-header .row.single.article-header .column.show-header > header > * .subtitle {
