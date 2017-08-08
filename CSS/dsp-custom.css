@@ -8851,6 +8851,11 @@ span.has-tooltip:hover:after {
 .row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #00ada4;
 }
+.row.has-linked-columns:not(.gutter).single .column > :first-child:not(header),
+.row.has-linked-columns:not(.gutter).single .column > header:first-child + *,
+.row.has-linked-columns:not(.gutter).single .column > .shift-to-bottom:first-of-type {
+  max-width: none;
+}
 .row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).thirds.thirds,
 .row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).quarters.thirds,
 .row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).thirds.thirds,
