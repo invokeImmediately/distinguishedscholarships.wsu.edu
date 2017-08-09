@@ -9175,6 +9175,9 @@ span.has-tooltip:hover:after {
 .row.has-linked-columns.linked-announcement {
   background-color: #ffb81c;
 }
+.row.has-linked-columns.linked-announcement .column {
+  padding-bottom: calc(28% - 2rem) !important;
+}
 .row.has-linked-columns.linked-announcement .column > :first-child:not(header),
 .row.has-linked-columns.linked-announcement .column > header:first-child + *,
 .row.has-linked-columns.linked-announcement .column > .shift-to-bottom:first-of-type {
@@ -9186,4 +9189,7 @@ span.has-tooltip:hover:after {
 .row.has-linked-columns.linked-announcement .column:hover > .shift-to-bottom:first-of-type {
   color: #77580c;
   text-shadow: 0 0 18px #fff;
+}
+.row.has-linked-columns.linked-announcement + .row.has-recent-updates {
+  margin-top: 0;
 }
