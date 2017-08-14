@@ -9176,7 +9176,7 @@ span.has-tooltip:hover:after {
   background-color: #ffb81c;
 }
 .row.has-linked-columns.linked-announcement .column {
-  padding-bottom: calc(28% - 2rem) !important;
+  padding-bottom: calc(20% - 2rem) !important;
 }
 .row.has-linked-columns.linked-announcement .column > :first-child:not(header),
 .row.has-linked-columns.linked-announcement .column > header:first-child + *,
