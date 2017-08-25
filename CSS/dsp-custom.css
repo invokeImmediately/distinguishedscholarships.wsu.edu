@@ -9321,8 +9321,10 @@ span.has-tooltip:hover:after {
   border-bottom: none;
   box-shadow: none;
   text-shadow: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-#tribe-bar-views a:hover {
+#tribe-bar-views li.tribe-bar-active a:hover {
   border-bottom-right-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   border-bottom: 0.0625em solid #981e32;
