@@ -9324,12 +9324,18 @@ span.has-tooltip:hover:after {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+#tribe-bar-views li.tribe-bar-active a {
+  border-bottom: 0.0625em solid transparent;
+}
 #tribe-bar-views li.tribe-bar-active a:hover {
   border-bottom-right-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   border-bottom: 0.0625em solid #981e32;
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
   color: #c60c30;
+}
+#tribe-bar-views li.tribe-bar-active a span {
+  color: inherit;
 }
 .type-tribe_events[class*=post-] .tribe-events-event-image {
   position: relative;
