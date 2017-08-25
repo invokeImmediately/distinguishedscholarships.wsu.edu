@@ -9406,6 +9406,15 @@ span.has-tooltip:hover:after {
 .tribe-events-week .tribe-events-tooltip .workshop-note {
   display: none;
 }
+#tribe-events-content.tribe-events-month {
+  background-color: #58111d;
+}
+#tribe-events-content.tribe-events-month .tribe-events-page-title {
+  color: #fff;
+}
+#tribe-events-content.tribe-events-month .tribe-events-calendar {
+  background-color: #fff;
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
