@@ -9373,6 +9373,9 @@ span.has-tooltip:hover:after {
   box-shadow: none;
   text-shadow: none;
 }
+.tribe-related-events-thumbnail img {
+  max-width: 198px;
+}
 .tribe-events-event-meta {
   padding-top: 1.5rem;
 }
