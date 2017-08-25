@@ -9386,7 +9386,7 @@ span.has-tooltip:hover:after {
   background-color: transparent;
 }
 .tribe-related-events-thumbnail img {
-  border: 0.0625em solid transparent;
+  border: 0.0625em solid transparent !important;
 }
 .tribe-events-event-meta {
   padding-top: 1.5rem;
