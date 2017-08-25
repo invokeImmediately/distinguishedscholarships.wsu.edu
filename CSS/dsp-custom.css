@@ -9317,6 +9317,10 @@ span.has-tooltip:hover:after {
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
   color: #c60c30;
 }
+#tribe-bar-views {
+  border-bottom: none;
+  box-shadow: none;
+}
 .type-tribe_events[class*=post-] .tribe-events-event-image {
   position: relative;
   float: left;
@@ -9326,6 +9330,12 @@ span.has-tooltip:hover:after {
 .tribe-events-single .type-tribe_events[class*=post-] .tribe-events-event-image {
   width: 30%;
   margin-right: 3%;
+}
+@media all and (min-width: 601px) {
+  .tribe-events-single .type-tribe_events[class*=post-] .tribe-events-event-image {
+    width: 20%;
+    padding-bottom: 20%;
+  }
 }
 .type-tribe_events[class*=post-] .tribe-events-event-image a {
   display: block;
