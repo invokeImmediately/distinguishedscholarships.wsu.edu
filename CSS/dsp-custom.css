@@ -9332,10 +9332,7 @@ span.has-tooltip:hover:after {
   border-bottom-left-radius: 0.25em;
   border-bottom: 0.0625em solid #981e32;
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
-  color: #c60c30;
-}
-#tribe-bar-views li.tribe-bar-active a span {
-  color: inherit;
+  color: #c60c30 !important;
 }
 .type-tribe_events[class*=post-] .tribe-events-event-image {
   position: relative;
