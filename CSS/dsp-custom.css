@@ -9369,11 +9369,12 @@ span.has-tooltip:hover:after {
   clear: left;
 }
 .tribe-related-events-thumbnail a {
-  border-bottom: none;
+  border: none;
   box-shadow: none;
   text-shadow: none;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+}
+.tribe-events-event-meta {
+  padding-top: 1.5rem;
 }
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
