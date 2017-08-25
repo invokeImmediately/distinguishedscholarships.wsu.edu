@@ -9301,11 +9301,17 @@ span.has-tooltip:hover:after {
 .column #tribe-events ul li {
   list-style-image: none;
 }
-.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a {
+.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a,
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a,
+.tribe-events-calendar td.tribe-events-future div[id*=tribe-events-daynum-] > a {
   border-bottom: none;
   box-shadow: none;
 }
-.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a:hover {
+.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a:hover,
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a:hover,
+.tribe-events-calendar td.tribe-events-future div[id*=tribe-events-daynum-] > a:hover {
+  border-bottom-right-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
   border-bottom: 0.0625em solid #981e32;
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
   color: #c60c30;
