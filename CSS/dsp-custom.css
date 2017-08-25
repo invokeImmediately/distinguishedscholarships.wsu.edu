@@ -9417,13 +9417,13 @@ span.has-tooltip:hover:after {
 #tribe-events-content.tribe-events-month .tribe-events-calendar {
   background-color: #fff;
 }
-#tribe-events-content.tribe-events-month .tribe-events-footer a {
+#tribe-events-content.tribe-events-month #tribe-events-footer a {
   padding-left: 3px;
   border-bottom: 0.0625em solid #fff;
   box-shadow: inset 0 -0.3125em 0 rgba(255, 255, 255, 0.3333);
-  color: white;
+  color: #fff;
 }
-#tribe-events-content.tribe-events-month .tribe-events-footer a:hover {
+#tribe-events-content.tribe-events-month #tribe-events-footer a:hover {
   border-radius: 4px;
   box-shadow: inset 0 -0.3125em 0 transparent;
   background-color: rgba(255, 255, 255, 0.75);
