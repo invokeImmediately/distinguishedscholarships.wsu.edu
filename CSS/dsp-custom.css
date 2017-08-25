@@ -9323,6 +9323,10 @@ span.has-tooltip:hover:after {
   height: 0;
   padding-bottom: 30%;
 }
+.tribe-events-single .type-tribe_events[class*=post-] .tribe-events-event-image {
+  width: 30%;
+  margin-right: 3%;
+}
 .type-tribe_events[class*=post-] .tribe-events-event-image a {
   display: block;
   position: absolute;
@@ -9333,6 +9337,10 @@ span.has-tooltip:hover:after {
   border-bottom: none;
   box-shadow: none;
   z-index: 1;
+}
+.type-tribe_events[class*=post-] .tribe-events-event-image img {
+  width: 100%;
+  height: auto;
 }
 .type-tribe_events[class*=post-] .tribe-events-cal-links {
   clear: left;
