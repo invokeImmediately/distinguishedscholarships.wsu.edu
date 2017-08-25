@@ -9301,6 +9301,10 @@ span.has-tooltip:hover:after {
 .column #tribe-events ul li {
   list-style-image: none;
 }
+#tribe-events .workshop-note {
+  font-size: 0.9em;
+  color: #9e7510;
+}
 .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a,
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a,
 .tribe-events-calendar td.tribe-events-future div[id*=tribe-events-daynum-] > a {
@@ -9384,6 +9388,12 @@ span.has-tooltip:hover:after {
 .tribe-events-shortcode.view-week .tribe-events-tooltip,
 .tribe-events-week .tribe-events-tooltip {
   padding: .75em 1em;
+}
+.recurring-info-tooltip .workshop-note,
+.tribe-events-calendar .tribe-events-tooltip .workshop-note,
+.tribe-events-shortcode.view-week .tribe-events-tooltip .workshop-note,
+.tribe-events-week .tribe-events-tooltip .workshop-note {
+  display: none;
 }
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
