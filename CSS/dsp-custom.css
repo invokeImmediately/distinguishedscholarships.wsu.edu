@@ -9376,6 +9376,12 @@ span.has-tooltip:hover:after {
 .tribe-events-event-meta {
   padding-top: 1.5rem;
 }
+.recurring-info-tooltip,
+.tribe-events-calendar .tribe-events-tooltip,
+.tribe-events-shortcode.view-week .tribe-events-tooltip,
+.tribe-events-week .tribe-events-tooltip {
+  padding: .75em 1em;
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
