@@ -7506,6 +7506,14 @@ x:-o-prefocus {
     right: 4px;
   }
 }
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Tribe Events Calendars ············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -9289,6 +9297,34 @@ span.has-tooltip:hover:after {
   .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(4) {
     border-left: 10px solid #ffffff !important;
   }
+}
+.column #tribe-events ul li {
+  list-style-image: none;
+}
+.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a {
+  border-bottom: none;
+  box-shadow: none;
+}
+.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a:hover {
+  border-bottom: 0.0625em solid #981e32;
+  box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
+  color: #c60c30;
+}
+.type-tribe_events[class*=post-] .tribe-events-event-image {
+  position: relative;
+  float: left;
+  height: 198px;
+}
+.type-tribe_events[class*=post-] .tribe-events-event-image a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: none;
+  box-shadow: none;
+  z-index: 1;
 }
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
