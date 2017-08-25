@@ -9306,6 +9306,7 @@ span.has-tooltip:hover:after {
 .tribe-events-calendar td.tribe-events-future div[id*=tribe-events-daynum-] > a {
   border-bottom: none;
   box-shadow: none;
+  border-bottom-color: #981e32;
 }
 .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a:hover,
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a:hover,
