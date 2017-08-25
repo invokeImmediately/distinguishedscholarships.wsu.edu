@@ -9368,6 +9368,13 @@ span.has-tooltip:hover:after {
 .type-tribe_events[class*=post-] .tribe-events-cal-links {
   clear: left;
 }
+.tribe-related-events-thumbnail a {
+  border-bottom: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
