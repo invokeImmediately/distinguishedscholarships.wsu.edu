@@ -9388,6 +9388,9 @@ span.has-tooltip:hover:after {
 .tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail img {
   border: 0.0625em solid transparent;
 }
+.tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail img:hover {
+  border: 0.0625em solid #981e32;
+}
 .tribe-events-event-meta {
   padding-top: 1.5rem;
 }
