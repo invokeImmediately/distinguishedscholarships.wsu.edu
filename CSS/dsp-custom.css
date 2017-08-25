@@ -9317,9 +9317,17 @@ span.has-tooltip:hover:after {
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
   color: #c60c30;
 }
-#tribe-bar-views {
+#tribe-bar-views a {
   border-bottom: none;
   box-shadow: none;
+  text-shadow: none;
+}
+#tribe-bar-views a:hover {
+  border-bottom-right-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  border-bottom: 0.0625em solid #981e32;
+  box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
+  color: #c60c30;
 }
 .type-tribe_events[class*=post-] .tribe-events-event-image {
   position: relative;
