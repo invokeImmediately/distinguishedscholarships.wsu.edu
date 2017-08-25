@@ -9368,13 +9368,13 @@ span.has-tooltip:hover:after {
 .type-tribe_events[class*=post-] .tribe-events-cal-links {
   clear: left;
 }
+.tribe-related-events-thumbnail {
+  max-width: 198px;
+}
 .tribe-related-events-thumbnail a {
   border: none;
   box-shadow: none;
   text-shadow: none;
-}
-.tribe-related-events-thumbnail img {
-  max-width: 198px;
 }
 .tribe-events-event-meta {
   padding-top: 1.5rem;
