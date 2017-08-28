@@ -9476,6 +9476,15 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 .single-tribe_events .tribe-events-before-html .calendar-intro-message {
   display: none;
 }
+.wsuwp-content-syndicate-event .content-item-event-date {
+  font-weight: bold;
+}
+.wsuwp-content-syndicate-event .content-item-event-date:after {
+  content: ":";
+}
+.wsuwp-content-syndicate-event .content-item-event-venue:before {
+  content: "in ";
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
