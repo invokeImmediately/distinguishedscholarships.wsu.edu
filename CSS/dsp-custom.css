@@ -9430,17 +9430,16 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
   margin-top: 1.5rem;
 }
 #tribe-events-content.tribe-events-month .tribe-events-page-title a {
-  color: #981e32;
+  color: #c60c30;
 }
 #tribe-events-content.tribe-events-month .tribe-events-page-title a:hover {
-  color: #c60c30;
+  color: #e38698;
 }
 #tribe-events-content.tribe-events-month .tribe-events-calendar {
   background-color: #fff;
 }
 #tribe-events-content.tribe-events-month .tribe-events-calendar th {
   background-color: #981e32;
-  border-right: ;
 }
 #tribe-events-content.tribe-events-month #tribe-events-footer a {
   padding-right: 3px;
