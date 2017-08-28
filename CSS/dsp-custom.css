@@ -9303,7 +9303,7 @@ body.tribe-theme-spine .main-header .header-group {
   width: calc(100% - 2rem);
 }
 body.tribe-theme-spine .main-header .header-group .sub-header {
-  color: transparent;
+  color: transparent !important;
 }
 body.tribe-theme-spine .main-header .header-group .sub-header:before {
   content: "Distinguished Scholarships Program";
