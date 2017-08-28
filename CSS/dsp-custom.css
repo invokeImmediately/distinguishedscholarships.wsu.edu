@@ -9460,6 +9460,19 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 #tribe-events-content.tribe-events-month #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous {
   margin-left: 5px;
 }
+#tribe-events-content.tribe-events-list .tribe-events-page-title {
+  padding-bottom: 0.5em;
+  padding-top: 0.42em;
+  border-radius: 10px;
+  background-color: #58111d;
+  color: #fff;
+}
+#tribe-events-content.tribe-events-list .tribe-events-list-separator-month span {
+  padding-bottom: 0.2em;
+  border-radius: 4px;
+  background-color: #981e32;
+  color: white;
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
