@@ -9467,6 +9467,14 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
   background-color: #58111d;
   color: #fff;
 }
+#tribe-events-content.tribe-events-list .tribe-events-page-title a {
+  color: #c60c30;
+  border-bottom: 1px solid transparent;
+}
+#tribe-events-content.tribe-events-list .tribe-events-page-title a:hover {
+  color: #e38698;
+  border-bottom-color: #e38698;
+}
 #tribe-events-content.tribe-events-list .tribe-events-list-separator-month span {
   padding-bottom: 0.2em;
   border-radius: 4px;
