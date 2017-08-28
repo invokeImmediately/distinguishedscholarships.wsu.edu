@@ -9457,7 +9457,7 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
   background-color: rgba(255, 255, 255, 0.75);
   color: #c60c30;
 }
-#tribe-events-content.tribe-events-month #tribe-events-footer a .tribe-events-sub-nav .tribe-events-nav-previous {
+#tribe-events-content.tribe-events-month #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous {
   margin-left: 5px;
 }
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
