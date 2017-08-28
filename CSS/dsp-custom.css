@@ -9298,6 +9298,18 @@ span.has-tooltip:hover:after {
     border-left: 10px solid #ffffff !important;
   }
 }
+body.tribe-theme-spine .main-header .header-group {
+  width: calc(90%);
+  width: calc(100% - 2rem);
+}
+body.tribe-theme-spine .main-header .header-group .sub-header {
+  color: transparent;
+}
+body.tribe-theme-spine .main-header .header-group .sub-header:before {
+  content: "Distinguished Scholarships Program";
+  position: absolute;
+  color: #fff;
+}
 .column #tribe-events ul li {
   list-style-image: none;
 }
@@ -9416,6 +9428,10 @@ span.has-tooltip:hover:after {
 }
 #tribe-events-content.tribe-events-month .tribe-events-calendar {
   background-color: #fff;
+}
+#tribe-events-content.tribe-events-month .tribe-events-calendar th {
+  background-color: #981e32;
+  border-right: ;
 }
 #tribe-events-content.tribe-events-month #tribe-events-footer a {
   padding-right: 3px;
