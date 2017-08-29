@@ -9493,6 +9493,9 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 .wsuwp-content-syndicate-event .content-item-event-venue:before {
   content: "in ";
 }
+.wsuwp-content-syndicate-list:empty:after {
+  content: "None.";
+}
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
