@@ -9579,9 +9579,23 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 #tribe-events-content.tribe-events-month #tribe-mobile-container {
   padding: 0.5rem;
 }
-#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day:not(:empty) {
-  padding: 0.5rem;
-  border-radius: 7px;
+#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day .tribe-mobile-day-heading {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day .tribe-events-mobile {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day .tribe-mobile-day-heading,
+#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day .tribe-events-mobile {
   background-color: #fff;
   font-size: 0.925rem;
 }
