@@ -9565,6 +9565,13 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
     margin-left: 0;
   }
 }
+@media only screen and (max-width: 768px) {
+  #tribe-events-content.tribe-events-month .tribe-events-sub-nav li a {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -0.3125em 0 transparent;
+  }
+}
 #tribe-events-content.tribe-events-list .tribe-events-page-title {
   padding-bottom: 0.5em;
   padding-top: 0.42em;
