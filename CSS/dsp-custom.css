@@ -9599,7 +9599,7 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
   background-color: #fff;
   font-size: 0.925rem;
 }
-#tribe-events-content.tribe-events-day .tribe-events-day-time-slot {
+#tribe-events-content.tribe-events-day .tribe-events-day-time-slot > h5:first-child {
   background-color: #464e54;
 }
 #tribe-events-content.tribe-events-list .tribe-events-page-title {
