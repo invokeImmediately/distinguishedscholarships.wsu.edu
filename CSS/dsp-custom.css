@@ -9579,7 +9579,7 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 #tribe-events-content.tribe-events-month #tribe-mobile-container {
   padding: 0.5rem;
 }
-#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day {
+#tribe-events-content.tribe-events-month #tribe-mobile-container .tribe-mobile-day:not(:empty) {
   padding: 0.5rem;
   border-radius: 7px;
   background-color: #fff;
