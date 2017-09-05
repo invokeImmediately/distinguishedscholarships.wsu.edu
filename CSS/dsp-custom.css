@@ -9494,9 +9494,6 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 .tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail img:hover {
   border: 0.0625em solid #981e32;
 }
-.tribe-events-event-meta {
-  padding-top: 1.5rem;
-}
 .recurring-info-tooltip,
 .tribe-events-calendar .tribe-events-tooltip,
 .tribe-events-shortcode.view-week .tribe-events-tooltip,
@@ -9602,6 +9599,9 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 #tribe-events-content.tribe-events-day .tribe-events-day-time-slot > h5:first-child {
   background-color: #464e54;
 }
+#tribe-events-content.tribe-events-single .tribe-events-event-meta {
+  padding-top: 1.5rem;
+}
 #tribe-events-content.tribe-events-list .tribe-events-page-title {
   padding-bottom: 0.5em;
   padding-top: 0.42em;
@@ -9622,6 +9622,17 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
   border-radius: 4px;
   background-color: #981e32;
   color: white;
+}
+#tribe-events-content.tribe-events-list .tribe-event-schedule-details {
+  font-size: 1.3rem;
+}
+#tribe-events-content.tribe-events-list .tribe-events-venue-details {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+#tribe-events-content.tribe-events-list .tribe-events-venue-details:before {
+  content: "Location: ";
+  font-weight: bold;
 }
 .single-tribe_events .tribe-events-before-html .calendar-intro-message {
   display: none;
