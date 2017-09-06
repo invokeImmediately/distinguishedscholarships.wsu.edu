@@ -9602,6 +9602,12 @@ body.tribe-theme-spine .main-header .header-group .sub-header:before {
 #tribe-events-content.tribe-events-single .tribe-events-event-meta {
   padding-top: 1.5rem;
 }
+#tribe-events-content.tribe-events-single .tribe-events-schedule {
+  margin-top: 0;
+}
+#tribe-events-content.tribe-events-single .tribe-events-schedule h2 {
+  font-size: 1.3rem;
+}
 #tribe-events-content.tribe-events-list .tribe-events-page-title {
   padding-bottom: 0.5em;
   padding-top: 0.42em;
