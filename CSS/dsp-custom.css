@@ -9910,8 +9910,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 #on-this-page h2 {
   color: #fff;
   padding-left: 2rem;
-  padding-bottom: 0.66666667rem;
   font-size: 1.7rem;
+  margin-bottom: 1rem;
 }
 #on-this-page ul {
   margin: 0;
