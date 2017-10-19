@@ -758,6 +758,14 @@ html {
 *       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
+@media only screen and (min-width: 990px) {
+  body.use-max-width-1386 #binder.max-1188 {
+    max-width: 1386px;
+  }
+  body.use-max-width-1386 #binder.max-1188 .row {
+    max-width: 1386px;
+  }
+}
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1558,6 +1566,10 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     margin-top: 2rem;
   }
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -9888,6 +9900,67 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 .wsuwp-content-syndicate-list:empty:after {
   content: "None.";
+}
+#on-this-page {
+  background-color: #2f3438;
+}
+#on-this-page .column {
+  background-color: inherit;
+}
+#on-this-page h2 {
+  color: #fff;
+  padding-left: 2rem;
+  padding-bottom: 0.66666667rem;
+  font-size: 1.7rem;
+}
+#on-this-page ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-top: 1px solid #2f3438;
+  border-left: 1px solid #2f3438;
+  background-color: inherit;
+  list-style-type: none;
+}
+#on-this-page li {
+  float: left;
+  margin-top: 0 !important;
+  list-style-image: none;
+  padding: 0;
+}
+#on-this-page li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  border-right: 1px solid #2f3438;
+  border-bottom: 1px solid #2f3438;
+  border-radius: 0;
+  background-color: #464e54;
+  box-shadow: none;
+}
+#on-this-page li a:hover {
+  border-color: #2f3438;
+  background-color: #23272a;
+  text-shadow: none;
+}
+@media all and (max-width: 791px) {
+  #on-this-page li a {
+    padding: 8px 10px;
+  }
+}
+.back-to-otp {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9em;
+}
+.back-to-otp:before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  left: -3px;
+  height: .9rem;
+  background: url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-cw_54x64.png) center center / auto 100% no-repeat;
 }
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
