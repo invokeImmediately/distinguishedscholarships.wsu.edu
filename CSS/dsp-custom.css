@@ -10025,3 +10025,12 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 .row.has-linked-columns.linked-announcement + .row.has-recent-updates {
   margin-top: 0;
 }
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### PACE-SPECIFIC layouts & styles ################################################################################# ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+.page.massie-fellowship .massie-project {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
