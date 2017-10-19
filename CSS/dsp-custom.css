@@ -9952,7 +9952,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 .back-to-otp {
   position: relative;
   padding-left: 1rem;
-  font-size: 0.9em;
+  font-size: 0.9em !important;
 }
 .back-to-otp:before {
   content: "";
