@@ -10035,8 +10035,13 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
   margin-right: auto;
 }
 .page.massie-fellowship .massie-project img {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .page.massie-fellowship .massie-project img.forces-spacing {
-  margin-left: 0.5rem !important;
+  margin-left: 1rem !important;
+}
+@media all and (max-width: 480px) {
+  .page.massie-fellowship .massie-project img {
+    width: 80px;
+  }
 }
