@@ -6639,6 +6639,11 @@ div.read-more-target {
 .column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
   display: none !important;
 }
+@media only screen and (min-width: 641px) {
+  .column .gform_wrapper .top-label li ul.gfield_radio {
+    width: 100%;
+  }
+}
 .column .gform_wrapper #extensions_message {
   padding-left: 1rem;
 }
@@ -6653,11 +6658,6 @@ div.read-more-target {
 }
 @media only screen and (max-width: 640px) {
   .column .gform_wrapper.gf_browser_chrome .gform_body {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 641px) {
-  .column .gform_wrapper.gf_browser_chrome .gform_body .top-label li ul.gfield_radio {
     width: 100%;
   }
 }
