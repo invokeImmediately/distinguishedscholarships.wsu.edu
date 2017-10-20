@@ -6682,9 +6682,6 @@ div.read-more-target {
 .column li.gfield.uses-rich-editor iframe {
   width: 100% !important;
 }
-.column li.gfield.uses-rich-editor iframe #tinymce {
-  font-family: "Open sans", sans-serif;
-}
 .column li.gfield.uses-rich-editor span.gp-word-count-label {
   margin-top: 0 !important;
 }
@@ -6746,7 +6743,6 @@ div.read-more-target {
 }
 .column li.gfield div.ginput_container_textarea > textarea {
   font-size: 16px;
-  font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
 }
 .column ul.gform_fields.top_label > li.gfield.gfield_error.gf_left_half,
 .column ul.gform_fields.top_label > li.gfield.gfield_error.gf_right_half {
