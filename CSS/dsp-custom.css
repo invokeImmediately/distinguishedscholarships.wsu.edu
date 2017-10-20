@@ -6656,6 +6656,11 @@ div.read-more-target {
     width: 100%;
   }
 }
+@media only screen and (min-width: 641px) {
+  .column .gform_wrapper.gf_browser_chrome .gform_body .top-label li ul.gfield_radio {
+    width: 100%;
+  }
+}
 .column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
   display: none;
 }
