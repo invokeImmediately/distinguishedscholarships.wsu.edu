@@ -6661,26 +6661,29 @@ div.read-more-target {
     width: 100%;
   }
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
+.column li.gfield.uses-rich-editor .tmce-active .mce-menubar {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Blockquote"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit link"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Remove link"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit image"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Table"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Fullscreen"] {
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Blockquote"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Insert/edit link"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Remove link"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Insert/edit image"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Table"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Toolbar Toggle"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Fullscreen"] {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-last {
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-last {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
+.column li.gfield.uses-rich-editor .tmce-active .mce-statusbar {
   display: none;
 }
 .column li.gfield.uses-rich-editor iframe {
   width: 100% !important;
+}
+.column li.gfield.uses-rich-editor iframe #tinymce {
+  font-family: "Open sans", sans-serif;
 }
 .column li.gfield.uses-rich-editor span.gp-word-count-label {
   margin-top: 0 !important;
