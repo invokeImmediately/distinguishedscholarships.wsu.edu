@@ -863,6 +863,7 @@ ol.massie-project {
 .use-award-recipients-tables();
 .use-linked-columns();
 .use-events-calendar("Distinguished Scholarships Program");
+.use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-cw_54x64.png));
 
 /*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -874,6 +875,20 @@ ol.massie-project {
 		&.show-header > header > * {
 			@v-fnt-sclng-hdr: 1.0, 1.0, 1.0, 1.0, 0.814286, 0.714286;
 			.has-responsive-font(3rem, 0.9em, @v-fnt-sclng-hdr);
+		}
+	}
+	header.main-header {
+		background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center,
+		  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
+		.sub-header-default,
+		.sub-header {
+			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8), pow(@v-scl-dwn, 10);
+			.has-responsive-font((2.5rem * 16 / 17), 0.9em, @new-fnt-sclng-fctrs);
+			margin-top: -5px;
+		}
+		@media all and (max-width: 580px) {
+			background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top/48px auto,
+			  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 		}
 	}
 }
@@ -899,5 +914,24 @@ ol.massie-project {
 	}
 	& + .row.has-recent-updates {
 		margin-top: 0;
+	}
+}
+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### PACE-SPECIFIC layouts & styles ################################################################################# ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+.page.massie-fellowship {
+	.massie-project {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		img {
+			.spaces-lft-half;
+			@media all and (max-width: @v-lg-mbl-thrshld) {
+				width: 80px;
+			}
+		}
 	}
 }
