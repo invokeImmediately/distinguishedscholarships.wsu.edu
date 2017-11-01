@@ -1,12 +1,14 @@
-var compiledCssSrcFileName = 'dsp-custom.css',
-	minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */\r\n',
-	gulp = require( 'gulp' ),
-	lessc = require( 'gulp-less' ),
-	gcmq = require( 'gulp-group-css-media-queries' ),
-	insertLines = require( 'gulp-insert-lines' ),
-	cleanCss = require( 'gulp-clean-css' ),
-	insert = require( 'gulp-insert' ),
-	extName = require( 'gulp-extname' );
+var compiledCssSrcFileName = 'dsp-custom.css';
+var minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */\r\n';
+var gulp = require( 'gulp' );
+var lessc = require( 'gulp-less' );
+var gcmq = require( 'gulp-group-css-media-queries' );
+var insertLines = require( 'gulp-insert-lines' );
+var cleanCss = require( 'gulp-clean-css' );
+var insert = require( 'gulp-insert' );
+var extName = require( 'gulp-extname' );
+var compiledJsBuildName = 'dsp-custom-build.js';
+var concat = require( 'gulp-concat' );
 
 gulp.task( 'buildMinCss', function () {
 	gulp.src( './CSS/*.less' )
@@ -24,4 +26,25 @@ gulp.task( 'buildMinCss', function () {
 		.pipe( insert.prepend( minCssFileHeaderStr ) )
 		.pipe( extName( '.min.css' ) )
 		.pipe( gulp.dest( './CSS/' ) );
+} );
+
+gulp.task( 'buildMinJs', function () {
+	gulp.src( [
+			'./JS/dsp-custom.js',
+			'./WSU-UE---JS/jQuery.oue-custom.js',
+			'./WSU-UE---JS/jQuery.animatedCalendar.js',
+			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
+			'./WSU-UE---JS/jQuery.cookieObjs.js',
+			'./WSU-UE---JS/jQuery.cycle2.js',
+			'./WSU-UE---JS/jQuery.forms.js',
+			'./WSU-UE---JS/jQuery.are-you-sure.js',
+			'./WSU-UE---JS/jquery.media.js',
+			'./WSU-UE---JS/jQuery.qTip.js',
+			'./WSU-UE---JS/jQuery.textResize.js',
+			'../imagesloaded/imagesloaded.pkgd.min.js',
+			'../masonry/dist/masonry.pkgd.min.js',
+			'./WSU-UE---JS/jQuery.masonry-custom.js'
+		] )
+		.pipe( concat( compiledJsBuildName ) )
+		.pipe( gulp.dest( './JS/' ) );
 } );
