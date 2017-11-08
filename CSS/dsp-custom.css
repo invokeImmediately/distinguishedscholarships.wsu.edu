@@ -5690,7 +5690,7 @@ div.recent-updates p.recent-update-3 {
   background-color: #c60c30;
 }
 .column a img:not(.no-border) {
-  border: 0.0625em solid rgba(94, 106, 113, 0.5);
+  border: 1px solid rgba(94, 106, 113, 0.5);
   box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.25);
   text-decoration: none;
   -webkit-transition: border .4s linear, box-shadow .4s ease-in;
@@ -5698,7 +5698,7 @@ div.recent-updates p.recent-update-3 {
   transition: border .4s linear, box-shadow .4s ease-in;
 }
 .column a img:not(.no-border):hover {
-  border: 0.0625em solid #981e32;
+  border: 1px solid #981e32;
   box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
 }
 .column a[data-title] {
