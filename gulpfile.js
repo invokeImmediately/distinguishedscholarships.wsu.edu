@@ -8,6 +8,7 @@ var cleanCss = require( 'gulp-clean-css' );
 var insert = require( 'gulp-insert' );
 var extName = require( 'gulp-extname' );
 var compiledJsBuildName = 'dsp-custom-build.js';
+var replace = require( 'gulp-replace' );
 var concat = require( 'gulp-concat' );
 
 gulp.task( 'buildMinCss', function () {
@@ -37,14 +38,25 @@ gulp.task( 'buildMinJs', function () {
 			'./WSU-UE---JS/jQuery.cookieObjs.js',
 			'./WSU-UE---JS/jQuery.cycle2.js',
 			'./WSU-UE---JS/jQuery.forms.js',
+			'../jQuery.AreYouSure/jquery.are-you-sure.js',
 			'./WSU-UE---JS/jQuery.are-you-sure.js',
 			'./WSU-UE---JS/jquery.media.js',
+			'../qTip2/dist/jquery.qtip.min.js',
 			'./WSU-UE---JS/jQuery.qTip.js',
 			'./WSU-UE---JS/jQuery.textResize.js',
 			'../imagesloaded/imagesloaded.pkgd.min.js',
 			'../masonry/dist/masonry.pkgd.min.js',
 			'./WSU-UE---JS/jQuery.masonry-custom.js'
 		] )
+		.pipe( replace( /^(\/\*)(?!!)/g, fixFileHeaderComments ) )
 		.pipe( concat( compiledJsBuildName ) )
 		.pipe( gulp.dest( './JS/' ) );
 } );
+
+function fixFileHeaderComments ( match, p1, offset, string ) {
+	var replacementStr = match;
+	if ( offset == 0 ) {
+		replacementStr = '/*!';
+	}
+	return replacementStr;
+}
