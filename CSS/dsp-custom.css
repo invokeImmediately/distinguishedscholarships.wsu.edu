@@ -7786,15 +7786,15 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ #### CUSTOM LAYOUTS ################################################################################################# ║
-*   ╠=======================================================================================================================╣
-*   ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                                 ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### CUSTOM LAYOUTS #########################################################################║
+*   ╠==============================================================================================╣
+*   ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.        ║
+*   ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*     │ ++++ Custom ID-TARGETED layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!   ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ ++++ Custom ID-TARGETED layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └──────────────────────────────────────────────────────────────────────────────────────────┘
 */
 #binder {
   border-right: 1px solid rgba(0, 0, 0, 0.6667);
@@ -7811,9 +7811,9 @@ div.auto-scroller ul li {
   background-position: right bottom;
   background-attachment: fixed;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom BODY layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom BODY layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────┘
 */
 @media all and (max-width: 1440px) {
   body {
@@ -7835,16 +7835,17 @@ div.auto-scroller ul li {
     background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed 1800px top, #000 url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed 1800px top;
   }
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom MAIN layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom MAIN layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────┘
 */
 main {
-  background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+  background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_
+		500x500_opacity-0.5.png) left top repeat;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom HEADER layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom HEADER layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────┘
 */
 header.main-header {
   background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
@@ -7857,16 +7858,17 @@ header.main-header {
 }
 @media all and (max-width: 1208px) {
   header.main-header {
-    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
+				50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   }
 }
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom ASIDE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────┘
 */
 @media all {
   .column aside {
@@ -7921,30 +7923,34 @@ header.main-header {
 @media screen {
   .column aside.decoration.international-scholarships {
     padding-bottom: 45.0622%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center / auto 100%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-
+						scholarships_portrait.jpg) center center / auto 100%;
   }
 }
 @media screen and (max-width: 480px) {
   .column aside.decoration.international-scholarships {
     padding-bottom: 38%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center / 100% auto;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_
+							international-scholarships_landscape.jpg) top center / 100% auto;
   }
 }
 @media screen {
   .column aside.decoration.daca-scholarships {
     padding-bottom: 43.8023%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center / 100% auto no-repeat;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
+						scholarships_portrait.jpg) center center / 100% auto no-repeat;
   }
 }
 @media screen and (max-width: 480px) {
   .column aside.decoration.daca-scholarships {
     padding-bottom: 38%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center / 100% auto no-repeat;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
+							scholarships_landscape.jpg) top center / 100% auto no-repeat;
   }
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom SECTION layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom SECTION layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column section.header-annual-events {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
@@ -7996,9 +8002,9 @@ header.main-header {
     text-align: center;
   }
 }
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Builder Template Slideshows ········································································ │
-*         └-----------------------------------------------------------------------------------------------------------┘
+/*!    ┌---------------------------------------------------------------------------------------┐
+*      │ ···· Builder Template Slideshows ···················································· │
+*      └---------------------------------------------------------------------------------------┘
 */
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before,
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
@@ -8012,7 +8018,8 @@ header.main-header {
   font-size: 12px;
   line-height: 1em;
   color: #fff;
-  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
+  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
+				with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
@@ -8024,7 +8031,8 @@ header.main-header {
 }
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
   color: #f6861f;
-  background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_with-drop-shadow_29x32.png);
+  background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_
+				with-drop-shadow_29x32.png);
   z-index: 102;
   opacity: 0;
 }
@@ -8051,9 +8059,9 @@ header.main-header {
     background-position: right center;
   }
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column table.calendar {
   border: 1px solid #70031a;
@@ -8363,9 +8371,9 @@ header.main-header {
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom DIV layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom DIV layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 div.calendar-legend {
   position: absolute;
@@ -8494,9 +8502,9 @@ div.calendar-legend div.legend-panel.gold a {
 div.calendar-legend div.legend-panel.gold a:hover {
   color: #2a3033;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom PARAGRAPH layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom PARAGRAPH layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column p.award-quote {
   margin-left: 2rem;
@@ -8523,15 +8531,16 @@ div.calendar-legend div.legend-panel.gold a:hover {
   background-color: #f1e4c4;
   color: #77580c;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom UL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom UL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column ul:not(.content-boxes):not(.application-steps) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
 .column ul:not(.content-boxes):not(.application-steps).gray-bullets li {
-  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
+  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
+				point_gray.png);
 }
 ul.application-steps {
   margin-top: 1rem !important;
@@ -8609,9 +8618,9 @@ ul.application-steps > li > *:not(:first-child) {
 ul.application-steps > li > *:last-child {
   padding-bottom: 0.5rem;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom OL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Custom OL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column ol.massie-project > li {
   font-size: 1.3em;
@@ -8662,11 +8671,11 @@ ul.application-steps > li > *:last-child {
     width: 80px;
   }
 }
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ #### MIXIN-TOGGLED layouts ########################################################################################## ║
-*   ╠=======================================================================================================================╣
-*   ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.                            ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ #### MIXIN-TOGGLED layouts ################################################################# ║
+*   ╠==============================================================================================╣
+*   ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.   ║
+*   ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 span.has-tool-tip:after,
 span.has-tooltip:after {
@@ -8676,7 +8685,8 @@ span.has-tooltip:after {
   right: 0;
   width: 10px;
   height: 10px;
-  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png) no-repeat center center / 100% 100%;
+  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
+	16x16.png) no-repeat center center / 100% 100%;
   opacity: 1.0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -8696,7 +8706,8 @@ span.has-tooltip:hover:after {
   right: 2px;
   width: 16px;
   height: 16px;
-  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png) center / auto 16px no-repeat;
+  background: url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
+	16x16.png) center / auto 16px no-repeat;
 }
 .page.has-short-main-header .main-header {
   height: 85px;
@@ -9964,11 +9975,12 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
   width: 1rem;
   left: -3px;
   height: .9rem;
-  background: url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-cw_54x64.png) center center / auto 100% no-repeat;
+  background: url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-
+	cw_54x64.png) center center / auto 100% no-repeat;
 }
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .page.has-short-main-header .row.single.article-header.opportunity-fund {
   height: 450px;
@@ -10009,7 +10021,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
   }
 }
 .page.has-short-main-header header.main-header {
-  background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+  background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-
+				short-main-headers-2.png) no-repeat right center, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 }
 .page.has-short-main-header header.main-header .sub-header-default,
 .page.has-short-main-header header.main-header .sub-header {
@@ -10059,7 +10072,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 @media all and (max-width: 580px) {
   .page.has-short-main-header header.main-header {
-    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
+					50px-height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   }
 }
 .row.has-linked-columns.linked-announcement {
