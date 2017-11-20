@@ -1741,18 +1741,28 @@ body.single-post #wsuwp-main .row .column.one aside,
 .column > aside.quote {
   float: right;
   clear: right;
-  width: 33%;
   padding: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   border-left: 4px solid #b5babe;
   background: #d7dadb;
   font-size: 0.9rem;
 }
+body.single-post #wsuwp-main .row .column.one aside.full-width,
+.column > aside.quote.full-width {
+  width: 94%;
+  width: calc(100% - 0.5rem * 2);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+body.single-post #wsuwp-main .row .column.one aside:not(.full-width),
+.column > aside.quote:not(.full-width) {
+  width: 33%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 @media all and (max-width: 693px) {
-  body.single-post #wsuwp-main .row .column.one aside,
-  .column > aside.quote {
+  body.single-post #wsuwp-main .row .column.one aside:not(.full-width),
+  .column > aside.quote:not(.full-width) {
     width: 94%;
     width: calc(100% - 0.5rem * 2);
     margin-top: 1rem;
