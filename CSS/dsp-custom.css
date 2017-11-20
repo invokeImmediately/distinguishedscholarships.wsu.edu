@@ -1746,8 +1746,8 @@ body.single-post #wsuwp-main .row .column.one aside,
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
-  border-left: 4px solid #d7dadb;
-  background: #b5babe;
+  border-left: 4px solid #b5babe;
+  background: #d7dadb;
   font-size: 0.9rem;
 }
 @media all and (max-width: 693px) {
@@ -1758,6 +1758,25 @@ body.single-post #wsuwp-main .row .column.one aside,
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
+}
+body.single-post #wsuwp-main .row .column.one aside > h2:first-child,
+.column > aside.quote > h2:first-child,
+body.single-post #wsuwp-main .row .column.one aside > h3:first-child,
+.column > aside.quote > h3:first-child,
+body.single-post #wsuwp-main .row .column.one aside > h4:first-child,
+.column > aside.quote > h4:first-child {
+  padding: 0.5rem;
+  margin: -0.5rem;
+  background-color: #981e32;
+  color: #fff;
+}
+body.single-post #wsuwp-main .row .column.one aside > h2:first-child + *,
+.column > aside.quote > h2:first-child + *,
+body.single-post #wsuwp-main .row .column.one aside > h3:first-child + *,
+.column > aside.quote > h3:first-child + *,
+body.single-post #wsuwp-main .row .column.one aside > h4:first-child + *,
+.column > aside.quote > h4:first-child + * {
+  margin-top: 1rem;
 }
 body.blog .article-summary aside {
   display: none;
