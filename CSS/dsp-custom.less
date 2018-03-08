@@ -1,20 +1,21 @@
 @grid-behavior: "hybrid";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ #### CUSTOM LAYOUTS ################################################################################################# ║
-*   ╠=======================================================================================================================╣
-*   ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.                                 ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*     │ ++++ Custom ID-TARGETED layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*** ║ #### CUSTOM LAYOUTS #########################################################################║
+*** ╠==============================================================================================╣
+*** ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.        ║
+*** ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+**/
+
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §1: ID-specific styles
+**/
+
 #binder {
 	& { border-right: 1px solid @rgba; .getRgbaStr(@hex-black, 0.6667); }
 	& { box-shadow: 5px 0 5px @rgba; .getRgbaStr(@hex-black,0.3333); }
-	@media all and (max-width: @v-wdscrn-bckgrnd) {
+	@media all and (max-width: @widescreen-background-width) {
 		border-right: none;
 		box-shadow: none;
 	}
@@ -26,52 +27,68 @@
 	background-attachment: fixed;
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom BODY layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §2: Body styling
+**/
+
 body {
-	@media all and (max-width: @v-wdscrn-bckgrnd) {
+	@media all and (max-width: @widescreen-background-width) {
 		background: @hex-black;
 	}
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-		background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png) repeat-y fixed right top,
-		  @hex-black  url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg) repeat-y fixed right top;
+	@media all and (min-width: (@widescreen-background-width+1)) and (max-width: @wuxga-width) {
+		background: 
+			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png)
+				repeat-y fixed right top,
+			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg)
+				repeat-y fixed right top;
 	}
-	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-		background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed right top,
-		  @hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed right top;
+	@media all and (min-width: (@wuxga-width+1)) and (max-width: @wqxga-width) {
+		background: 
+			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) 
+				repeat-y fixed right top,
+			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) 
+				repeat-y fixed right top;
 	}
-	@media all and (min-width: (@v-wqxga-width+1)) {
-		background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed 1800px top,
-		  @hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed 1800px top;
+	@media all and (min-width: (@wqxga-width+1)) {
+		background: 
+			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) 
+				repeat-y fixed 1800px top,
+			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) 
+				repeat-y fixed 1800px top;
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom MAIN layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §3: Main styling
+**/
+
 main {
-	background: @hex-white url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+	background: @hex-white url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_
+		500x500_opacity-0.5.png) left top repeat;
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom HEADER layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §4: Header styling
+**/
+
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom,
-	  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
+	background: 
+		url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) 
+			no-repeat right bottom,
+		url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+			left top repeat, rgba(42,48,51,1.00);
 	color: #fff !important;
 	@media print {
 		background: url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat,
 		  rgba(42,48,51,1.00);
 	}
 	@media all and (max-width: 1208px) {
-		background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top,
-		  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
+		background: 
+			url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
+				50px-height-2.png) no-repeat right top,
+			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+				left top repeat, rgba(42,48,51,1.00);
 	}
 }
 
@@ -79,10 +96,10 @@ header.main-header {
 	color: #fff !important;
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom ASIDE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §5: Aside styling
+**/
+
 .column {
 	aside {
 		// font-size: .8rem;
@@ -103,20 +120,24 @@ header.main-header {
 			&.international-scholarships {
 				@media screen {
 					padding-bottom: 45.0622%;
-					background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center/auto 100%;
-					@media (max-width: @v-lg-mbl-thrshld) {
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-
+						scholarships_portrait.jpg) center center/auto 100%;
+					@media (max-width: @large-mobile-screen-width) {
 						padding-bottom: 38%;
-						background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center/100% auto;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_
+							international-scholarships_landscape.jpg) top center/100% auto;
 					}
 				}
 			}
 			&.daca-scholarships {
 				@media screen {
 					padding-bottom: 43.8023%;
-					background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center/100% auto no-repeat;
-					@media (max-width: @v-lg-mbl-thrshld) {
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
+						scholarships_portrait.jpg) center center/100% auto no-repeat;
+					@media (max-width: @large-mobile-screen-width) {
 						padding-bottom: 38%;
-						background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center/100% auto no-repeat;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
+							scholarships_landscape.jpg) top center/100% auto no-repeat;
 					}
 				}
 			}
@@ -124,87 +145,109 @@ header.main-header {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom SECTION layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §6: Section styling
+**/
+
 .column {
 	&:extend(.has-dflt-font);
 	section {
 		&.header-annual-events {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
 		}
 		&.header-calendar {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/10/wpbg-calendar-v2.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/10/wpbg-calendar-v2.png) no-repeat center;
 		}
 		&.header-committees {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/10/wpbg-committees.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/10/wpbg-committees.png) no-repeat center;
 		}
 		&.header-contact {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/10/wpbg-contact.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/10/wpbg-contact.png) no-repeat center;
 		}
 		&.header-deepWebPortal {
 			height: 514px;
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/04/wpbg-deep-web-portal.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/04/wpbg-deep-web-portal.png) no-repeat center;
 			background-size: cover;
 		}
 		&.header-exploreAwards {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/06/wpbg-explore-awards-v3.png) no-repeat center;
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-explore-awards-v3.png)
+					no-repeat center;
 		}
 		&.header-from-the-director {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png)
+					no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png) 
+					no-repeat center;
 		}
 		&.header-massie-fellowship {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2016/09/wpbg-massie-fellowship.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) 
+					no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2016/09/wpbg-massie-fellowship.png) 
+					no-repeat center;
 		}
 		&.header-meet-our-director {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2016/01/wpbg-seehafer-bio.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) 
+					no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2016/01/wpbg-seehafer-bio.png) no-repeat center;
 		}
 		&.header-newsEvents {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 		}
 		&.header-prepare {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/06/wpbg-prepare-v4.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-prepare-v4.png) no-repeat center;
 		}
 		&.header-resources {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/06/wpbg-resources-v2.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-resources-v2.png) no-repeat center;
 		}
 		&.header-scholarship-list {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2017/01/wpbg-scholarship-list.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2017/01/wpbg-scholarship-list.png) 
+					no-repeat center;
 		}
 		&.header-wsuRecipients {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-			  url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-			  url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
+			background: 
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) 
+					no-repeat center;
 		}
 		div.header-content.large-format-friendly {
-			@media (min-width: @v-lrgfrmt-thrshld) {
+			@media (min-width: @large-format-threshold) {
 				max-width: none;
 				text-align: center;
 			}
@@ -212,10 +255,10 @@ header.main-header {
 	}
 }
 
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Builder Template Slideshows ········································································ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §7: Styling of builder-template photo slideshows
+**/
+
 .row.builder-section-banner.has-interaction-message {
 	@icon-height: 32px;
 	@icon-spacing: 5px;
@@ -233,7 +276,8 @@ header.main-header {
 			font-size: 12px;
 			line-height: 1em;
 			color: @hex-white;
-			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
+			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
+				with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
 			& { text-shadow: 1px 1px 2px @rgba; .getRgbaStr(@hex-black, 0.5); }
 			z-index: @z-index;
 		}
@@ -243,7 +287,8 @@ header.main-header {
 		}
 		&:after {
 			color: @hex-accent-orange;
-			background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_with-drop-shadow_29x32.png);
+			background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_
+				with-drop-shadow_29x32.png);
 			z-index: (@z-index + 1);
 			opacity: 0;
 		}
@@ -260,7 +305,7 @@ header.main-header {
 	@padding-amount: 30.208333333333%;
 	.builder-banner-slide {
 		padding-bottom: @padding-amount;
-		@media all and (max-width: @v-lg-mbl-thrshld) {
+		@media all and (max-width: @large-mobile-screen-width) {
 			padding-bottom: (30.208333333333% * 2);
 			&:nth-child(4) {
 				background-position: left center;
@@ -275,10 +320,10 @@ header.main-header {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom TABLE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §8: Table styling
+**/
+
 .column table.calendar {
 	border: 1px solid #70031a;
 	border-collapse: separate;
@@ -360,8 +405,10 @@ header.main-header {
 				color: @hex-white;
 			}
 			p > a {
-				border-bottom: 0.0625em solid rgba(red(@hex-white), green(@hex-white), blue(@hex-white), .3);
-				box-shadow: inset 0 -0.3125em 0 rgba(red(@hex-white), green(@hex-white), blue(@hex-white), .3);
+				border-bottom: 0.0625em solid rgba(red(@hex-white), green(@hex-white), 
+					blue(@hex-white), .3);
+				box-shadow: inset 0 -0.3125em 0 rgba(red(@hex-white), green(@hex-white), 
+					blue(@hex-white), .3);
 				color: @hex-white;
 				.transition("color .4s linear, border .4s ease-in, box-shadow .4s ease-in");
 				&:hover {
@@ -372,8 +419,10 @@ header.main-header {
 			&.gray {
 				background-color: #67767b;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#2a3033), green(#2a3033), blue(#2a3033), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#2a3033), green(#2a3033), blue(#2a3033), .3);
+					border-bottom: 0.0625em solid rgba(red(#2a3033), green(#2a3033), 
+						blue(#2a3033), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#2a3033), green(#2a3033), 
+						blue(#2a3033), .3);
 					&:hover {
 						border-bottom: 0.0625em solid transparent;
 						box-shadow: inset 0 -.3125em 0 transparent;
@@ -388,8 +437,10 @@ header.main-header {
 			&.crimson {
 				background-color: #be1a40;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#da91a5), green(#da91a5), blue(#da91a5), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#da91a5), green(#da91a5), blue(#da91a5), .3);
+					border-bottom: 0.0625em solid rgba(red(#da91a5), green(#da91a5), 
+						blue(#da91a5), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#da91a5), green(#da91a5), 
+						blue(#da91a5), .3);
 					&:hover {
 						background-color: rgba(219, 146, 166, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -404,8 +455,10 @@ header.main-header {
 			&.orange {
 				background-color: #e95b34;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#492e14), green(#492e14), blue(#492e14), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#492e14), green(#492e14), blue(#492e14), .3);
+					border-bottom: 0.0625em solid rgba(red(#492e14), green(#492e14), 
+						blue(#492e14), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#492e14), green(#492e14), 
+						blue(#492e14), .3);
 					&:hover {
 						background-color: rgba(73, 46, 20, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -420,8 +473,10 @@ header.main-header {
 			&.olive {
 				background-color: #9b8b28;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#e9e03c), green(#e9e03c), blue(#e9e03c), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#e9e03c), green(#e9e03c), blue(#e9e03c), .3);
+					border-bottom: 0.0625em solid rgba(red(#e9e03c), green(#e9e03c), 
+						blue(#e9e03c), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#e9e03c), green(#e9e03c), 
+						blue(#e9e03c), .3);
 					&:hover {
 						background-color: rgba(233, 244, 60, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -436,8 +491,10 @@ header.main-header {
 			&.blue {
 				background-color: #127286;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#06c6ce), green(#06c6ce), blue(#06c6ce), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#06c6ce), green(#06c6ce), blue(#06c6ce), .3);
+					border-bottom: 0.0625em solid rgba(red(#06c6ce), green(#06c6ce), 
+						blue(#06c6ce), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#06c6ce), green(#06c6ce), 
+						blue(#06c6ce), .3);
 					&:hover {
 						background-color: rgba(6, 198, 206, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -452,8 +509,12 @@ header.main-header {
 			&.dark-gray {
 				background-color: #373940;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+
+						blue(#b5babe), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+
+						blue(#b5babe), .3);
 					&:hover {
 						background-color: rgba(181, 186, 190, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -468,8 +529,12 @@ header.main-header {
 			&.dark-brown {
 				background-color: #480f13;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#cb9b6e), green(#cb9b6e), blue(#cb9b6e), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#cb9b6e), green(#cb9b6e), blue(#cb9b6e), .3);
+					border-bottom: 0.0625em solid rgba(red(#cb9b6e), green(#cb9b6e), 
+
+						blue(#cb9b6e), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#cb9b6e), green(#cb9b6e), 
+
+						blue(#cb9b6e), .3);
 					&:hover {
 						background-color: rgba(203, 155, 110, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -484,8 +549,10 @@ header.main-header {
 			&.brown {
 				background-color: #723f1f;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#ddbea1), green(#ddbea1), blue(#ddbea1), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#ddbea1), green(#ddbea1), blue(#ddbea1), .3);
+					border-bottom: 0.0625em solid rgba(red(#ddbea1), green(#ddbea1), 
+						blue(#ddbea1), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#ddbea1), green(#ddbea1), 
+						blue(#ddbea1), .3);
 					&:hover {
 						background-color: rgba(221, 190, 161, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -498,11 +565,13 @@ header.main-header {
 				}
 			}
 			&.dark-gray.brown {
-				background: linear-gradient(to bottom, rgba(red(#373940), green(#373940), blue(#373940), 1.0),
-							  rgba(red(#723f1f), green(#723f1f), blue(#723f1f), 1.0));
+				background: linear-gradient(to bottom, rgba(red(#373940), green(#373940), 
+					blue(#373940), 1.0), rgba(red(#723f1f), green(#723f1f), blue(#723f1f), 1.0));
 				p > a:first-child {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+						blue(#b5babe), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+						blue(#b5babe), .3);
 					&:hover {
 						background-color: rgba(181, 186, 190, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -517,8 +586,10 @@ header.main-header {
 			&.dark-olive {
 				background-color: #453a16;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#ada400), green(#ada400), blue(#ada400), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#ada400), green(#ada400), blue(#ada400), .3);
+					border-bottom: 0.0625em solid rgba(red(#ada400), green(#ada400), 
+						blue(#ada400), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#ada400), green(#ada400), 
+						blue(#ada400), .3);
 					&:hover {
 						background-color: rgba(173, 164, 0, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -533,8 +604,10 @@ header.main-header {
 			&.dark-blue {
 				background-color: #12313c;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#00a5bd), green(#00a5bd), blue(#00a5bd), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#00a5bd), green(#00a5bd), blue(#00a5bd), .3);
+					border-bottom: 0.0625em solid rgba(red(#00a5bd), green(#00a5bd), 
+						blue(#00a5bd), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#00a5bd), green(#00a5bd), 
+						blue(#00a5bd), .3);
 					&:hover {
 						background-color: rgba(0, 165, 189, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -549,8 +622,10 @@ header.main-header {
 			&.black {
 				background-color: #0f0f10;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), blue(#b5babe), .3);
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+						blue(#b5babe), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+						blue(#b5babe), .3);
 					&:hover {
 						background-color: rgba(181, 186, 190, 0.2);
 						border-bottom: 0.0625em solid transparent;
@@ -570,8 +645,10 @@ header.main-header {
 				}
 				p > a {
 					color: #2a3033;
-					border-bottom: 0.0625em solid rgba(red(#68777e), green(#68777e), blue(#68777e), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#68777e), green(#68777e), blue(#68777e), .3);
+					border-bottom: 0.0625em solid rgba(red(#68777e), green(#68777e), 
+						blue(#68777e), .3);
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#68777e), green(#68777e), 
+						blue(#68777e), .3);
 					&:hover {
 						color: #68777e;
 						background-color: rgba(104, 119, 126, 0.2);
@@ -584,10 +661,10 @@ header.main-header {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom DIV layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §9: Div styling
+**/
+
 div.calendar-legend {
 	position: absolute;
 	right: -122px;
@@ -688,10 +765,10 @@ div.calendar-legend {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom PARAGRAPH layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §10: Paragraph styling
+**/
+
 .column p {
 	 &.award-quote {
 		margin-left: @v-dflt-spcng;
@@ -719,14 +796,19 @@ div.calendar-legend {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom UL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §11: Unordered list styling
+**/
+
 .column ul:not(.content-boxes):not(.application-steps) {
-	li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+	li {
+		list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
+	}
 	&.gray-bullets {
-		li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
+		li {
+			list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
+				point_gray.png);
+		}
 	}
 }
 
@@ -741,11 +823,11 @@ ul.application-steps {
 		width: 49%;
 		min-height: 198px;
 		margin-bottom: 2%;
-        @media all and (max-width: @v-rghtclmn-thrshld) {
+        @media all and (max-width: @column-floating-threshold) {
             width: 98%;
 			margin-bottom: 4%;
         }
-		@media all and (max-width: @v-bckgrnd-thrshld) {
+		@media all and (max-width: @background-width-threshold) {
 			overflow-x: visible;
 		}
 		& + li {
@@ -809,10 +891,10 @@ ul.application-steps {
 	}
 }
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Custom OL layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §12: Ordered list styling
+**/
+
 ol.massie-project {
 	.column & > li {
 		font-size: 1.3em;
@@ -837,13 +919,13 @@ ol.massie-project {
 			.spaces-lft-half;
 			@media all {
 				width: 128px;
-				@media (max-width: @v-rghtclmn-thrshld) {
+				@media (max-width: @column-floating-threshold) {
 					width: 112px;
 				}
-				@media (max-width: @v-lg-mbl-thrshld) {
+				@media (max-width: @large-mobile-screen-width) {
 					width: 96px;
 				}				
-				@media (max-width: @v-mbl-thrshld) {
+				@media (max-width: @mobile-screen-width) {
 					width: 80px;
 				}
 			}
@@ -851,24 +933,24 @@ ol.massie-project {
 	}
 }
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ #### MIXIN-TOGGLED layouts ########################################################################################## ║
-*   ╠=======================================================================================================================╣
-*   ║ Mixins are used here to pull in optional layouts that can be used as desired on OUE sites.                            ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-.use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_16x16.png));
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §13: Styles included through Less mixins
+**/
+
+.use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
+	16x16.png));
 .use-sectional-article-headers();
 .use-glass-button-layout();
 .use-award-recipients-tables();
 .use-linked-columns();
 .use-events-calendar("Distinguished Scholarships Program");
-.use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-cw_54x64.png));
+.use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-
+	cw_54x64.png));
 
-/*!  ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ Overrides for toggled layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!    ··························································································
+***    DSP CUSTOM §13.1: Overrides for mixin-included styles
+**/
+
 .page.has-short-main-header {
 	.row.single.article-header.opportunity-fund {
 		height: 450px;
@@ -878,17 +960,24 @@ ol.massie-project {
 		}
 	}
 	header.main-header {
-		background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center,
-		  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
+		background: 
+			url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-
+				short-main-headers-2.png) no-repeat right center,
+			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+				left top repeat, rgba(42,48,51,1.00);
 		.sub-header-default,
 		.sub-header {
-			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8), pow(@v-scl-dwn, 10);
+			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8), 
+				pow(@v-scl-dwn, 10);
 			.has-responsive-font((2.5rem * 16 / 17), 0.9em, @new-fnt-sclng-fctrs);
 			margin-top: -5px;
 		}
 		@media all and (max-width: 580px) {
-			background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top/48px auto,
-			  url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
+			background: 
+				url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
+					50px-height-2.png) no-repeat right top/48px auto,
+				url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+					left top repeat, rgba(42,48,51,1.00);
 		}
 	}
 }
@@ -917,10 +1006,9 @@ ol.massie-project {
 	}
 }
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ #### PACE-SPECIFIC layouts & styles ################################################################################# ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+/*! ------------------------------------------------------------------------------------------------
+*** DSP CUSTOM §14: Page-specific styles
+**/
 
 .page.massie-fellowship {
 	.massie-project {
@@ -929,7 +1017,7 @@ ol.massie-project {
 		margin-right: auto;
 		img {
 			.spaces-lft-half;
-			@media all and (max-width: @v-lg-mbl-thrshld) {
+			@media all and (max-width: @large-mobile-screen-width) {
 				width: 80px;
 			}
 		}
