@@ -2536,7 +2536,7 @@ header.main-header .header-group {
 **     │ ···· OUE HEADINGS/HEADERS §8: Accessibility friendly classes ···························· │
 **     └───────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!      >>> ···· §8.1, Accessibility friendly classes: Spacing ····························· <<< */
+/*!      >>> ···· §8.1, Accessibility friendly classes: Spacing ································· */
 body.use-a11y-styles .column * + h1.hN--spacing-0,
 body.use-a11y-styles .column * + h2.hN--spacing-0,
 body.use-a11y-styles .column * + h3.hN--spacing-0,
@@ -2617,6 +2617,14 @@ body.use-a11y-styles .column * + h5.hN--spacing-9,
 body.use-a11y-styles .column * + h6.hN--spacing-9 {
   margin-top: 2em;
 }
+body.use-a11y-styles .column h1,
+body.use-a11y-styles .column h2,
+body.use-a11y-styles .column h3,
+body.use-a11y-styles .column h4,
+body.use-a11y-styles .column h5,
+body.use-a11y-styles .column h6 {
+  padding: 0;
+}
 body.use-a11y-styles .column * + h1,
 body.use-a11y-styles .column * + h2,
 body.use-a11y-styles .column * + h3,
@@ -2626,7 +2634,7 @@ body.use-a11y-styles .column * + h6 {
   margin: 0;
   margin-top: 1em;
 }
-/*!      >>> ···· §8.2, Accessibility friendly classes: Typography - font sizing ············ <<< */
+/*!      >>> ···· §8.2, Accessibility friendly classes: Typography - font sizing ················ */
 body.use-a11y-styles .column h1.hN--fSize-1,
 body.use-a11y-styles .column h2.hN--fSize-1,
 body.use-a11y-styles .column h3.hN--fSize-1,
@@ -2693,7 +2701,7 @@ body.use-a11y-styles .column h5 {
 body.use-a11y-styles .column h6 {
   font-size: 1.4em;
 }
-/*!      >>> ···· §8.3, Accessibility friendly classes: Typography - line heights ··········· <<< */
+/*!      >>> ···· §8.3, Accessibility friendly classes: Typography - line heights ··············· */
 body.use-a11y-styles .column h1.hN--lHeight-1,
 body.use-a11y-styles .column h2.hN--lHeight-1,
 body.use-a11y-styles .column h3.hN--lHeight-1,
@@ -2766,7 +2774,7 @@ body.use-a11y-styles .column h5,
 body.use-a11y-styles .column h6 {
   line-height: 1.1em;
 }
-/*!      >>> ···· §8.4, Accessibility friendly classes: Coloring ···························· <<< */
+/*!      >>> ···· §8.4, Accessibility friendly classes: Coloring ································ */
 body.use-a11y-styles .column h1.hN--solid,
 body.use-a11y-styles .column h2.hN--solid,
 body.use-a11y-styles .column h3.hN--solid,
@@ -2901,7 +2909,7 @@ body.use-a11y-styles .column h6.hN--crimson.hN--solid::before {
   border-top: 2px solid rgba(152, 30, 50, 0.6667);
   border-bottom: 1px solid rgba(152, 30, 50, 0.3333);
 }
-/*!      >>> ···· §8.5, Accessibility friendly classes: Child elements ······················ <<< */
+/*!      >>> ···· §8.5, Accessibility friendly classes: Child elements ·························· */
 .column h1 > a,
 .column h2 > a,
 .column h3 > a,
