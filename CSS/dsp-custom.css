@@ -10815,7 +10815,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 @media all {
   .page.has-short-main-header .row.single.article-header.opportunity-fund.show-header > header > * {
-    line-height: 0.9em;
+    line-height: 1em;
   }
 }
 @media all and (min-width: 1073px) {
