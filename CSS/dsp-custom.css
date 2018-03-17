@@ -1189,38 +1189,6 @@ main section.row > .column > section > .gform_confirmation_wrapper p:not(:last-c
 main section.row > .column table > tbody > tr > td > .gform_confirmation_wrapper p:not(:last-child) {
   margin-bottom: 1rem;
 }
-main section.row > .column > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-body > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > p + ul:not(.spaces-top-full),
-main section.row > .column > section > p + ul:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > p + ul:not(.spaces-top-full),
-main section.row > .column > section > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-body > section > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > section > p + ul:not(.spaces-top-full),
-main section.row > .column > section > section > p + ul:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > section > p + ul:not(.spaces-top-full),
-main section.row > .column > div > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-body > div > p + ul:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > div > p + ul:not(.spaces-top-full),
-main section.row > .column > section > div > p + ul:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > div > p + ul:not(.spaces-top-full),
-main section.row > .column > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-body > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > p + ol:not(.spaces-top-full),
-main section.row > .column > section > p + ol:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > p + ol:not(.spaces-top-full),
-main section.row > .column > section > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-body > section > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > section > p + ol:not(.spaces-top-full),
-main section.row > .column > section > section > p + ol:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > section > p + ol:not(.spaces-top-full),
-main section.row > .column > div > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-body > div > p + ol:not(.spaces-top-full),
-main section.row > .column > article > .article-summary > div > p + ol:not(.spaces-top-full),
-main section.row > .column > section > div > p + ol:not(.spaces-top-full),
-main section.row > .column table > tbody > tr > td > div > p + ol:not(.spaces-top-full) {
-  margin-top: -0.66666667rem;
-}
 main section.row:last-child > .column > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-body > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > ul:last-child,
