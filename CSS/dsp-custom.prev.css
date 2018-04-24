@@ -977,19 +977,15 @@ section.side-right .column.two p {
 /*! ------------------------------------------------------------------------------------------------
 *** OUE SECTIONS §6: Spacing overrides to improve responsive design of WSU Spine builder template
 **/
-body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>.gform_confirmation_wrapper p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>.gform_wrapper .gfield_html>p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>.gform_confirmation_wrapper p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>.gform_wrapper .gfield_html>p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>.gform_confirmation_wrapper p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>.gform_wrapper .gfield_html>p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>div>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>div>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>div>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>section>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>section>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>section>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>.gform_confirmation_wrapper p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>.gform_wrapper .gfield_html>p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>div>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>div>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>div>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>section>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>section>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>section>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>div>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>div>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>div>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>.gform_confirmation_wrapper p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>section>.gform_wrapper .gfield_html>p:not(:last-child),body:not(.use-a11y-styles) main section.row>.column>section>div>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>div>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>div>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>section>ol:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>section>p:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>section>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>section>ul:not(.no-btm-margin),body:not(.use-a11y-styles) main section.row>.column>ul:not(.no-btm-margin) {
+main section.row>.column table>tbody>tr>td>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column table>tbody>tr>td>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column table>tbody>tr>td>div>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>div>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ul:not(.no-btm-margin),main section.row>.column>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-body>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-summary>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-summary>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ul:not(.no-btm-margin),main section.row>.column>div>ol:not(.no-btm-margin),main section.row>.column>div>ul:not(.no-btm-margin),main section.row>.column>ol:not(.no-btm-margin),main section.row>.column>section>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>section>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>section>div>ol:not(.no-btm-margin),main section.row>.column>section>div>ul:not(.no-btm-margin),main section.row>.column>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ul:not(.no-btm-margin),main section.row>.column>section>ul:not(.no-btm-margin),main section.row>.column>ul:not(.no-btm-margin) {
 	margin-bottom: 1rem;
 }
 
-body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>div>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>div>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>section>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-body>section>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>div>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>div>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>section>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>article>.article-summary>section>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>div>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>div>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>div>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>div>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>p+ul:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>section>p+ol:not(.spaces-top-full),body:not(.use-a11y-styles) main section.row>.column>section>section>p+ul:not(.spaces-top-full) {
-	margin-top: -.66666667rem;
-}
-
-body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>.column>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child>.column>ul:last-child {
+main section.row:last-child>.column>.column>article>.article-body>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ul:last-child,main section.row:last-child>.column>.column>section>div>ol:last-child,main section.row:last-child>.column>.column>section>div>ul:last-child,main section.row:last-child>.column>.column>section>ol:last-child,main section.row:last-child>.column>.column>section>section>ol:last-child,main section.row:last-child>.column>.column>section>section>ul:last-child,main section.row:last-child>.column>.column>section>ul:last-child,main section.row:last-child>.column>div>ol:last-child,main section.row:last-child>.column>div>ul:last-child,main section.row:last-child>.column>ol:last-child,main section.row:last-child>.column>section>ol:last-child,main section.row:last-child>.column>section>ul:last-child,main section.row:last-child>.column>ul:last-child {
 	margin-bottom: 0;
 }
 
-body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>ol:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>p:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>ul:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>ol:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>p:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>ol:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>p:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>section>ul:last-child,body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>ul:last-child {
+main section.row>.column table>tbody>tr>td>div>ol:last-child,main section.row>.column table>tbody>tr>td>div>p:last-child,main section.row>.column table>tbody>tr>td>div>ul:last-child,main section.row>.column table>tbody>tr>td>ol:last-child,main section.row>.column table>tbody>tr>td>p:last-child,main section.row>.column table>tbody>tr>td>section>ol:last-child,main section.row>.column table>tbody>tr>td>section>p:last-child,main section.row>.column table>tbody>tr>td>section>ul:last-child,main section.row>.column table>tbody>tr>td>ul:last-child {
 	margin-bottom: 0;
 }
 
@@ -1018,7 +1014,7 @@ body:not(.use-a11y-styles) main section.row>.column table>tbody>tr>td>div>ol:las
 /*! ------------------------------------------------------------------------------------------------
 *** OUE SECTIONS §10: Accessibility friendly utility classes
 **/
-body.use-a11y-styles .row.halves .column,body.use-a11y-styles .row.quarters .column,body.use-a11y-styles .row.side-left .column,body.use-a11y-styles .row.side-right .column,body.use-a11y-styles .row.single .column,body.use-a11y-styles .row.thirds .column {
+.row.halves .column,.row.quarters .column,.row.side-left .column,.row.side-right .column,.row.single .column,.row.thirds .column {
 	font-size: 1.125rem;
 }
 
@@ -1696,19 +1692,10 @@ footer.article-footer div.author-info {
 *     ║ Rulesets that target nodes for grouping content.                                                                  ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ++++ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └─────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-p {
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE PARAGRAPHS §1: Legacy utility classes ·········································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-}
-
+/*! ------------------------------------------------------------------------------------------------
+*** OUE PARAGRAPHS §1: Legacy style declarations (prior to a11y redesign)
+**/
 .column p {
-	padding-bottom: 0;
 	text-align: left;
 }
 
@@ -2021,15 +2008,1051 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 	border-top: 1px solid rgba(127,127,127,.2);
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE PARAGRAPHS §2: Paragraph based notices ········································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
+/*! ------------------------------------------------------------------------------------------------
+*** OUE PARAGRAPHS §2: Paragraph based notices
+**/
+/*! ------------------------------------------------------------------------------------------------
+*** OUE PARAGRAPHS §3: Accessibility friendly classes
+**/
+/*!     ····························································································
+***     >>> §3.1: Spacing
+**/
+.column p.p--pTop-1 {
+	padding-top: 0;
+}
+
+.column p.p--pRgt-1 {
+	padding-right: 0;
+}
+
+.column p.p--pBtm-1 {
+	padding-bottom: 0;
+}
+
+.column p.p--pLft-1 {
+	padding-left: 0;
+}
+
+.column p.p--pTop-2 {
+	padding-top: .125em;
+}
+
+.column p.p--pRgt-2 {
+	padding-right: .125em;
+}
+
+.column p.p--pBtm-2 {
+	padding-bottom: .125em;
+}
+
+.column p.p--pLft-2 {
+	padding-left: .125em;
+}
+
+.column p.p--pTop-3 {
+	padding-top: .25em;
+}
+
+.column p.p--pRgt-3 {
+	padding-right: .25em;
+}
+
+.column p.p--pBtm-3 {
+	padding-bottom: .25em;
+}
+
+.column p.p--pLft-3 {
+	padding-left: .25em;
+}
+
+.column p.p--pTop-4 {
+	padding-top: .375em;
+}
+
+.column p.p--pRgt-4 {
+	padding-right: .375em;
+}
+
+.column p.p--pBtm-4 {
+	padding-bottom: .375em;
+}
+
+.column p.p--pLft-4 {
+	padding-left: .375em;
+}
+
+.column p.p--pTop-5 {
+	padding-top: .5em;
+}
+
+.column p.p--pRgt-5 {
+	padding-right: .5em;
+}
+
+.column p.p--pBtm-5 {
+	padding-bottom: .5em;
+}
+
+.column p.p--pLft-5 {
+	padding-left: .5em;
+}
+
+.column p.p--pTop-6 {
+	padding-top: .625em;
+}
+
+.column p.p--pRgt-6 {
+	padding-right: .625em;
+}
+
+.column p.p--pBtm-6 {
+	padding-bottom: .625em;
+}
+
+.column p.p--pLft-6 {
+	padding-left: .625em;
+}
+
+.column p.p--pTop-7 {
+	padding-top: .75em;
+}
+
+.column p.p--pRgt-7 {
+	padding-right: .75em;
+}
+
+.column p.p--pBtm-7 {
+	padding-bottom: .75em;
+}
+
+.column p.p--pLft-7 {
+	padding-left: .75em;
+}
+
+.column p.p--pTop-8 {
+	padding-top: .875em;
+}
+
+.column p.p--pRgt-8 {
+	padding-right: .875em;
+}
+
+.column p.p--pBtm-8 {
+	padding-bottom: .875em;
+}
+
+.column p.p--pLft-8 {
+	padding-left: .875em;
+}
+
+.column p.p--pTop-9 {
+	padding-top: 1em;
+}
+
+.column p.p--pRgt-9 {
+	padding-right: 1em;
+}
+
+.column p.p--pBtm-9 {
+	padding-bottom: 1em;
+}
+
+.column p.p--pLft-9 {
+	padding-left: 1em;
+}
+
+.column p.p--pTop-10 {
+	padding-top: 1.125em;
+}
+
+.column p.p--pRgt-10 {
+	padding-right: 1.125em;
+}
+
+.column p.p--pBtm-10 {
+	padding-bottom: 1.125em;
+}
+
+.column p.p--pLft-10 {
+	padding-left: 1.125em;
+}
+
+.column p.p--pTop-11 {
+	padding-top: 1.25em;
+}
+
+.column p.p--pRgt-11 {
+	padding-right: 1.25em;
+}
+
+.column p.p--pBtm-11 {
+	padding-bottom: 1.25em;
+}
+
+.column p.p--pLft-11 {
+	padding-left: 1.25em;
+}
+
+.column p.p--pTop-12 {
+	padding-top: 1.375em;
+}
+
+.column p.p--pRgt-12 {
+	padding-right: 1.375em;
+}
+
+.column p.p--pBtm-12 {
+	padding-bottom: 1.375em;
+}
+
+.column p.p--pLft-12 {
+	padding-left: 1.375em;
+}
+
+.column p.p--pTop-13 {
+	padding-top: 1.5em;
+}
+
+.column p.p--pRgt-13 {
+	padding-right: 1.5em;
+}
+
+.column p.p--pBtm-13 {
+	padding-bottom: 1.5em;
+}
+
+.column p.p--pLft-13 {
+	padding-left: 1.5em;
+}
+
+.column p.p--pTop-14 {
+	padding-top: 1.625em;
+}
+
+.column p.p--pRgt-14 {
+	padding-right: 1.625em;
+}
+
+.column p.p--pBtm-14 {
+	padding-bottom: 1.625em;
+}
+
+.column p.p--pLft-14 {
+	padding-left: 1.625em;
+}
+
+.column p.p--pTop-15 {
+	padding-top: 1.75em;
+}
+
+.column p.p--pRgt-15 {
+	padding-right: 1.75em;
+}
+
+.column p.p--pBtm-15 {
+	padding-bottom: 1.75em;
+}
+
+.column p.p--pLft-15 {
+	padding-left: 1.75em;
+}
+
+.column p.p--pTop-16 {
+	padding-top: 1.875em;
+}
+
+.column p.p--pRgt-16 {
+	padding-right: 1.875em;
+}
+
+.column p.p--pBtm-16 {
+	padding-bottom: 1.875em;
+}
+
+.column p.p--pLft-16 {
+	padding-left: 1.875em;
+}
+
+.column p.p--pTop-17 {
+	padding-top: 2em;
+}
+
+.column p.p--pRgt-17 {
+	padding-right: 2em;
+}
+
+.column p.p--pBtm-17 {
+	padding-bottom: 2em;
+}
+
+.column p.p--pLft-17 {
+	padding-left: 2em;
+}
+
+.column p.p--mTop-1 {
+	margin-top: 0;
+}
+
+.column p.p--mRgt-1 {
+	margin-right: 0;
+}
+
+.column p.p--mBtm-1 {
+	margin-bottom: 0;
+}
+
+.column p.p--mLft-1 {
+	margin-left: 0;
+}
+
+.column p.p--mTop-2 {
+	margin-top: .125em;
+}
+
+.column p.p--mRgt-2 {
+	margin-right: .125em;
+}
+
+.column p.p--mBtm-2 {
+	margin-bottom: .125em;
+}
+
+.column p.p--mLft-2 {
+	margin-left: .125em;
+}
+
+.column p.p--mTop-3 {
+	margin-top: .25em;
+}
+
+.column p.p--mRgt-3 {
+	margin-right: .25em;
+}
+
+.column p.p--mBtm-3 {
+	margin-bottom: .25em;
+}
+
+.column p.p--mLft-3 {
+	margin-left: .25em;
+}
+
+.column p.p--mTop-4 {
+	margin-top: .375em;
+}
+
+.column p.p--mRgt-4 {
+	margin-right: .375em;
+}
+
+.column p.p--mBtm-4 {
+	margin-bottom: .375em;
+}
+
+.column p.p--mLft-4 {
+	margin-left: .375em;
+}
+
+.column p.p--mTop-5 {
+	margin-top: .5em;
+}
+
+.column p.p--mRgt-5 {
+	margin-right: .5em;
+}
+
+.column p.p--mBtm-5 {
+	margin-bottom: .5em;
+}
+
+.column p.p--mLft-5 {
+	margin-left: .5em;
+}
+
+.column p.p--mTop-6 {
+	margin-top: .625em;
+}
+
+.column p.p--mRgt-6 {
+	margin-right: .625em;
+}
+
+.column p.p--mBtm-6 {
+	margin-bottom: .625em;
+}
+
+.column p.p--mLft-6 {
+	margin-left: .625em;
+}
+
+.column p.p--mTop-7 {
+	margin-top: .75em;
+}
+
+.column p.p--mRgt-7 {
+	margin-right: .75em;
+}
+
+.column p.p--mBtm-7 {
+	margin-bottom: .75em;
+}
+
+.column p.p--mLft-7 {
+	margin-left: .75em;
+}
+
+.column p.p--mTop-8 {
+	margin-top: .875em;
+}
+
+.column p.p--mRgt-8 {
+	margin-right: .875em;
+}
+
+.column p.p--mBtm-8 {
+	margin-bottom: .875em;
+}
+
+.column p.p--mLft-8 {
+	margin-left: .875em;
+}
+
+.column p.p--mTop-9 {
+	margin-top: 1em;
+}
+
+.column p.p--mRgt-9 {
+	margin-right: 1em;
+}
+
+.column p.p--mBtm-9 {
+	margin-bottom: 1em;
+}
+
+.column p.p--mLft-9 {
+	margin-left: 1em;
+}
+
+.column p.p--mTop-10 {
+	margin-top: 1.125em;
+}
+
+.column p.p--mRgt-10 {
+	margin-right: 1.125em;
+}
+
+.column p.p--mBtm-10 {
+	margin-bottom: 1.125em;
+}
+
+.column p.p--mLft-10 {
+	margin-left: 1.125em;
+}
+
+.column p.p--mTop-11 {
+	margin-top: 1.25em;
+}
+
+.column p.p--mRgt-11 {
+	margin-right: 1.25em;
+}
+
+.column p.p--mBtm-11 {
+	margin-bottom: 1.25em;
+}
+
+.column p.p--mLft-11 {
+	margin-left: 1.25em;
+}
+
+.column p.p--mTop-12 {
+	margin-top: 1.375em;
+}
+
+.column p.p--mRgt-12 {
+	margin-right: 1.375em;
+}
+
+.column p.p--mBtm-12 {
+	margin-bottom: 1.375em;
+}
+
+.column p.p--mLft-12 {
+	margin-left: 1.375em;
+}
+
+.column p.p--mTop-13 {
+	margin-top: 1.5em;
+}
+
+.column p.p--mRgt-13 {
+	margin-right: 1.5em;
+}
+
+.column p.p--mBtm-13 {
+	margin-bottom: 1.5em;
+}
+
+.column p.p--mLft-13 {
+	margin-left: 1.5em;
+}
+
+.column p.p--mTop-14 {
+	margin-top: 1.625em;
+}
+
+.column p.p--mRgt-14 {
+	margin-right: 1.625em;
+}
+
+.column p.p--mBtm-14 {
+	margin-bottom: 1.625em;
+}
+
+.column p.p--mLft-14 {
+	margin-left: 1.625em;
+}
+
+.column p.p--mTop-15 {
+	margin-top: 1.75em;
+}
+
+.column p.p--mRgt-15 {
+	margin-right: 1.75em;
+}
+
+.column p.p--mBtm-15 {
+	margin-bottom: 1.75em;
+}
+
+.column p.p--mLft-15 {
+	margin-left: 1.75em;
+}
+
+.column p.p--mTop-16 {
+	margin-top: 1.875em;
+}
+
+.column p.p--mRgt-16 {
+	margin-right: 1.875em;
+}
+
+.column p.p--mBtm-16 {
+	margin-bottom: 1.875em;
+}
+
+.column p.p--mLft-16 {
+	margin-left: 1.875em;
+}
+
+.column p.p--mTop-17 {
+	margin-top: 2em;
+}
+
+.column p.p--mRgt-17 {
+	margin-right: 2em;
+}
+
+.column p.p--mBtm-17 {
+	margin-bottom: 2em;
+}
+
+.column p.p--mLft-17 {
+	margin-left: 2em;
+}
+
+/*!     ····························································································
+***     >>> §3.2: Typograhy: Font Sizing
+**/
+.column p.p--fSize-1 {
+	font-size: .75em;
+}
+
+.column p.p--fSize-2 {
+	font-size: .78125em;
+}
+
+.column p.p--fSize-3 {
+	font-size: .8125em;
+}
+
+.column p.p--fSize-4 {
+	font-size: .84375em;
+}
+
+.column p.p--fSize-5 {
+	font-size: .875em;
+}
+
+.column p.p--fSize-6 {
+	font-size: .90625em;
+}
+
+.column p.p--fSize-7 {
+	font-size: .9375em;
+}
+
+.column p.p--fSize-8 {
+	font-size: .96875em;
+}
+
+.column p.p--fSize-9 {
+	font-size: 1em;
+}
+
+.column p.p--fSize-10 {
+	font-size: 1.03125em;
+}
+
+.column p.p--fSize-11 {
+	font-size: 1.0625em;
+}
+
+.column p.p--fSize-12 {
+	font-size: 1.09375em;
+}
+
+.column p.p--fSize-13 {
+	font-size: 1.125em;
+}
+
+.column p.p--fSize-14 {
+	font-size: 1.15625em;
+}
+
+.column p.p--fSize-15 {
+	font-size: 1.1875em;
+}
+
+.column p.p--fSize-16 {
+	font-size: 1.21875em;
+}
+
+.column p.p--fSize-17 {
+	font-size: 1.25em;
+}
+
+.column p.p--fSize-18 {
+	font-size: 1.28125em;
+}
+
+.column p.p--fSize-19 {
+	font-size: 1.3125em;
+}
+
+.column p.p--fSize-20 {
+	font-size: 1.34375em;
+}
+
+.column p.p--fSize-21 {
+	font-size: 1.375em;
+}
+
+.column p.p--fSize-22 {
+	font-size: 1.40625em;
+}
+
+.column p.p--fSize-23 {
+	font-size: 1.4375em;
+}
+
+.column p.p--fSize-24 {
+	font-size: 1.46875em;
+}
+
+.column p.p--fSize-25 {
+	font-size: 1.5em;
+}
+
+.column p.p--fSize-26 {
+	font-size: 1.53125em;
+}
+
+.column p.p--fSize-27 {
+	font-size: 1.5625em;
+}
+
+.column p.p--fSize-28 {
+	font-size: 1.59375em;
+}
+
+.column p.p--fSize-29 {
+	font-size: 1.625em;
+}
+
+.column p.p--fSize-30 {
+	font-size: 1.65625em;
+}
+
+.column p.p--fSize-31 {
+	font-size: 1.6875em;
+}
+
+.column p.p--fSize-32 {
+	font-size: 1.71875em;
+}
+
+.column p.p--fSize-33 {
+	font-size: 1.75em;
+}
+
+.column p.p--fSize-34 {
+	font-size: 1.78125em;
+}
+
+.column p.p--fSize-35 {
+	font-size: 1.8125em;
+}
+
+.column p.p--fSize-36 {
+	font-size: 1.84375em;
+}
+
+.column p.p--fSize-37 {
+	font-size: 1.875em;
+}
+
+.column p.p--fSize-38 {
+	font-size: 1.90625em;
+}
+
+.column p.p--fSize-39 {
+	font-size: 1.9375em;
+}
+
+.column p.p--fSize-40 {
+	font-size: 1.96875em;
+}
+
+.column p.p--fSize-41 {
+	font-size: 2em;
+}
+
+/*!     ····························································································
+***     >>> §3.3: Typography: Line-Heights
+**/
+.column p.p--lHeight-1 {
+	line-height: 1.25em;
+}
+
+.column p.p--lHeight-2 {
+	line-height: 1.375em;
+}
+
+.column p.p--lHeight-3 {
+	line-height: 1.5em;
+}
+
+/*!     ····························································································
+***     >>> §3.4: Style Defaults
+**/
+.column p {
+	max-width: 80ch;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.column *+p {
+	margin-top: 1em;
+}
+
+/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*     │ LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE PARAGRAPHS §3: Accessibility friendly classes ·································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!      >>> ···· §3.1, Accessibility friendly classes: Typograhy ··························· li,ul.content-boxes>li{position:relative;list-style-type:none;min-height:320px;border-radius:4px;box-shadow:0 1px 2px 0 rgba(0,0,0,.22);-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.22);border-top:1px solid rgba(0,0,0,.1);background-color:#fff}ul.application-steps>li p.email,ul.content-boxes>li p.email{font-size:.9em;font-weight:700}ul.application-steps>li>img,ul.content-boxes>li>img{position:absolute;top:10px;left:10px;width:106px}ul.application-steps>li>.content,ul.content-boxes>li>.content{position:relative;left:121px;width:calc(100% - 136px);min-width:189px;padding:10px 10px 10px 5px}ul.application-steps>li+li,ul.content-boxes>li+li{margin-top:2rem}ul.external-links li{list-style-image:url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png)}ul.cascaded-layout>li{list-style-type:none}ul.cascaded-layout>li.cascade-sizer,ul.cascaded-layout>li.gutter-sizer{height:0!important;min-height:0!important;padding:0!important;border:none!important;background:0 0!important;box-shadow:none!important}ul.cascaded-layout>li.gutter-sizer{width:2%!important}ul.cascaded-layout.blank{padding:0;margin-top:1rem!important;font-size:1rem!important}ul.cascaded-layout.blank>li{float:left;width:48.5%;margin-bottom:3%;list-style-type:none}ul.cascaded-layout.blank>li+li{margin-top:0}ul.cascaded-layout.blank>li.gutter-sizer{width:3%!important}.column ol{padding-right:0;padding-bottom:0}.column ol li{line-height:inherit}.column ol ol,.column ol ul{font-size:inherit!important}.column ol ol{list-style-type:lower-alpha}.column ol ol ol{list-style-type:lower-roman}.column dl.faq{position:relative}.column dl.faq dt{position:relative;width:calc(100% - 52px);padding:5px 40px 5px 10px;margin:5px 0;border:1px solid #afb5b7;background-color:#d7dadb;font-weight:700;cursor:pointer;-webkit-transition:all .25s linear;-moz-transition:all .25s linear;transition:all .25s linear}.column dl.faq dt:after{content:"";position:absolute;top:50%;right:10px;width:0;height:0;border-top:8px solid #5e6a71;border-right:8px solid transparent;border-bottom:none;border-left:8px solid transparent;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease}.column dl.faq dt:hover{background-color:#5e6a71;color:#fff}.column dl.faq dt:hover:after{border-top:8px solid #fff;border-right:8px solid transparent;border-bottom:none;border-left:8px solid transparent}.column dl.faq dt.activated{background-color:#d3b0b8;color:#464e54;border-color:#b87f8c}.column dl.faq dt.activated:after{border-top:none;border-right:8px solid transparent;border-bottom:8px solid #5e6a71;border-left:8px solid transparent}.column dl.faq dt.activated:hover{background-color:#725764;color:#fff}.column dl.faq dt.activated:hover:after{border-top:none;border-right:8px solid transparent;border-bottom:8px solid #fff;border-left:8px solid transparent}.column dl.faq.blue dt{background-color:#d8ecf3;border-color:#9ed0e1}.column dl.faq.blue dt:hover{background-color:#3f6b72}.column dl.faq.blue dt.activated{background-color:#d3b0b8;border-color:#b87f8c}.column dl.faq.blue dt.activated:hover{background-color:#725764}.column dl.faq dd{display:block;max-height:0;padding-right:1rem;padding-left:1rem;margin-top:0;overflow:hidden;opacity:0;-webkit-transition:margin .4s cubic-bezier(.02,.01,.47,1),opacity .4s cubic-bezier(.02,.01,.47,1);-moz-transition:margin .4s cubic-bezier(.02,.01,.47,1),opacity .4s cubic-bezier(.02,.01,.47,1);transition:margin .4s cubic-bezier(.02,.01,.47,1),opacity .4s cubic-bezier(.02,.01,.47,1)}.column dl.faq dd.revealed{margin-top:.25rem;margin-bottom:1rem;opacity:1}.column dl.faq dd>p+p{margin-top:1rem}.column dl.faq dd>p+ol,.column dl.faq dd>p+ul{margin-top:.5rem}.column dl.faq>.collapse-all-button,.column dl.faq>.expand-all-button{display:none;position:absolute;top:0;padding:5px;border:1px solid #afb5b7;background-color:#d7dadb;font-family:'Roboto Mono',monospace,sans-serif;font-weight:300;cursor:pointer;-webkit-transform:translateY(-100%) translateY(-5px);-moz-transform:translateY(-100%) translateY(-5px);transform:translateY(-100%) translateY(-5px);-webkit-transition:background-color .3s ease,border .3s ease,color .3s ease;-moz-transition:background-color .3s ease,border .3s ease,color .3s ease;transition:background-color .3s ease,border .3s ease,color .3s ease}.column dl.faq>.collapse-all-button:hover,.column dl.faq>.expand-all-button:hover{background-color:#5e6a71;color:#fff}.column dl.faq.blue>.collapse-all-button,.column dl.faq.blue>.expand-all-button{background-color:#d8ecf3;border-color:#9ed0e1}.column dl.faq.blue>.collapse-all-button:hover,.column dl.faq.blue>.expand-all-button:hover{background-color:#3f6b72}.column dl.faq>.expand-all-button{left:0}.column dl.faq>.collapse-all-button{right:0}/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+.column ul {
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+.column ul ol,.column ul ul {
+	font-size: inherit !important;
+}
+
+.column ul.centered {
+	text-align: center;
+}
+
+.column ul+p {
+	margin-top: 1rem;
+}
+
+.column ul li {
+	line-height: inherit;
+}
+
+.column ul li.no-bottom-pad {
+	padding-bottom: 0;
+}
+
+.column p+ul {
+	margin-top: .5rem;
+}
+
+ul.application-steps,ul.content-boxes {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+ul.application-steps>li,ul.content-boxes>li {
+	position: relative;
+	list-style-type: none;
+	min-height: 320px;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.22);
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.22);
+	border-top: 1px solid rgba(0,0,0,.1);
+	background-color: #fff;
+}
+
+ul.application-steps>li p.email,ul.content-boxes>li p.email {
+	font-size: .9em;
+	font-weight: 700;
+}
+
+ul.application-steps>li>img,ul.content-boxes>li>img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 106px;
+}
+
+ul.application-steps>li>.content,ul.content-boxes>li>.content {
+	position: relative;
+	left: 121px;
+	width: calc(100% - 136px);
+	min-width: 189px;
+	padding: 10px 10px 10px 5px;
+}
+
+ul.application-steps>li+li,ul.content-boxes>li+li {
+	margin-top: 2rem;
+}
+
+ul.external-links li {
+	list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
+}
+
+ul.cascaded-layout>li {
+	list-style-type: none;
+}
+
+ul.cascaded-layout>li.cascade-sizer,ul.cascaded-layout>li.gutter-sizer {
+	height: 0 !important;
+	min-height: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	background: 0 0 !important;
+	box-shadow: none !important;
+}
+
+ul.cascaded-layout>li.gutter-sizer {
+	width: 2% !important;
+}
+
+ul.cascaded-layout.blank {
+	padding: 0;
+	margin-top: 1rem !important;
+	font-size: 1rem !important;
+}
+
+ul.cascaded-layout.blank>li {
+	float: left;
+	width: 48.5%;
+	margin-bottom: 3%;
+	list-style-type: none;
+}
+
+ul.cascaded-layout.blank>li+li {
+	margin-top: 0;
+}
+
+ul.cascaded-layout.blank>li.gutter-sizer {
+	width: 3% !important;
+}
+
+.column ol {
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+.column ol li {
+	line-height: inherit;
+}
+
+.column ol ol,.column ol ul {
+	font-size: inherit !important;
+}
+
+.column ol ol {
+	list-style-type: lower-alpha;
+}
+
+.column ol ol ol {
+	list-style-type: lower-roman;
+}
+
+.column dl.faq {
+	position: relative;
+}
+
+.column dl.faq dt {
+	position: relative;
+	width: calc(100% - 52px);
+	padding: 5px 40px 5px 10px;
+	margin: 5px 0;
+	border: 1px solid #afb5b7;
+	background-color: #d7dadb;
+	font-weight: 700;
+	cursor: pointer;
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+.column dl.faq dt:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid #5e6a71;
+	border-right: 8px solid transparent;
+	border-bottom: none;
+	border-left: 8px solid transparent;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.column dl.faq dt:hover {
+	background-color: #5e6a71;
+	color: #fff;
+}
+
+.column dl.faq dt:hover:after {
+	border-top: 8px solid #fff;
+	border-right: 8px solid transparent;
+	border-bottom: none;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq dt.activated {
+	background-color: #d3b0b8;
+	color: #464e54;
+	border-color: #b87f8c;
+}
+
+.column dl.faq dt.activated:after {
+	border-top: none;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #5e6a71;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq dt.activated:hover {
+	background-color: #725764;
+	color: #fff;
+}
+
+.column dl.faq dt.activated:hover:after {
+	border-top: none;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq.blue dt {
+	background-color: #d8ecf3;
+	border-color: #9ed0e1;
+}
+
+.column dl.faq.blue dt:hover {
+	background-color: #3f6b72;
+}
+
+.column dl.faq.blue dt.activated {
+	background-color: #d3b0b8;
+	border-color: #b87f8c;
+}
+
+.column dl.faq.blue dt.activated:hover {
+	background-color: #725764;
+}
+
+.column dl.faq dd {
+	display: block;
+	max-height: 0;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-top: 0;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: margin .4s cubic-bezier(.02,.01,.47,1), opacity .4s cubic-bezier(.02,.01,.47,1);
+	-moz-transition: margin .4s cubic-bezier(.02,.01,.47,1), opacity .4s cubic-bezier(.02,.01,.47,1);
+	transition: margin .4s cubic-bezier(.02,.01,.47,1), opacity .4s cubic-bezier(.02,.01,.47,1);
+}
+
+.column dl.faq dd.revealed {
+	margin-top: .25rem;
+	margin-bottom: 1rem;
+	opacity: 1;
+}
+
+.column dl.faq dd>p+p {
+	margin-top: 1rem;
+}
+
+.column dl.faq dd>p+ol,.column dl.faq dd>p+ul {
+	margin-top: .5rem;
+}
+
+.column dl.faq>.collapse-all-button,.column dl.faq>.expand-all-button {
+	display: none;
+	position: absolute;
+	top: 0;
+	padding: 5px;
+	border: 1px solid #afb5b7;
+	background-color: #d7dadb;
+	font-family: 'Roboto Mono', monospace, sans-serif;
+	font-weight: 300;
+	cursor: pointer;
+	-webkit-transform: translateY(-100%) translateY(-5px);
+	-moz-transform: translateY(-100%) translateY(-5px);
+	transform: translateY(-100%) translateY(-5px);
+	-webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	-moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	transition: background-color .3s ease, border .3s ease, color .3s ease;
+}
+
+.column dl.faq>.collapse-all-button:hover,.column dl.faq>.expand-all-button:hover {
+	background-color: #5e6a71;
+	color: #fff;
+}
+
+.column dl.faq.blue>.collapse-all-button,.column dl.faq.blue>.expand-all-button {
+	background-color: #d8ecf3;
+	border-color: #9ed0e1;
+}
+
+.column dl.faq.blue>.collapse-all-button:hover,.column dl.faq.blue>.expand-all-button:hover {
+	background-color: #3f6b72;
+}
+
+.column dl.faq>.expand-all-button {
+	left: 0;
+}
+
+.column dl.faq>.collapse-all-button {
+	right: 0;
+}
+
+/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ NEWS POSTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -7319,22 +8342,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 2.35294118rem;
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: 1.06609808em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: 1em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: 1em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: 1em;
-	}
-	
 	.column p.banner-text {
 		font-size: 1.3326226em;
 	}
@@ -7569,7 +8576,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (max-width:1073px) {
-	body.use-a11y-styles .row.halves .column,body.use-a11y-styles .row.quarters .column,body.use-a11y-styles .row.side-left .column,body.use-a11y-styles .row.side-right .column,body.use-a11y-styles .row.single .column,body.use-a11y-styles .row.thirds .column {
+	.row.halves .column,.row.quarters .column,.row.side-left .column,.row.side-right .column,.row.single .column,.row.thirds .column {
 		font-size: 1rem;
 	}
 }
@@ -7682,7 +8689,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (max-width:791px) {
-	body.use-a11y-styles .row.halves .column,body.use-a11y-styles .row.quarters .column,body.use-a11y-styles .row.side-left .column,body.use-a11y-styles .row.side-right .column,body.use-a11y-styles .row.single .column,body.use-a11y-styles .row.thirds .column {
+	.row.halves .column,.row.quarters .column,.row.side-left .column,.row.side-right .column,.row.single .column,.row.thirds .column {
 		font-size: .9412rem;
 	}
 	
@@ -7739,7 +8746,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		width: 100%;
 	}
 	
-	body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.halves>.column:not(:last-child)>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.quarters>.column:not(:last-child)>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-left>.column:not(:last-child)>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.side-right>.column:not(:last-child)>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>div>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>div>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>div>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>section>ol:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>section>p:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>section>ul:last-child,body:not(.use-a11y-styles) main section.row:last-child.thirds>.column:not(:last-child)>ul:last-child {
+	main section.row:last-child.halves>.column:not(:last-child)>:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-body>:last-child,main section.row:last-child.halves>.column:not(:last-child)>article>.article-summary>:last-child,main section.row:last-child.halves>.column:not(:last-child)>section>:last-child,main section.row:last-child.quarters>.column:not(:last-child)>:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-body>:last-child,main section.row:last-child.quarters>.column:not(:last-child)>article>.article-summary>:last-child,main section.row:last-child.quarters>.column:not(:last-child)>section>:last-child,main section.row:last-child.side-left>.column:not(:last-child)>:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-body>:last-child,main section.row:last-child.side-left>.column:not(:last-child)>article>.article-summary>:last-child,main section.row:last-child.side-left>.column:not(:last-child)>section>:last-child,main section.row:last-child.side-right>.column:not(:last-child)>:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-body>:last-child,main section.row:last-child.side-right>.column:not(:last-child)>article>.article-summary>:last-child,main section.row:last-child.side-right>.column:not(:last-child)>section>:last-child,main section.row:last-child.thirds>.column:not(:last-child)>:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-body>:last-child,main section.row:last-child.thirds>.column:not(:last-child)>article>.article-summary>:last-child,main section.row:last-child.thirds>.column:not(:last-child)>section>:last-child {
 		margin-bottom: 1rem;
 	}
 	
@@ -8158,22 +9165,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 2.07022118rem;
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: .879844em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: .879844em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: .879844em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: .879844em;
-	}
-	
 	.column p.banner-text {
 		font-size: 1.099805em;
 	}
@@ -8528,22 +9519,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		transform: translateX(-50%);
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: 1.06609808em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: 1em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: 1em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: 1em;
-	}
-	
 	.column p.banner-text {
 		font-size: 1.3326226em;
 	}
@@ -8781,22 +9756,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 2.20705882rem;
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: 1em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: 1em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: 1em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: .938em;
-	}
-	
 	.column p.banner-text {
 		font-size: 1.25em;
 	}
@@ -8983,22 +9942,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 2.20705882rem;
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: 1em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: 1em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: 1em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: .938em;
-	}
-	
 	.column p.banner-text {
 		font-size: 1.25em;
 	}
@@ -9183,22 +10126,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	
 	header.main-header .sub-header,header.main-header .sub-header-default {
 		font-size: 2.07022118rem;
-	}
-	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		font-size: .938em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		font-size: .938em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		font-size: .938em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		font-size: .879844em;
 	}
 	
 	.column p.banner-text {
@@ -9474,22 +10401,6 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		line-height: .9em;
 	}
 	
-	.row.single:not(.mimic-multi-column-sections) .column p {
-		line-height: 1.375em;
-	}
-	
-	.row.single.mimic-two-column-sections .column p {
-		line-height: 1.375em;
-	}
-	
-	.row.halves .column p,.row.side-left .column p,.row.side-right .column p {
-		line-height: 1.375em;
-	}
-	
-	.row.quarters .column p,.row.thirds .column p {
-		line-height: 1.375em;
-	}
-	
 	.column p.banner-text {
 		line-height: 1.375em;
 	}
@@ -9651,7 +10562,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.page.has-short-main-header .row.single.article-header.opportunity-fund.show-header>header>* {
-		line-height: .9em;
+		line-height: 1em;
 	}
 	
 	.page.has-short-main-header header.main-header .sub-header,.page.has-short-main-header header.main-header .sub-header-default {
