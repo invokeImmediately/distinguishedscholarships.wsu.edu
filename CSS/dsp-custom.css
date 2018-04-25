@@ -2731,6 +2731,11 @@ h6.crimson-text.solid::before {
 **  }
 **.person--handsome { }
 */
+.hN--subtitle {
+  display: block;
+  font-size: 0.4em;
+  line-height: 1.375em;
+}
 /*!   ----------------------------------------------------------------------------------------------
 ***   >>> §3.7: Footer elements
 **/
@@ -8986,6 +8991,48 @@ div.auto-scroller ul li {
 **      • Depends on the utiltiy mixin .font-size(...) and the Less variable @fSize-array, which 
 **        are both defined in utility-mixins.less.
 */
+.font-size--400mx {
+  font-size: 0.4em;
+}
+.font-size--425mx {
+  font-size: 0.425em;
+}
+.font-size--450mx {
+  font-size: 0.45em;
+}
+.font-size--475mx {
+  font-size: 0.475em;
+}
+.font-size--500mx {
+  font-size: 0.5em;
+}
+.font-size--525mx {
+  font-size: 0.525em;
+}
+.font-size--550mx {
+  font-size: 0.55em;
+}
+.font-size--575mx {
+  font-size: 0.575em;
+}
+.font-size--600mx {
+  font-size: 0.6em;
+}
+.font-size--625mx {
+  font-size: 0.625em;
+}
+.font-size--650mx {
+  font-size: 0.65em;
+}
+.font-size--675mx {
+  font-size: 0.675em;
+}
+.font-size--700mx {
+  font-size: 0.7em;
+}
+.font-size--725mx {
+  font-size: 0.725em;
+}
 .font-size--750mx {
   font-size: 0.75em;
 }
@@ -9139,52 +9186,52 @@ div.auto-scroller ul li {
 .font-size--2000mx {
   font-size: 2em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 52) {
+.font-size--2025mx {
   font-size: 2.025em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 53) {
+.font-size--2050mx {
   font-size: 2.05em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 54) {
+.font-size--2075mx {
   font-size: 2.075em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 55) {
+.font-size--2100mx {
   font-size: 2.1em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 56) {
+.font-size--2125mx {
   font-size: 2.125em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 57) {
+.font-size--2150mx {
   font-size: 2.15em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 58) {
+.font-size--2175mx {
   font-size: 2.175em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 59) {
+.font-size--2200mx {
   font-size: 2.2em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 60) {
+.font-size--2225mx {
   font-size: 2.225em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 61) {
+.font-size--2250mx {
   font-size: 2.25em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 62) {
+.font-size--2275mx {
   font-size: 2.275em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 63) {
+.font-size--2300mx {
   font-size: 2.3em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 64) {
+.font-size--2325mx {
   font-size: 2.325em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 65) {
+.font-size--2350mx {
   font-size: 2.35em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 66) {
+.font-size--2375mx {
   font-size: 2.375em;
 }
-.font-size--extract(750mx, 775mx, 800mx, 825mx, 850mx, 875mx, 900mx, 925mx, 950mx, 975mx, 1000mx, 1025mx, 1050mx, 1075mx, 1100mx, 1125mx, 1150mx, 1175mx, 1200mx, 1225mx, 1250mx, 1275mx, 1300mx, 1325mx, 1350mx, 1375mx, 1400mx, 1425mx, 1450mx, 1475mx, 1500mx, 1525mx, 1550mx, 1575mx, 1600mx, 1625mx, 1650mx, 1675mx, 1700mx, 1725mx, 1750mx, 1775mx, 1800mx, 1825mx, 1850mx, 1875mx, 1900mx, 1925mx, 1950mx, 1975mx, 2000mx, 67) {
+.font-size--2400mx {
   font-size: 2.4em;
 }
 /*!     ····························································································
