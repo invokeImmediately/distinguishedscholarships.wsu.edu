@@ -646,7 +646,9 @@ img.shift-to-center,
 **  │                                                                                            │
 **  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)         │
 **  │                                                                                            │
-**  │ DESCRIPTION: ...                                                                           │
+**  │ DESCRIPTION: Less import that defines a variety of utility mixins to be utilized in        │
+**  │  making focused, functional style declarations and creating utility classes. Designed as a │
+**  │  dependency to be imported upstream of other Less files in the final stylesheet build.     │
 **  └────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*  ================================================================================================
@@ -655,16 +657,16 @@ img.shift-to-center,
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE UTILITY MIXINS §1: Margins...........................................................31
-**        >>> §1.1: In units of "em"...........................................................35
-**        >>> §1.2: In units of "rem".........................................................128
-**    §2: Spacing.............................................................................265
-**        >>> §2.1: In units of "em"..........................................................269
-**        >>> §2.2: In units of "rem".........................................................304
-**    §3: Typography..........................................................................359
-**        >>> §3.1: Typograhy: Font Sizing....................................................363
-**        >>> §3.2: Line heights..............................................................566
-**        >>> §3.3: Bolding...................................................................631
+**    OUE UTILITY MIXINS §1: Margins...........................................................33
+**        >>> §1.1: In units of "em"...........................................................37
+**        >>> §1.2: In units of "rem".........................................................130
+**    §2: Spacing.............................................................................267
+**        >>> §2.1: In units of "em"..........................................................271
+**        >>> §2.2: In units of "rem".........................................................306
+**    §3: Typography..........................................................................361
+**        >>> §3.1: Typograhy: Font Sizing....................................................365
+**        >>> §3.2: Line heights..............................................................568
+**        >>> §3.3: Bolding...................................................................633
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
@@ -2039,22 +2041,23 @@ body.blog .article-summary aside {
 /*    ─────────────────────────────────────────────────────────────────────────────────────────── 
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE-HEADINGS §1: [h1] elements...........................................................42
-**    OUE-HEADINGS §2: [h2] elements...........................................................65
-**    OUE-HEADINGS §3: [h3] elements..........................................................148
-**    OUE-HEADINGS §4: [h4] elements..........................................................219
-**    OUE-HEADINGS §5: [hN] elements..........................................................251
-**    OUE-HEADINGS §6: [header] elements......................................................284
-**    OUE-HEADINGS §7: (Legacy) Sectional article headers.....................................350
-**    OUE-HEADINGS §8: Accessibility friendly classes.........................................595
-**      >>> §8.1: Spacing.....................................................................599
-**      >>> §8.2: Font sizing.................................................................614
-**      >>> §8.3: Line heights................................................................643
-**      >>> §8.4: Coloring....................................................................660
-**        ├> §8.4a: Defaults..................................................................663
-**        └> §8.4b: Utility classes...........................................................768
-**      >>> §8.5: Child elements..............................................................871
-**    OUE-HEADINGS §9: Article Header Blocks, Elements, & Modifiers...........................894
+**    OUE-HEADINGS §1: [h1] elements...........................................................43
+**    OUE-HEADINGS §2: [h2] elements...........................................................64
+**    OUE-HEADINGS §3: [h3] elements..........................................................145
+**    OUE-HEADINGS §4: [h4] elements..........................................................212
+**    OUE-HEADINGS §5: [hN] elements..........................................................243
+**    OUE-HEADINGS §6: [header] elements......................................................276
+**    OUE-HEADINGS §7: (Legacy) Sectional article headers.....................................342
+**    OUE-HEADINGS §8: Accessibility friendly classes.........................................587
+**      >>> §8.1: Spacing.....................................................................591
+**      >>> §8.2: Font sizing.................................................................606
+**      >>> §8.3: Line heights................................................................635
+**      >>> §8.4: Coloring....................................................................652
+**        ├> §8.4a: Defaults..................................................................655
+**        └> §8.4b: Utility classes...........................................................760
+**      >>> §8.5: Text transformation.........................................................863
+**      >>> §8.6: Child elements..............................................................873
+**    OUE-HEADINGS §9: Article Header Blocks, Elements, & Modifiers...........................897
 */
 /*  ================================================================================================
 **  SEMANTIC CSS FOR STYLING OUE HEADING & HEADER ELEMENTS
@@ -2063,9 +2066,7 @@ body.blog .article-summary aside {
 **    OUE-HEADINGS §1: [h1] elements
 */
 .column h1 {
-  color: #464e54;
   font-weight: 700;
-  text-transform: uppercase;
 }
 .column h1.centered {
   text-align: center;
@@ -2078,9 +2079,7 @@ body.blog .article-summary aside {
 **    OUE-HEADINGS §2: [h2] elements
 */
 .column h2 {
-  color: #464e54;
   font-weight: 700;
-  text-transform: uppercase;
 }
 @media all {
   .column h2.article-title {
@@ -2169,12 +2168,6 @@ h2.article-title a {
 /*    ----------------------------------------------------------------------------------------------
 **    OUE-HEADINGS §3: [h3] elements
 */
-.column h3,
-.gform_heading h3.gform_title {
-  color: #981e32;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 .column h3.centered,
 .gform_heading h3.gform_title.centered {
   text-align: center;
@@ -2228,7 +2221,6 @@ h2.article-title a {
 **    OUE-HEADINGS §4: [h4] elements
 */
 .column h4 {
-  font-size: 1.31764706em;
   font-weight: 600;
 }
 .column h4.centered {
@@ -2625,6 +2617,25 @@ h6.white-text.solid.black-background::before {
   border-top: 2px solid #000000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+h1.white-text.solid.dark-crimson-background,
+h2.white-text.solid.dark-crimson-background,
+h3.white-text.solid.dark-crimson-background,
+h4.white-text.solid.dark-crimson-background,
+h5.white-text.solid.dark-crimson-background,
+h6.white-text.solid.dark-crimson-background {
+  background-color: rgba(109, 22, 36, 0.9);
+  background: linear-gradient(to right, #6d1624 50%, #3a0b13);
+  border-bottom: 2px solid rgba(58, 11, 19, 0.5);
+}
+h1.white-text.solid.dark-crimson-background::before,
+h2.white-text.solid.dark-crimson-background::before,
+h3.white-text.solid.dark-crimson-background::before,
+h4.white-text.solid.dark-crimson-background::before,
+h5.white-text.solid.dark-crimson-background::before,
+h6.white-text.solid.dark-crimson-background::before {
+  border-bottom: 1px solid rgba(58, 11, 19, 0.5);
+  border-top: 2px solid #3a0b13;
+}
 h1.white-text.solid.crimson-background,
 h2.white-text.solid.crimson-background,
 h3.white-text.solid.crimson-background,
@@ -2699,7 +2710,15 @@ h6.crimson-text.solid::before {
   border-bottom: 1px solid rgba(152, 30, 50, 0.3333);
 }
 /*      ····························································································
-**      >>> §8.5: Child elements
+**      >>> §8.5: Text transformation
+*/
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+/*      ····························································································
+**      >>> §8.6: Child elements
 */
 .column h1 > a,
 .column h2 > a,
@@ -2710,6 +2729,7 @@ h6.crimson-text.solid::before {
 .gform_heading h3.gform_title > a {
   border-bottom: none;
   box-shadow: none;
+  line-height: 1.375em;
   text-decoration: underline;
 }
 .column h1 > a:hover,
@@ -7375,23 +7395,26 @@ figure figcaption {
   vertical-align: top;
 }
 .column table.peopleList {
-  width: 100%;
   background: #fff;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
 }
 .column table.peopleList tbody td {
-  width: 80%;
+  /* background: #c75d61; */
+  border-bottom: 1px solid #e5e5e5;
   padding-bottom: 3pt;
   padding-top: 3pt;
-  border-bottom: 1px solid #e5e5e5;
-  vertical-align: middle;
-  /* background: #c75d61; */
+  vertical-align: top;
+  width: 80%;
 }
 .column table.peopleList tbody td:first-of-type {
-  width: 20%;
   text-align: center;
+  width: 20%;
+}
+.column table.peopleList tbody td:not(:first-of-type) {
+  padding-top: 0.5em;
 }
 .column table.wsu-blue-theme {
   width: 100%;
@@ -7413,10 +7436,10 @@ figure figcaption {
   }
 }
 .column table.wsu-blue-theme > thead > tr > th {
-  padding: 3px;
   background-color: #2f5055;
-  vertical-align: bottom;
   color: #fff;
+  padding: 3px;
+  vertical-align: bottom;
 }
 .column table.wsu-blue-theme > thead > tr.supra-header-row > th {
   padding-top: 0.6em;
@@ -7432,58 +7455,58 @@ figure figcaption {
   font-size: 1.4em;
 }
 .column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n) > td {
-  padding-top: 3px;
-  padding-right: 0.5em;
+  background-color: #fff;
+  line-height: normal;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #fff;
+  padding-right: 0.5em;
+  padding-top: 3px;
   text-indent: -1em;
   vertical-align: top;
-  line-height: normal;
 }
 .column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n + 1) > td {
-  padding-top: 3px;
-  padding-right: 0.5em;
+  background-color: #d3e1e3;
+  line-height: normal;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #d3e1e3;
+  padding-right: 0.5em;
+  padding-top: 3px;
   text-indent: -1em;
   vertical-align: top;
-  line-height: normal;
 }
 .column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr > td {
-  padding-top: 3px;
-  padding-right: 0.5em;
+  background-color: #fff;
+  line-height: normal;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #fff;
+  padding-right: 0.5em;
+  padding-top: 3px;
   text-indent: -1em;
   vertical-align: top;
-  line-height: normal;
 }
 .column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr.alt > td {
   background-color: #f2f2f2;
 }
 .column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr > td {
-  padding-top: 3px;
-  padding-right: 0.5em;
+  background-color: #d3e1e3;
+  line-height: normal;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #d3e1e3;
+  padding-right: 0.5em;
+  padding-top: 3px;
   text-indent: -1em;
   vertical-align: top;
-  line-height: normal;
 }
 .column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr.alt > td {
   background-color: #c3d6d9;
 }
 .column table.wsu-gray-theme {
-  width: 100%;
+  border-bottom: 1px solid #464e54;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #464e54;
-  border-bottom: 1px solid #464e54;
   vertical-align: top;
+  width: 100%;
 }
 @media all and (min-width: 891px) {
   .column table.wsu-gray-theme {
@@ -7496,30 +7519,30 @@ figure figcaption {
   }
 }
 .column table.wsu-gray-theme > thead > tr > th {
-  padding: 3px;
   background-color: #5e6a71;
-  vertical-align: top;
   color: #fff;
+  padding: 3px;
+  vertical-align: top;
 }
 .column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
-  padding: 3px;
   background-color: #000;
-  vertical-align: bottom;
-  text-indent: -1em;
-  font-weight: bold;
   color: #fff;
+  font-weight: bold;
+  padding: 3px;
+  text-indent: -1em;
+  vertical-align: bottom;
 }
 .column table.wsu-gray-theme > tbody > tr:nth-child(2n) > td {
-  padding: 3px;
   background-color: #fff;
-  vertical-align: top;
   line-height: normal;
+  padding: 3px;
+  vertical-align: top;
 }
 .column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
-  padding: 3px;
   background-color: #d7dadb;
-  vertical-align: top;
   line-height: normal;
+  padding: 3px;
+  vertical-align: top;
 }
 /*    ----------------------------------------------------------------------------------------------
 **    OUE-TABLES §2: Optional styling of tables via inclusional mixins
@@ -8962,7 +8985,10 @@ div.auto-scroller ul li {
 **  │                                                                                            │
 **  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)         │
 **  │                                                                                            │
-**  │ DESCRIPTION: ...                                                                           │
+**  │ DESCRIPTION: Less import that declares a variety of utility classes for use in functional  │
+**  │  styling of WSU Office of Undergraduate Education websites. Designed to be imported        │
+**  │  downstream of other Less files in the final stylesheet build so its rules will have the   │
+**  │  greatest possible weight in style conflict resolution.                                    │
 **  └────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*  ================================================================================================
@@ -8971,11 +8997,12 @@ div.auto-scroller ul li {
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE UTILITY CLASSES §1: Typography.......................................................26
-**        >>> §1.1: Font Sizing................................................................30
-**        >>> §1.2: Line Heights..............................................................175
-**        >>> §1.3: Bolding...................................................................221
-**        >>> §1.4: Text transformation.......................................................249
+**    OUE UTILITY CLASSES §1: Typography.......................................................30
+**        >>> §1.1: Font Sizing................................................................34
+**        >>> §1.2: Line Heights..............................................................180
+**        >>> §1.3: Bolding...................................................................226
+**        >>> §1.4: Text transformation.......................................................255
+**    §2: Spacing.............................................................................266
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
@@ -9236,22 +9263,22 @@ div.auto-scroller ul li {
   font-size: 2.4em;
 }
 .h1-text-size {
-  font-size: 81;
+  font-size: 2.4em;
 }
 .h2-text-size {
-  font-size: 69;
+  font-size: 2.1em;
 }
 .h3-text-size {
-  font-size: 57;
+  font-size: 1.8em;
 }
 .h4-text-size {
-  font-size: 49;
+  font-size: 1.6em;
 }
 .h5-text-size {
-  font-size: 45;
+  font-size: 1.5em;
 }
 .h6-text-size {
-  font-size: 41;
+  font-size: 1.4em;
 }
 /*!     ····························································································
 ***     >>> §1.2: Typograhy: Line heights
@@ -9327,6 +9354,21 @@ div.auto-scroller ul li {
 /*!     ····························································································
 ***     >>> §1.3: Typograhy: Bolding
 **/
+.font-weight--light {
+  font-weight: 300;
+}
+.font-weight--normal {
+  font-weight: 400;
+}
+.font-weight--semi-bold {
+  font-weight: 600;
+}
+.font-weight--bold {
+  font-weight: 700;
+}
+.font-weight--extra-bold {
+  font-weight: 800;
+}
 /*!     ····························································································
 ***     >>> §1.4: Typograhy: Text transformation
 **/
@@ -9335,6 +9377,72 @@ div.auto-scroller ul li {
 }
 .text-transform--uppercase {
   text-transform: uppercase;
+}
+/*    ----------------------------------------------------------------------------------------------
+**     OUE UTILITY CLASSES §2: Spacing
+*/
+* + .spacing--0mx {
+  margin-top: 0em;
+}
+* + .spacing--100mx {
+  margin-top: 0.1em;
+}
+* + .spacing--200mx {
+  margin-top: 0.2em;
+}
+* + .spacing--300mx {
+  margin-top: 0.3em;
+}
+* + .spacing--400mx {
+  margin-top: 0.4em;
+}
+* + .spacing--500mx {
+  margin-top: 0.5em;
+}
+* + .spacing--600mx {
+  margin-top: 0.6em;
+}
+* + .spacing--700mx {
+  margin-top: 0.7em;
+}
+* + .spacing--800mx {
+  margin-top: 0.8em;
+}
+* + .spacing--900mx {
+  margin-top: 0.9em;
+}
+* + .spacing--1000mx {
+  margin-top: 1em;
+}
+* + .spacing--1100mx {
+  margin-top: 1.1em;
+}
+* + .spacing--1200mx {
+  margin-top: 1.2em;
+}
+* + .spacing--1300mx {
+  margin-top: 1.3em;
+}
+* + .spacing--1400mx {
+  margin-top: 1.4em;
+}
+* + .spacing--1500mx {
+  margin-top: 1.5em;
+}
+* + .spacing--1600mx {
+  margin-top: 1.6em;
+}
+* + .spacing--1700mx {
+  margin-top: 1.7em;
+}
+* + .spacing--1800mx {
+  margin-top: 1.8em;
+}
+* + .spacing--1900mx {
+  margin-top: 1.9em;
+}
+* + .spacing--2000mx {
+  margin-top: 2em;
 }
 /*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *** ║ #### CUSTOM LAYOUTS #########################################################################║
@@ -10580,10 +10688,10 @@ span.has-tooltip:hover:after {
 }
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
+  border-bottom: 1px solid #5e6a71;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #5e6a71;
-  border-bottom: 1px solid #5e6a71;
   line-height: 1.5em;
 }
 @media all and (max-width: 480px) {
@@ -10592,30 +10700,30 @@ span.has-tooltip:hover:after {
   }
 }
 .column table.award-recipients thead tr th {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
-  border-top: 1px solid #fff;
   border-bottom: 1px solid #B6BCBF;
+  border-top: 1px solid #fff;
+  padding-bottom: .25rem;
+  padding-left: .25rem;
+  padding-top: .25rem;
   text-align: inherit;
 }
 .column table.award-recipients tbody tr td {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
   background-color: #fff;
-  border-top: 1px solid #eff0f1;
   border-bottom: 1px solid #d7dadb;
+  border-top: 1px solid #eff0f1;
+  padding-bottom: .25rem;
+  padding-left: .25rem;
+  padding-top: .25rem;
   text-align: inherit;
   vertical-align: top;
 }
 .column table.award-recipients tbody:nth-of-type(2n) tr td {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
   background-color: #eff0f1;
-  border-top: 1px solid #fff;
   border-bottom: 1px solid #b5babe;
+  border-top: 1px solid #fff;
+  padding-bottom: .25rem;
+  padding-left: .25rem;
+  padding-top: .25rem;
   text-align: inherit;
   vertical-align: top;
 }
