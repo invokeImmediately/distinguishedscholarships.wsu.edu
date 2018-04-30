@@ -6818,6 +6818,7 @@ a.vpue-tooltip span b {
   transition: all .25s ease;
 }
 .column a.non-text-link:hover::before {
+  background-color: transparent;
   opacity: 1;
 }
 .column a.non-text-link:hover img {
