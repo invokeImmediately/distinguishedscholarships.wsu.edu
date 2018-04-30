@@ -2715,9 +2715,10 @@ h3 {
 .column h5 > a,
 .column h6 > a,
 .gform_heading h3.gform_title > a {
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
   box-shadow: none;
-  line-height: 1.375em;
+  line-height: 1.4em;
+  line-height: calc(1.4em + 1px);
   text-decoration: underline;
 }
 .column h1 > a:hover,
@@ -2727,6 +2728,7 @@ h3 {
 .column h5 > a:hover,
 .column h6 > a:hover,
 .gform_heading h3.gform_title > a:hover {
+  border-bottom: 1px solid #981e32;
   text-decoration: none;
 }
 /*    ----------------------------------------------------------------------------------------------
@@ -6366,6 +6368,9 @@ div.page-covering-notice-js div.notice-content p + p {
   left: 0;
   position: relative;
   top: 0;
+}
+* + .recent-updates {
+  margin-top: 1em;
 }
 @media all and (max-width: 693px) {
   .recent-updates {
