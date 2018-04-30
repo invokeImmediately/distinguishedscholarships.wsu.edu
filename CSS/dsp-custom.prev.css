@@ -1,39 +1,50 @@
 ﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
 
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*   ║ MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### ║
-*   ╠=======================================================================================================================╣
-*   ║ AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)                                    ║
-*   ║                                                                                                                       ║
-*   ║ DESCRIPTION: Intended for use with all elements regardless of semantics                                               ║
-*   ║                                                                                                                       ║
-*   ║ LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       ║
-*   ║          https://www.w3.org/TR/html5/ for more information). Rulesets are generally declared in the same sequence as  ║
-*   ║          their matching elements appear in the HTML5 spec. Moreover, style declarations are made according to browser ║
-*   ║          rendering sequence; styles for controlling layout are followed by those related to painting and then by      ║
-*   ║          those associated with dynamic behaviors to the DOM tree.                                                     ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Global LESS VARIABLES, LESS MIXINS, and CLASS SPECIFIC rulesets ############################################ ║
-*     ╠===================================================================================================================╣
-*     ║ LESS variables and mixins and low-specificity CSS3 rulesets designed for either styling nodes without             ║
-*     ║ regard to semantics or being included within LESS dependencies.                                                   ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ Additional FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       │   CSS classes and LESS variables and parametric mixins designed for inclusion in dependencies to facilitate   │
-*       │   typographical design of dependent layouts.                                                                  │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ================================================================================================
+*** MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites (OUE-MASTER)
+*** ================================================================================================
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)                                   
+***                                                                                                                        
+***   DESCRIPTION: Intended for use with all WSUWP websites associated with the WSU Office of 
+***     Undergraduate Education, a unit within the Office of the Provost. (Please see 
+***     https://web.wsu.edu and https://vpue.wsu.edu/oue for more information.) It is designed to 
+***     be applied via the WSUWP CSS Stylesheet Editor functioning in in add-on mode.
+***
+***   DESIGN PHILOSOPHY: This stylesheet mixes semantic with functional CSS. The Spine Theme for 
+***     WSUWP takes a semantic approach to styling; thus, this add-on style sheet necessarily 
+***     contains some semantic styling of its own. Specifically, semantic CSS is utilized to 
+***     override or minimally build upon the default design imposed by the Spine builder theme.
+***
+***     Functional CSS is utilized to maximally build upon the Spine builder theme and further 
+***     extend its design flexibility. Content authors are enabled more options for tweaking the 
+***     design to suit their needs without needing to touch CSS, while the CSS is made more 
+***     reusable and easier to maintain.
+***
+***   ORGANIZATION OF STYLESHEET: This stylesheet is organized such that semantic CSS preceeds
+***     functional CSS. This is done to ensure that utility classes associated with functional CSS 
+***     override all other behaviors.
+***
+***     The semantic styling section of this stylesheet is laid out according to the W3C HTML5 
+***     language specification (please see https://www.w3.org/TR/html5/ for more information). 
+***     Styles are generally declared in the same sequence as their matching elements appear in the 
+***     HTML5 spec. Moreover, style declarations are made according to browser rendering sequence; 
+***     styles for controlling layout are followed by those related to painting and then by those 
+***     associated with dynamic behaviors to the DOM tree.
+*** ================================================================================================
+**/
+/*! ================================================================================================
+*** OUE-MASTER §1:  Global Less variables and Less mixins/utility classes
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.1: Additional fonts
+**/
 .has-mono-font {
 	font-family: 'Roboto Mono', monospace, sans-serif;
 	font-weight: 300;
 }
 
-.column,.has-dflt-font,body,body:not(.use-a11y-styles) .column h1,body:not(.use-a11y-styles) .column h2,body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .column h4,body:not(.use-a11y-styles) .gform_heading h3.gform_title,header.main-header {
+.column,.column h1,.column h2,.column h3,.column h4,.gform_heading h3.gform_title,.has-dflt-font,body,header.main-header {
 	font-family: 'Open Sans', 'Lucida Sans', sans-serif;
 }
 
@@ -53,6 +64,15 @@
 	font-family: 'PT Serif', Palatino, serif;
 }
 
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.2: Color variables and mixins
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.3: All other Less variables
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.4: Miscellaneous mixins
+**/
 .column .initially-hidden,.initially-hidden {
 	display: none;
 }
@@ -391,10 +411,12 @@
 	border: 1px solid rgba(42,48,51,.5);
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ ANIMATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.5: Utility mixins
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §1.6: Animation utility classes
+**/
 .fade-in-from-top {
 	opacity: 0;
 	-webkit-animation: anim-fade-in-from-top 1s linear 1;
@@ -656,10 +678,9 @@
 	}
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ CLASS SPECIFIC rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ================================================================================================
+*** OUE-MASTER §2: Anchor pseudoclass
+**/
 :target:not(.no-anchor-highlighting) {
 	position: relative;
 }
@@ -803,28 +824,22 @@
 	visibility: visible;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### SEMANTICALLY SPECIFIC RULESETS: DOCUMENT SECTIONS ########################################################## ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets that target section-level nodes.                                                                         ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ HTML rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ================================================================================================
+*** OUE-MASTER §3: Document section nodes
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.1: HTML element
+**/
 html {
-	font-size: 17px;
+	font-size: 106.25%;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.2: Body element
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.3: Article elements
+**/
 .column article.post {
 	padding: 1em;
 	border: 1px solid rgba(0,0,0,.3333);
@@ -872,24 +887,9 @@ html {
 	text-align: center;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-***  OUE SECTIONS §0: Styles for sectioning content across OUE websites
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.4: Section elements
 **/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §1: Utility classes
-**/
-section {
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §2: Legacy article headers
-*/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §3: Large-format friendly sections
-**/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §4: Styles for "Thirds" Spine builder sections
-**/
-}
-
 section.column-one-with-bottom-margin>.column.one {
 	margin-bottom: 2rem;
 }
@@ -943,9 +943,6 @@ section.side-right .column.two p {
 	padding-bottom: 0;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §5: Section coloring
-**/
 .row.has-charcoal-background {
 	background-color: #2f3438;
 }
@@ -974,9 +971,6 @@ section.side-right .column.two p {
 	color: #fff;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §6: Spacing overrides to improve responsive design of WSU Spine builder template
-**/
 main section.row>.column table>tbody>tr>td>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column table>tbody>tr>td>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column table>tbody>tr>td>div>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>div>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ul:not(.no-btm-margin),main section.row>.column>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-body>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-summary>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-summary>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ul:not(.no-btm-margin),main section.row>.column>div>ol:not(.no-btm-margin),main section.row>.column>div>ul:not(.no-btm-margin),main section.row>.column>ol:not(.no-btm-margin),main section.row>.column>section>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>section>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>section>div>ol:not(.no-btm-margin),main section.row>.column>section>div>ul:not(.no-btm-margin),main section.row>.column>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ul:not(.no-btm-margin),main section.row>.column>section>ul:not(.no-btm-margin),main section.row>.column>ul:not(.no-btm-margin) {
 	margin-bottom: 1rem;
 }
@@ -1001,31 +995,13 @@ main section.row>.column table>tbody>tr>td>div>ol:last-child,main section.row>.c
 	padding-top: 4rem;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §7: Gutter padding overrides to improve mobile design of WSU Spine builder template
-*/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §8: Column stacking overrides to improve mobile design of WSU Spine builder 
-*** template
-**/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §9: Linked column styling
-**/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE SECTIONS §10: Accessibility friendly utility classes
-**/
 .row.halves .column,.row.quarters .column,.row.side-left .column,.row.side-right .column,.row.single .column,.row.thirds .column {
 	font-size: 1.125rem;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ ASIDE layouts +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └─────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.5: Aside elements
+**/
 aside.shield-themed {
 	padding: .5rem;
 	border-left: 4px solid #8d959a;
@@ -1217,216 +1193,159 @@ body.blog .article-summary aside {
 	display: none;
 }
 
-/*!┌───────────────────────────────────────────────────────────────────────────────────────────────┐
-** │ ++++ HEADINGS & HEADERS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-** │   Style rules applied to headings & headers to override default styling in, and extend styl-  │
-** │   ing options beyond, the WSU Spine Theme for WordPress.                                      │
-** └───────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §1: [h1] Elements ············································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-body:not(.use-a11y-styles) .column h1 {
-	padding-bottom: 0;
-	margin-top: 1.5rem;
-	margin-bottom: .75rem;
-	font-size: 2.82352941em;
-	font-weight: 900;
-	text-transform: uppercase;
-	color: #464e54;
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.6: Heading elements
+**/
+.column h1 {
+	font-weight: 700;
 }
 
-body:not(.use-a11y-styles) .column h1.centered {
+.column h1.centered {
 	text-align: center;
 }
 
-body:not(.use-a11y-styles) .column h1:first-child,body:not(.use-a11y-styles) .column header:first-child+h1 {
+.column h1:first-child,.column header:first-child+h1 {
 	margin-top: 0;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §2: [h2] Elements ············································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-body:not(.use-a11y-styles) .column h2 {
-	padding: 0 0 0 .1em;
-	margin-top: 1.5rem;
-	margin-bottom: .75rem;
-	margin-left: -.1em;
-	font-size: 2.07058824em;
-	line-height: 1.375em;
-	font-weight: 800;
-	color: #464e54;
-	text-transform: uppercase;
+.column h2 {
+	font-weight: 700;
 }
 
-body:not(.use-a11y-styles) .column h2.centered {
+.column h2.centered {
 	text-align: center;
 }
 
-body:not(.use-a11y-styles) .column h2.narrower-top-margin {
+.column h2.narrower-top-margin {
 	margin-top: 1.25rem;
 }
 
-body:not(.use-a11y-styles) .column h2.no-top-margin {
+.column h2.no-top-margin {
 	margin-top: 0;
 }
 
-body:not(.use-a11y-styles) .column h2.fancy,body:not(.use-a11y-styles) .column h2.solid,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h2 {
-	position: relative;
-	padding: .33333333rem .5rem .55rem;
-	margin-left: -.5rem;
-	margin-bottom: 1rem;
-	margin-right: -.5rem;
+.column.show-header.has-fancy-header>header:first-child>h2 {
 	background-color: rgba(94,106,113,.2);
 	background: linear-gradient(to right,transparent,rgba(94,106,113,.075) 5%,rgba(94,106,113,.075) 50%,rgba(94,106,113,.225));
 	border-bottom: 2px solid rgba(94,106,113,.075);
+	margin-bottom: 1rem;
+	margin-left: -.5rem;
+	margin-right: -.5rem;
+	padding: .33333333rem .5rem .55rem;
+	position: relative;
 }
 
-body:not(.use-a11y-styles) .column h2.fancy.with-top-border,body:not(.use-a11y-styles) .column h2.solid,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h2 {
+.column.show-header.has-fancy-header>header:first-child>h2 {
 	padding-top: .5rem;
 }
 
-body:not(.use-a11y-styles) .column h2.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .column h2.solid:not(:first-child),body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h2:not(:first-child) {
+.column.show-header.has-fancy-header>header:first-child>h2:not(:first-child) {
 	margin-top: 2rem;
 }
 
-body:not(.use-a11y-styles) .column h2.fancy.with-top-border::before,body:not(.use-a11y-styles) .column h2.solid::before,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h2::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0;
-	border-top: 1px solid rgba(70,78,84,.6667);
+.column.show-header.has-fancy-header>header:first-child>h2::before {
 	border-bottom: 1px solid rgba(70,78,84,.3333);
 	border-top-width: 2px;
+	border-top: 1px solid rgba(70,78,84,.6667);
+	content: "";
+	height: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
-body:not(.use-a11y-styles) .column h2:first-child,body:not(.use-a11y-styles) .column header:first-child+h2,body:not(.use-a11y-styles) .column header:first-child+h2.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .column header:first-child+h2.solid:not(:first-child) {
+.column h2:first-child,.column header:first-child+h2 {
 	margin-top: 0;
 }
 
-body:not(.use-a11y-styles) .column h1+h2 {
+.column h1+h2 {
 	font-style: italic;
 }
 
-h2 body:not(.use-a11y-styles) .column hr:not(.subSection)+h2 {
+h2 .column hr:not(.subSection)+h2 {
 	margin-top: 0;
 }
 
-body:not(.use-a11y-styles) h2.article-title a {
+h2.article-title a {
 	border-bottom: none;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §3: [h3] Elements ············································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-	padding: 0 0 0 .1em;
-	margin-top: 1.5rem;
-	margin-bottom: .75rem;
-	margin-left: -.1em;
-	font-size: 1.6em;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: #981e32;
-}
-
-body:not(.use-a11y-styles) .column h3.centered,body:not(.use-a11y-styles) .gform_heading h3.gform_title.centered {
+.column h3.centered,.gform_heading h3.gform_title.centered {
 	text-align: center;
 }
 
-body:not(.use-a11y-styles) .column h3.gray,body:not(.use-a11y-styles) .gform_heading h3.gform_title.gray {
+.column h3.gray,.gform_heading h3.gform_title.gray {
 	color: #464e54;
 }
 
-body:not(.use-a11y-styles) .column h3.no-top-margin,body:not(.use-a11y-styles) .gform_heading h3.gform_title.no-top-margin {
+.column h3.no-top-margin,.gform_heading h3.gform_title.no-top-margin {
 	margin-top: 0;
 }
 
-body:not(.use-a11y-styles) .column h3.lowercase,body:not(.use-a11y-styles) .column.show-header.has-lowercase-header>header:first-child>h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title.lowercase {
+.column h3.lowercase,.column.show-header.has-lowercase-header>header:first-child>h3,.gform_heading h3.gform_title.lowercase {
 	text-transform: none;
 }
 
-body:not(.use-a11y-styles) .column h3.fancy,body:not(.use-a11y-styles) .column h3.solid,body:not(.use-a11y-styles) .column h4.fancy,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title,body:not(.use-a11y-styles) .gform_heading h3.gform_title.fancy,body:not(.use-a11y-styles) .gform_heading h3.gform_title.solid {
-	position: relative;
-	padding: .33333333rem .5rem .45rem 0;
-	margin-left: 0;
-	margin-bottom: 1rem;
-	margin-right: 0;
+.column.show-header.has-fancy-header>header:first-child>h3 {
 	background-color: rgba(198,12,48,.075);
 	background: linear-gradient(to right,transparent,rgba(219,120,121,.075) 5%,rgba(219,120,121,.075) 50%,rgba(219,120,121,.225));
 	border-bottom: 2px solid rgba(198,12,48,.075);
+	margin-bottom: 1rem;
+	margin-left: 0;
+	margin-right: 0;
+	padding: .33333333rem .5rem .45rem 0;
+	position: relative;
 }
 
-body:not(.use-a11y-styles) .column h3.fancy.with-top-border,body:not(.use-a11y-styles) .column h3.solid,body:not(.use-a11y-styles) .column h4.fancy.with-top-border,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title,body:not(.use-a11y-styles) .gform_heading h3.gform_title.fancy.with-top-border,body:not(.use-a11y-styles) .gform_heading h3.gform_title.solid,body:not(.use-a11y-styles) .gform_heading h3.gform_title.with-top-border {
+.column.show-header.has-fancy-header>header:first-child>h3 {
 	padding-top: .4375rem;
 }
 
-body:not(.use-a11y-styles) .column h3.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .column h3.solid:not(:first-child),body:not(.use-a11y-styles) .column h4.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h3:not(:first-child),body:not(.use-a11y-styles) .gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .gform_heading h3.gform_title.solid:not(:first-child),body:not(.use-a11y-styles) .gform_heading h3.gform_title.with-top-border:not(:first-child),body:not(.use-a11y-styles) .gform_heading h3.gform_title:not(:first-child) {
+.column.show-header.has-fancy-header>header:first-child>h3:not(:first-child) {
 	margin-top: 2rem;
 }
 
-body:not(.use-a11y-styles) .column h3.fancy.with-top-border::before,body:not(.use-a11y-styles) .column h3.solid::before,body:not(.use-a11y-styles) .column h4.fancy.with-top-border::before,body:not(.use-a11y-styles) .column.show-header.has-fancy-header>header:first-child>h3::before,body:not(.use-a11y-styles) .gform_heading h3.gform_title.fancy.with-top-border::before,body:not(.use-a11y-styles) .gform_heading h3.gform_title.solid::before,body:not(.use-a11y-styles) .gform_heading h3.gform_title.with-top-border::before,body:not(.use-a11y-styles) .gform_heading h3.gform_title::before {
+.column.show-header.has-fancy-header>header:first-child>h3::before {
+	border-bottom: 1px solid rgba(152,30,50,.375);
+	border-top: 1px solid rgba(152,30,50,.67);
 	content: "";
+	height: 0;
+	left: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 0;
-	border-top: 1px solid rgba(152,30,50,.67);
-	border-bottom: 1px solid rgba(152,30,50,.375);
 }
 
-body:not(.use-a11y-styles) .column h3:first-child,body:not(.use-a11y-styles) .column header:first-child+h3,body:not(.use-a11y-styles) .column header:first-child+h3.fancy.with-top-border:not(:first-child),body:not(.use-a11y-styles) .column header:first-child+h3.solid:not(:first-child),body:not(.use-a11y-styles) .column hr:not(.subSection)+h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title:first-child {
+.column h3:first-child,.column header:first-child+h3,.column hr:not(.subSection)+h3,.gform_heading h3.gform_title:first-child {
 	margin-top: 0;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §4: [h4] Elements ············································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-body:not(.use-a11y-styles) .column h4 {
-	padding: 0;
-	margin-top: 1rem;
-	margin-bottom: .5rem;
-	font-size: 1.31764706em;
+.column h4 {
 	font-weight: 600;
-	color: #981e32;
 }
 
-body:not(.use-a11y-styles) .column h4.centered {
+.column h4.centered {
 	text-align: center;
 }
 
-body:not(.use-a11y-styles) .column h4.gray {
+.column h4.gray {
 	color: #464e54;
 }
 
-body:not(.use-a11y-styles) .column h4:first-child,body:not(.use-a11y-styles) .column header:first-child+h4,body:not(.use-a11y-styles) .column hr:not(.subSection)+h4 {
+.column h4:first-child,.column header:first-child+h4,.column hr:not(.subSection)+h4 {
 	margin-top: 0;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §5: [hN] Elements ············································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-body:not(.use-a11y-styles) .column h1.crimson,body:not(.use-a11y-styles) .column h2.crimson {
+.column h1.crimson,.column h2.crimson {
 	color: #981e32;
 }
 
 body.blog .column header.article-header+* {
-	padding-top: 15px;
 	border-top: 1px solid rgba(127,127,127,.2);
+	padding-top: 15px;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §7: [header] Elements & Children ······························ │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 header.main-header .sup-header-default {
 	margin-bottom: .5rem;
 }
@@ -1443,226 +1362,202 @@ header.main-header .header-group {
 	margin-top: 0;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §7: (Legacy) Sectional Article Headers ························ │
-**     │ ···· (INCLUSIONAL VIA MIXIN) ···························································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §8: Accessibility friendly classes ···························· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!      >>> ···· §8.1, Accessibility friendly classes: Spacing ································· */
-body.use-a11y-styles .column *+h1.hN--spacing-0,body.use-a11y-styles .column *+h2.hN--spacing-0,body.use-a11y-styles .column *+h3.hN--spacing-0,body.use-a11y-styles .column *+h4.hN--spacing-0,body.use-a11y-styles .column *+h5.hN--spacing-0,body.use-a11y-styles .column *+h6.hN--spacing-0 {
-	margin-top: extract(0,.25em,.5em,.75em,1em,1.25em,1.5em,1.75em,2em,0);
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-1,body.use-a11y-styles .column *+h2.hN--spacing-1,body.use-a11y-styles .column *+h3.hN--spacing-1,body.use-a11y-styles .column *+h4.hN--spacing-1,body.use-a11y-styles .column *+h5.hN--spacing-1,body.use-a11y-styles .column *+h6.hN--spacing-1 {
-	margin-top: 0;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-2,body.use-a11y-styles .column *+h2.hN--spacing-2,body.use-a11y-styles .column *+h3.hN--spacing-2,body.use-a11y-styles .column *+h4.hN--spacing-2,body.use-a11y-styles .column *+h5.hN--spacing-2,body.use-a11y-styles .column *+h6.hN--spacing-2 {
-	margin-top: .25em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-3,body.use-a11y-styles .column *+h2.hN--spacing-3,body.use-a11y-styles .column *+h3.hN--spacing-3,body.use-a11y-styles .column *+h4.hN--spacing-3,body.use-a11y-styles .column *+h5.hN--spacing-3,body.use-a11y-styles .column *+h6.hN--spacing-3 {
-	margin-top: .5em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-4,body.use-a11y-styles .column *+h2.hN--spacing-4,body.use-a11y-styles .column *+h3.hN--spacing-4,body.use-a11y-styles .column *+h4.hN--spacing-4,body.use-a11y-styles .column *+h5.hN--spacing-4,body.use-a11y-styles .column *+h6.hN--spacing-4 {
-	margin-top: .75em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-5,body.use-a11y-styles .column *+h2.hN--spacing-5,body.use-a11y-styles .column *+h3.hN--spacing-5,body.use-a11y-styles .column *+h4.hN--spacing-5,body.use-a11y-styles .column *+h5.hN--spacing-5,body.use-a11y-styles .column *+h6.hN--spacing-5 {
-	margin-top: 1em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-6,body.use-a11y-styles .column *+h2.hN--spacing-6,body.use-a11y-styles .column *+h3.hN--spacing-6,body.use-a11y-styles .column *+h4.hN--spacing-6,body.use-a11y-styles .column *+h5.hN--spacing-6,body.use-a11y-styles .column *+h6.hN--spacing-6 {
-	margin-top: 1.25em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-7,body.use-a11y-styles .column *+h2.hN--spacing-7,body.use-a11y-styles .column *+h3.hN--spacing-7,body.use-a11y-styles .column *+h4.hN--spacing-7,body.use-a11y-styles .column *+h5.hN--spacing-7,body.use-a11y-styles .column *+h6.hN--spacing-7 {
-	margin-top: 1.5em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-8,body.use-a11y-styles .column *+h2.hN--spacing-8,body.use-a11y-styles .column *+h3.hN--spacing-8,body.use-a11y-styles .column *+h4.hN--spacing-8,body.use-a11y-styles .column *+h5.hN--spacing-8,body.use-a11y-styles .column *+h6.hN--spacing-8 {
-	margin-top: 1.75em;
-}
-
-body.use-a11y-styles .column *+h1.hN--spacing-9,body.use-a11y-styles .column *+h2.hN--spacing-9,body.use-a11y-styles .column *+h3.hN--spacing-9,body.use-a11y-styles .column *+h4.hN--spacing-9,body.use-a11y-styles .column *+h5.hN--spacing-9,body.use-a11y-styles .column *+h6.hN--spacing-9 {
-	margin-top: 2em;
-}
-
-body.use-a11y-styles .column h1,body.use-a11y-styles .column h2,body.use-a11y-styles .column h3,body.use-a11y-styles .column h4,body.use-a11y-styles .column h5,body.use-a11y-styles .column h6 {
+h1,h2,h3,h4,h5,h6 {
 	padding: 0;
+	margin: 0;
 }
 
-body.use-a11y-styles .column *+h1,body.use-a11y-styles .column *+h2,body.use-a11y-styles .column *+h3,body.use-a11y-styles .column *+h4,body.use-a11y-styles .column *+h5,body.use-a11y-styles .column *+h6 {
-	margin: 0;
+*+h1,*+h2,*+h3,*+h4,*+h5,*+h6 {
 	margin-top: 1em;
 }
 
-/*!      >>> ···· §8.2, Accessibility friendly classes: Typography - font sizing ················ */
-body.use-a11y-styles .column h1.hN--fSize-1,body.use-a11y-styles .column h2.hN--fSize-1,body.use-a11y-styles .column h3.hN--fSize-1,body.use-a11y-styles .column h4.hN--fSize-1,body.use-a11y-styles .column h5.hN--fSize-1,body.use-a11y-styles .column h6.hN--fSize-1 {
-	font-size: 1.4em;
-}
-
-body.use-a11y-styles .column h1.hN--fSize-2,body.use-a11y-styles .column h2.hN--fSize-2,body.use-a11y-styles .column h3.hN--fSize-2,body.use-a11y-styles .column h4.hN--fSize-2,body.use-a11y-styles .column h5.hN--fSize-2,body.use-a11y-styles .column h6.hN--fSize-2 {
-	font-size: 1.5em;
-}
-
-body.use-a11y-styles .column h1.hN--fSize-3,body.use-a11y-styles .column h2.hN--fSize-3,body.use-a11y-styles .column h3.hN--fSize-3,body.use-a11y-styles .column h4.hN--fSize-3,body.use-a11y-styles .column h5.hN--fSize-3,body.use-a11y-styles .column h6.hN--fSize-3 {
-	font-size: 1.6em;
-}
-
-body.use-a11y-styles .column h1.hN--fSize-4,body.use-a11y-styles .column h2.hN--fSize-4,body.use-a11y-styles .column h3.hN--fSize-4,body.use-a11y-styles .column h4.hN--fSize-4,body.use-a11y-styles .column h5.hN--fSize-4,body.use-a11y-styles .column h6.hN--fSize-4 {
-	font-size: 1.8em;
-}
-
-body.use-a11y-styles .column h1.hN--fSize-5,body.use-a11y-styles .column h2.hN--fSize-5,body.use-a11y-styles .column h3.hN--fSize-5,body.use-a11y-styles .column h4.hN--fSize-5,body.use-a11y-styles .column h5.hN--fSize-5,body.use-a11y-styles .column h6.hN--fSize-5 {
-	font-size: 2.1em;
-}
-
-body.use-a11y-styles .column h1.hN--fSize-6,body.use-a11y-styles .column h2.hN--fSize-6,body.use-a11y-styles .column h3.hN--fSize-6,body.use-a11y-styles .column h4.hN--fSize-6,body.use-a11y-styles .column h5.hN--fSize-6,body.use-a11y-styles .column h6.hN--fSize-6 {
+h1 {
 	font-size: 2.4em;
 }
 
-body.use-a11y-styles .column h1 {
-	font-size: 2.4em;
-}
-
-body.use-a11y-styles .column h2 {
+h2 {
 	font-size: 2.1em;
 }
 
-body.use-a11y-styles .column h3 {
+h3 {
 	font-size: 1.8em;
 }
 
-body.use-a11y-styles .column h4 {
+h4 {
 	font-size: 1.6em;
 }
 
-body.use-a11y-styles .column h5 {
+h5 {
 	font-size: 1.5em;
 }
 
-body.use-a11y-styles .column h6 {
+h6 {
 	font-size: 1.4em;
 }
 
-/*!      >>> ···· §8.3, Accessibility friendly classes: Typography - line heights ··············· */
-body.use-a11y-styles .column h1.hN--lHeight-1,body.use-a11y-styles .column h2.hN--lHeight-1,body.use-a11y-styles .column h3.hN--lHeight-1,body.use-a11y-styles .column h4.hN--lHeight-1,body.use-a11y-styles .column h5.hN--lHeight-1,body.use-a11y-styles .column h6.hN--lHeight-1 {
-	line-height: 1em;
-}
-
-body.use-a11y-styles .column h1.hN--lHeight-2,body.use-a11y-styles .column h2.hN--lHeight-2,body.use-a11y-styles .column h3.hN--lHeight-2,body.use-a11y-styles .column h4.hN--lHeight-2,body.use-a11y-styles .column h5.hN--lHeight-2,body.use-a11y-styles .column h6.hN--lHeight-2 {
+h1,h2,h3,h4,h5,h6 {
 	line-height: 1.1em;
 }
 
-body.use-a11y-styles .column h1.hN--lHeight-3,body.use-a11y-styles .column h2.hN--lHeight-3,body.use-a11y-styles .column h3.hN--lHeight-3,body.use-a11y-styles .column h4.hN--lHeight-3,body.use-a11y-styles .column h5.hN--lHeight-3,body.use-a11y-styles .column h6.hN--lHeight-3 {
-	line-height: 1.2em;
-}
-
-body.use-a11y-styles .column h1.hN--lHeight-4,body.use-a11y-styles .column h2.hN--lHeight-4,body.use-a11y-styles .column h3.hN--lHeight-4,body.use-a11y-styles .column h4.hN--lHeight-4,body.use-a11y-styles .column h5.hN--lHeight-4,body.use-a11y-styles .column h6.hN--lHeight-4 {
-	line-height: 1.3em;
-}
-
-body.use-a11y-styles .column h1.hN--lHeight-5,body.use-a11y-styles .column h2.hN--lHeight-5,body.use-a11y-styles .column h3.hN--lHeight-5,body.use-a11y-styles .column h4.hN--lHeight-5,body.use-a11y-styles .column h5.hN--lHeight-5,body.use-a11y-styles .column h6.hN--lHeight-5 {
+h1.linked-text,h2.linked-text,h3.linked-text,h4.linked-text,h5.linked-text,h6.linked-text {
 	line-height: 1.375em;
 }
 
-body.use-a11y-styles .column h1.hN--lHeight-6,body.use-a11y-styles .column h2.hN--lHeight-6,body.use-a11y-styles .column h3.hN--lHeight-6,body.use-a11y-styles .column h4.hN--lHeight-6,body.use-a11y-styles .column h5.hN--lHeight-6,body.use-a11y-styles .column h6.hN--lHeight-6 {
-	line-height: 1.4em;
+h1,h2,h3,h4,h5,h6 {
+	color: #981e32;
 }
 
-body.use-a11y-styles .column h1.hN--lHeight-7,body.use-a11y-styles .column h2.hN--lHeight-7,body.use-a11y-styles .column h3.hN--lHeight-7,body.use-a11y-styles .column h4.hN--lHeight-7,body.use-a11y-styles .column h5.hN--lHeight-7,body.use-a11y-styles .column h6.hN--lHeight-7 {
-	line-height: 1.5em;
-}
-
-body.use-a11y-styles .column h1.hN--linked,body.use-a11y-styles .column h2.hN--linked,body.use-a11y-styles .column h3.hN--linked,body.use-a11y-styles .column h4.hN--linked,body.use-a11y-styles .column h5.hN--linked,body.use-a11y-styles .column h6.hN--linked {
-	line-height: 1.375em;
-}
-
-body.use-a11y-styles .column h1,body.use-a11y-styles .column h2,body.use-a11y-styles .column h3,body.use-a11y-styles .column h4,body.use-a11y-styles .column h5,body.use-a11y-styles .column h6 {
-	line-height: 1.1em;
-}
-
-/*!      >>> ···· §8.4, Accessibility friendly classes: Coloring ································ */
-body.use-a11y-styles .column h1.hN--solid,body.use-a11y-styles .column h2.hN--solid,body.use-a11y-styles .column h3.hN--solid,body.use-a11y-styles .column h4.hN--solid,body.use-a11y-styles .column h5.hN--solid,body.use-a11y-styles .column h6.hN--solid {
-	position: relative;
-	padding: .1em .25em .11em;
-}
-
-body.use-a11y-styles .column h1.hN--solid::before,body.use-a11y-styles .column h2.hN--solid::before,body.use-a11y-styles .column h3.hN--solid::before,body.use-a11y-styles .column h4.hN--solid::before,body.use-a11y-styles .column h5.hN--solid::before,body.use-a11y-styles .column h6.hN--solid::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0;
-}
-
-body.use-a11y-styles .column h1.hN--white,body.use-a11y-styles .column h2.hN--white,body.use-a11y-styles .column h3.hN--white,body.use-a11y-styles .column h4.hN--white,body.use-a11y-styles .column h5.hN--white,body.use-a11y-styles .column h6.hN--white {
+h1.solid {
+	background-color: rgba(0,0,0,.9);
+	background: linear-gradient(to right,rgba(0,0,0,.8) 50%,#000);
+	border-bottom: 2px solid rgba(0,0,0,.333);
 	color: #fff;
 }
 
-body.use-a11y-styles .column h1.hN--white.hN--solid,body.use-a11y-styles .column h1.hN--white.hN--solid.hN--bg-black,body.use-a11y-styles .column h2.hN--white.hN--solid,body.use-a11y-styles .column h2.hN--white.hN--solid.hN--bg-black,body.use-a11y-styles .column h3.hN--white.hN--solid,body.use-a11y-styles .column h3.hN--white.hN--solid.hN--bg-black,body.use-a11y-styles .column h4.hN--white.hN--solid,body.use-a11y-styles .column h4.hN--white.hN--solid.hN--bg-black,body.use-a11y-styles .column h5.hN--white.hN--solid,body.use-a11y-styles .column h5.hN--white.hN--solid.hN--bg-black,body.use-a11y-styles .column h6.hN--white.hN--solid,body.use-a11y-styles .column h6.hN--white.hN--solid.hN--bg-black {
+h1.solid::before {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+h2.solid {
+	background-color: rgba(152,30,50,.9);
+	background: linear-gradient(to right,#981e32 50%,#4f101a);
+	border-bottom: 2px solid rgba(79,16,26,.5);
+	color: #fff;
+	margin-right: .8rem;
+}
+
+h2.solid::before {
+	border-bottom: 1px solid rgba(79,16,26,.5);
+	border-top: 2px solid #4f101a;
+}
+
+h3.solid {
+	background-color: rgba(198,12,48,.075);
+	background: linear-gradient(to right,transparent,rgba(219,120,121,.075) 5%,rgba(219,120,121,.075) 50%,rgba(219,120,121,.225));
+	border-bottom: 2px solid rgba(198,12,48,.075);
+	color: #981e32;
+	margin-right: 1.6rem;
+}
+
+h3.solid::before {
+	border-top: 2px solid rgba(152,30,50,.6667);
+	border-bottom: 1px solid rgba(152,30,50,.3333);
+}
+
+h4.solid {
+	background-color: rgba(94,106,113,.2);
+	background: linear-gradient(to right,transparent,rgba(94,106,113,.075) 5%,rgba(94,106,113,.075) 50%,rgba(94,106,113,.225));
+	border-bottom: 2px solid rgba(94,106,113,.075);
+	color: #464e54;
+	margin-right: /*! Less error: .margins-rem__parse-dir => Invalid @idx */
+2.4rem;
+}
+
+h4.solid::before {
+	border-top: 2px solid rgba(70,78,84,.6667);
+	border-bottom: 1px solid rgba(70,78,84,.3333);
+}
+
+h5.solid {
+	margin-right: /*! Less error: .margins-rem__parse-dir => Invalid @idx */
+3.2rem;
+}
+
+h6.solid {
+	margin-right: /*! Less error: .margins-rem__parse-dir => Invalid @idx */
+4rem;
+}
+
+h1.solid,h2.solid,h3.solid,h4.solid,h5.solid,h6.solid {
+	padding: .1em .25em .11em;
+	position: relative;
+}
+
+h1.solid::before,h2.solid::before,h3.solid::before,h4.solid::before,h5.solid::before,h6.solid::before {
+	content: "";
+	left: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+h1.white-text,h2.white-text,h3.white-text,h4.white-text,h5.white-text,h6.white-text {
+	color: #fff;
+}
+
+h1.white-text.solid,h1.white-text.solid.black-background,h2.white-text.solid,h2.white-text.solid.black-background,h3.white-text.solid,h3.white-text.solid.black-background,h4.white-text.solid,h4.white-text.solid.black-background,h5.white-text.solid,h5.white-text.solid.black-background,h6.white-text.solid,h6.white-text.solid.black-background {
 	background-color: rgba(0,0,0,.9);
 	background: linear-gradient(to right,rgba(0,0,0,.8) 50%,#000);
 	border-bottom: 2px solid rgba(0,0,0,.333);
 }
 
-body.use-a11y-styles .column h1.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h1.hN--white.hN--solid::before,body.use-a11y-styles .column h2.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h2.hN--white.hN--solid::before,body.use-a11y-styles .column h3.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h3.hN--white.hN--solid::before,body.use-a11y-styles .column h4.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h4.hN--white.hN--solid::before,body.use-a11y-styles .column h5.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h5.hN--white.hN--solid::before,body.use-a11y-styles .column h6.hN--white.hN--solid.hN--bg-black::before,body.use-a11y-styles .column h6.hN--white.hN--solid::before {
+h1.white-text.solid.black-background::before,h1.white-text.solid::before,h2.white-text.solid.black-background::before,h2.white-text.solid::before,h3.white-text.solid.black-background::before,h3.white-text.solid::before,h4.white-text.solid.black-background::before,h4.white-text.solid::before,h5.white-text.solid.black-background::before,h5.white-text.solid::before,h6.white-text.solid.black-background::before,h6.white-text.solid::before {
 	border-top: 2px solid #000;
 	border-bottom: 1px solid rgba(0,0,0,.5);
 }
 
-body.use-a11y-styles .column h1.hN--white.hN--solid.hN--bg-crimson,body.use-a11y-styles .column h2.hN--white.hN--solid.hN--bg-crimson,body.use-a11y-styles .column h3.hN--white.hN--solid.hN--bg-crimson,body.use-a11y-styles .column h4.hN--white.hN--solid.hN--bg-crimson,body.use-a11y-styles .column h5.hN--white.hN--solid.hN--bg-crimson,body.use-a11y-styles .column h6.hN--white.hN--solid.hN--bg-crimson {
+h1.white-text.solid.dark-crimson-background,h2.white-text.solid.dark-crimson-background,h3.white-text.solid.dark-crimson-background,h4.white-text.solid.dark-crimson-background,h5.white-text.solid.dark-crimson-background,h6.white-text.solid.dark-crimson-background {
+	background-color: rgba(109,22,36,.9);
+	background: linear-gradient(to right,#6d1624 50%,#3a0b13);
+	border-bottom: 2px solid rgba(58,11,19,.5);
+}
+
+h1.white-text.solid.dark-crimson-background::before,h2.white-text.solid.dark-crimson-background::before,h3.white-text.solid.dark-crimson-background::before,h4.white-text.solid.dark-crimson-background::before,h5.white-text.solid.dark-crimson-background::before,h6.white-text.solid.dark-crimson-background::before {
+	border-bottom: 1px solid rgba(58,11,19,.5);
+	border-top: 2px solid #3a0b13;
+}
+
+h1.white-text.solid.crimson-background,h2.white-text.solid.crimson-background,h3.white-text.solid.crimson-background,h4.white-text.solid.crimson-background,h5.white-text.solid.crimson-background,h6.white-text.solid.crimson-background {
 	background-color: rgba(152,30,50,.9);
 	background: linear-gradient(to right,#981e32 50%,#4f101a);
 	border-bottom: 2px solid rgba(79,16,26,.5);
 }
 
-body.use-a11y-styles .column h1.hN--white.hN--solid.hN--bg-crimson::before,body.use-a11y-styles .column h2.hN--white.hN--solid.hN--bg-crimson::before,body.use-a11y-styles .column h3.hN--white.hN--solid.hN--bg-crimson::before,body.use-a11y-styles .column h4.hN--white.hN--solid.hN--bg-crimson::before,body.use-a11y-styles .column h5.hN--white.hN--solid.hN--bg-crimson::before,body.use-a11y-styles .column h6.hN--white.hN--solid.hN--bg-crimson::before {
-	border-top: 2px solid #4f101a;
+h1.white-text.solid.crimson-background::before,h2.white-text.solid.crimson-background::before,h3.white-text.solid.crimson-background::before,h4.white-text.solid.crimson-background::before,h5.white-text.solid.crimson-background::before,h6.white-text.solid.crimson-background::before {
 	border-bottom: 1px solid rgba(79,16,26,.5);
+	border-top: 2px solid #4f101a;
 }
 
-body.use-a11y-styles .column h1.hN--gray,body.use-a11y-styles .column h2.hN--gray,body.use-a11y-styles .column h3.hN--gray,body.use-a11y-styles .column h4.hN--gray,body.use-a11y-styles .column h5.hN--gray,body.use-a11y-styles .column h6.hN--gray {
+h1.gray-text,h2.gray-text,h3.gray-text,h4.gray-text,h5.gray-text,h6.gray-text {
 	color: #464e54;
 }
 
-body.use-a11y-styles .column h1.hN--gray.hN--solid,body.use-a11y-styles .column h2.hN--gray.hN--solid,body.use-a11y-styles .column h3.hN--gray.hN--solid,body.use-a11y-styles .column h4.hN--gray.hN--solid,body.use-a11y-styles .column h5.hN--gray.hN--solid,body.use-a11y-styles .column h6.hN--gray.hN--solid {
+h1.gray-text.solid,h2.gray-text.solid,h3.gray-text.solid,h4.gray-text.solid,h5.gray-text.solid,h6.gray-text.solid {
 	background-color: rgba(94,106,113,.2);
 	background: linear-gradient(to right,transparent,rgba(94,106,113,.075) 5%,rgba(94,106,113,.075) 50%,rgba(94,106,113,.225));
 	border-bottom: 2px solid rgba(94,106,113,.075);
 }
 
-body.use-a11y-styles .column h1.hN--gray.hN--solid::before,body.use-a11y-styles .column h2.hN--gray.hN--solid::before,body.use-a11y-styles .column h3.hN--gray.hN--solid::before,body.use-a11y-styles .column h4.hN--gray.hN--solid::before,body.use-a11y-styles .column h5.hN--gray.hN--solid::before,body.use-a11y-styles .column h6.hN--gray.hN--solid::before {
+h1.gray-text.solid::before,h2.gray-text.solid::before,h3.gray-text.solid::before,h4.gray-text.solid::before,h5.gray-text.solid::before,h6.gray-text.solid::before {
 	border-top: 2px solid rgba(70,78,84,.6667);
 	border-bottom: 1px solid rgba(70,78,84,.3333);
 }
 
-body.use-a11y-styles .column h1.hN--crimson,body.use-a11y-styles .column h2.hN--crimson,body.use-a11y-styles .column h3.hN--crimson,body.use-a11y-styles .column h4.hN--crimson,body.use-a11y-styles .column h5.hN--crimson,body.use-a11y-styles .column h6.hN--crimson {
+h1.crimson-text,h2.crimson-text,h3.crimson-text,h4.crimson-text,h5.crimson-text,h6.crimson-text {
 	color: #981e32;
 }
 
-body.use-a11y-styles .column h1.hN--crimson.hN--solid,body.use-a11y-styles .column h2.hN--crimson.hN--solid,body.use-a11y-styles .column h3.hN--crimson.hN--solid,body.use-a11y-styles .column h4.hN--crimson.hN--solid,body.use-a11y-styles .column h5.hN--crimson.hN--solid,body.use-a11y-styles .column h6.hN--crimson.hN--solid {
+h1.crimson-text.solid,h2.crimson-text.solid,h3.crimson-text.solid,h4.crimson-text.solid,h5.crimson-text.solid,h6.crimson-text.solid {
 	background-color: rgba(198,12,48,.075);
 	background: linear-gradient(to right,transparent,rgba(219,120,121,.075) 5%,rgba(219,120,121,.075) 50%,rgba(219,120,121,.225));
 	border-bottom: 2px solid rgba(198,12,48,.075);
 }
 
-body.use-a11y-styles .column h1.hN--crimson.hN--solid::before,body.use-a11y-styles .column h2.hN--crimson.hN--solid::before,body.use-a11y-styles .column h3.hN--crimson.hN--solid::before,body.use-a11y-styles .column h4.hN--crimson.hN--solid::before,body.use-a11y-styles .column h5.hN--crimson.hN--solid::before,body.use-a11y-styles .column h6.hN--crimson.hN--solid::before {
+h1.crimson-text.solid::before,h2.crimson-text.solid::before,h3.crimson-text.solid::before,h4.crimson-text.solid::before,h5.crimson-text.solid::before,h6.crimson-text.solid::before {
 	border-top: 2px solid rgba(152,30,50,.6667);
 	border-bottom: 1px solid rgba(152,30,50,.3333);
 }
 
-/*!      >>> ···· §8.5, Accessibility friendly classes: Child elements ·························· */
+h1,h2,h3 {
+	text-transform: uppercase;
+}
+
 .column h1>a,.column h2>a,.column h3>a,.column h4>a,.column h5>a,.column h6>a,.gform_heading h3.gform_title>a {
 	border-bottom: none;
 	box-shadow: none;
+	line-height: 1.375em;
 	text-decoration: underline;
 }
 
@@ -1670,11 +1565,6 @@ body.use-a11y-styles .column h1.hN--crimson.hN--solid::before,body.use-a11y-styl
 	text-decoration: none;
 }
 
-/*!    ┌───────────────────────────────────────────────────────────────────────────────────────────┐
-**     │ ···· OUE HEADINGS/HEADERS §9: Article Header Blocks, Elements, & Modifiers ·············· │
-**     │ ···· (INCLUSIONAL VIA MIXIN) ···························································· │
-**     └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 /*!Example from SASS:
 ** .person { }
 **  .person__face {
@@ -1682,23 +1572,25 @@ body.use-a11y-styles .column h1.hN--crimson.hN--solid::before,body.use-a11y-styl
 **  }
 **.person--handsome { }
 */
+.hN--subtitle {
+	display: block;
+	font-size: .4em;
+	line-height: 1.375em;
+}
+
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §3.7: Footer elements
+**/
 footer.article-footer div.author-info {
 	display: none;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### CONTENT GROUPING NODES ##################################################################################### ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets that target nodes for grouping content.                                                                  ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE PARAGRAPHS §1: Legacy style declarations (prior to a11y redesign)
+/*! ================================================================================================
+*** OUE-MASTER §4: Content grouping nodes
 **/
-.column p {
-	text-align: left;
-}
-
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §4.1: Paragraph elements
+**/
 .column p.no-bottom-pad {
 	padding-bottom: 0 !important;
 }
@@ -1728,38 +1620,38 @@ footer.article-footer div.author-info {
 }
 
 .column p.vpue-jump-bar {
-	position: relative;
-	padding: 0 1rem 1rem;
-	margin: 2rem;
 	background-color: rgba(0,165,189,.5);
 	border: 1px solid rgba(63,107,114,.5);
 	border-radius: 10px;
-	color: #464e54;
-	text-align: center;
 	box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+	color: #464e54;
+	margin: 2rem;
+	padding: 0 1rem 1rem;
+	position: relative;
+	text-align: center;
 }
 
 .column p.vpue-jump-bar span.title {
 	font-size: 1.18147448em;
-	line-height: 2em;
 	font-weight: 700;
 	font-variant: small-caps;
+	line-height: 2em;
 }
 
 .column p.vpue-jump-bar.floating {
+	background-color: rgba(127,208,220,.95);
+	box-shadow: 4px 4px 8px rgba(0,0,0,.5);
 	display: none;
+	font-size: .8em !important;
+	left: 50%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding-bottom: .75rem;
+	padding-top: .4rem;
 	position: fixed;
 	top: 0;
-	left: 50%;
 	width: 50%;
-	padding-top: .4rem;
-	padding-bottom: .75rem;
-	margin-top: 0;
-	margin-right: 0;
-	margin-left: 0;
-	background-color: rgba(127,208,220,.95);
-	font-size: .8em !important;
-	box-shadow: 4px 4px 8px rgba(0,0,0,.5);
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -1775,25 +1667,25 @@ footer.article-footer div.author-info {
 }
 
 .column p.banner-text-gray-with-towers {
-	color: #2a3033;
 	background-color: rgba(141,149,154,.5);
 	border: 32px solid transparent;
-	-webkit-border-image: url(/wp-content/uploads/sites/906/2015/08/Gray-Clock-Tower-Border-Template.png) 32 32 round;
-	-o-border-image: url(/wp-content/uploads/sites/906/2015/08/Gray-Clock-Tower-Border-Template.png) 32 32 round;
 	border-image: url(/wp-content/uploads/sites/906/2015/08/Gray-Clock-Tower-Border-Template.png) 32 32 round;
+	-o-border-image: url(/wp-content/uploads/sites/906/2015/08/Gray-Clock-Tower-Border-Template.png) 32 32 round;
+	-webkit-border-image: url(/wp-content/uploads/sites/906/2015/08/Gray-Clock-Tower-Border-Template.png) 32 32 round;
+	color: #2a3033;
 	margin-bottom: 15px;
 	padding: 7px;
 }
 
 .column p.banner-text {
-	padding: 7px;
+	background-color: rgba(94,106,113,.5);
+	border: 1px solid #2a3033;
+	color: #2a3033;
+	line-height: 1.5em;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 2rem;
-	background-color: rgba(94,106,113,.5);
-	border: 1px solid #2a3033;
-	line-height: 1.375em;
-	color: #2a3033;
+	padding: 7px;
 }
 
 .column p.banner-text.orange {
@@ -1817,14 +1709,14 @@ footer.article-footer div.author-info {
 }
 
 .column p.banner-text-orange-with-towers {
-	padding: 7px;
-	margin-bottom: 15px;
+	background-color: rgba(182,114,51,.5);
+	border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
+	-o-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
+	-webkit-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
 	border: 32px solid transparent;
 	color: #492e14;
-	background-color: rgba(182,114,51,.5);
-	-webkit-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
-	-o-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
-	border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
+	margin-bottom: 15px;
+	padding: 7px;
 }
 
 .column p.article-deck {
@@ -1838,8 +1730,8 @@ footer.article-footer div.author-info {
 .column p.article-tagline {
 	font-family: 'PT Serif', Palatino, serif;
 	font-size: 1.305em;
-	line-height: 1.275em;
 	font-weight: 500;
+	line-height: 1.275em;
 }
 
 .column p.article-tagline.sans {
@@ -1990,8 +1882,8 @@ p.article-tagline .has-bold-text,p.article-tagline.bold {
 }
 
 .column p.vpue-jump-back {
-	padding-bottom: .33333333rem;
 	margin-bottom: .33333333rem;
+	padding-bottom: .33333333rem;
 }
 
 .column p.article-media-contacts {
@@ -2004,19 +1896,10 @@ p.article-tagline .has-bold-text,p.article-tagline.bold {
 }
 
 body.single-post .column p.article-media-contacts+:not(.article-media-contacts) {
-	padding-top: 15px;
 	border-top: 1px solid rgba(127,127,127,.2);
+	padding-top: 15px;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** OUE PARAGRAPHS §2: Paragraph based notices
-**/
-/*! ------------------------------------------------------------------------------------------------
-*** OUE PARAGRAPHS §3: Accessibility friendly classes
-**/
-/*!     ····························································································
-***     >>> §3.1: Spacing
-**/
 .column p.p--pTop-1 {
 	padding-top: 0;
 }
@@ -2747,20 +2630,22 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 ***     >>> §3.4: Style Defaults
 **/
 .column p {
-	max-width: 80ch;
-	padding: 0;
 	font-size: 1em;
 	line-height: 1.5em;
+	max-width: 80ch;
+	padding: 0;
 }
 
 .column *+p {
 	margin-top: 1em;
 }
 
-/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*     │ LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §4.2: List elements
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   OUE-LISTS §1: List elements
+**/
 .column ul {
 	padding-right: 0;
 	padding-bottom: 0;
@@ -3052,19 +2937,19 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	right: 0;
 }
 
-/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ NEWS POSTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §4.3: Div elements
+**/
+/*!     ····························································································
+***     >>> §4.3.1: News posts
+**/
 .article-body {
 	position: relative;
-	line-height: 1.375em;
+	line-height: 1.5em;
 }
 
 .article-summary {
-	line-height: 1.375em;
+	line-height: 1.5em;
 }
 
 .article-summary aside.article-sidebar,.article-summary img,.article-summary object,.article-summary p.article-media-contacts,.article-summary p.photo-caption,.article-summary>h3 {
@@ -3093,7 +2978,7 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 	box-sizing: border-box;
 	width: 50%;
 	padding: 0 2rem 2rem 0;
-	line-height: 1.375em;
+	line-height: 1.5em;
 	list-style-image: none !important;
 }
 
@@ -3151,15 +3036,14 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 	margin-bottom: 1rem;
 }
 
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Builder Template Slideshows ········································································ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*!     ····························································································
+***     >>> §4.3.2: Banner slideshows
+**/
 .column .builder-banner-content {
-	padding: 0 0 10px;
+	border: 0;
 	font-size: 1.5rem;
 	line-height: 1.35em;
-	border: 0;
+	padding: 0 0 10px;
 	-webkit-transition: font-size .15s linear, line-height .15s linear;
 	-moz-transition: font-size .15s linear, line-height .15s linear;
 	transition: font-size .15s linear, line-height .15s linear;
@@ -3174,18 +3058,18 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 }
 
 .column .builder-banner-inner-content {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 	background-color: rgba(0,0,0,.6);
+	bottom: 0;
 	font-size: inherit;
 	line-height: inherit;
+	position: absolute;
+	width: 100%;
 }
 
 .column .builder-banner-inner-content p {
-	padding: 10px;
 	font-size: inherit !important;
 	line-height: inherit !important;
+	padding: 10px;
 	text-align: center;
 }
 
@@ -3198,27 +3082,25 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 }
 
 .column .builder-banner-inner-content a {
-	color: #f6861f;
 	border-bottom: 1px dotted rgba(246,134,31,.4);
-	transition: color .4s linear, border-color .4s linear;
+	color: #f6861f;
 	-webkit-transition: color .4s linear, border-color .4s linear;
 	-moz-transition: color .4s linear, border-color .4s linear;
-	-o-transition: color .4s linear, border-color .4s linear;
+	transition: color .4s linear, border-color .4s linear;
 }
 
 .column .builder-banner-inner-content a:hover {
-	color: #949b9d;
 	border-color: rgba(106,120,128,.4);
+	color: #949b9d;
 }
 
 .column .builder-banner-overlay {
 	display: none;
 }
 
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· (div).column rulesets ·············································································· │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*!     ····························································································
+***     >>> §4.3.3: Columns
+**/
 section.pad-top div.column.half-pad,section.pad-top.half-pad {
 	padding-top: 1rem;
 }
@@ -3460,6 +3342,9 @@ div.callout.top:after,span.callout.top:after {
 	border-top: 11px solid #f1d031;
 }
 
+/*!     ····························································································
+***     >>> §4.3.4: Flippable content panels
+**/
 .interactively-flipped-panels {
 	position: relative;
 	top: 0;
@@ -3677,6 +3562,9 @@ div.callout.top:after,span.callout.top:after {
 	transition: width linear .25s, padding linear .25s;
 }
 
+/*!     ····························································································
+***     >>> §4.3.5: Page covering notices
+**/
 div.page-covering-notice-css3 {
 	position: fixed;
 	top: 0;
@@ -3796,65 +3684,41 @@ div.page-covering-notice-js div.notice-content p+p {
 	margin-top: 1em !important;
 }
 
-.row.single.has-recent-updates {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+/*!     ····························································································
+***     >>> §4.3.6: Recent updates
+**/
+.has-recent-updates {
 	background-color: #eff0f1;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
 
-div.recent-updates {
-	position: relative;
-	left: 0;
-	top: 0;
+.recent-updates {
 	height: 4em;
+	left: 0;
+	position: relative;
+	top: 0;
 }
 
-div.recent-updates p+p {
+.recent-updates p+p {
 	margin-top: 0;
 }
 
-div.recent-updates p.recent-update-1 {
-	animation: anim-recent-update-1;
-	animation-duration: 13.5s;
-	animation-timing-function: linear;
-	animation-delay: 0;
-	animation-iteration-count: infinite;
-	-webkit-animation: anim-recent-update-1;
-	-webkit-animation-duration: 13.5s;
-	-webkit-animation-timing-function: linear;
+.recent-update-1,.recent-updates__update-1 {
 	-webkit-animation-delay: 0;
+	animation-delay: 0;
+	-webkit-animation-duration: 13.5s;
+	animation-duration: 13.5s;
 	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: anim-recent-update-1;
+	animation-name: anim-recent-update-1;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	left: 0;
 	opacity: 0;
 	position: absolute;
-	left: 0;
 	top: 0;
-}
-
-@keyframes anim-recent-update-1 {
-	0% {
-		opacity: 1;
-		z-index: 10;
-	}
-	
-	30% {
-		opacity: 1;
-		z-index: 10;
-	}
-	
-	33% {
-		opacity: 0;
-		z-index: 1;
-	}
-	
-	96% {
-		opacity: 0;
-		z-index: 1;
-	}
-	
-	100% {
-		opacity: 1;
-		z-index: 10;
-	}
 }
 
 @-webkit-keyframes anim-recent-update-1 {
@@ -3884,53 +3748,48 @@ div.recent-updates p.recent-update-1 {
 	}
 }
 
-div.recent-updates p.recent-update-2 {
-	animation-name: anim-recent-update-2;
-	animation-duration: 13.5s;
-	animation-timing-function: linear;
-	animation-delay: 0;
-	animation-iteration-count: infinite;
-	-webkit-animation-name: anim-recent-update-2;
-	-webkit-animation-duration: 13.5s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 0;
-	-webkit-animation-iteration-count: infinite;
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-@keyframes anim-recent-update-2 {
+@keyframes anim-recent-update-1 {
 	0% {
-		opacity: 0;
-		z-index: 1;
+		opacity: 1;
+		z-index: 10;
 	}
 	
 	30% {
+		opacity: 1;
+		z-index: 10;
+	}
+	
+	33% {
 		opacity: 0;
 		z-index: 1;
 	}
 	
-	33% {
-		opacity: 1;
-		z-index: 10;
-	}
-	
-	63% {
-		opacity: 1;
-		z-index: 10;
-	}
-	
-	67% {
+	96% {
 		opacity: 0;
 		z-index: 1;
 	}
 	
 	100% {
-		opacity: 0;
-		z-index: 1;
+		opacity: 1;
+		z-index: 10;
 	}
+}
+
+.recent-update-2,.recent-updates__update-2 {
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+	-webkit-animation-duration: 13.5s;
+	animation-duration: 13.5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: anim-recent-update-2;
+	animation-name: anim-recent-update-2;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 @-webkit-keyframes anim-recent-update-2 {
@@ -3965,47 +3824,52 @@ div.recent-updates p.recent-update-2 {
 	}
 }
 
-div.recent-updates p.recent-update-3 {
-	animation-name: anim-recent-update-3;
-	animation-duration: 13.5s;
-	animation-timing-function: linear;
-	animation-delay: 0;
-	animation-iteration-count: infinite;
-	-webkit-animation-name: anim-recent-update-3;
-	-webkit-animation-duration: 13.5s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 0;
-	-webkit-animation-iteration-count: infinite;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-@keyframes anim-recent-update-3 {
+@keyframes anim-recent-update-2 {
 	0% {
 		opacity: 0;
 		z-index: 1;
 	}
 	
-	63% {
+	30% {
 		opacity: 0;
 		z-index: 1;
 	}
 	
-	67% {
+	33% {
 		opacity: 1;
 		z-index: 10;
 	}
 	
-	96% {
+	63% {
 		opacity: 1;
 		z-index: 10;
+	}
+	
+	67% {
+		opacity: 0;
+		z-index: 1;
 	}
 	
 	100% {
 		opacity: 0;
 		z-index: 1;
 	}
+}
+
+.recent-update-3,.recent-updates__update-3 {
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+	-webkit-animation-duration: 13.5s;
+	animation-duration: 13.5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: anim-recent-update-3;
+	animation-name: anim-recent-update-3;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	left: 0;
+	position: absolute;
+	top: 0;
 }
 
 @-webkit-keyframes anim-recent-update-3 {
@@ -4035,12 +3899,42 @@ div.recent-updates p.recent-update-3 {
 	}
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### TEXT-LEVEL NODES ########################################################################################### ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets that target nodes with text-level semantics.                                                             ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+@keyframes anim-recent-update-3 {
+	0% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	63% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	67% {
+		opacity: 1;
+		z-index: 10;
+	}
+	
+	96% {
+		opacity: 1;
+		z-index: 10;
+	}
+	
+	100% {
+		opacity: 0;
+		z-index: 1;
+	}
+}
+
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §4.4: Main element
+**/
+/*! ================================================================================================
+*** OUE-MASTER §5: Text-level nodes
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §5.1: Hyperlink elements
+**/
 .column a {
 	border-bottom-right-radius: .25em;
 	border-bottom-left-radius: .25em;
@@ -4240,10 +4134,9 @@ a.vpue-tooltip span b {
 	border-right: 1px solid #925b29;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ STRONG rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §5.2: Strong elements
+**/
 strong.opening-line {
 	font-size: 1.0625em;
 	color: #72652a;
@@ -4255,20 +4148,18 @@ strong.stands-out {
 	font-size: 1.2em;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ MARK rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §5.3: Mark elements
+**/
 mark.highlight {
 	background-color: transparent;
 	font-style: normal;
 	color: #aec7cb;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ SPAN rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §5.4: Span elements
+**/
 span.accentuated-text {
 	font-weight: 700;
 	font-size: 1.3em;
@@ -4311,20 +4202,19 @@ span.has-tool-tip:hover,span.has-tooltip:hover {
 	color: #2f5055;
 }
 
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ CITE rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §5.5: Cite elements
+**/
 cite.article-author {
 	display: none;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### EMBEDDED CONTENT ########################################################################################### ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets that target nodes representing embedded content.                                                         ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+/*! ================================================================================================
+*** OUE-MASTER §6: Embedded content nodes
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §6.1: Image elements
+**/
 img {
 	height: auto;
 }
@@ -4333,7 +4223,7 @@ img.auto-scaled,img.autoScaled {
 	width: 100%;
 }
 
-img.autoScaled-byHeight {
+img.auto-scaled.by-height,img.autoScaled-byHeight {
 	height: 100%;
 	width: auto;
 }
@@ -4342,36 +4232,72 @@ img.auto-scaled.to-90,img.autoScaledTo90 {
 	width: 90%;
 }
 
+img.auto-scaled.to-85,img.autoScaledTo85 {
+	width: 85%;
+}
+
 img.auto-scaled.to-80,img.autoScaledTo80 {
 	width: 80%;
+}
+
+img.auto-scaled.to-75,img.autoScaledTo75 {
+	width: 75%;
 }
 
 img.auto-scaled.to-70,img.autoScaledTo70 {
 	width: 70%;
 }
 
+img.auto-scaled.to-65,img.autoScaledTo65 {
+	width: 65%;
+}
+
 img.auto-scaled.to-60,img.autoScaledTo60 {
 	width: 60%;
+}
+
+img.auto-scaled.to-55,img.autoScaledTo55 {
+	width: 55%;
 }
 
 img.auto-scaled.to-50,img.autoScaledTo50 {
 	width: 50%;
 }
 
+img.auto-scaled.to-45,img.autoScaledTo45 {
+	width: 45%;
+}
+
 img.auto-scaled.to-40,img.autoScaledTo40 {
 	width: 40%;
+}
+
+img.auto-scaled.to-35,img.autoScaledTo35 {
+	width: 35%;
 }
 
 img.auto-scaled.to-30,img.autoScaledTo30 {
 	width: 30%;
 }
 
+img.auto-scaled.to-25,img.autoScaledTo25 {
+	width: 25%;
+}
+
 img.auto-scaled.to-20,img.autoScaledTo20 {
 	width: 20%;
 }
 
+img.auto-scaled.to-15,img.autoScaledTo15 {
+	width: 15%;
+}
+
 img.auto-scaled.to-10,img.autoScaledTo10 {
 	width: 10%;
+}
+
+img.auto-scaled.to-5,img.autoScaledTo5 {
+	width: 5%;
 }
 
 img.autoScaledToHalf {
@@ -4386,44 +4312,148 @@ img.auto-scaled.to-25,img.autoScaledToQuarter {
 	width: 25%;
 }
 
+img.width-fixed.to-384 {
+	width: 384px;
+}
+
+img.width-fixed.to-376 {
+	width: 376px;
+}
+
+img.width-fixed.to-368 {
+	width: 368px;
+}
+
+img.width-fixed.to-360 {
+	width: 360px;
+}
+
+img.width-fixed.to-352 {
+	width: 352px;
+}
+
+img.width-fixed.to-344 {
+	width: 344px;
+}
+
+img.width-fixed.to-336 {
+	width: 336px;
+}
+
+img.width-fixed.to-328 {
+	width: 328px;
+}
+
+img.width-fixed.to-320 {
+	width: 320px;
+}
+
+img.width-fixed.to-312 {
+	width: 312px;
+}
+
+img.width-fixed.to-304 {
+	width: 304px;
+}
+
+img.width-fixed.to-296 {
+	width: 296px;
+}
+
+img.width-fixed.to-288 {
+	width: 288px;
+}
+
+img.width-fixed.to-280 {
+	width: 280px;
+}
+
+img.width-fixed.to-272 {
+	width: 272px;
+}
+
+img.width-fixed.to-264 {
+	width: 264px;
+}
+
 img.width-fixed.to-256 {
 	width: 256px;
+}
+
+img.width-fixed.to-248 {
+	width: 248px;
 }
 
 img.width-fixed.to-240 {
 	width: 240px;
 }
 
+img.width-fixed.to-232 {
+	width: 232px;
+}
+
 img.width-fixed.to-224 {
 	width: 224px;
+}
+
+img.width-fixed.to-216 {
+	width: 216px;
 }
 
 img.width-fixed.to-208 {
 	width: 208px;
 }
 
+img.width-fixed.to-200 {
+	width: 200px;
+}
+
 img.width-fixed.to-192 {
 	width: 192px;
+}
+
+img.width-fixed.to-184 {
+	width: 184px;
 }
 
 img.width-fixed.to-176 {
 	width: 176px;
 }
 
+img.width-fixed.to-168 {
+	width: 168px;
+}
+
 img.width-fixed.to-160 {
 	width: 160px;
+}
+
+img.width-fixed.to-152 {
+	width: 152px;
 }
 
 img.width-fixed.to-144 {
 	width: 144px;
 }
 
+img.width-fixed.to-136 {
+	width: 136px;
+}
+
 img.width-fixed.to-128 {
 	width: 128px;
 }
 
+img.width-fixed.to-120 {
+	width: 120px;
+}
+
 img.width-fixed.to-112 {
 	width: 112px;
+}
+
+img.width-fixed.to-104 {
+	width: 104px;
 }
 
 img.width-fixed.to-96 {
@@ -4563,13 +4593,16 @@ figure figcaption {
 	text-align: center;
 }
 
-.column .pdf-wrapper,.column .youtube-wrapper {
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §6.2: Iframe elements
+**/
+.column .pdf-wrapper,.column .video-wrapper,.column .youtube-wrapper {
 	position: relative;
 	width: 100%;
 	height: 0;
 }
 
-.column .pdf-wrapper>iframe,.column .youtube-wrapper>iframe {
+.column .pdf-wrapper>iframe,.column .video-wrapper>iframe,.column .youtube-wrapper>iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -4592,16 +4625,13 @@ figure figcaption {
 	padding-bottom: calc(154.5454% + 56px);
 }
 
-.column .youtube-wrapper {
+.column .video-wrapper,.column .youtube-wrapper {
 	padding-bottom: 56.25%;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### TABULAR DATA ############################################################################################### ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets that nodes for representing tabular data.                                                                ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+/*! ================================================================================================
+*** OUE-MASTER §7: Tabular data nodes
+**/
 .column table.plain {
 	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
 	border-collapse: separate;
@@ -4642,24 +4672,28 @@ figure figcaption {
 }
 
 .column table.peopleList {
-	width: 100%;
 	background: #fff;
 	border-collapse: separate;
 	border-spacing: 0;
 	border-top: 1px solid #e5e5e5;
+	width: 100%;
 }
 
 .column table.peopleList tbody td {
-	width: 80%;
+	border-bottom: 1px solid #e5e5e5;
 	padding-bottom: 3pt;
 	padding-top: 3pt;
-	border-bottom: 1px solid #e5e5e5;
-	vertical-align: middle;
+	vertical-align: top;
+	width: 80%;
 }
 
 .column table.peopleList tbody td:first-of-type {
-	width: 20%;
 	text-align: center;
+	width: 20%;
+}
+
+.column table.peopleList tbody td:not(:first-of-type) {
+	padding-top: .5em;
 }
 
 .column table.wsu-blue-theme {
@@ -4674,10 +4708,10 @@ figure figcaption {
 }
 
 .column table.wsu-blue-theme>thead>tr>th {
-	padding: 3px;
 	background-color: #2f5055;
-	vertical-align: bottom;
 	color: #fff;
+	padding: 3px;
+	vertical-align: bottom;
 }
 
 .column table.wsu-blue-theme>thead>tr.supra-header-row>th {
@@ -4695,36 +4729,36 @@ figure figcaption {
 }
 
 .column table.wsu-blue-theme:not(.has-row-spans)>tbody>tr:nth-child(2n)>td {
-	padding-top: 3px;
-	padding-right: .5em;
+	background-color: #fff;
+	line-height: normal;
 	padding-bottom: .5em;
 	padding-left: 1.5em;
-	background-color: #fff;
+	padding-right: .5em;
+	padding-top: 3px;
 	text-indent: -1em;
 	vertical-align: top;
-	line-height: normal;
 }
 
 .column table.wsu-blue-theme:not(.has-row-spans)>tbody>tr:nth-child(2n+1)>td {
-	padding-top: 3px;
-	padding-right: .5em;
+	background-color: #d3e1e3;
+	line-height: normal;
 	padding-bottom: .5em;
 	padding-left: 1.5em;
-	background-color: #d3e1e3;
+	padding-right: .5em;
+	padding-top: 3px;
 	text-indent: -1em;
 	vertical-align: top;
-	line-height: normal;
 }
 
 .column table.wsu-blue-theme.has-row-spans>tbody:nth-child(2n)>tr>td {
-	padding-top: 3px;
-	padding-right: .5em;
+	background-color: #fff;
+	line-height: normal;
 	padding-bottom: .5em;
 	padding-left: 1.5em;
-	background-color: #fff;
+	padding-right: .5em;
+	padding-top: 3px;
 	text-indent: -1em;
 	vertical-align: top;
-	line-height: normal;
 }
 
 .column table.wsu-blue-theme.has-row-spans>tbody:nth-child(2n)>tr.alt>td {
@@ -4732,14 +4766,14 @@ figure figcaption {
 }
 
 .column table.wsu-blue-theme.has-row-spans>tbody:nth-child(2n+1)>tr>td {
-	padding-top: 3px;
-	padding-right: .5em;
+	background-color: #d3e1e3;
+	line-height: normal;
 	padding-bottom: .5em;
 	padding-left: 1.5em;
-	background-color: #d3e1e3;
+	padding-right: .5em;
+	padding-top: 3px;
 	text-indent: -1em;
 	vertical-align: top;
-	line-height: normal;
 }
 
 .column table.wsu-blue-theme.has-row-spans>tbody:nth-child(2n+1)>tr.alt>td {
@@ -4747,54 +4781,47 @@ figure figcaption {
 }
 
 .column table.wsu-gray-theme {
-	width: 100%;
+	border-bottom: 1px solid #464e54;
 	border-collapse: separate;
 	border-spacing: 0;
 	border-top: 1px solid #464e54;
-	border-bottom: 1px solid #464e54;
 	vertical-align: top;
+	width: 100%;
 }
 
 .column table.wsu-gray-theme>thead>tr>th {
-	padding: 3px;
 	background-color: #5e6a71;
-	vertical-align: top;
 	color: #fff;
+	padding: 3px;
+	vertical-align: top;
 }
 
 .column table.wsu-gray-theme>thead>tr.sub-heading-row>th {
-	padding: 3px;
 	background-color: #000;
-	vertical-align: bottom;
-	text-indent: -1em;
-	font-weight: 700;
 	color: #fff;
+	font-weight: 700;
+	padding: 3px;
+	text-indent: -1em;
+	vertical-align: bottom;
 }
 
 .column table.wsu-gray-theme>tbody>tr:nth-child(2n)>td {
-	padding: 3px;
 	background-color: #fff;
-	vertical-align: top;
 	line-height: normal;
+	padding: 3px;
+	vertical-align: top;
 }
 
 .column table.wsu-gray-theme>tbody>tr:nth-child(2n+1)>td {
-	padding: 3px;
 	background-color: #d7dadb;
-	vertical-align: top;
 	line-height: normal;
+	padding: 3px;
+	vertical-align: top;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### FORMS ###################################################################################################### ║
-*     ╠===================================================================================================================╣
-*     ║ Styling applied to nodes representing a form's user interface.                                                    ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ FORM ELEMENT LAYOUTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ================================================================================================
+*** OUE-MASTER §8: Form nodes
+**/
 input.read-more-state {
 	display: none;
 }
@@ -5214,24 +5241,12 @@ div.read-more-target {
 	}
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### SCRIPTING ################################################################################################## ║
-*     ╠===================================================================================================================╣
-*     ║ Rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ CLASS SPECIFIC rulesets related to script-driven elements ++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Drop-down toggle: upon click, either drops down or pulls up a related element ······················ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ DROP-DOWN TOGGLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*! ================================================================================================
+*** OUE-MASTER §9: Scripted elements
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.1: Toggled drop-down panels
+**/
 .drop-down-toggle {
 	position: relative;
 	-webkit-transition: all .3s ease;
@@ -5443,62 +5458,63 @@ div.read-more-target {
 	opacity: 0 !important;
 }
 
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Subtle Panels: Content panels with highly faded appearence until mousehover ························ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Flipped content panels ············································································· │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.2: Subtle panels
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.3: Flippable content panels
+**/
 .flipped-content-back {
 	display: none;
 	width: 100%;
 }
 
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.4: QTip driven tooltips
+**/
 .is-qtip {
 	display: none;
 }
 
 .qtip {
-	position: absolute;
-	left: -28000px;
-	top: -28000px;
+	box-shadow: none;
+	direction: ltr;
 	display: none;
+	font-size: 12px;
+	left: -28000px;
+	line-height: 15px;
 	max-width: 280px;
 	min-width: 50px;
-	font-size: 12px;
-	line-height: 15px;
-	direction: ltr;
-	box-shadow: none;
 	padding: 0;
+	position: absolute;
+	top: -28000px;
 }
 
 .qtip-content {
-	position: relative;
-	padding: 5px 9px;
 	overflow: hidden;
+	padding: 5px 9px;
+	position: relative;
 	text-align: left;
 	word-wrap: break-word;
 }
 
 .qtip-close {
+	border: 1px solid transparent;
+	cursor: pointer;
+	outline: 0;
 	position: absolute;
 	right: -9px;
 	top: -9px;
 	z-index: 11;
-	cursor: pointer;
-	outline: 0;
-	border: 1px solid transparent;
 }
 
 .qtip-titlebar {
-	position: relative;
-	padding: 5px 35px 5px 10px;
-	overflow: hidden;
-	border-width: 0 0 1px;
 	border-top-right-radius: 7px;
+	border-width: 0 0 1px;
 	font-weight: 700;
+	overflow: hidden;
+	padding: 5px 35px 5px 10px;
+	position: relative;
 }
 
 .qtip-titlebar+.qtip-content {
@@ -5506,15 +5522,15 @@ div.read-more-target {
 }
 
 .qtip-titlebar .qtip-close {
+	margin-top: -9px;
 	right: 4px;
 	top: 50%;
-	margin-top: -9px;
 }
 
 .qtip-titlebar .ui-icon {
+	direction: ltr;
 	display: block;
 	text-indent: -1000em;
-	direction: ltr;
 }
 
 * html .qtip-titlebar .qtip-close {
@@ -5529,29 +5545,29 @@ div.read-more-target {
 }
 
 .qtip-icon .ui-icon {
-	display: block;
-	text-indent: -1000em;
-	direction: ltr;
+	background: -100em -100em no-repeat;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	text-decoration: none;
-	width: 18px;
+	color: inherit;
+	direction: ltr;
+	display: block;
+	font: 400 bold 10px/13px Tahoma, sans-serif;
 	height: 14px;
 	line-height: 14px;
 	text-align: center;
+	text-decoration: none;
+	text-indent: -1000em;
 	text-indent: 0;
-	font: 400 bold 10px/13px Tahoma, sans-serif;
-	color: inherit;
-	background: -100em -100em no-repeat;
+	width: 18px;
 }
 
 .qtip-default {
-	border: 1px solid #f1d031;
-	border-top-right-radius: 7px;
-	border-bottom-right-radius: 7px;
-	border-bottom-left-radius: 7px;
 	background-color: #ffffa3;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	border: 1px solid #f1d031;
 	color: #555;
 }
 
@@ -5560,8 +5576,8 @@ div.read-more-target {
 }
 
 .qtip-default .qtip-icon {
-	border-color: #ccc;
 	background: #f1f1f1;
+	border-color: #ccc;
 	color: #777;
 }
 
@@ -5647,8 +5663,8 @@ div.read-more-target {
 .qtip-blue {
 	background-color: #d3e1e3;
 	border-color: #203639;
-	color: #2f5055;
 	box-shadow: 3px 3px 6px rgba(47,80,85,.3);
+	color: #2f5055;
 }
 
 .qtip-blue .qtip-titlebar {
@@ -5661,8 +5677,8 @@ div.read-more-target {
 }
 
 .qtip-shadow {
-	-webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
 	-moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
 	box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
 }
 
@@ -5679,20 +5695,21 @@ div.read-more-target {
 }
 
 .qtip-youtube {
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: 0 0 3px #333;
-	-moz-box-shadow: 0 0 3px #333;
-	box-shadow: 0 0 3px #333;
-	color: #fff;
-	border: 0 solid transparent;
-	background: #4a4a4a;
+	background-color: #4a4a4a;
 	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4a4a4a),color-stop(100%,#000));
 	background-image: -webkit-linear-gradient(top,#4a4a4a 0,#000 100%);
 	background-image: -moz-linear-gradient(top,#4a4a4a 0,#000 100%);
 	background-image: -ms-linear-gradient(top,#4a4a4a 0,#000 100%);
 	background-image: -o-linear-gradient(top,#4a4a4a 0,#000 100%);
+	background-image: linear-gradient(to bottom,#4a4a4a,#000);
+	border: 0 solid transparent;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	box-shadow: 0 0 3px #333;
+	-moz-box-shadow: 0 0 3px #333;
+	-webkit-box-shadow: 0 0 3px #333;
+	color: #fff;
 }
 
 .qtip-youtube .qtip-titlebar {
@@ -5700,8 +5717,8 @@ div.read-more-target {
 }
 
 .qtip-youtube .qtip-content {
-	padding: .75em;
 	font: 12px arial, sans-serif;
+	padding: .75em;
 }
 
 .qtip-youtube .qtip-icon {
@@ -5713,13 +5730,14 @@ div.read-more-target {
 }
 
 .qtip-jtools {
-	background: #232323;
-	background: rgba(0,0,0,.7);
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#717171),to(#232323));
+	background-color: #232323;
+	background-color: rgba(0,0,0,.7);
 	background-image: -moz-linear-gradient(top,#717171,#232323);
-	background-image: -webkit-linear-gradient(top,#717171,#232323);
 	background-image: -ms-linear-gradient(top,#717171,#232323);
 	background-image: -o-linear-gradient(top,#717171,#232323);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#717171),to(#232323));
+	background-image: -webkit-linear-gradient(top,#717171,#232323);
+	background-image: linear-gradient(to bottom,#717171,#232323);
 	border: 2px solid #ddd;
 	border: 2px solid #f1f1f1;
 	-moz-border-radius: 2px;
@@ -5732,8 +5750,8 @@ div.read-more-target {
 
 .qtip-jtools .qtip-content,.qtip-jtools .qtip-titlebar {
 	background: 0 0;
-	color: #fff;
 	border: 0 dashed transparent;
+	color: #fff;
 }
 
 .qtip-jtools .qtip-icon {
@@ -5745,12 +5763,12 @@ div.read-more-target {
 }
 
 .qtip-cluetip {
+	background-color: #d9d9c2;
+	border: 0 dashed transparent;
 	-webkit-box-shadow: 4px 4px 5px rgba(0,0,0,.4);
 	-moz-box-shadow: 4px 4px 5px rgba(0,0,0,.4);
 	box-shadow: 4px 4px 5px rgba(0,0,0,.4);
-	background-color: #d9d9c2;
 	color: #111;
-	border: 0 dashed transparent;
 }
 
 .qtip-cluetip .qtip-titlebar {
@@ -5771,18 +5789,18 @@ div.read-more-target {
 .qtip-tipsy {
 	background: #000;
 	background: rgba(0,0,0,.87);
-	color: #fff;
 	border: 0 solid transparent;
-	font-size: 11px;
+	color: #fff;
 	font-family: 'Lucida Grande', sans-serif;
 	font-weight: 700;
+	font-size: 11px;
 	line-height: 16px;
 	text-shadow: 0 1px #000;
 }
 
 .qtip-tipsy .qtip-titlebar {
-	padding: 6px 35px 0 10px;
 	background-color: transparent;
+	padding: 6px 35px 0 10px;
 }
 
 .qtip-tipsy .qtip-content {
@@ -5799,25 +5817,26 @@ div.read-more-target {
 }
 
 .qtip-tipped {
+	background-color: #f9f9f9;
 	border: 3px solid #959fa9;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	background-color: #f9f9f9;
 	color: #454545;
-	font-weight: 400;
 	font-family: serif;
+	font-weight: 400;
 }
 
 .qtip-tipped .qtip-titlebar {
 	border-bottom-width: 0;
 	color: #fff;
-	background: #3a79b8;
+	background-color: #3a79b8;
 	background-image: -webkit-gradient(linear,left top,left bottom,from(#3a79b8),to(#2e629d));
 	background-image: -webkit-linear-gradient(top,#3a79b8,#2e629d);
 	background-image: -moz-linear-gradient(top,#3a79b8,#2e629d);
 	background-image: -ms-linear-gradient(top,#3a79b8,#2e629d);
 	background-image: -o-linear-gradient(top,#3a79b8,#2e629d);
+	background-image: linear-gradient(to bottom,#3a79b8,#2e629d);
 }
 
 .qtip-tipped .qtip-icon {
@@ -5831,10 +5850,9 @@ div.read-more-target {
 }
 
 .qtip-bootstrap {
-	font-size: 14px;
-	line-height: 20px;
-	color: #333;
-	padding: 1px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0,0,0,.2);
@@ -5844,28 +5862,29 @@ div.read-more-target {
 	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
 	box-shadow: 0 5px 10px rgba(0,0,0,.2);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+	color: #333;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 1px;
 }
 
 .qtip-bootstrap .qtip-titlebar {
-	padding: 8px 14px;
-	margin: 0;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
 	background-color: #f7f7f7;
 	border-bottom: 1px solid #ebebeb;
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
 	border-radius: 5px 5px 0 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	margin: 0;
+	padding: 8px 14px;
 }
 
 .qtip-bootstrap .qtip-titlebar .qtip-close {
+	border-style: none;
 	right: 11px;
 	top: 45%;
-	border-style: none;
 }
 
 .qtip-bootstrap .qtip-content {
@@ -5877,27 +5896,27 @@ div.read-more-target {
 }
 
 .qtip-bootstrap .qtip-icon .ui-icon {
-	width: auto;
-	height: auto;
+	color: #000;
 	float: right;
 	font-size: 20px;
 	font-weight: 700;
+	height: auto;
 	line-height: 18px;
-	color: #000;
-	text-shadow: 0 1px 0 #fff;
 	opacity: .2;
+	text-shadow: 0 1px 0 #fff;
+	width: auto;
 }
 
 .qtip-bootstrap .qtip-icon .ui-icon:hover {
 	color: #000;
-	text-decoration: none;
 	cursor: pointer;
 	opacity: .4;
+	text-decoration: none;
 }
 
 .qtip:not(.ie9haxors) div.qtip-content,.qtip:not(.ie9haxors) div.qtip-titlebar {
-	filter: none;
 	-ms-filter: none;
+	filter: none;
 }
 
 .qtip .qtip-tip {
@@ -5911,15 +5930,15 @@ div.read-more-target {
 }
 
 .qtip .qtip-tip,.qtip .qtip-tip .qtip-vml,.qtip .qtip-tip canvas {
-	position: absolute;
-	color: #123456;
 	background: 0 0;
 	border: 0 dashed transparent;
+	color: #123456;
+	position: absolute;
 }
 
 .qtip .qtip-tip canvas {
-	top: 0;
 	left: 0;
+	top: 0;
 }
 
 .qtip .qtip-tip .qtip-vml {
@@ -5928,11 +5947,11 @@ div.read-more-target {
 }
 
 #qtip-overlay {
-	position: fixed;
+	height: 100%;
 	left: 0;
+	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100%;
 }
 
 #qtip-overlay.blurs {
@@ -5940,19 +5959,22 @@ div.read-more-target {
 }
 
 #qtip-overlay div {
-	position: absolute;
+	background-color: #000;
+	height: 100%;
 	left: 0;
+	opacity: .7;
+	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: .7;
 }
 
 .qtipmodal-ie6fix {
 	position: absolute !important;
 }
 
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.5: Cycle-driven photo slideshows
+**/
 .cycle2-slideshow,.cycle2-slideshow * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -6109,22 +6131,19 @@ div.read-more-target {
 	opacity: .5;
 }
 
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Tribe Events Calendars ············································································· │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.6: Quick-tabs panels
+**/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.7: Trive Events Calendars
+**/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Auto-scrolling image containers ···································································· │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
+/*!   ----------------------------------------------------------------------------------------------
+***   >>> §9.8: Auto-scrolling image panels
+**/
 div.auto-scroller {
 	position: relative;
 }
@@ -6150,6 +6169,567 @@ div.auto-scroller ul li {
 	margin: 0;
 	list-style-type: none;
 	list-style-image: none;
+}
+
+/*! ================================================================================================
+*** OUE-MASTER §10: Utility classes
+**/
+.font-size--400mx {
+	font-size: .4em;
+}
+
+.font-size--425mx {
+	font-size: .425em;
+}
+
+.font-size--450mx {
+	font-size: .45em;
+}
+
+.font-size--475mx {
+	font-size: .475em;
+}
+
+.font-size--500mx {
+	font-size: .5em;
+}
+
+.font-size--525mx {
+	font-size: .525em;
+}
+
+.font-size--550mx {
+	font-size: .55em;
+}
+
+.font-size--575mx {
+	font-size: .575em;
+}
+
+.font-size--600mx {
+	font-size: .6em;
+}
+
+.font-size--625mx {
+	font-size: .625em;
+}
+
+.font-size--650mx {
+	font-size: .65em;
+}
+
+.font-size--675mx {
+	font-size: .675em;
+}
+
+.font-size--700mx {
+	font-size: .7em;
+}
+
+.font-size--725mx {
+	font-size: .725em;
+}
+
+.font-size--750mx {
+	font-size: .75em;
+}
+
+.font-size--775mx {
+	font-size: .775em;
+}
+
+.font-size--800mx {
+	font-size: .8em;
+}
+
+.font-size--825mx {
+	font-size: .825em;
+}
+
+.font-size--850mx {
+	font-size: .85em;
+}
+
+.font-size--875mx {
+	font-size: .875em;
+}
+
+.font-size--900mx {
+	font-size: .9em;
+}
+
+.font-size--925mx {
+	font-size: .925em;
+}
+
+.font-size--950mx {
+	font-size: .95em;
+}
+
+.font-size--975mx {
+	font-size: .975em;
+}
+
+.font-size--1000mx {
+	font-size: 1em;
+}
+
+.font-size--1025mx {
+	font-size: 1.025em;
+}
+
+.font-size--1050mx {
+	font-size: 1.05em;
+}
+
+.font-size--1075mx {
+	font-size: 1.075em;
+}
+
+.font-size--1100mx {
+	font-size: 1.1em;
+}
+
+.font-size--1125mx {
+	font-size: 1.125em;
+}
+
+.font-size--1150mx {
+	font-size: 1.15em;
+}
+
+.font-size--1175mx {
+	font-size: 1.175em;
+}
+
+.font-size--1200mx {
+	font-size: 1.2em;
+}
+
+.font-size--1225mx {
+	font-size: 1.225em;
+}
+
+.font-size--1250mx {
+	font-size: 1.25em;
+}
+
+.font-size--1275mx {
+	font-size: 1.275em;
+}
+
+.font-size--1300mx {
+	font-size: 1.3em;
+}
+
+.font-size--1325mx {
+	font-size: 1.325em;
+}
+
+.font-size--1350mx {
+	font-size: 1.35em;
+}
+
+.font-size--1375mx {
+	font-size: 1.375em;
+}
+
+.font-size--1400mx {
+	font-size: 1.4em;
+}
+
+.font-size--1425mx {
+	font-size: 1.425em;
+}
+
+.font-size--1450mx {
+	font-size: 1.45em;
+}
+
+.font-size--1475mx {
+	font-size: 1.475em;
+}
+
+.font-size--1500mx {
+	font-size: 1.5em;
+}
+
+.font-size--1525mx {
+	font-size: 1.525em;
+}
+
+.font-size--1550mx {
+	font-size: 1.55em;
+}
+
+.font-size--1575mx {
+	font-size: 1.575em;
+}
+
+.font-size--1600mx {
+	font-size: 1.6em;
+}
+
+.font-size--1625mx {
+	font-size: 1.625em;
+}
+
+.font-size--1650mx {
+	font-size: 1.65em;
+}
+
+.font-size--1675mx {
+	font-size: 1.675em;
+}
+
+.font-size--1700mx {
+	font-size: 1.7em;
+}
+
+.font-size--1725mx {
+	font-size: 1.725em;
+}
+
+.font-size--1750mx {
+	font-size: 1.75em;
+}
+
+.font-size--1775mx {
+	font-size: 1.775em;
+}
+
+.font-size--1800mx {
+	font-size: 1.8em;
+}
+
+.font-size--1825mx {
+	font-size: 1.825em;
+}
+
+.font-size--1850mx {
+	font-size: 1.85em;
+}
+
+.font-size--1875mx {
+	font-size: 1.875em;
+}
+
+.font-size--1900mx {
+	font-size: 1.9em;
+}
+
+.font-size--1925mx {
+	font-size: 1.925em;
+}
+
+.font-size--1950mx {
+	font-size: 1.95em;
+}
+
+.font-size--1975mx {
+	font-size: 1.975em;
+}
+
+.font-size--2000mx {
+	font-size: 2em;
+}
+
+.font-size--2025mx {
+	font-size: 2.025em;
+}
+
+.font-size--2050mx {
+	font-size: 2.05em;
+}
+
+.font-size--2075mx {
+	font-size: 2.075em;
+}
+
+.font-size--2100mx {
+	font-size: 2.1em;
+}
+
+.font-size--2125mx {
+	font-size: 2.125em;
+}
+
+.font-size--2150mx {
+	font-size: 2.15em;
+}
+
+.font-size--2175mx {
+	font-size: 2.175em;
+}
+
+.font-size--2200mx {
+	font-size: 2.2em;
+}
+
+.font-size--2225mx {
+	font-size: 2.225em;
+}
+
+.font-size--2250mx {
+	font-size: 2.25em;
+}
+
+.font-size--2275mx {
+	font-size: 2.275em;
+}
+
+.font-size--2300mx {
+	font-size: 2.3em;
+}
+
+.font-size--2325mx {
+	font-size: 2.325em;
+}
+
+.font-size--2350mx {
+	font-size: 2.35em;
+}
+
+.font-size--2375mx {
+	font-size: 2.375em;
+}
+
+.font-size--2400mx {
+	font-size: 2.4em;
+}
+
+.h1-text-size {
+	font-size: 2.4em;
+}
+
+.h2-text-size {
+	font-size: 2.1em;
+}
+
+.h3-text-size {
+	font-size: 1.8em;
+}
+
+.h4-text-size {
+	font-size: 1.6em;
+}
+
+.h5-text-size {
+	font-size: 1.5em;
+}
+
+.h6-text-size {
+	font-size: 1.4em;
+}
+
+/*!     ····························································································
+***     >>> §1.2: Typograhy: Line heights
+***
+***     NOTES:
+***     * See line 24 for explanation of "mx" units.
+***     * Depends on the utiltiy mixin .set-lHeight(...) and the Less variable @lHeight-array, 
+***       which are both defined in utility-mixins.less.
+**/
+.line-height--1000mx {
+	line-height: 1em;
+}
+
+.line-height--1025mx {
+	line-height: 1.025em;
+}
+
+.line-height--1050mx {
+	line-height: 1.05em;
+}
+
+.line-height--1075mx {
+	line-height: 1.075em;
+}
+
+.line-height--1100mx {
+	line-height: 1.1em;
+}
+
+.line-height--1125mx {
+	line-height: 1.125em;
+}
+
+.line-height--1150mx {
+	line-height: 1.15em;
+}
+
+.line-height--1175mx {
+	line-height: 1.175em;
+}
+
+.line-height--1200mx {
+	line-height: 1.2em;
+}
+
+.line-height--1225mx {
+	line-height: 1.225em;
+}
+
+.line-height--1250mx {
+	line-height: 1.25em;
+}
+
+.line-height--1275mx {
+	line-height: 1.275em;
+}
+
+.line-height--1300mx {
+	line-height: 1.3em;
+}
+
+.line-height--1325mx {
+	line-height: 1.325em;
+}
+
+.line-height--1350mx {
+	line-height: 1.35em;
+}
+
+.line-height--1375mx {
+	line-height: 1.375em;
+}
+
+.line-height--1400mx {
+	line-height: 1.4em;
+}
+
+.line-height--1425mx {
+	line-height: 1.425em;
+}
+
+.line-height--1450mx {
+	line-height: 1.45em;
+}
+
+.line-height--1475mx {
+	line-height: 1.475em;
+}
+
+.line-height--1500mx {
+	line-height: 1.5em;
+}
+
+/*!     ····························································································
+***     >>> §1.3: Typograhy: Bolding
+**/
+.font-weight--light {
+	font-weight: 300;
+}
+
+.font-weight--normal {
+	font-weight: 400;
+}
+
+.font-weight--semi-bold {
+	font-weight: 600;
+}
+
+.font-weight--bold {
+	font-weight: 700;
+}
+
+.font-weight--extra-bold {
+	font-weight: 800;
+}
+
+/*!     ····························································································
+***     >>> §1.4: Typograhy: Text transformation
+**/
+.text-transform--none {
+	text-transform: none;
+}
+
+.text-transform--uppercase {
+	text-transform: uppercase;
+}
+
+*+.spacing--0mx {
+	margin-top: 0;
+}
+
+*+.spacing--100mx {
+	margin-top: .1em;
+}
+
+*+.spacing--200mx {
+	margin-top: .2em;
+}
+
+*+.spacing--300mx {
+	margin-top: .3em;
+}
+
+*+.spacing--400mx {
+	margin-top: .4em;
+}
+
+*+.spacing--500mx {
+	margin-top: .5em;
+}
+
+*+.spacing--600mx {
+	margin-top: .6em;
+}
+
+*+.spacing--700mx {
+	margin-top: .7em;
+}
+
+*+.spacing--800mx {
+	margin-top: .8em;
+}
+
+*+.spacing--900mx {
+	margin-top: .9em;
+}
+
+*+.spacing--1000mx {
+	margin-top: 1em;
+}
+
+*+.spacing--1100mx {
+	margin-top: 1.1em;
+}
+
+*+.spacing--1200mx {
+	margin-top: 1.2em;
+}
+
+*+.spacing--1300mx {
+	margin-top: 1.3em;
+}
+
+*+.spacing--1400mx {
+	margin-top: 1.4em;
+}
+
+*+.spacing--1500mx {
+	margin-top: 1.5em;
+}
+
+*+.spacing--1600mx {
+	margin-top: 1.6em;
+}
+
+*+.spacing--1700mx {
+	margin-top: 1.7em;
+}
+
+*+.spacing--1800mx {
+	margin-top: 1.8em;
+}
+
+*+.spacing--1900mx {
+	margin-top: 1.9em;
+}
+
+*+.spacing--2000mx {
+	margin-top: 2em;
 }
 
 /*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -7020,13 +7600,13 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 .qtip-titlebar:after {
-	content: "";
-	position: absolute;
-	top: 2px;
-	right: 2px;
-	width: 16px;
-	height: 16px;
 	background: url('/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_	16x16.png') center/auto 16px no-repeat;
+	content: "";
+	height: 16px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 16px;
 }
 
 .page.has-short-main-header .main-header {
@@ -7055,22 +7635,22 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 .row.halves.article-header .column.one {
-	position: absolute;
-	right: 40%;
-	left: 0;
-	width: auto;
-	height: 100%;
-	padding-left: 0;
-	padding-right: 0;
 	background: #5e6a71;
 	background: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.4) 50%,rgba(0,0,0,.1)), linear-gradient(to right,#5e6a71,#5e6a71);
+	height: 100%;
+	left: 0;
+	padding-left: 0;
+	padding-right: 0;
+	position: absolute;
+	right: 40%;
+	width: auto;
 }
 
 .row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
-	position: absolute;
-	top: 50%;
-	right: 2rem;
 	left: 2rem;
+	position: absolute;
+	right: 2rem;
+	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -7081,24 +7661,24 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 .row.halves.article-header .column.one h1 {
-	margin: 0;
 	color: #fff;
 	line-height: .95em;
+	margin: 0;
 	text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
 }
 
 .row.halves.article-header .column.one h1+.subtitle {
 	color: #fff;
 	font-size: 1.25em;
-	line-height: 1.1em;
 	font-weight: 700;
-	text-transform: uppercase;
+	line-height: 1.1em;
 	text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+	text-transform: uppercase;
 }
 
 .row.halves.article-header .column.one .parent-page {
-	margin-bottom: .125em;
 	color: #eff0f1;
+	margin-bottom: .125em;
 }
 
 .row.halves.article-header .column.one>:not(:first-child):not(header:first-child+*) {
@@ -7110,15 +7690,15 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 .row.halves.article-header .column.two {
-	position: absolute;
-	right: 0;
-	left: 60%;
-	width: auto;
-	height: 100%;
-	margin-top: 0 !important;
 	background-color: #8d959a;
 	background-position: center center;
 	background-size: cover;
+	height: 100%;
+	left: 60%;
+	margin-top: 0 !important;
+	position: absolute;
+	right: 0;
+	width: auto;
 }
 
 .row.single.article-header {
@@ -7126,41 +7706,41 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 }
 
 .row.single.article-header .column {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 	background-color: #8d959a;
 	background-position: center center;
 	background-size: cover;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .row.single.article-header .column.show-header>header {
-	box-sizing: border-box;
-	position: absolute;
-	left: 0;
 	bottom: 0;
-	width: 100%;
+	box-sizing: border-box;
+	left: 0;
 	padding: 2rem 2rem 0;
+	position: absolute;
+	width: 100%;
 }
 
 .row.single.article-header .column.show-header>header>* {
-	color: #fff;
-	padding: .25em;
-	margin: 0;
-	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
 	background-color: rgba(0,0,0,.75);
+	color: #fff;
+	margin: 0;
+	padding: .25em;
+	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
 }
 
 .row.single.article-header .column.show-header>header>* .subtitle {
+	background-color: rgba(0,0,0,.75);
 	display: block;
 	font-size: .5em;
-	padding: .25em;
-	margin-top: .25em;
 	line-height: 1.1em;
+	margin-top: .25em;
+	padding: .25em;
 	text-transform: none;
-	background-color: rgba(0,0,0,.75);
 }
 
 .column a.glass-button,.column a.recommend-button {
@@ -7251,40 +7831,40 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 
 .column table.award-recipients {
 	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
+	border-bottom: 1px solid #5e6a71;
 	border-collapse: separate;
 	border-spacing: 0;
 	border-top: 1px solid #5e6a71;
-	border-bottom: 1px solid #5e6a71;
-	line-height: 1.375em;
+	line-height: 1.5em;
 }
 
 .column table.award-recipients thead tr th {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
-	border-top: 1px solid #fff;
 	border-bottom: 1px solid #b6bcbf;
+	border-top: 1px solid #fff;
+	padding-bottom: .25rem;
+	padding-left: .25rem;
+	padding-top: .25rem;
 	text-align: inherit;
 }
 
 .column table.award-recipients tbody tr td {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
 	background-color: #fff;
-	border-top: 1px solid #eff0f1;
 	border-bottom: 1px solid #d7dadb;
+	border-top: 1px solid #eff0f1;
+	padding-bottom: .25rem;
+	padding-left: .25rem;
+	padding-top: .25rem;
 	text-align: inherit;
 	vertical-align: top;
 }
 
 .column table.award-recipients tbody:nth-of-type(2n) tr td {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
 	background-color: #eff0f1;
-	border-top: 1px solid #fff;
 	border-bottom: 1px solid #b5babe;
+	border-top: 1px solid #fff;
+	padding-bottom: .25rem;
+	padding-left: .25rem;
+	padding-top: .25rem;
 	text-align: inherit;
 	vertical-align: top;
 }
@@ -7960,59 +8540,60 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 
 #on-this-page h2 {
 	color: #fff;
-	padding-left: 2rem;
 	font-size: 1.7rem;
 	margin-bottom: 1rem;
+	padding-left: 2rem;
 }
 
 #on-this-page ul {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	border-top: 1px solid #2f3438;
-	border-left: 1px solid #2f3438;
 	background-color: inherit;
+	border-left: 1px solid #2f3438;
+	border-top: 1px solid #2f3438;
 	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
 }
 
 #on-this-page li {
 	float: left;
-	margin-top: 0 !important;
 	list-style-image: none;
+	margin-top: 0 !important;
 	padding: 0;
 }
 
 #on-this-page li a {
-	display: inline-block;
 	color: #fff;
-	text-align: center;
-	padding: 14px 16px;
-	border-right: 1px solid #2f3438;
+	background-color: #464e54;
 	border-bottom: 1px solid #2f3438;
 	border-radius: 0;
-	background-color: #464e54;
+	border-right: 1px solid #2f3438;
 	box-shadow: none;
+	display: inline-block;
+	padding: 14px 16px;
+	text-align: center;
 }
 
 #on-this-page li a:hover {
-	border-color: #2f3438;
 	background-color: #23272a;
+	border-color: #2f3438;
 	text-shadow: none;
 }
 
 .back-to-otp {
+	font-size: .9em !important;
 	position: relative;
 	padding-left: 1rem;
-	font-size: .9em !important;
 }
 
 .back-to-otp:before {
+	background: url('/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-	cw_54x64.png') center center/auto 100% no-repeat;
 	content: "";
+	height: .9rem;
+	left: -1rem;
+	left: calc(-1rem - 3px);
 	position: absolute;
 	width: 1rem;
-	left: -3px;
-	height: .9rem;
-	background: url('/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-	cw_54x64.png') center center/auto 100% no-repeat;
 }
 
 /*!    ··························································································
@@ -8147,7 +8728,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		width: 33.3333%;
 	}
 	
-	body:not(.use-a11y-styles) section.row.side-right .column.one h2.fancy,body:not(.use-a11y-styles) section.row.side-right .column.one h3.fancy,body:not(.use-a11y-styles) section.side-right .column.one h2.fancy,body:not(.use-a11y-styles) section.side-right .column.one h3.fancy {
+	section.row.side-right .column.one h2.fancy,section.row.side-right .column.one h3.fancy,section.side-right .column.one h2.fancy,section.side-right .column.one h3.fancy {
 		margin-right: 0;
 	}
 	
@@ -8257,8 +8838,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	header.main-header .header-group.centered {
-		width: 100%;
 		left: 50%;
+		width: 100%;
 		-webkit-transform: translateX(-50%);
 		-moz-transform: translateX(-50%);
 		transform: translateX(-50%);
@@ -8310,24 +8891,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (min-width:1073px) {
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.82352941em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 2.07058824em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .88298006em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.6em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.31764706em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -8622,19 +9187,19 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.column p.vpue-jump-bar.floating:after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		bottom: 0;
-		width: 0;
-		height: 0;
-		border-top: 5px solid #2a3033;
-		border-right: 5px solid transparent;
 		border-bottom: 5px solid transparent;
 		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #2a3033;
+		bottom: 0;
+		content: "";
+		height: 0;
+		left: 50%;
+		position: absolute;
 		-webkit-transform: translate(-50%,0);
 		-moz-transform: translate(-50%,0);
 		transform: translate(-50%,0);
+		width: 0;
 	}
 	
 	.column p.vpue-jump-bar.floating:hover {
@@ -8644,10 +9209,10 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.column p.vpue-jump-bar.floating:hover:after {
-		border-top: 5px solid transparent;
-		border-right: 5px solid transparent;
 		border-bottom: 5px solid #2a3033;
 		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid transparent;
 		-webkit-transform: translate(-50%,-5px);
 		-moz-transform: translate(-50%,-5px);
 		transform: translate(-50%,-5px);
@@ -8788,7 +9353,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		margin-bottom: 6%;
 	}
 	
-	div.recent-updates {
+	.recent-updates {
 		height: 7em;
 	}
 	
@@ -8822,8 +9387,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.row.halves.article-header .column.one,.row.halves.article-header .column.two {
-		float: left;
 		clear: none;
+		float: left;
 	}
 	
 	.row.has-linked-columns:not(.gutter) .column:not(:first-child) {
@@ -9059,8 +9624,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.row.halves.article-header .column.two {
-		left: 0;
 		height: 50%;
+		left: 0;
 		top: 0;
 	}
 	
@@ -9133,24 +9698,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		text-align: left;
 	}
 	
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.48426541em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 1.82179464em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .72871785em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.4077504em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.15932386em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -9475,24 +10024,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		max-width: 800px;
 	}
 	
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.82352941em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 2.07058824em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .88298006em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.6em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.31764706em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -9512,8 +10045,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	header.main-header .header-group.centered {
-		width: 100%;
 		left: 50%;
+		width: 100%;
 		-webkit-transform: translateX(-50%);
 		-moz-transform: translateX(-50%);
 		transform: translateX(-50%);
@@ -9724,24 +10257,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.82352941em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 2.07058824em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .82823529em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.6em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.31764706em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -9910,24 +10427,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (min-width:481px) and (max-width:791px) {
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.82352941em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 2.07058824em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .82823529em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.6em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.31764706em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -10096,24 +10597,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 
 @media all and (min-width:361px) and (max-width:480px) {
-	body:not(.use-a11y-styles) .column h1 {
-		font-size: 2.64847059em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		font-size: 1.94221176em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
+	.column h2.article-title {
 		font-size: .77688471em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		font-size: 1.5008em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		font-size: 1.23595294em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -10369,24 +10854,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		text-shadow: 0 .3333px 0 #77898b, 0 .6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px .3333px rgba(0,0,0,.1), 0 0 1.6667px rgba(0,0,0,.1), 0 .3333px 1px rgba(0,0,0,.3), 0 1px 1.6667px rgba(0,0,0,.2), 0 1.6667px 3.3333px rgba(0,0,0,.25), 0 3.3333px 3.3333px rgba(0,0,0,.2), 0 6.6667px 6.6667px rgba(0,0,0,.15);
 	}
 	
-	body:not(.use-a11y-styles) .column h1 {
+	.column h2.article-title {
 		line-height: 1.1em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2 {
-		line-height: 1.1em;
-	}
-	
-	body:not(.use-a11y-styles) .column h2.article-title {
-		line-height: 1.1em;
-	}
-	
-	body:not(.use-a11y-styles) .column h3,body:not(.use-a11y-styles) .gform_heading h3.gform_title {
-		line-height: 1.1em;
-	}
-	
-	body:not(.use-a11y-styles) .column h4 {
-		line-height: 1.2em;
 	}
 	
 	.column header.article-header h1.article-title,.column header.article-header h2.article-title {
@@ -10402,131 +10871,131 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.column p.banner-text {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.column p.banner-text-orange-with-towers {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-deck {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-deck {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column p.article-deck,.row.side-left .column p.article-deck,.row.side-right .column p.article-deck {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column p.article-deck,.row.thirds .column p.article-deck {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-tagline {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column p.article-tagline,.row.side-left .column p.article-tagline,.row.side-right .column p.article-tagline {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column p.article-tagline,.row.thirds .column p.article-tagline {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-tagline.home {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column p.article-tagline.home,.row.side-left .column p.article-tagline.home,.row.side-right .column p.article-tagline.home {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column p.article-tagline.home,.row.thirds .column p.article-tagline.home {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.vpue-jump-back {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column p.vpue-jump-back,.row.side-left .column p.vpue-jump-back,.row.side-right .column p.vpue-jump-back {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column p.vpue-jump-back,.row.thirds .column p.vpue-jump-back {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column p.article-media-contacts {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column p.article-media-contacts,.row.side-left .column p.article-media-contacts,.row.side-right .column p.article-media-contacts {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column p.article-media-contacts,.row.thirds .column p.article-media-contacts {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column ul {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column ul {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column ul,.row.side-left .column ul,.row.side-right .column ul {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column ul,.row.thirds .column ul {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	ul.application-steps>li p,ul.content-boxes>li p {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single:not(.mimic-multi-column-sections) .column ol {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.single.mimic-two-column-sections .column ol {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.halves .column ol,.row.side-left .column ol,.row.side-right .column ol {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.row.quarters .column ol,.row.thirds .column ol {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.column dl.faq dt {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.column dl.faq>.collapse-all-button,.column dl.faq>.expand-all-button {
@@ -10546,11 +11015,11 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 	}
 	
 	.column .gform_wrapper {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.column aside {
-		line-height: 1.375em;
+		line-height: 1.5em;
 	}
 	
 	.column ol.massie-project>li>img {
