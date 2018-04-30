@@ -6817,8 +6817,10 @@ a.vpue-tooltip span b {
   -moz-transition: all .25s ease;
   transition: all .25s ease;
 }
-.column a.non-text-link:hover::before {
+.column a.non-text-link:hover {
   background-color: transparent;
+}
+.column a.non-text-link:hover::before {
   opacity: 1;
 }
 .column a.non-text-link:hover img {
