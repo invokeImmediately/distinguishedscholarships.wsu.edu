@@ -6812,14 +6812,14 @@ a.vpue-tooltip span b {
 /*    ----------------------------------------------------------------------------------------------
 **    §5: In-focus hyperlinks
 */
-a:focus {
+body.user-is-tabbing a:focus {
   border: 2px dotted white;
   outline: 2px dotted blue;
 }
-.column a:focus {
+body.user-is-tabbing .column a:focus {
   position: relative;
 }
-.column a:focus::after {
+body.user-is-tabbing .column a:focus::after {
   border: 9px solid transparent;
   border-left-color: blue;
   content: "";
