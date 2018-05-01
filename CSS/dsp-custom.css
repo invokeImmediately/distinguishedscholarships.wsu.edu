@@ -5497,12 +5497,26 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 .column .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.9);
 }
+.column .builder-banner-slide > a,
+.column .builder-banner-slide > .builder-banner-content {
+  bottom: 0;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+}
+.column .builder-banner-slide > a {
+  border: none;
+}
+.column .builder-banner-slide > a > .builder-banner-content {
+  padding-bottom: 0;
+}
+.column .builder-slide > a {
+  height: auto;
+}
 .column .builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
   font-size: inherit;
   line-height: inherit;
-  position: absolute;
   width: 100%;
 }
 .column .builder-banner-inner-content p {
@@ -9402,67 +9416,67 @@ div.auto-scroller ul li {
 /*    ----------------------------------------------------------------------------------------------
 **     OUE UTILITY CLASSES §2: Spacing
 */
-* + .spacing--0mx {
+.column * + .spacing--0mx {
   margin-top: 0em;
 }
-* + .spacing--100mx {
+.column * + .spacing--100mx {
   margin-top: 0.1em;
 }
-* + .spacing--200mx {
+.column * + .spacing--200mx {
   margin-top: 0.2em;
 }
-* + .spacing--300mx {
+.column * + .spacing--300mx {
   margin-top: 0.3em;
 }
-* + .spacing--400mx {
+.column * + .spacing--400mx {
   margin-top: 0.4em;
 }
-* + .spacing--500mx {
+.column * + .spacing--500mx {
   margin-top: 0.5em;
 }
-* + .spacing--600mx {
+.column * + .spacing--600mx {
   margin-top: 0.6em;
 }
-* + .spacing--700mx {
+.column * + .spacing--700mx {
   margin-top: 0.7em;
 }
-* + .spacing--800mx {
+.column * + .spacing--800mx {
   margin-top: 0.8em;
 }
-* + .spacing--900mx {
+.column * + .spacing--900mx {
   margin-top: 0.9em;
 }
-* + .spacing--1000mx {
+.column * + .spacing--1000mx {
   margin-top: 1em;
 }
-* + .spacing--1100mx {
+.column * + .spacing--1100mx {
   margin-top: 1.1em;
 }
-* + .spacing--1200mx {
+.column * + .spacing--1200mx {
   margin-top: 1.2em;
 }
-* + .spacing--1300mx {
+.column * + .spacing--1300mx {
   margin-top: 1.3em;
 }
-* + .spacing--1400mx {
+.column * + .spacing--1400mx {
   margin-top: 1.4em;
 }
-* + .spacing--1500mx {
+.column * + .spacing--1500mx {
   margin-top: 1.5em;
 }
-* + .spacing--1600mx {
+.column * + .spacing--1600mx {
   margin-top: 1.6em;
 }
-* + .spacing--1700mx {
+.column * + .spacing--1700mx {
   margin-top: 1.7em;
 }
-* + .spacing--1800mx {
+.column * + .spacing--1800mx {
   margin-top: 1.8em;
 }
-* + .spacing--1900mx {
+.column * + .spacing--1900mx {
   margin-top: 1.9em;
 }
-* + .spacing--2000mx {
+.column * + .spacing--2000mx {
   margin-top: 2em;
 }
 /*    ----------------------------------------------------------------------------------------------
