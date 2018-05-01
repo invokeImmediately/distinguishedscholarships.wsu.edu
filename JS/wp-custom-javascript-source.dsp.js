@@ -551,6 +551,7 @@ $( function () {
 	}
 
 	function addTabPressListener(listenerCallback) {
+		console.log( "addTabPressListener was called." );
 		window.addEventListener("keydown", listenerCallback);
 	}
 
@@ -720,6 +721,7 @@ $( function () {
 	}
 	
 	function handleTabPressForA11y( e ) {
+		console.log( "handleTabPressForA11y was called." );
 		if (e.keyCode === 9) {
 			$( "body" ).addClass( "user-is-tabbing" )
 			window.removeEventListener( "keydown", handleTabPressForA11y )
