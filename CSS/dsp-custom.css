@@ -10667,7 +10667,7 @@ span.has-tooltip:hover:after {
   bottom: 2px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.025) 50%, transparent 50%, returned-3 50%, returned-4);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.025) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25));
 }
 .column a.recommend-button.crimson,
 .column a.glass-button.crimson {
