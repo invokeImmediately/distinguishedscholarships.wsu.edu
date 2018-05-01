@@ -6815,6 +6815,8 @@ a.vpue-tooltip span b {
 a:focus {
   border: 2px dotted white;
   outline: 2px dotted blue;
+}
+.column a:focus {
   position: relative;
 }
 .column a:focus::after {
