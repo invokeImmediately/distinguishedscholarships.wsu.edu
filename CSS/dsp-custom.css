@@ -5507,10 +5507,13 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 .column .builder-banner-slide > a {
   border: none;
 }
+.column .builder-banner-slide > a:focus {
+  position: absolute;
+}
 .column .builder-banner-slide > a > .builder-banner-content {
   padding-bottom: 0;
 }
-.column .builder-slide > a {
+.column .builder-banner-slide > a {
   height: auto;
 }
 .column .builder-banner-inner-content {
