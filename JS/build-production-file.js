@@ -11,7 +11,7 @@ concat([
  '../../jquery.AreYouSure/jquery.are-you-sure.js',
  '../WSU-UE---JS/jQuery.are-you-sure.js',
  '../WSU-UE---JS/jquery.media.js',
- '../../qTip2/jquery.qtip.min.js',
+ '../../qTip2/dist/jquery.qtip.min.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.textResize.js',
  '../../imagesloaded/imagesloaded.pkgd.min.js',
