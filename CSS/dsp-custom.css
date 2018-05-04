@@ -657,20 +657,24 @@ img.shift-to-center,
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE UTILITY MIXINS §1: Margins...........................................................33
-**        >>> §1.1: In units of "em"...........................................................37
-**        >>> §1.2: In units of "rem".........................................................130
-**    §2: Spacing.............................................................................267
-**        >>> §2.1: In units of "em"..........................................................271
-**        >>> §2.2: In units of "rem".........................................................306
-**    §3: Typography..........................................................................361
-**        >>> §3.1: Typograhy: Font Sizing....................................................365
-**        >>> §3.2: Line heights..............................................................568
-**        >>> §3.3: Bolding...................................................................633
+**    §1: Width................................................................................33
+**    §2: Margins..............................................................................33
+**        >>> §2.1: In units of "em"...........................................................37
+**        >>> §2.2: In units of "rem".........................................................130
+**    §3: Spacing.............................................................................267
+**        >>> §3.1: In units of "em"..........................................................271
+**        >>> §3.2: In units of "rem".........................................................306
+**    §4: Typography..........................................................................361
+**        >>> §4.1: Typograhy: Font Sizing....................................................365
+**        >>> §4.2: Line heights..............................................................568
+**        >>> §4.3: Bolding...................................................................633
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
-**    OUE UTILITY MIXINS §1: Margins
+**    §1: Width
+*/
+/*    ----------------------------------------------------------------------------------------------
+**    §1: Margins
 */
 /*      ····························································································
 **      >>> §1.1: In units of "em"
@@ -679,7 +683,7 @@ img.shift-to-center,
 **      >>> §1.2: In units of "rem"
 */
 /*    ----------------------------------------------------------------------------------------------
-**    OUE UTILITY MIXINS §2: Spacing
+**    §2: Spacing
 */
 /*      ····························································································
 **      >>> §2.1: In units of "em"
@@ -688,7 +692,7 @@ img.shift-to-center,
 **      >>> §2.2: In units of "rem"
 */
 /*    ----------------------------------------------------------------------------------------------
-**    OUE UTILITY MIXINS §3: Typography
+**    §3: Typography
 */
 /*      ····························································································
 **      >>> §3.1: Font Sizing
@@ -1101,67 +1105,67 @@ html {
 **  SEMANTIC CSS FOR STYLING OUE ARTICLE ELEMENTS
 */
 .column article.post {
-  padding: 1em;
+  background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3333);
   border-radius: 5px;
-  background-color: #fff;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+  padding: 1em;
 }
 .column article.post + article.post {
   margin-top: 1.5em;
 }
-.row.h1-header.new-article-section {
+.row.h1-header .new-article-section {
   padding: 1rem;
 }
-.row.h1-header.new-article-section h1,
-.row.h1-header.new-article-section h2,
-.row.h1-header.new-article-section h3,
-.row.h1-header.new-article-section h4,
-.row.h1-header.new-article-section h5,
-.row.h1-header.new-article-section h6 {
-  padding: 0;
-  margin: 0;
+.row.h1-header .new-article-section h1,
+.row.h1-header .new-article-section h2,
+.row.h1-header .new-article-section h3,
+.row.h1-header .new-article-section h4,
+.row.h1-header .new-article-section h5,
+.row.h1-header .new-article-section h6 {
   color: inherit;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
-.row.side-right .column.one.new-article-section header {
-  padding: 1rem 2rem;
+.row.side-right .column.one .new-article-section header {
   margin-bottom: 2rem;
   margin-left: -2rem;
-}
-.row.side-right .column.two.new-article-section header {
   padding: 1rem 2rem;
-  margin-right: -2.01rem;
-  margin-bottom: 2rem;
 }
-.row.side-right .column.one.new-article-section header,
-.row.side-right .column.two.new-article-section header {
+.row.side-right .column.two .new-article-section header {
+  margin-bottom: 2rem;
+  margin-right: -2.01rem;
+  padding: 1rem 2rem;
+}
+.row.side-right .column.one .new-article-section header,
+.row.side-right .column.two .new-article-section header {
   background-color: #2f3438;
   color: #fff;
 }
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-  .row.side-right .column.one.new-article-section header,
-  .row.side-right .column.two.new-article-section header {
-    padding-right: 1rem;
+  .row.side-right .column.one .new-article-section header,
+  .row.side-right .column.two .new-article-section header {
     padding-left: 1rem;
-    margin-right: -1rem;
+    padding-right: 1rem;
     margin-left: -1rem;
+    margin-right: -1rem;
   }
 }
 @media only screen and (max-width: 360px) {
-  .row.side-right .column.one.new-article-section header,
-  .row.side-right .column.two.new-article-section header {
-    padding-right: 0.5rem;
+  .row.side-right .column.one .new-article-section header,
+  .row.side-right .column.two .new-article-section header {
     padding-left: 0.5rem;
-    margin-right: -0.5rem;
+    padding-right: 0.5rem;
     margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 }
-.row.side-right .column.one.new-article-section header > *,
-.row.side-right .column.two.new-article-section header > * {
-  padding: 0;
-  margin: 0;
+.row.side-right .column.one .new-article-section header > *,
+.row.side-right .column.two .new-article-section header > * {
   color: inherit;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 /*!   ----------------------------------------------------------------------------------------------
@@ -6358,7 +6362,7 @@ div.page-covering-notice-js div.notice-content p + p {
   margin-top: 1em !important;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
- */
+*/
 /*!     ····························································································
 ***     >>> §4.3.6: Recent updates
 **/
@@ -9056,20 +9060,84 @@ div.auto-scroller ul li {
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE UTILITY CLASSES §1: Typography.......................................................30
+**    §1: Widths...............................................................................30
+**    §2: Typography...........................................................................30
 **        >>> §1.1: Font Sizing................................................................34
 **        >>> §1.2: Line Heights..............................................................180
 **        >>> §1.3: Bolding...................................................................226
 **        >>> §1.4: Text transformation.......................................................255
-**    §2: Spacing.............................................................................266
-**    §3: Floating............................................................................289
+**    §3: Spacing.............................................................................266
+**    §4: Floating............................................................................289
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
-**     OUE UTILITY CLASSES §1: Typography
+**    §1: Widths
+*/
+.width--5pct {
+  width: 5%;
+}
+.width--10pct {
+  width: 10%;
+}
+.width--15pct {
+  width: 15%;
+}
+.width--20pct {
+  width: 20%;
+}
+.width--25pct {
+  width: 25%;
+}
+.width--30pct {
+  width: 30%;
+}
+.width--35pct {
+  width: 35%;
+}
+.width--40pct {
+  width: 40%;
+}
+.width--45pct {
+  width: 45%;
+}
+.width--50pct {
+  width: 50%;
+}
+.width--55pct {
+  width: 55%;
+}
+.width--60pct {
+  width: 60%;
+}
+.width--65pct {
+  width: 65%;
+}
+.width--70pct {
+  width: 70%;
+}
+.width--75pct {
+  width: 75%;
+}
+.width--80pct {
+  width: 80%;
+}
+.width--85pct {
+  width: 85%;
+}
+.width--90pct {
+  width: 90%;
+}
+.width--95pct {
+  width: 95%;
+}
+.width--100pct {
+  width: 100%;
+}
+/*    ----------------------------------------------------------------------------------------------
+**    §2: Typography
 */
 /*      ····························································································
-**      >>> §1.1: Typograhy: Font Sizing
+**      >>> §2.1: Typograhy: Font Sizing
 ** 
 **      NOTES:
 **      • Units of "mx" stand for "milli-fold" and function similar to magnification units. Thus, 
@@ -9341,7 +9409,7 @@ div.auto-scroller ul li {
   font-size: 1.4em;
 }
 /*!     ····························································································
-***     >>> §1.2: Typograhy: Line heights
+***     >>> §2.2: Typograhy: Line heights
 ***
 ***     NOTES:
 ***     * See line 24 for explanation of "mx" units.
@@ -9412,7 +9480,7 @@ div.auto-scroller ul li {
   line-height: 1.5em;
 }
 /*!     ····························································································
-***     >>> §1.3: Typograhy: Bolding
+***     >>> §2.3: Typograhy: Bolding
 **/
 .font-weight--light {
   font-weight: 300;
@@ -9430,7 +9498,7 @@ div.auto-scroller ul li {
   font-weight: 800;
 }
 /*!     ····························································································
-***     >>> §1.4: Typograhy: Text transformation
+***     >>> §2.4: Typograhy: Text transformation
 **/
 .text-transform--none {
   text-transform: none;
@@ -9439,7 +9507,7 @@ div.auto-scroller ul li {
   text-transform: uppercase;
 }
 /*    ----------------------------------------------------------------------------------------------
-**     OUE UTILITY CLASSES §2: Spacing
+**    §3: Spacing
 */
 .column * + .spacing--0mx {
   margin-top: 0em;
@@ -9505,7 +9573,7 @@ div.auto-scroller ul li {
   margin-top: 2em;
 }
 /*    ----------------------------------------------------------------------------------------------
-**     OUE UTILITY CLASSES §3: Floating
+**    §4: Floating
 */
 .float--none {
   float: none;
