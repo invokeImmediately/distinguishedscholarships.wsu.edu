@@ -16,6 +16,7 @@ gulp.task( 'buildMinCss', function () {
 		.pipe( lessc( {
 			paths: ['./WSU-UE---CSS/']
 		} ) )
+		.pipe( replace( /^ (?! )/gm, '' ) )
 		.pipe( gulp.dest( './CSS/' ) )
 		.pipe( gcmq() )
 		.pipe( insertLines( {
