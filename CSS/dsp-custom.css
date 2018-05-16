@@ -6269,18 +6269,6 @@ a.non-text-link {
 /*    ----------------------------------------------------------------------------------------------
 **    §7: Special cases for hyperlinks
 */
-.column h1 a,
-.column h2 a,
-.column h3 a,
-.column h4 a,
-.column h5 a,
-.column h6 a,
-.gform_heading h3.gform_title a {
-  border-bottom: 1px solid transparent;
-  box-shadow: none;
-  line-height: 1.4em;
-  line-height: calc(1.4em + 1px);
-}
 .column h1 a:not(.non-text-link),
 .column h2 a:not(.non-text-link),
 .column h3 a:not(.non-text-link),
@@ -6288,15 +6276,19 @@ a.non-text-link {
 .column h5 a:not(.non-text-link),
 .column h6 a:not(.non-text-link),
 .gform_heading h3.gform_title a:not(.non-text-link) {
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  line-height: 1.4em;
+  line-height: calc(1.4em + 1px);
   text-decoration: underline;
 }
-.column h1 a:hover,
-.column h2 a:hover,
-.column h3 a:hover,
-.column h4 a:hover,
-.column h5 a:hover,
-.column h6 a:hover,
-.gform_heading h3.gform_title a:hover {
+.column h1 a:not(.non-text-link):hover,
+.column h2 a:not(.non-text-link):hover,
+.column h3 a:not(.non-text-link):hover,
+.column h4 a:not(.non-text-link):hover,
+.column h5 a:not(.non-text-link):hover,
+.column h6 a:not(.non-text-link):hover,
+.gform_heading h3.gform_title a:not(.non-text-link):hover {
   border-bottom: 1px solid #981e32;
   text-decoration: none;
 }
