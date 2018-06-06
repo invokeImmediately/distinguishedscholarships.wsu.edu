@@ -33,12 +33,6 @@
 ***     associated with dynamic behaviors to the DOM tree.
 *** ================================================================================================
 **/
-/*! ================================================================================================
-*** OUE-MASTER §1:  Global Less variables and Less mixins/utility classes
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.1: Additional fonts
-**/
 .has-mono-font {
 	font-family: 'Roboto Mono', monospace, sans-serif;
 	font-weight: 300;
@@ -64,15 +58,6 @@
 	font-family: 'PT Serif', Palatino, serif;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.2: Color variables and mixins
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.3: All other Less variables
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.4: Miscellaneous mixins
-**/
 .column .initially-hidden,.initially-hidden {
 	display: none;
 }
@@ -411,12 +396,6 @@
 	border: 1px solid rgba(42,48,51,.5);
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.5: Utility mixins
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §1.6: Animation utility classes
-**/
 .fade-in-from-top {
 	opacity: 0;
 	-webkit-animation: anim-fade-in-from-top 1s linear 1;
@@ -678,9 +657,6 @@
 	}
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §2: Anchor pseudoclass
-**/
 :target:not(.no-anchor-highlighting) {
 	position: relative;
 }
@@ -824,28 +800,16 @@
 	visibility: visible;
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §3: Document section nodes
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.1: HTML element
-**/
 html {
 	font-size: 106.25%;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.2: Body element
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.3: Article elements
-**/
 .column article.post {
-	padding: 1em;
+	background-color: #fff;
 	border: 1px solid rgba(0,0,0,.3333);
 	border-radius: 5px;
-	background-color: #fff;
 	box-shadow: 1px 2px 3px rgba(0,0,0,.25);
+	padding: 1em;
 }
 
 .column article.post+article.post {
@@ -857,22 +821,22 @@ html {
 }
 
 .row.h1-header.new-article-section h1,.row.h1-header.new-article-section h2,.row.h1-header.new-article-section h3,.row.h1-header.new-article-section h4,.row.h1-header.new-article-section h5,.row.h1-header.new-article-section h6 {
-	padding: 0;
-	margin: 0;
 	color: inherit;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 
 .row.side-right .column.one.new-article-section header {
-	padding: 1rem 2rem;
 	margin-bottom: 2rem;
 	margin-left: -2rem;
+	padding: 1rem 2rem;
 }
 
 .row.side-right .column.two.new-article-section header {
-	padding: 1rem 2rem;
-	margin-right: -2.01rem;
 	margin-bottom: 2rem;
+	margin-right: -2.01rem;
+	padding: 1rem 2rem;
 }
 
 .row.side-right .column.one.new-article-section header,.row.side-right .column.two.new-article-section header {
@@ -881,15 +845,12 @@ html {
 }
 
 .row.side-right .column.one.new-article-section header>*,.row.side-right .column.two.new-article-section header>* {
-	padding: 0;
-	margin: 0;
 	color: inherit;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.4: Section elements
-**/
 section.column-one-with-bottom-margin>.column.one {
 	margin-bottom: 2rem;
 }
@@ -999,9 +960,6 @@ main section.row>.column table>tbody>tr>td>div>ol:last-child,main section.row>.c
 	font-size: 1.125rem;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.5: Aside elements
-**/
 aside.shield-themed {
 	padding: .5rem;
 	border-left: 4px solid #8d959a;
@@ -1193,9 +1151,6 @@ body.blog .article-summary aside {
 	display: none;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.6: Heading elements
-**/
 .column h1 {
 	font-weight: 700;
 }
@@ -1540,19 +1495,6 @@ h1,h2,h3 {
 	text-transform: uppercase;
 }
 
-.column h1>a,.column h2>a,.column h3>a,.column h4>a,.column h5>a,.column h6>a,.gform_heading h3.gform_title>a {
-	border-bottom: 1px solid transparent;
-	box-shadow: none;
-	line-height: 1.4em;
-	line-height: calc(1.4em + 1px);
-	text-decoration: underline;
-}
-
-.column h1>a:hover,.column h2>a:hover,.column h3>a:hover,.column h4>a:hover,.column h5>a:hover,.column h6>a:hover,.gform_heading h3.gform_title>a:hover {
-	border-bottom: 1px solid #981e32;
-	text-decoration: none;
-}
-
 /*!Example from SASS:
 ** .person { }
 **  .person__face {
@@ -1566,19 +1508,10 @@ h1,h2,h3 {
 	line-height: 1.375em;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §3.7: Footer elements
-**/
 footer.article-footer div.author-info {
 	display: none;
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §4: Content grouping nodes
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §4.1: Paragraph elements
-**/
 .column p.no-bottom-pad {
 	padding-bottom: 0 !important;
 }
@@ -1888,734 +1821,8 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 	padding-top: 15px;
 }
 
-p.p--pTop-1 {
-	padding-top: 0;
-}
-
-p.p--pRgt-1 {
-	padding-right: 0;
-}
-
-p.p--pBtm-1 {
-	padding-bottom: 0;
-}
-
-p.p--pLft-1 {
-	padding-left: 0;
-}
-
-p.p--pTop-2 {
-	padding-top: .125em;
-}
-
-p.p--pRgt-2 {
-	padding-right: .125em;
-}
-
-p.p--pBtm-2 {
-	padding-bottom: .125em;
-}
-
-p.p--pLft-2 {
-	padding-left: .125em;
-}
-
-p.p--pTop-3 {
-	padding-top: .25em;
-}
-
-p.p--pRgt-3 {
-	padding-right: .25em;
-}
-
-p.p--pBtm-3 {
-	padding-bottom: .25em;
-}
-
-p.p--pLft-3 {
-	padding-left: .25em;
-}
-
-p.p--pTop-4 {
-	padding-top: .375em;
-}
-
-p.p--pRgt-4 {
-	padding-right: .375em;
-}
-
-p.p--pBtm-4 {
-	padding-bottom: .375em;
-}
-
-p.p--pLft-4 {
-	padding-left: .375em;
-}
-
-p.p--pTop-5 {
-	padding-top: .5em;
-}
-
-p.p--pRgt-5 {
-	padding-right: .5em;
-}
-
-p.p--pBtm-5 {
-	padding-bottom: .5em;
-}
-
-p.p--pLft-5 {
-	padding-left: .5em;
-}
-
-p.p--pTop-6 {
-	padding-top: .625em;
-}
-
-p.p--pRgt-6 {
-	padding-right: .625em;
-}
-
-p.p--pBtm-6 {
-	padding-bottom: .625em;
-}
-
-p.p--pLft-6 {
-	padding-left: .625em;
-}
-
-p.p--pTop-7 {
-	padding-top: .75em;
-}
-
-p.p--pRgt-7 {
-	padding-right: .75em;
-}
-
-p.p--pBtm-7 {
-	padding-bottom: .75em;
-}
-
-p.p--pLft-7 {
-	padding-left: .75em;
-}
-
-p.p--pTop-8 {
-	padding-top: .875em;
-}
-
-p.p--pRgt-8 {
-	padding-right: .875em;
-}
-
-p.p--pBtm-8 {
-	padding-bottom: .875em;
-}
-
-p.p--pLft-8 {
-	padding-left: .875em;
-}
-
-p.p--pTop-9 {
-	padding-top: 1em;
-}
-
-p.p--pRgt-9 {
-	padding-right: 1em;
-}
-
-p.p--pBtm-9 {
-	padding-bottom: 1em;
-}
-
-p.p--pLft-9 {
-	padding-left: 1em;
-}
-
-p.p--pTop-10 {
-	padding-top: 1.125em;
-}
-
-p.p--pRgt-10 {
-	padding-right: 1.125em;
-}
-
-p.p--pBtm-10 {
-	padding-bottom: 1.125em;
-}
-
-p.p--pLft-10 {
-	padding-left: 1.125em;
-}
-
-p.p--pTop-11 {
-	padding-top: 1.25em;
-}
-
-p.p--pRgt-11 {
-	padding-right: 1.25em;
-}
-
-p.p--pBtm-11 {
-	padding-bottom: 1.25em;
-}
-
-p.p--pLft-11 {
-	padding-left: 1.25em;
-}
-
-p.p--pTop-12 {
-	padding-top: 1.375em;
-}
-
-p.p--pRgt-12 {
-	padding-right: 1.375em;
-}
-
-p.p--pBtm-12 {
-	padding-bottom: 1.375em;
-}
-
-p.p--pLft-12 {
-	padding-left: 1.375em;
-}
-
-p.p--pTop-13 {
-	padding-top: 1.5em;
-}
-
-p.p--pRgt-13 {
-	padding-right: 1.5em;
-}
-
-p.p--pBtm-13 {
-	padding-bottom: 1.5em;
-}
-
-p.p--pLft-13 {
-	padding-left: 1.5em;
-}
-
-p.p--pTop-14 {
-	padding-top: 1.625em;
-}
-
-p.p--pRgt-14 {
-	padding-right: 1.625em;
-}
-
-p.p--pBtm-14 {
-	padding-bottom: 1.625em;
-}
-
-p.p--pLft-14 {
-	padding-left: 1.625em;
-}
-
-p.p--pTop-15 {
-	padding-top: 1.75em;
-}
-
-p.p--pRgt-15 {
-	padding-right: 1.75em;
-}
-
-p.p--pBtm-15 {
-	padding-bottom: 1.75em;
-}
-
-p.p--pLft-15 {
-	padding-left: 1.75em;
-}
-
-p.p--pTop-16 {
-	padding-top: 1.875em;
-}
-
-p.p--pRgt-16 {
-	padding-right: 1.875em;
-}
-
-p.p--pBtm-16 {
-	padding-bottom: 1.875em;
-}
-
-p.p--pLft-16 {
-	padding-left: 1.875em;
-}
-
-p.p--pTop-17 {
-	padding-top: 2em;
-}
-
-p.p--pRgt-17 {
-	padding-right: 2em;
-}
-
-p.p--pBtm-17 {
-	padding-bottom: 2em;
-}
-
-p.p--pLft-17 {
-	padding-left: 2em;
-}
-
-p.p--mTop-1 {
-	margin-top: 0;
-}
-
-p.p--mRgt-1 {
-	margin-right: 0;
-}
-
-p.p--mBtm-1 {
-	margin-bottom: 0;
-}
-
-p.p--mLft-1 {
-	margin-left: 0;
-}
-
-p.p--mTop-2 {
-	margin-top: .125em;
-}
-
-p.p--mRgt-2 {
-	margin-right: .125em;
-}
-
-p.p--mBtm-2 {
-	margin-bottom: .125em;
-}
-
-p.p--mLft-2 {
-	margin-left: .125em;
-}
-
-p.p--mTop-3 {
-	margin-top: .25em;
-}
-
-p.p--mRgt-3 {
-	margin-right: .25em;
-}
-
-p.p--mBtm-3 {
-	margin-bottom: .25em;
-}
-
-p.p--mLft-3 {
-	margin-left: .25em;
-}
-
-p.p--mTop-4 {
-	margin-top: .375em;
-}
-
-p.p--mRgt-4 {
-	margin-right: .375em;
-}
-
-p.p--mBtm-4 {
-	margin-bottom: .375em;
-}
-
-p.p--mLft-4 {
-	margin-left: .375em;
-}
-
-p.p--mTop-5 {
-	margin-top: .5em;
-}
-
-p.p--mRgt-5 {
-	margin-right: .5em;
-}
-
-p.p--mBtm-5 {
-	margin-bottom: .5em;
-}
-
-p.p--mLft-5 {
-	margin-left: .5em;
-}
-
-p.p--mTop-6 {
-	margin-top: .625em;
-}
-
-p.p--mRgt-6 {
-	margin-right: .625em;
-}
-
-p.p--mBtm-6 {
-	margin-bottom: .625em;
-}
-
-p.p--mLft-6 {
-	margin-left: .625em;
-}
-
-p.p--mTop-7 {
-	margin-top: .75em;
-}
-
-p.p--mRgt-7 {
-	margin-right: .75em;
-}
-
-p.p--mBtm-7 {
-	margin-bottom: .75em;
-}
-
-p.p--mLft-7 {
-	margin-left: .75em;
-}
-
-p.p--mTop-8 {
-	margin-top: .875em;
-}
-
-p.p--mRgt-8 {
-	margin-right: .875em;
-}
-
-p.p--mBtm-8 {
-	margin-bottom: .875em;
-}
-
-p.p--mLft-8 {
-	margin-left: .875em;
-}
-
-p.p--mTop-9 {
-	margin-top: 1em;
-}
-
-p.p--mRgt-9 {
-	margin-right: 1em;
-}
-
-p.p--mBtm-9 {
-	margin-bottom: 1em;
-}
-
-p.p--mLft-9 {
-	margin-left: 1em;
-}
-
-p.p--mTop-10 {
-	margin-top: 1.125em;
-}
-
-p.p--mRgt-10 {
-	margin-right: 1.125em;
-}
-
-p.p--mBtm-10 {
-	margin-bottom: 1.125em;
-}
-
-p.p--mLft-10 {
-	margin-left: 1.125em;
-}
-
-p.p--mTop-11 {
-	margin-top: 1.25em;
-}
-
-p.p--mRgt-11 {
-	margin-right: 1.25em;
-}
-
-p.p--mBtm-11 {
-	margin-bottom: 1.25em;
-}
-
-p.p--mLft-11 {
-	margin-left: 1.25em;
-}
-
-p.p--mTop-12 {
-	margin-top: 1.375em;
-}
-
-p.p--mRgt-12 {
-	margin-right: 1.375em;
-}
-
-p.p--mBtm-12 {
-	margin-bottom: 1.375em;
-}
-
-p.p--mLft-12 {
-	margin-left: 1.375em;
-}
-
-p.p--mTop-13 {
-	margin-top: 1.5em;
-}
-
-p.p--mRgt-13 {
-	margin-right: 1.5em;
-}
-
-p.p--mBtm-13 {
-	margin-bottom: 1.5em;
-}
-
-p.p--mLft-13 {
-	margin-left: 1.5em;
-}
-
-p.p--mTop-14 {
-	margin-top: 1.625em;
-}
-
-p.p--mRgt-14 {
-	margin-right: 1.625em;
-}
-
-p.p--mBtm-14 {
-	margin-bottom: 1.625em;
-}
-
-p.p--mLft-14 {
-	margin-left: 1.625em;
-}
-
-p.p--mTop-15 {
-	margin-top: 1.75em;
-}
-
-p.p--mRgt-15 {
-	margin-right: 1.75em;
-}
-
-p.p--mBtm-15 {
-	margin-bottom: 1.75em;
-}
-
-p.p--mLft-15 {
-	margin-left: 1.75em;
-}
-
-p.p--mTop-16 {
-	margin-top: 1.875em;
-}
-
-p.p--mRgt-16 {
-	margin-right: 1.875em;
-}
-
-p.p--mBtm-16 {
-	margin-bottom: 1.875em;
-}
-
-p.p--mLft-16 {
-	margin-left: 1.875em;
-}
-
-p.p--mTop-17 {
-	margin-top: 2em;
-}
-
-p.p--mRgt-17 {
-	margin-right: 2em;
-}
-
-p.p--mBtm-17 {
-	margin-bottom: 2em;
-}
-
-p.p--mLft-17 {
-	margin-left: 2em;
-}
-
 /*!     ····························································································
-***     >>> §3.2: Typograhy: Font Sizing
-**/
-p.p--fSize-1 {
-	font-size: .75em;
-}
-
-p.p--fSize-2 {
-	font-size: .78125em;
-}
-
-p.p--fSize-3 {
-	font-size: .8125em;
-}
-
-p.p--fSize-4 {
-	font-size: .84375em;
-}
-
-p.p--fSize-5 {
-	font-size: .875em;
-}
-
-p.p--fSize-6 {
-	font-size: .90625em;
-}
-
-p.p--fSize-7 {
-	font-size: .9375em;
-}
-
-p.p--fSize-8 {
-	font-size: .96875em;
-}
-
-p.p--fSize-9 {
-	font-size: 1em;
-}
-
-p.p--fSize-10 {
-	font-size: 1.03125em;
-}
-
-p.p--fSize-11 {
-	font-size: 1.0625em;
-}
-
-p.p--fSize-12 {
-	font-size: 1.09375em;
-}
-
-p.p--fSize-13 {
-	font-size: 1.125em;
-}
-
-p.p--fSize-14 {
-	font-size: 1.15625em;
-}
-
-p.p--fSize-15 {
-	font-size: 1.1875em;
-}
-
-p.p--fSize-16 {
-	font-size: 1.21875em;
-}
-
-p.p--fSize-17 {
-	font-size: 1.25em;
-}
-
-p.p--fSize-18 {
-	font-size: 1.28125em;
-}
-
-p.p--fSize-19 {
-	font-size: 1.3125em;
-}
-
-p.p--fSize-20 {
-	font-size: 1.34375em;
-}
-
-p.p--fSize-21 {
-	font-size: 1.375em;
-}
-
-p.p--fSize-22 {
-	font-size: 1.40625em;
-}
-
-p.p--fSize-23 {
-	font-size: 1.4375em;
-}
-
-p.p--fSize-24 {
-	font-size: 1.46875em;
-}
-
-p.p--fSize-25 {
-	font-size: 1.5em;
-}
-
-p.p--fSize-26 {
-	font-size: 1.53125em;
-}
-
-p.p--fSize-27 {
-	font-size: 1.5625em;
-}
-
-p.p--fSize-28 {
-	font-size: 1.59375em;
-}
-
-p.p--fSize-29 {
-	font-size: 1.625em;
-}
-
-p.p--fSize-30 {
-	font-size: 1.65625em;
-}
-
-p.p--fSize-31 {
-	font-size: 1.6875em;
-}
-
-p.p--fSize-32 {
-	font-size: 1.71875em;
-}
-
-p.p--fSize-33 {
-	font-size: 1.75em;
-}
-
-p.p--fSize-34 {
-	font-size: 1.78125em;
-}
-
-p.p--fSize-35 {
-	font-size: 1.8125em;
-}
-
-p.p--fSize-36 {
-	font-size: 1.84375em;
-}
-
-p.p--fSize-37 {
-	font-size: 1.875em;
-}
-
-p.p--fSize-38 {
-	font-size: 1.90625em;
-}
-
-p.p--fSize-39 {
-	font-size: 1.9375em;
-}
-
-p.p--fSize-40 {
-	font-size: 1.96875em;
-}
-
-p.p--fSize-41 {
-	font-size: 2em;
-}
-
-/*!     ····························································································
-***     >>> §3.3: Typography: Line-Heights
-**/
-p.p--lHeight-1 {
-	line-height: 1.25em;
-}
-
-p.p--lHeight-2 {
-	line-height: 1.375em;
-}
-
-p.p--lHeight-3 {
-	line-height: 1.5em;
-}
-
-/*!     ····························································································
-***     >>> §3.4: Style Defaults
+***     >>> §3.1: Style Defaults
 **/
 p {
 	font-size: 1em;
@@ -2624,13 +1831,14 @@ p {
 	padding: 0;
 }
 
+p~p {
+	padding-bottom: 0;
+}
+
 .column *+p {
 	margin-top: 1em;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §4.2: List elements
-**/
 /*!   ----------------------------------------------------------------------------------------------
 ***   OUE-LISTS §1: List elements
 **/
@@ -2925,12 +2133,6 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	right: 0;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §4.3: Div elements
-**/
-/*!     ····························································································
-***     >>> §4.3.1: News posts
-**/
 .article-body {
 	position: relative;
 	line-height: 1.5em;
@@ -3024,9 +2226,6 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 	margin-bottom: 1rem;
 }
 
-/*!     ····························································································
-***     >>> §4.3.2: Banner slideshows
-**/
 .column .builder-banner-content {
 	border: 0;
 	font-size: 1.5rem;
@@ -3108,9 +2307,6 @@ body.page:not(.uses-default-syndicate-plugin-layout) .column .wsuwp-content-synd
 	display: none;
 }
 
-/*!     ····························································································
-***     >>> §4.3.3: Columns
-**/
 section.pad-top div.column.half-pad,section.pad-top.half-pad {
 	padding-top: 1rem;
 }
@@ -3352,9 +2548,6 @@ div.callout.top:after,span.callout.top:after {
 	border-top: 11px solid #f1d031;
 }
 
-/*!     ····························································································
-***     >>> §4.3.4: Flippable content panels
-**/
 .interactively-flipped-panels {
 	position: relative;
 	top: 0;
@@ -3572,10 +2765,7 @@ div.callout.top:after,span.callout.top:after {
 	transition: width linear .25s, padding linear .25s;
 }
 
-/*!     ····························································································
-***     >>> §4.3.5: Page covering notices
-**/
-div.page-covering-notice-css3 {
+.page-covering-notice-css3 {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -3591,7 +2781,7 @@ div.page-covering-notice-css3 {
 	-webkit-animation-duration: 4.9s;
 }
 
-div.page-covering-notice-css3 div.notice-content {
+.page-covering-notice-css3 .notice-content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -3599,11 +2789,11 @@ div.page-covering-notice-css3 div.notice-content {
 	transform: translate(-50%,-50%);
 }
 
-div.page-covering-notice-css3 div.notice-content img {
+.page-covering-notice-css3 .notice-content img {
 	margin: 0 auto 20px;
 }
 
-div.page-covering-notice-css3 div.notice-content p {
+.page-covering-notice-css3 .notice-content p {
 	font-size: 2rem;
 	line-height: 1.35em;
 }
@@ -3652,7 +2842,7 @@ div.page-covering-notice-css3 div.notice-content p {
 	}
 }
 
-div.page-covering-notice-js {
+.page-covering-notice-js {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -3664,11 +2854,11 @@ div.page-covering-notice-js {
 	text-align: center;
 }
 
-div.page-covering-notice-js.left-aligned {
+.page-covering-notice-js.left-aligned {
 	text-align: left;
 }
 
-div.page-covering-notice-js div.notice-content {
+.page-covering-notice-js .notice-content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -3680,23 +2870,20 @@ div.page-covering-notice-js div.notice-content {
 	transform: translate(-50%,-50%);
 }
 
-div.page-covering-notice-js div.notice-content img {
+.page-covering-notice-js .notice-content img {
 	margin: 0 auto 20px;
 }
 
-div.page-covering-notice-js div.notice-content p {
+.page-covering-notice-js .notice-content p {
 	font-size: 2rem !important;
 	line-height: 1.275em !important;
 	text-align: inherit !important;
 }
 
-div.page-covering-notice-js div.notice-content p+p {
+.page-covering-notice-js .notice-content p+p {
 	margin-top: 1em !important;
 }
 
-/*!     ····························································································
-***     >>> §4.3.6: Recent updates
-**/
 .has-recent-updates {
 	background-color: #eff0f1;
 	margin-bottom: 2rem;
@@ -3940,31 +3127,14 @@ div.page-covering-notice-js div.notice-content p+p {
 	}
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §4.4: Main element
-**/
-/*! ================================================================================================
-*** OUE-MASTER §5: Text-level nodes
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §5.1: Hyperlink elements
-**/
 .column a.pop-out-link {
 	-webkit-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
 	-moz-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
 	transition: color .4s linear, background .4s ease-in, font-size .25s linear;
 }
 
-.column a.pop-out-link.subtle-link {
-	border-bottom: .0625em solid rgba(152,30,50,0);
-	box-shadow: inset 0 -.3125em 0 rgba(152,30,50,0);
-}
-
 .column a.pop-out-link:hover {
-	background-color: rgba(211,130,53,.1);
 	font-size: 1.05em;
-	line-height: calc(1.05em * 1.05);
-	color: #f6861f;
 }
 
 .column a.learn-more {
@@ -4147,7 +3317,6 @@ body.user-is-tabbing .column a:focus::after {
 .column a.non-text-link {
 	border: none;
 	box-shadow: none;
-	display: inline-block;
 	position: relative;
 }
 
@@ -4187,9 +3356,23 @@ body.user-is-tabbing .column a:focus::after {
 	box-shadow: 0 3px #f45372;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §5.2: Strong elements
-**/
+a.non-text-link {
+	display: inline-block;
+}
+
+.column h1 a:not(.non-text-link),.column h2 a:not(.non-text-link),.column h3 a:not(.non-text-link),.column h4 a:not(.non-text-link),.column h5 a:not(.non-text-link),.column h6 a:not(.non-text-link),.gform_heading h3.gform_title a:not(.non-text-link) {
+	border-bottom: 1px solid transparent;
+	box-shadow: none;
+	line-height: 1.4em;
+	line-height: calc(1.4em + 1px);
+	text-decoration: underline;
+}
+
+.column h1 a:not(.non-text-link):hover,.column h2 a:not(.non-text-link):hover,.column h3 a:not(.non-text-link):hover,.column h4 a:not(.non-text-link):hover,.column h5 a:not(.non-text-link):hover,.column h6 a:not(.non-text-link):hover,.gform_heading h3.gform_title a:not(.non-text-link):hover {
+	border-bottom: 1px solid #981e32;
+	text-decoration: none;
+}
+
 strong.opening-line {
 	font-size: 1.0625em;
 	color: #72652a;
@@ -4201,18 +3384,12 @@ strong.stands-out {
 	font-size: 1.2em;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §5.3: Mark elements
-**/
 mark.highlight {
 	background-color: transparent;
 	font-style: normal;
 	color: #aec7cb;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §5.4: Span elements
-**/
 span.accentuated-text {
 	font-weight: 700;
 	font-size: 1.3em;
@@ -4255,19 +3432,10 @@ span.has-tool-tip:hover,span.has-tooltip:hover {
 	color: #2f5055;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §5.5: Cite elements
-**/
 cite.article-author {
 	display: none;
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §6: Embedded content nodes
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §6.1: Image elements
-**/
 img {
 	height: auto;
 }
@@ -4646,9 +3814,6 @@ figure figcaption {
 	text-align: center;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §6.2: Iframe elements
-**/
 .column .pdf-wrapper,.column .video-wrapper,.column .youtube-wrapper {
 	position: relative;
 	width: 100%;
@@ -4682,9 +3847,6 @@ figure figcaption {
 	padding-bottom: 56.25%;
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §7: Tabular data nodes
-**/
 .column table.plain {
 	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
 	border-collapse: separate;
@@ -4872,9 +4034,6 @@ figure figcaption {
 	vertical-align: top;
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §8: Form nodes
-**/
 input.read-more-state {
 	display: none;
 }
@@ -5294,12 +4453,6 @@ div.read-more-target {
 	}
 }
 
-/*! ================================================================================================
-*** OUE-MASTER §9: Scripted elements
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.1: Toggled drop-down panels
-**/
 .drop-down-toggle {
 	position: relative;
 	-webkit-transition: all .3s ease;
@@ -5511,20 +4664,11 @@ div.read-more-target {
 	opacity: 0 !important;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.2: Subtle panels
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.3: Flippable content panels
-**/
 .flipped-content-back {
 	display: none;
 	width: 100%;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.4: QTip driven tooltips
-**/
 .is-qtip {
 	display: none;
 }
@@ -6025,9 +5169,724 @@ div.read-more-target {
 	position: absolute !important;
 }
 
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.5: Cycle-driven photo slideshows
+div.auto-scroller {
+	position: relative;
+}
+
+div.auto-scroller .inner-scroll-area {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+div.auto-scroller ul {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+div.auto-scroller ul li {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+.width--5pct {
+	width: 5%;
+}
+
+.width--10pct {
+	width: 10%;
+}
+
+.width--15pct {
+	width: 15%;
+}
+
+.width--20pct {
+	width: 20%;
+}
+
+.width--25pct {
+	width: 25%;
+}
+
+.width--30pct {
+	width: 30%;
+}
+
+.width--35pct {
+	width: 35%;
+}
+
+.width--40pct {
+	width: 40%;
+}
+
+.width--45pct {
+	width: 45%;
+}
+
+.width--50pct {
+	width: 50%;
+}
+
+.width--55pct {
+	width: 55%;
+}
+
+.width--60pct {
+	width: 60%;
+}
+
+.width--65pct {
+	width: 65%;
+}
+
+.width--70pct {
+	width: 70%;
+}
+
+.width--75pct {
+	width: 75%;
+}
+
+.width--80pct {
+	width: 80%;
+}
+
+.width--85pct {
+	width: 85%;
+}
+
+.width--90pct {
+	width: 90%;
+}
+
+.width--95pct {
+	width: 95%;
+}
+
+.width--100pct {
+	width: 100%;
+}
+
+.max-width--none {
+	max-width: none;
+}
+
+.font-size--400mx {
+	font-size: .4em;
+}
+
+.font-size--500mx {
+	font-size: .5em;
+}
+
+.font-size--600mx {
+	font-size: .6em;
+}
+
+.font-size--700mx {
+	font-size: .7em;
+}
+
+.font-size--800mx {
+	font-size: .8em;
+}
+
+.font-size--900mx {
+	font-size: .9em;
+}
+
+.font-size--1000mx {
+	font-size: 1em;
+}
+
+.font-size--1100mx {
+	font-size: 1.1em;
+}
+
+.font-size--1200mx {
+	font-size: 1.2em;
+}
+
+.font-size--1300mx {
+	font-size: 1.3em;
+}
+
+.font-size--1400mx {
+	font-size: 1.4em;
+}
+
+.font-size--1500mx {
+	font-size: 1.5em;
+}
+
+.font-size--1600mx {
+	font-size: 1.6em;
+}
+
+.font-size--1700mx {
+	font-size: 1.7em;
+}
+
+.font-size--1800mx {
+	font-size: 1.8em;
+}
+
+.font-size--1900mx {
+	font-size: 1.9em;
+}
+
+.font-size--2000mx {
+	font-size: 2em;
+}
+
+.font-size--2100mx {
+	font-size: 2.1em;
+}
+
+.font-size--2200mx {
+	font-size: 2.2em;
+}
+
+.font-size--2300mx {
+	font-size: 2.3em;
+}
+
+.font-size--2400mx {
+	font-size: 2.4em;
+}
+
+.h1-text-size {
+	font-size: 2.4em;
+}
+
+.h2-text-size {
+	font-size: 2.1em;
+}
+
+.h3-text-size {
+	font-size: 1.8em;
+}
+
+.h4-text-size {
+	font-size: 1.6em;
+}
+
+.h5-text-size {
+	font-size: 1.5em;
+}
+
+.h6-text-size {
+	font-size: 1.4em;
+}
+
+/*!     ····························································································
+***     >>> §2.2: Typograhy: Line heights
+***
+***     NOTES:
+***     * See line 24 for explanation of "mx" units.
+***     * Depends on the utiltiy mixin .set-lHeight(...) and the Less variable @lHeight-array, 
+***       which are both defined in utility-mixins.less.
 **/
+.line-height--1000mx {
+	line-height: 1em;
+}
+
+.line-height--1025mx {
+	line-height: 1.025em;
+}
+
+.line-height--1050mx {
+	line-height: 1.05em;
+}
+
+.line-height--1075mx {
+	line-height: 1.075em;
+}
+
+.line-height--1100mx {
+	line-height: 1.1em;
+}
+
+.line-height--1125mx {
+	line-height: 1.125em;
+}
+
+.line-height--1150mx {
+	line-height: 1.15em;
+}
+
+.line-height--1175mx {
+	line-height: 1.175em;
+}
+
+.line-height--1200mx {
+	line-height: 1.2em;
+}
+
+.line-height--1225mx {
+	line-height: 1.225em;
+}
+
+.line-height--1250mx {
+	line-height: 1.25em;
+}
+
+.line-height--1275mx {
+	line-height: 1.275em;
+}
+
+.line-height--1300mx {
+	line-height: 1.3em;
+}
+
+.line-height--1325mx {
+	line-height: 1.325em;
+}
+
+.line-height--1350mx {
+	line-height: 1.35em;
+}
+
+.line-height--1375mx {
+	line-height: 1.375em;
+}
+
+.line-height--1400mx {
+	line-height: 1.4em;
+}
+
+.line-height--1425mx {
+	line-height: 1.425em;
+}
+
+.line-height--1450mx {
+	line-height: 1.45em;
+}
+
+.line-height--1475mx {
+	line-height: 1.475em;
+}
+
+.line-height--1500mx {
+	line-height: 1.5em;
+}
+
+/*!     ····························································································
+***     >>> §2.3: Typograhy: Bolding
+**/
+.font-weight--light {
+	font-weight: 300;
+}
+
+.font-weight--normal {
+	font-weight: 400;
+}
+
+.font-weight--semi-bold {
+	font-weight: 600;
+}
+
+.font-weight--bold {
+	font-weight: 700;
+}
+
+.font-weight--extra-bold {
+	font-weight: 800;
+}
+
+/*!     ····························································································
+***     >>> §2.4: Typograhy: Text transformation
+**/
+.text-transform--none {
+	text-transform: none;
+}
+
+.text-transform--uppercase {
+	text-transform: uppercase;
+}
+
+.column *+.spacing--0mx {
+	margin-top: 0;
+}
+
+.column *+.spacing--250mx {
+	margin-top: .25em;
+}
+
+.column *+.spacing--500mx {
+	margin-top: .5em;
+}
+
+.column *+.spacing--750mx {
+	margin-top: .75em;
+}
+
+.column *+.spacing--1000mx {
+	margin-top: 1em;
+}
+
+.column *+.spacing--1250mx {
+	margin-top: 1.25em;
+}
+
+.column *+.spacing--1500mx {
+	margin-top: 1.5em;
+}
+
+.column *+.spacing--1750mx {
+	margin-top: 1.75em;
+}
+
+.column *+.spacing--2000mx {
+	margin-top: 2em;
+}
+
+.column *+.spacing--2250mx {
+	margin-top: 2.25em;
+}
+
+.column *+.spacing--2500mx {
+	margin-top: 2.5em;
+}
+
+.column *+.spacing--2750mx {
+	margin-top: 2.75em;
+}
+
+.column *+.spacing--3000mx {
+	margin-top: 3em;
+}
+
+.column *+.spacing--3250mx {
+	margin-top: 3.25em;
+}
+
+.column *+.spacing--3500mx {
+	margin-top: 3.5em;
+}
+
+.column *+.spacing--3750mx {
+	margin-top: 3.75em;
+}
+
+.column *+.spacing--4000mx {
+	margin-top: 4em;
+}
+
+.float--none {
+	float: none;
+}
+
+.float--right {
+	float: right;
+}
+
+.float--left {
+	float: left;
+}
+
+.display--block {
+	display: block;
+}
+
+.display--inline {
+	display: inline;
+}
+
+.display--inline-block {
+	display: inline-block;
+}
+
+.display--none {
+	display: none;
+}
+
+.margin-bottom--0mx {
+	margin-bottom: 0;
+}
+
+.margin-left--0mx {
+	margin-left: 0;
+}
+
+.margin-right--0mx {
+	margin-right: 0;
+}
+
+.margin-top--0mx {
+	margin-top: 0;
+}
+
+.margin-bottom--250mx {
+	margin-bottom: .25em;
+}
+
+.margin-left--250mx {
+	margin-left: .25em;
+}
+
+.margin-right--250mx {
+	margin-right: .25em;
+}
+
+.margin-top--250mx {
+	margin-top: .25em;
+}
+
+.margin-bottom--500mx {
+	margin-bottom: .5em;
+}
+
+.margin-left--500mx {
+	margin-left: .5em;
+}
+
+.margin-right--500mx {
+	margin-right: .5em;
+}
+
+.margin-top--500mx {
+	margin-top: .5em;
+}
+
+.margin-bottom--750mx {
+	margin-bottom: .75em;
+}
+
+.margin-left--750mx {
+	margin-left: .75em;
+}
+
+.margin-right--750mx {
+	margin-right: .75em;
+}
+
+.margin-top--750mx {
+	margin-top: .75em;
+}
+
+.margin-bottom--1000mx {
+	margin-bottom: 1em;
+}
+
+.margin-left--1000mx {
+	margin-left: 1em;
+}
+
+.margin-right--1000mx {
+	margin-right: 1em;
+}
+
+.margin-top--1000mx {
+	margin-top: 1em;
+}
+
+.margin-bottom--1250mx {
+	margin-bottom: 1.25em;
+}
+
+.margin-left--1250mx {
+	margin-left: 1.25em;
+}
+
+.margin-right--1250mx {
+	margin-right: 1.25em;
+}
+
+.margin-top--1250mx {
+	margin-top: 1.25em;
+}
+
+.margin-bottom--1500mx {
+	margin-bottom: 1.5em;
+}
+
+.margin-left--1500mx {
+	margin-left: 1.5em;
+}
+
+.margin-right--1500mx {
+	margin-right: 1.5em;
+}
+
+.margin-top--1500mx {
+	margin-top: 1.5em;
+}
+
+.margin-bottom--1750mx {
+	margin-bottom: 1.75em;
+}
+
+.margin-left--1750mx {
+	margin-left: 1.75em;
+}
+
+.margin-right--1750mx {
+	margin-right: 1.75em;
+}
+
+.margin-top--1750mx {
+	margin-top: 1.75em;
+}
+
+.margin-bottom--2000mx {
+	margin-bottom: 2em;
+}
+
+.margin-left--2000mx {
+	margin-left: 2em;
+}
+
+.margin-right--2000mx {
+	margin-right: 2em;
+}
+
+.margin-top--2000mx {
+	margin-top: 2em;
+}
+
+.margin-bottom--2250mx {
+	margin-bottom: 2.25em;
+}
+
+.margin-left--2250mx {
+	margin-left: 2.25em;
+}
+
+.margin-right--2250mx {
+	margin-right: 2.25em;
+}
+
+.margin-top--2250mx {
+	margin-top: 2.25em;
+}
+
+.margin-bottom--2500mx {
+	margin-bottom: 2.5em;
+}
+
+.margin-left--2500mx {
+	margin-left: 2.5em;
+}
+
+.margin-right--2500mx {
+	margin-right: 2.5em;
+}
+
+.margin-top--2500mx {
+	margin-top: 2.5em;
+}
+
+.margin-bottom--2750mx {
+	margin-bottom: 2.75em;
+}
+
+.margin-left--2750mx {
+	margin-left: 2.75em;
+}
+
+.margin-right--2750mx {
+	margin-right: 2.75em;
+}
+
+.margin-top--2750mx {
+	margin-top: 2.75em;
+}
+
+.margin-bottom--3000mx {
+	margin-bottom: 3em;
+}
+
+.margin-left--3000mx {
+	margin-left: 3em;
+}
+
+.margin-right--3000mx {
+	margin-right: 3em;
+}
+
+.margin-top--3000mx {
+	margin-top: 3em;
+}
+
+.margin-bottom--3250mx {
+	margin-bottom: 3.25em;
+}
+
+.margin-left--3250mx {
+	margin-left: 3.25em;
+}
+
+.margin-right--3250mx {
+	margin-right: 3.25em;
+}
+
+.margin-top--3250mx {
+	margin-top: 3.25em;
+}
+
+.margin-bottom--3500mx {
+	margin-bottom: 3.5em;
+}
+
+.margin-left--3500mx {
+	margin-left: 3.5em;
+}
+
+.margin-right--3500mx {
+	margin-right: 3.5em;
+}
+
+.margin-top--3500mx {
+	margin-top: 3.5em;
+}
+
+.margin-bottom--3750mx {
+	margin-bottom: 3.75em;
+}
+
+.margin-left--3750mx {
+	margin-left: 3.75em;
+}
+
+.margin-right--3750mx {
+	margin-right: 3.75em;
+}
+
+.margin-top--3750mx {
+	margin-top: 3.75em;
+}
+
+.margin-bottom--4000mx {
+	margin-bottom: 4em;
+}
+
+.margin-left--4000mx {
+	margin-left: 4em;
+}
+
+.margin-right--4000mx {
+	margin-right: 4em;
+}
+
+.margin-top--4000mx {
+	margin-top: 4em;
+}
+
+.margin--centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .cycle2-slideshow,.cycle2-slideshow * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -6182,619 +6041,6 @@ div.read-more-target {
 	right: 10px;
 	border-radius: 10px;
 	opacity: .5;
-}
-
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.6: Quick-tabs panels
-**/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.7: Trive Events Calendars
-**/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!   ----------------------------------------------------------------------------------------------
-***   >>> §9.8: Auto-scrolling image panels
-**/
-div.auto-scroller {
-	position: relative;
-}
-
-div.auto-scroller .inner-scroll-area {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-}
-
-div.auto-scroller ul {
-	position: relative;
-	padding: 0;
-	margin: 0;
-}
-
-div.auto-scroller ul li {
-	position: absolute;
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-/*! ================================================================================================
-*** OUE-MASTER §10: Utility classes
-**/
-.font-size--400mx {
-	font-size: .4em;
-}
-
-.font-size--425mx {
-	font-size: .425em;
-}
-
-.font-size--450mx {
-	font-size: .45em;
-}
-
-.font-size--475mx {
-	font-size: .475em;
-}
-
-.font-size--500mx {
-	font-size: .5em;
-}
-
-.font-size--525mx {
-	font-size: .525em;
-}
-
-.font-size--550mx {
-	font-size: .55em;
-}
-
-.font-size--575mx {
-	font-size: .575em;
-}
-
-.font-size--600mx {
-	font-size: .6em;
-}
-
-.font-size--625mx {
-	font-size: .625em;
-}
-
-.font-size--650mx {
-	font-size: .65em;
-}
-
-.font-size--675mx {
-	font-size: .675em;
-}
-
-.font-size--700mx {
-	font-size: .7em;
-}
-
-.font-size--725mx {
-	font-size: .725em;
-}
-
-.font-size--750mx {
-	font-size: .75em;
-}
-
-.font-size--775mx {
-	font-size: .775em;
-}
-
-.font-size--800mx {
-	font-size: .8em;
-}
-
-.font-size--825mx {
-	font-size: .825em;
-}
-
-.font-size--850mx {
-	font-size: .85em;
-}
-
-.font-size--875mx {
-	font-size: .875em;
-}
-
-.font-size--900mx {
-	font-size: .9em;
-}
-
-.font-size--925mx {
-	font-size: .925em;
-}
-
-.font-size--950mx {
-	font-size: .95em;
-}
-
-.font-size--975mx {
-	font-size: .975em;
-}
-
-.font-size--1000mx {
-	font-size: 1em;
-}
-
-.font-size--1025mx {
-	font-size: 1.025em;
-}
-
-.font-size--1050mx {
-	font-size: 1.05em;
-}
-
-.font-size--1075mx {
-	font-size: 1.075em;
-}
-
-.font-size--1100mx {
-	font-size: 1.1em;
-}
-
-.font-size--1125mx {
-	font-size: 1.125em;
-}
-
-.font-size--1150mx {
-	font-size: 1.15em;
-}
-
-.font-size--1175mx {
-	font-size: 1.175em;
-}
-
-.font-size--1200mx {
-	font-size: 1.2em;
-}
-
-.font-size--1225mx {
-	font-size: 1.225em;
-}
-
-.font-size--1250mx {
-	font-size: 1.25em;
-}
-
-.font-size--1275mx {
-	font-size: 1.275em;
-}
-
-.font-size--1300mx {
-	font-size: 1.3em;
-}
-
-.font-size--1325mx {
-	font-size: 1.325em;
-}
-
-.font-size--1350mx {
-	font-size: 1.35em;
-}
-
-.font-size--1375mx {
-	font-size: 1.375em;
-}
-
-.font-size--1400mx {
-	font-size: 1.4em;
-}
-
-.font-size--1425mx {
-	font-size: 1.425em;
-}
-
-.font-size--1450mx {
-	font-size: 1.45em;
-}
-
-.font-size--1475mx {
-	font-size: 1.475em;
-}
-
-.font-size--1500mx {
-	font-size: 1.5em;
-}
-
-.font-size--1525mx {
-	font-size: 1.525em;
-}
-
-.font-size--1550mx {
-	font-size: 1.55em;
-}
-
-.font-size--1575mx {
-	font-size: 1.575em;
-}
-
-.font-size--1600mx {
-	font-size: 1.6em;
-}
-
-.font-size--1625mx {
-	font-size: 1.625em;
-}
-
-.font-size--1650mx {
-	font-size: 1.65em;
-}
-
-.font-size--1675mx {
-	font-size: 1.675em;
-}
-
-.font-size--1700mx {
-	font-size: 1.7em;
-}
-
-.font-size--1725mx {
-	font-size: 1.725em;
-}
-
-.font-size--1750mx {
-	font-size: 1.75em;
-}
-
-.font-size--1775mx {
-	font-size: 1.775em;
-}
-
-.font-size--1800mx {
-	font-size: 1.8em;
-}
-
-.font-size--1825mx {
-	font-size: 1.825em;
-}
-
-.font-size--1850mx {
-	font-size: 1.85em;
-}
-
-.font-size--1875mx {
-	font-size: 1.875em;
-}
-
-.font-size--1900mx {
-	font-size: 1.9em;
-}
-
-.font-size--1925mx {
-	font-size: 1.925em;
-}
-
-.font-size--1950mx {
-	font-size: 1.95em;
-}
-
-.font-size--1975mx {
-	font-size: 1.975em;
-}
-
-.font-size--2000mx {
-	font-size: 2em;
-}
-
-.font-size--2025mx {
-	font-size: 2.025em;
-}
-
-.font-size--2050mx {
-	font-size: 2.05em;
-}
-
-.font-size--2075mx {
-	font-size: 2.075em;
-}
-
-.font-size--2100mx {
-	font-size: 2.1em;
-}
-
-.font-size--2125mx {
-	font-size: 2.125em;
-}
-
-.font-size--2150mx {
-	font-size: 2.15em;
-}
-
-.font-size--2175mx {
-	font-size: 2.175em;
-}
-
-.font-size--2200mx {
-	font-size: 2.2em;
-}
-
-.font-size--2225mx {
-	font-size: 2.225em;
-}
-
-.font-size--2250mx {
-	font-size: 2.25em;
-}
-
-.font-size--2275mx {
-	font-size: 2.275em;
-}
-
-.font-size--2300mx {
-	font-size: 2.3em;
-}
-
-.font-size--2325mx {
-	font-size: 2.325em;
-}
-
-.font-size--2350mx {
-	font-size: 2.35em;
-}
-
-.font-size--2375mx {
-	font-size: 2.375em;
-}
-
-.font-size--2400mx {
-	font-size: 2.4em;
-}
-
-.h1-text-size {
-	font-size: 2.4em;
-}
-
-.h2-text-size {
-	font-size: 2.1em;
-}
-
-.h3-text-size {
-	font-size: 1.8em;
-}
-
-.h4-text-size {
-	font-size: 1.6em;
-}
-
-.h5-text-size {
-	font-size: 1.5em;
-}
-
-.h6-text-size {
-	font-size: 1.4em;
-}
-
-/*!     ····························································································
-***     >>> §1.2: Typograhy: Line heights
-***
-***     NOTES:
-***     * See line 24 for explanation of "mx" units.
-***     * Depends on the utiltiy mixin .set-lHeight(...) and the Less variable @lHeight-array, 
-***       which are both defined in utility-mixins.less.
-**/
-.line-height--1000mx {
-	line-height: 1em;
-}
-
-.line-height--1025mx {
-	line-height: 1.025em;
-}
-
-.line-height--1050mx {
-	line-height: 1.05em;
-}
-
-.line-height--1075mx {
-	line-height: 1.075em;
-}
-
-.line-height--1100mx {
-	line-height: 1.1em;
-}
-
-.line-height--1125mx {
-	line-height: 1.125em;
-}
-
-.line-height--1150mx {
-	line-height: 1.15em;
-}
-
-.line-height--1175mx {
-	line-height: 1.175em;
-}
-
-.line-height--1200mx {
-	line-height: 1.2em;
-}
-
-.line-height--1225mx {
-	line-height: 1.225em;
-}
-
-.line-height--1250mx {
-	line-height: 1.25em;
-}
-
-.line-height--1275mx {
-	line-height: 1.275em;
-}
-
-.line-height--1300mx {
-	line-height: 1.3em;
-}
-
-.line-height--1325mx {
-	line-height: 1.325em;
-}
-
-.line-height--1350mx {
-	line-height: 1.35em;
-}
-
-.line-height--1375mx {
-	line-height: 1.375em;
-}
-
-.line-height--1400mx {
-	line-height: 1.4em;
-}
-
-.line-height--1425mx {
-	line-height: 1.425em;
-}
-
-.line-height--1450mx {
-	line-height: 1.45em;
-}
-
-.line-height--1475mx {
-	line-height: 1.475em;
-}
-
-.line-height--1500mx {
-	line-height: 1.5em;
-}
-
-/*!     ····························································································
-***     >>> §1.3: Typograhy: Bolding
-**/
-.font-weight--light {
-	font-weight: 300;
-}
-
-.font-weight--normal {
-	font-weight: 400;
-}
-
-.font-weight--semi-bold {
-	font-weight: 600;
-}
-
-.font-weight--bold {
-	font-weight: 700;
-}
-
-.font-weight--extra-bold {
-	font-weight: 800;
-}
-
-/*!     ····························································································
-***     >>> §1.4: Typograhy: Text transformation
-**/
-.text-transform--none {
-	text-transform: none;
-}
-
-.text-transform--uppercase {
-	text-transform: uppercase;
-}
-
-.column *+.spacing--0mx {
-	margin-top: 0;
-}
-
-.column *+.spacing--100mx {
-	margin-top: .1em;
-}
-
-.column *+.spacing--200mx {
-	margin-top: .2em;
-}
-
-.column *+.spacing--300mx {
-	margin-top: .3em;
-}
-
-.column *+.spacing--400mx {
-	margin-top: .4em;
-}
-
-.column *+.spacing--500mx {
-	margin-top: .5em;
-}
-
-.column *+.spacing--600mx {
-	margin-top: .6em;
-}
-
-.column *+.spacing--700mx {
-	margin-top: .7em;
-}
-
-.column *+.spacing--800mx {
-	margin-top: .8em;
-}
-
-.column *+.spacing--900mx {
-	margin-top: .9em;
-}
-
-.column *+.spacing--1000mx {
-	margin-top: 1em;
-}
-
-.column *+.spacing--1100mx {
-	margin-top: 1.1em;
-}
-
-.column *+.spacing--1200mx {
-	margin-top: 1.2em;
-}
-
-.column *+.spacing--1300mx {
-	margin-top: 1.3em;
-}
-
-.column *+.spacing--1400mx {
-	margin-top: 1.4em;
-}
-
-.column *+.spacing--1500mx {
-	margin-top: 1.5em;
-}
-
-.column *+.spacing--1600mx {
-	margin-top: 1.6em;
-}
-
-.column *+.spacing--1700mx {
-	margin-top: 1.7em;
-}
-
-.column *+.spacing--1800mx {
-	margin-top: 1.8em;
-}
-
-.column *+.spacing--1900mx {
-	margin-top: 1.9em;
-}
-
-.column *+.spacing--2000mx {
-	margin-top: 2em;
-}
-
-.float--none {
-	float: none;
-}
-
-.float--right {
-	float: right;
-}
-
-.float--left {
-	float: left;
 }
 
 /*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
@@ -8556,10 +7802,10 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 #tribe-events-content.tribe-events-list .tribe-events-venue-details {
 	font-size: 1.3rem;
 	margin-top: /*! TODO: Replace with a JavaScript-based solution b/c some events lack a venue, but the plugin loads empty HTML tags regardless.
-					&:before {
-						content: "Location: ";
-						font-weight: bold;
-					}*/
+				&:before {
+					content: "Location: ";
+					font-weight: bold;
+				}*/
 0;
 }
 
@@ -9622,7 +8868,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		padding-bottom: calc((100% * .8) * 4);
 	}
 	
-	div.page-covering-notice-js div.notice-content p {
+	.page-covering-notice-js .notice-content p {
 		font-size: 1rem !important;
 	}
 	
@@ -9935,10 +9181,10 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 
 @media only screen and (max-width:360px) {
 	.row.side-right .column.one.new-article-section header,.row.side-right .column.two.new-article-section header {
-		padding-right: .5rem;
 		padding-left: .5rem;
-		margin-right: -.5rem;
+		padding-right: .5rem;
 		margin-left: -.5rem;
+		margin-right: -.5rem;
 	}
 	
 	.gutter .column:not(.gutterless),.guttered {
@@ -9998,10 +9244,10 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 
 @media only screen and (min-width:361px) and (max-width:480px) {
 	.row.side-right .column.one.new-article-section header,.row.side-right .column.two.new-article-section header {
-		padding-right: 1rem;
 		padding-left: 1rem;
-		margin-right: -1rem;
+		padding-right: 1rem;
 		margin-left: -1rem;
+		margin-right: -1rem;
 	}
 	
 	.gutter .column:not(.gutterless),.guttered {
