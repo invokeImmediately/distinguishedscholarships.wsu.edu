@@ -23,9 +23,9 @@ function getCssBuildSettings() {
 		dependenciesPath: './WSU-UE---CSS/',
 		destFolder: './CSS/',
 		minCssFileExtension: '.min.css',
-		minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Pleas\
-e see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of \
-source code. */\r\n',
+		minCssFileHeaderStr: '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please\
+ see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of s\
+ource code. */\r\n',
 		sourceFile: './CSS/dsp-custom.less'
 	};
 }
