@@ -1,37 +1,38 @@
-var compiledCssSrcFileName = 'dsp-custom.css';
-var minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */\r\n';
-var gulp = require( 'gulp' );
-var lessc = require( 'gulp-less' );
-var gcmq = require( 'gulp-group-css-media-queries' );
-var insertLines = require( 'gulp-insert-lines' );
+/* -------------------------------------------------------------------------------------------------
+** Variable Declarations
+*/
+
+// Gulp task dependencies
 var cleanCss = require( 'gulp-clean-css' );
-var insert = require( 'gulp-insert' );
-var extName = require( 'gulp-extname' );
-var compiledJsBuildName = 'dsp-custom-build.js';
-var replace = require( 'gulp-replace' );
 var concat = require( 'gulp-concat' );
+var extName = require( 'gulp-extname' );
+var gcmq = require( 'gulp-group-css-media-queries' );
+var gulp = require( 'gulp' );
+var insert = require( 'gulp-insert' );
+var insertLines = require( 'gulp-insert-lines' );
+var lessc = require( 'gulp-less' );
+var replace = require( 'gulp-replace' );
 
-gulp.task( 'buildMinCss', function () {
-	gulp.src( './CSS/*.less' )
-		.pipe( lessc( {
-			paths: ['./WSU-UE---CSS/']
-		} ) )
-		.pipe( replace( /^ (?! )/gm, '' ) )
-		.pipe( gulp.dest( './CSS/' ) )
-		.pipe( gcmq() )
-		.pipe( insertLines( {
-			'before': /^@media/,
-			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ####################################################################################################### ║\r\n*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝\r\n*/',
-			'stopAfterFirstMatch': true
-		} ) )
-		.pipe( cleanCss() )
-		.pipe( insert.prepend( minCssFileHeaderStr ) )
-		.pipe( extName( '.min.css' ) )
-		.pipe( gulp.dest( './CSS/' ) );
-} );
+/* -------------------------------------------------------------------------------------------------
+** Function declarations
+*/
 
-gulp.task( 'buildMinJs', function () {
-	gulp.src( [
+function getCssBuildSettings() {
+	return {
+		commentRemovalNeedle: /^\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
+		dependenciesPath: './WSU-UE---CSS/',
+		destFolder: './CSS/',
+		minCssFileExtension: '.min.css',
+		minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Pleas\
+e see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of \
+source code. */\r\n',
+		sourceFile: './CSS/dsp-custom.less'
+	};
+}
+
+function getJsBuildSettings() {
+	return {
+		buildDependenciesList: [
 			'./JS/dsp-custom.js',
 			'./WSU-UE---JS/jQuery.oue-custom.js',
 			'./WSU-UE---JS/jQuery.animatedCalendar.js',
@@ -48,11 +49,13 @@ gulp.task( 'buildMinJs', function () {
 			'../imagesloaded/imagesloaded.pkgd.min.js',
 			'../masonry/dist/masonry.pkgd.min.js',
 			'./WSU-UE---JS/jQuery.masonry-custom.js'
-		] )
-		.pipe( replace( /^(\/\*)(?!!)/g, fixFileHeaderComments ) )
-		.pipe( concat( compiledJsBuildName ) )
-		.pipe( gulp.dest( './JS/' ) );
-} );
+		],
+		commentNeedle: /^(\/\*)(?!!)/g,
+		compiledJsFileName: 'dsp-custom-build.js',
+		destFolder: './JS/',
+		replaceCallback: fixFileHeaderComments
+	};
+}
 
 function fixFileHeaderComments ( match, p1, offset, string ) {
 	var replacementStr = match;
@@ -61,3 +64,44 @@ function fixFileHeaderComments ( match, p1, offset, string ) {
 	}
 	return replacementStr;
 }
+
+function setUpCssBuildTask( settings ) {
+	gulp.task( 'buildMinCss', function () {
+		return gulp.src( settings.sourceFile )
+			.pipe( lessc( {
+				paths: [settings.dependenciesPath]
+			} ) )
+			.pipe( replace( settings.commentRemovalNeedle, '' ) )
+			.pipe( gulp.dest( settings.destFolder ) )
+			.pipe( gcmq() )
+			.pipe( insertLines( {
+				'before': /^@media/,
+				'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════\
+════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ##################\
+##################################################################################### ║\r\n*   ╚═══\
+═══════════════════════════════════════════════════════════════════════════════════════════════════\
+═════════════════╝\r\n*/',
+				'stopAfterFirstMatch': true
+			} ) )
+			.pipe( cleanCss() )
+			.pipe( insert.prepend( settings.minCssFileHeaderStr ) )
+			.pipe( extName( settings.minCssFileExtension ) )
+			.pipe( gulp.dest( settings.destFolder ) );
+	} );		
+}
+
+function setUpJsBuildTask( settings ) {
+	gulp.task( 'buildMinJs', function () {
+		return gulp.src( settings.buildDependenciesList )
+			.pipe( replace( settings.commentNeedle, settings.replaceCallback ) )
+			.pipe( concat( settings.compiledJsFileName ) )
+			.pipe( gulp.dest( settings.destFolder ) );
+	} );	
+}
+
+/* -------------------------------------------------------------------------------------------------
+** Main execution sequence
+*/
+
+setUpCssBuildTask( getCssBuildSettings() );
+setUpJsBuildTask( getJsBuildSettings() );
