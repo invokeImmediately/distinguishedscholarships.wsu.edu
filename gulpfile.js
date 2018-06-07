@@ -22,6 +22,15 @@ function getCssBuildSettings() {
 		commentRemovalNeedle: /^\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-UE---CSS/',
 		destFolder: './CSS/',
+		insertLinesSettings: {
+			'before': /^@media/,
+			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════\
+════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ######################\
+################################################################################# ║\r\n*   ╚═══════\
+═══════════════════════════════════════════════════════════════════════════════════════════════════\
+═════════════╝\r\n*/',
+			'stopAfterFirstMatch': true
+		},
 		minCssFileExtension: '.min.css',
 		minCssFileHeaderStr: '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please\
  see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of s\
@@ -74,15 +83,7 @@ function setUpCssBuildTask( settings ) {
 			.pipe( replace( settings.commentRemovalNeedle, '' ) )
 			.pipe( gulp.dest( settings.destFolder ) )
 			.pipe( gcmq() )
-			.pipe( insertLines( {
-				'before': /^@media/,
-				'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════\
-════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ##################\
-##################################################################################### ║\r\n*   ╚═══\
-═══════════════════════════════════════════════════════════════════════════════════════════════════\
-═════════════════╝\r\n*/',
-				'stopAfterFirstMatch': true
-			} ) )
+			.pipe( insertLines( settings.insertLinesSettings ) )
 			.pipe( cleanCss() )
 			.pipe( insert.prepend( settings.minCssFileHeaderStr ) )
 			.pipe( extName( settings.minCssFileExtension ) )
