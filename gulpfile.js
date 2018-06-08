@@ -21,7 +21,7 @@ var replace = require( 'gulp-replace' );
 
 function getCssBuildSettings() {
 	return {
-		commentRemovalNeedle: /^\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
+		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-UE---CSS/',
 		destFolder: './CSS/',
 		insertLinesSettings: {
