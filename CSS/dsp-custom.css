@@ -3682,7 +3682,7 @@ ol {
 .column dl.faq > .collapse-all-button {
   right: 0;
 }
-* + .column .div {
+.column * + div {
   margin-top: 1em;
 }
 .article-body {
