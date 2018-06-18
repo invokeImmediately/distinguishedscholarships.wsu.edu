@@ -7377,7 +7377,7 @@ div.auto-scroller ul li {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.22);
   border-radius: 4px;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
 }
 .style--card--raised {
   background-color: #ffffff;
@@ -7385,14 +7385,14 @@ div.auto-scroller ul li {
   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.22);
   border-radius: 4px;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
 }
 .style--card__title {
   background-color: #d7dadb;
   color: #2a3033;
   margin-left: -1rem;
   margin-right: -1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 .style--card__title:first-child {
   border-top-left-radius: 3px;
