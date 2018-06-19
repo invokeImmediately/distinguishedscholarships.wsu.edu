@@ -6624,6 +6624,50 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
+.style--card {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.style--card--raised {
+  background-color: #ffffff;
+  border: 1px solid #464e54;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.22);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.style--card__title {
+  background-color: #d7dadb;
+  color: #2a3033;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0.5rem 1rem;
+}
+.style--card__title:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-top: -1rem;
+}
+.style--card__sub-title {
+  background-color: #5e6a71;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  word-spacing: 1px;
+}
+.style-card__title + .style--card__sub-title {
+  margin-top: 0em;
+}
 .width--5pct {
   width: 5%;
 }
@@ -6769,7 +6813,7 @@ div.auto-scroller ul li {
   font-size: 1.4em;
 }
 /*!     ····························································································
-***     >>> §2.2: Typograhy: Line heights
+***     >>> §3.2: Typograhy: Line heights
 ***
 ***     NOTES:
 ***     * See line 24 for explanation of "mx" units.
@@ -6840,7 +6884,7 @@ div.auto-scroller ul li {
   line-height: 1.5em;
 }
 /*!     ····························································································
-***     >>> §2.3: Typograhy: Bolding
+***     >>> §3.3: Typograhy: Bolding
 **/
 .font-weight--light {
   font-weight: 300;
@@ -6858,7 +6902,7 @@ div.auto-scroller ul li {
   font-weight: 800;
 }
 /*!     ····························································································
-***     >>> §2.4: Typograhy: Text transformation
+***     >>> §3.4: Typograhy: Text transformation
 **/
 .text-transform--none {
   text-transform: none;
@@ -6867,7 +6911,7 @@ div.auto-scroller ul li {
   text-transform: uppercase;
 }
 /*!     ····························································································
-***     >>> §2.5: Typograhy: Text alignment
+***     >>> §3.5: Typograhy: Text alignment
 **/
 .text-align--center {
   text-align: center;
@@ -7208,50 +7252,6 @@ div.auto-scroller ul li {
 }
 .padding-top--2000mx {
   padding-top: 4em;
-}
-.style--card {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.22);
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 1rem;
-}
-.style--card--raised {
-  background-color: #ffffff;
-  border: 1px solid #464e54;
-  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.22);
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 1rem;
-}
-.style--card__title {
-  background-color: #d7dadb;
-  color: #2a3033;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0.5rem 1rem;
-}
-.style--card__title:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-top: -1rem;
-}
-.style--card__sub-title {
-  background-color: #5e6a71;
-  color: #ffffff;
-  font-size: 1.1em;
-  font-weight: 700;
-  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
-  margin-bottom: 0em;
-  margin-top: 0em;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  letter-spacing: 1px;
-  padding: 0.5rem 1rem;
-  word-spacing: 1px;
-}
-.style-card__title + .style--card__sub-title {
-  margin-top: 0em;
 }
 .color--gray--lightest {
   color: #eff0f1;
