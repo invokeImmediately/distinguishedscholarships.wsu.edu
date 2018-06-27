@@ -7942,7 +7942,7 @@ div.auto-scroller ul li {
 }
 main {
   background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_
-		500x500_opacity-0.5.png) left top repeat;
+500x500_opacity-0.5.png) left top repeat;
 }
 header.main-header {
   background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
@@ -8104,7 +8104,7 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
   line-height: 1em;
   color: #fff;
   background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
-				with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
+with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
@@ -8117,7 +8117,7 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
   color: #f6861f;
   background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_
-				with-drop-shadow_29x32.png);
+with-drop-shadow_29x32.png);
   z-index: 102;
   opacity: 0;
 }
@@ -8452,133 +8452,6 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
-div.calendar-legend {
-  position: absolute;
-  right: -122px;
-  width: 100px;
-  box-shadow: 2px 2px 2px rgba(194, 194, 194, 0.5);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 1rem;
-  z-index: 99164;
-}
-div.calendar-legend div.legend-title {
-  color: #981e32;
-  font-size: 0.7059em;
-  font-weight: bold;
-  margin: 10px;
-  text-align: center;
-  width: 80px;
-}
-div.calendar-legend div.legend-panel {
-  width: 70px;
-  height: 30px;
-  padding: 5px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  font-size: 0.705882em;
-  line-height: 30px;
-  text-align: center;
-  color: #fff;
-  -webkit-transition: "background .2s linear";
-  -moz-transition: "background .2s linear";
-  transition: "background .2s linear";
-}
-div.calendar-legend div.legend-panel a {
-  color: #fff;
-  border-bottom: none;
-  box-shadow: none;
-}
-div.calendar-legend div.legend-panel a:hover {
-  background-color: transparent;
-  color: #fff;
-  border-bottom: none;
-}
-div.calendar-legend div.legend-panel span.content {
-  display: inline-block;
-  line-height: 1.175em;
-  vertical-align: middle;
-}
-div.calendar-legend div.legend-panel.gray {
-  background-color: #67767b;
-}
-div.calendar-legend div.legend-panel.gray:hover {
-  background-color: #7d979b;
-}
-div.calendar-legend div.legend-panel.crimson {
-  background-color: #be1a40;
-}
-div.calendar-legend div.legend-panel.crimson:hover {
-  background-color: #bf526f;
-}
-div.calendar-legend div.legend-panel.orange {
-  background-color: #e95b34;
-}
-div.calendar-legend div.legend-panel.orange:hover {
-  background-color: #df8366;
-}
-div.calendar-legend div.legend-panel.olive {
-  background-color: #9b8b28;
-}
-div.calendar-legend div.legend-panel.olive:hover {
-  background-color: #a5a75d;
-}
-div.calendar-legend div.legend-panel.blue {
-  background-color: #127286;
-}
-div.calendar-legend div.legend-panel.blue:hover {
-  background-color: #3d94a3;
-}
-div.calendar-legend div.legend-panel.dark-gray {
-  background-color: #373940;
-}
-div.calendar-legend div.legend-panel.dark-gray:hover {
-  background-color: #59696f;
-}
-div.calendar-legend div.legend-panel.dark-brown {
-  background-color: #480f13;
-}
-div.calendar-legend div.legend-panel.dark-brown:hover {
-  background-color: #664a4d;
-}
-div.calendar-legend div.legend-panel.brown {
-  background-color: #723f1f;
-}
-div.calendar-legend div.legend-panel.brown:hover {
-  background-color: #866e56;
-}
-div.calendar-legend div.legend-panel.dark-olive {
-  background-color: #453a16;
-}
-div.calendar-legend div.legend-panel.dark-olive:hover {
-  background-color: #646a4f;
-}
-div.calendar-legend div.legend-panel.dark-blue {
-  background-color: #12313c;
-}
-div.calendar-legend div.legend-panel.dark-blue:hover {
-  background-color: #3d636c;
-}
-div.calendar-legend div.legend-panel.black {
-  background-color: #0f0f10;
-}
-div.calendar-legend div.legend-panel.black:hover {
-  background: #30303f;
-}
-div.calendar-legend div.legend-panel.gold {
-  background-color: #ffb81c;
-  color: #2a3033;
-}
-div.calendar-legend div.legend-panel.gold:hover {
-  background: #ffdb8d;
-}
-div.calendar-legend div.legend-panel.gold a {
-  color: #2a3033;
-}
-div.calendar-legend div.legend-panel.gold a:hover {
-  color: #2a3033;
-}
 .column p.award-quote {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -8609,7 +8482,7 @@ div.calendar-legend div.legend-panel.gold a:hover {
 }
 .column ul:not(.content-boxes):not(.application-steps).gray-bullets li {
   list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
-				point_gray.png);
+point_gray.png);
 }
 ul.application-steps {
   margin-top: 1rem !important;
