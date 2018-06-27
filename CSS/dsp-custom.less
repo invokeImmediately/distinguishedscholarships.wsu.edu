@@ -24,22 +24,22 @@
 
 /**  TABLE OF CONTENTS:
 ***  -----------------
-***  §1: Backgrounds...........................................................................47
-***    >>> §1.1: Spine binder..................................................................51
-***    >>> §1.2: Spine jacket..................................................................64
-***    >>> §1.3: Page body.....................................................................74
-***    >>> §1.4: Main content section.........................................................105
-***    >>> §1.5: Main header..................................................................114
-***  §2: Aside styling........................................................................144
-***  §3: Article header backgrounds...........................................................193
-***  §4: Styling of builder-template photo slideshows.........................................303
-***  §5: Table styling........................................................................368
-***  §6: Paragraph styling....................................................................813
-***  §7: Unordered list styling...............................................................844
-***  §8: Ordered list styling.................................................................939
-***  §9: Styles included through Less mixins..................................................981
-***    >>> §9.1: Overrides for mixin-included styles..........................................995
-***  §10: Page-specific styles...............................................................1054
+***  §1: Backgrounds...........................................................................46
+***    >>> §1.1: Spine binder..................................................................50
+***    >>> §1.2: Spine jacket..................................................................63
+***    >>> §1.3: Page body.....................................................................73
+***    >>> §1.4: Main content section.........................................................104
+***    >>> §1.5: Main header..................................................................113
+***  §2: Aside styling........................................................................143
+***  §3: Article header backgrounds...........................................................192
+***  §4: Styling of builder-template photo slideshows.........................................302
+***  §5: Table styling........................................................................367
+***  §6: Paragraph styling....................................................................708
+***  §7: Unordered list styling...............................................................739
+***  §8: Styles included through Less mixins..................................................834
+***    >>> §8.1: Overrides for mixin-included styles..........................................848
+***  §9: Page-specific styles.................................................................907
+***    >>> §9.1: Massie fellowship............................................................911
 **/
 
 /** ================================================================================================
@@ -751,11 +751,11 @@ point_gray.png);
 	}
 }
 
-ul.application-steps {
-	&:extend(ul.content-boxes all);
+.application-steps {
+	&:extend(.content-boxes all);
 }
 
-ul.application-steps {
+.application-steps {
 	margin-top: @v-btm-mrgns !important;
 	& > li {
 		float: left;
@@ -831,49 +831,7 @@ ul.application-steps {
 }
 
 /** ================================================================================================
-*** §8: Ordered list styling
-**/
-
-ol.massie-project {
-	.column & > li {
-		font-size: 1.3em;
-		clear: both;
-		&:not(:first-child) {
-			padding-top: 1.9rem;
-		}
-		& > strong:first-of-type {
-			padding-right: 8;
-			padding-bottom: 4;
-			padding-left: 8;
-			border-radius: 5px;
-			background-color: #b3d4c5;
-			line-height: 1.9em;
-		}
-		& > span.description {
-			font-size: (1 / 1.3em);
-		}
-		& > img {
-			margin-top: 0.4rem;
-			.spaces-btm-half;
-			.spaces-lft-half;
-			@media all {
-				width: 128px;
-				@media (max-width: @column-floating-threshold) {
-					width: 112px;
-				}
-				@media (max-width: @large-mobile-screen-width) {
-					width: 96px;
-				}				
-				@media (max-width: @mobile-screen-width) {
-					width: 80px;
-				}
-			}
-		}
-	}
-}
-
-/** ================================================================================================
-*** §9: Styles included through Less mixins
+*** §8: Styles included through Less mixins
 **/
 
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
@@ -887,7 +845,7 @@ ol.massie-project {
 cw_54x64.png));
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §9.1: Overrides for mixin-included styles
+***   >>> §8.1: Overrides for mixin-included styles
 **/
 
 .page.has-short-main-header {
@@ -946,7 +904,11 @@ top repeat, rgba(42,48,51,1.00);
 }
 
 /** ================================================================================================
-*** §10: Page-specific styles
+*** §9: Page-specific styles
+**/
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §9.1: Massie fellowship
 **/
 
 .page.massie-fellowship {
@@ -958,6 +920,44 @@ top repeat, rgba(42,48,51,1.00);
 			.spaces-lft-half;
 			@media all and (max-width: @large-mobile-screen-width) {
 				width: 80px;
+			}
+		}
+	}
+}
+
+.massie-project {
+	.column & > li {
+		font-size: 1.3em;
+		clear: both;
+		&:not(:first-child) {
+			padding-top: 1.9rem;
+		}
+		& > strong:first-of-type {
+			padding-right: 8;
+			padding-bottom: 4;
+			padding-left: 8;
+			border-radius: 5px;
+			background-color: #b3d4c5;
+			line-height: 1.9em;
+		}
+		& > .description {
+			font-size: (1 / 1.3em);
+		}
+		& > img {
+			margin-top: 0.4rem;
+			.spaces-btm-half;
+			.spaces-lft-half;
+			@media all {
+				width: 128px;
+				@media (max-width: @column-floating-threshold) {
+					width: 112px;
+				}
+				@media (max-width: @large-mobile-screen-width) {
+					width: 96px;
+				}				
+				@media (max-width: @mobile-screen-width) {
+					width: 80px;
+				}
 			}
 		}
 	}
