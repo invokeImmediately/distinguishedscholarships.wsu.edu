@@ -24,25 +24,30 @@
 
 /**  TABLE OF CONTENTS:
 ***  -----------------
-***  §1: ID-specific styles....................................................................45
-***  §2: Body styling..........................................................................64
-***  §3: Main styling..........................................................................95
-***  §4: Header styling.......................................................................104
-***  §5: Aside styling........................................................................134
-***  §6: Section styling......................................................................183
-***  §7: Styling of builder-template photo slideshows.........................................293
-***  §8: Table styling........................................................................358
-***  §9: Div styling..........................................................................699
-***  §10: Paragraph styling...................................................................803
-***  §11: Unordered list styling..............................................................834
-***  §12: Ordered list styling................................................................929
-***  §13: Styles included through Less mixins.................................................971
-***    >>> §13.1: Overrides for mixin-included styles.........................................985
-***  §14: Page-specific styles...............................................................1044
+***  §1: Backgrounds...........................................................................47
+***    >>> §1.1: Spine binder..................................................................51
+***    >>> §1.2: Spine jacket..................................................................64
+***    >>> §1.3: Page body.....................................................................74
+***    >>> §1.4: Main content section.........................................................105
+***    >>> §1.5: Main header..................................................................114
+***  §2: Aside styling........................................................................144
+***  §3: Article header backgrounds...........................................................193
+***  §4: Styling of builder-template photo slideshows.........................................303
+***  §5: Table styling........................................................................368
+***  §6: Paragraph styling....................................................................813
+***  §7: Unordered list styling...............................................................844
+***  §8: Ordered list styling.................................................................939
+***  §9: Styles included through Less mixins..................................................981
+***    >>> §9.1: Overrides for mixin-included styles..........................................995
+***  §10: Page-specific styles...............................................................1054
 **/
 
 /** ================================================================================================
-*** §1: ID-specific styles
+*** §1: Backgrounds
+**/
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.1: Spine binder
 **/
 
 #binder {
@@ -54,14 +59,18 @@
 	}
 }
 
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.2: Spine jacket
+**/
+
 #jacket {
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-attachment: fixed;
 }
 
-/** ================================================================================================
-*** §2: Body styling
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.3: Page body
 **/
 
 body {
@@ -91,17 +100,17 @@ body {
 	}
 }
 
-/** ================================================================================================
-*** §3: Main styling
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.4: Main content section
 **/
 
 main {
 	background: @hex-white url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_
-		500x500_opacity-0.5.png) left top repeat;
+500x500_opacity-0.5.png) left top repeat;
 }
 
-/** ================================================================================================
-*** §4: Header styling
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.5: Main header
 **/
 
 header.main-header {
@@ -131,7 +140,7 @@ header.main-header {
 }
 
 /** ================================================================================================
-*** §5: Aside styling
+*** §2: Aside styling
 **/
 
 .column {
@@ -180,7 +189,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 }
 
 /** ================================================================================================
-*** §6: Section styling
+*** §3: Article header backgrounds
 **/
 
 .column {
@@ -290,7 +299,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 }
 
 /** ================================================================================================
-*** §7: Styling of builder-template photo slideshows
+*** §4: Styling of builder-template photo slideshows
 **/
 
 .row.builder-section-banner.has-interaction-message {
@@ -311,7 +320,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 			line-height: 1em;
 			color: @hex-white;
 			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
-				with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
+with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
 			& { text-shadow: 1px 1px 2px @rgba; .getRgbaStr(@hex-black, 0.5); }
 			z-index: @z-index;
 		}
@@ -322,7 +331,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 		&:after {
 			color: @hex-accent-orange;
 			background-image: url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_orange_
-				with-drop-shadow_29x32.png);
+with-drop-shadow_29x32.png);
 			z-index: (@z-index + 1);
 			opacity: 0;
 		}
@@ -355,7 +364,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 }
 
 /** ================================================================================================
-*** §8: Table styling
+*** §5: Table styling
 **/
 
 .column table.calendar {
@@ -696,111 +705,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 }
 
 /** ================================================================================================
-*** §9: Div styling
-**/
-
-div.calendar-legend {
-	position: absolute;
-	right: -122px;
-	width: 100px;
-	box-shadow: 2px 2px 2px rgba(194,194,194,0.5);
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	background: @hex-white;
-	font-size: 1rem;
-	z-index: 99164;
-	div.legend-title {
-		color: @hex-crimson;
-		font-size: 0.7059em;
-		font-weight: bold;
-		margin: 10px;
-		text-align: center;
-		width: 80px;
-	}
-	div.legend-panel {
-		width: 70px;
-		height: 30px;
-		padding: 5px;
-		margin: 10px;
-		border: 1px solid #ccc;
-		font-size: 0.705882em;
-		line-height: 30px;
-		text-align: center;
-		color: @hex-white;
-		.transition("background .2s linear");
-		a {
-			color: @hex-white;
-			border-bottom: none;
-			box-shadow: none;
-			&:hover {
-				background-color: transparent;
-				color: @hex-white;
-				border-bottom: none;
-			}
-		}
-		span.content {
-			display: inline-block;
-			line-height: 1.175em;
-			vertical-align: middle;
-		}
-		&.gray {
-			background-color: #67767b;
-			&:hover { background-color: #7d979b; }
-		}
-		&.crimson {
-			background-color: #be1a40;
-			&:hover { background-color: #bf526f; }
-		}
-		&.orange {
-			background-color: #e95b34;
-			&:hover { background-color: #df8366; }
-		}
-		&.olive {
-			background-color: #9b8b28;
-			&:hover { background-color: #a5a75d; }
-		}
-		&.blue {
-			background-color: #127286;
-			&:hover { background-color: #3d94a3; }
-		}
-		&.dark-gray {
-			background-color: #373940;
-			&:hover { background-color: #59696f; }
-		}
-		&.dark-brown {
-			background-color: #480f13;
-			&:hover { background-color: #664a4d; }
-		}
-		&.brown {
-			background-color: #723f1f;
-			&:hover { background-color: #866e56; }
-		}
-		&.dark-olive {
-			background-color: #453a16;
-			&:hover { background-color: #646a4f; }
-		}
-		&.dark-blue {
-			background-color: #12313c;
-			&:hover { background-color: #3d636c; }
-		}
-		&.black {
-			background-color: #0f0f10;
-			&:hover { background: #30303f; }
-		}
-		&.gold {
-			background-color: #ffb81c;
-			color: #2a3033;
-			&:hover { background: #ffdb8d; }
-			a {
-				color: #2a3033;
-				&:hover { color: #2a3033; }
-			}
-		}
-	}
-}
-
-/** ================================================================================================
-*** §10: Paragraph styling
+*** §6: Paragraph styling
 **/
 
 .column p {
@@ -831,7 +736,7 @@ div.calendar-legend {
 }
 
 /** ================================================================================================
-*** §11: Unordered list styling
+*** §7: Unordered list styling
 **/
 
 .column ul:not(.content-boxes):not(.application-steps) {
@@ -841,7 +746,7 @@ div.calendar-legend {
 	&.gray-bullets {
 		li {
 			list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
-				point_gray.png);
+point_gray.png);
 		}
 	}
 }
@@ -926,7 +831,7 @@ ul.application-steps {
 }
 
 /** ================================================================================================
-*** §12: Ordered list styling
+*** §8: Ordered list styling
 **/
 
 ol.massie-project {
@@ -968,7 +873,7 @@ ol.massie-project {
 }
 
 /** ================================================================================================
-*** §13: Styles included through Less mixins
+*** §9: Styles included through Less mixins
 **/
 
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
@@ -982,7 +887,7 @@ ol.massie-project {
 cw_54x64.png));
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §13.1: Overrides for mixin-included styles
+***   >>> §9.1: Overrides for mixin-included styles
 **/
 
 .page.has-short-main-header {
@@ -1041,7 +946,7 @@ top repeat, rgba(42,48,51,1.00);
 }
 
 /** ================================================================================================
-*** §14: Page-specific styles
+*** §10: Page-specific styles
 **/
 
 .page.massie-fellowship {
