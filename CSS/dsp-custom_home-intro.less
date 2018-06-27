@@ -1,0 +1,50 @@
+/** ┌────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: dsp-custom_home-intro.less                                                       │
+*** └────────────────────────────────────────────────────────────────────────────────────────────┘
+**/
+
+& { // OPEN FILE-LEVEL SCOPE ///////////////////////////////////////////////////////////////////////
+
+@object: grid--home-intro;
+
+.@{object} {
+	.spacing(@spacing-1000mx);
+}
+
+.@{object} {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 10% 70% 20%;
+	grid-template-columns: 20% calc(60% - 4em) 20%;
+	grid-template-areas: "left-button tagline right-button";
+	grid-column-gap: calc(2em);
+}
+
+.@{object}__left-button {
+	flex-basis: 18%;
+	flex-basis: calc(20% - 4em / 3);
+	grid-area: left-button;
+}
+
+.@{object}__tagline {
+	flex-basis: 56%;
+	flex-basis: calc(60% - 4em / 3);
+	grid-area: tagline;
+	text-align: center;
+}
+
+.@{object}__right-button {
+	flex-basis: 18%;
+	flex-basis: calc(20% - 4em / 3);
+	grid-area: right-button;
+}
+
+.@{object}__left-button,
+.@{object}__right-button {
+	background-color: #981e32;
+	color: white;
+}
+
+} //// CLOSE FILE-LEVEL SCOPE //////////////////////////////////////////////////////////////////////
