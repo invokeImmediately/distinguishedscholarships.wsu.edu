@@ -1,33 +1,12 @@
 /*! ================================================================================================
 *** MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites (OUE-MASTER)
 *** ================================================================================================
-***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)                                   
-***                                                                                                                        
-***   DESCRIPTION: Intended for use with all WSUWP websites associated with the WSU Office of 
-***     Undergraduate Education, a unit within the Office of the Provost. (Please see 
-***     https://web.wsu.edu and https://vpue.wsu.edu/oue for more information.) It is designed to 
-***     be applied via the WSUWP CSS Stylesheet Editor functioning in in add-on mode.
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
 ***
-***   DESIGN PHILOSOPHY: This stylesheet mixes semantic with functional CSS. The Spine Theme for 
-***     WSUWP takes a semantic approach to styling; thus, this add-on style sheet necessarily 
-***     contains some semantic styling of its own. Specifically, semantic CSS is utilized to 
-***     override or minimally build upon the default design imposed by the Spine builder theme.
+***   CONTENTS: CSS compiled from Less language extension of CSS.
 ***
-***     Functional CSS is utilized to maximally build upon the Spine builder theme and further 
-***     extend its design flexibility. Content authors are enabled more options for tweaking the 
-***     design to suit their needs without needing to touch CSS, while the CSS is made more 
-***     reusable and easier to maintain.
-***
-***   ORGANIZATION OF STYLESHEET: This stylesheet is organized such that semantic CSS preceeds
-***     functional CSS. This is done to ensure that utility classes associated with functional CSS 
-***     override all other behaviors.
-***
-***     The semantic styling section of this stylesheet is laid out according to the W3C HTML5 
-***     language specification (please see https://www.w3.org/TR/html5/ for more information). 
-***     Styles are generally declared in the same sequence as their matching elements appear in the 
-***     HTML5 spec. Moreover, style declarations are made according to browser rendering sequence; 
-***     styles for controlling layout are followed by those related to painting and then by those 
-***     associated with dynamic behaviors to the DOM tree.
+***   GIT REPOSITORY: https://github.com/invokeImmediately/wsu-ue---css/
+***     See git repository for fully documented, precompiled source code.
 *** ================================================================================================
 **/
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif');
@@ -7415,6 +7394,9 @@ div.auto-scroller ul li {
 .bg-color--crimson--accent--25pct {
   background-color: rgba(198, 12, 48, 0.25);
 }
+.bg-color--crimson--tint {
+  background-color: #f2e2e4;
+}
 .color--green--lightest {
   color: #f4f2eb;
 }
@@ -7495,6 +7477,9 @@ div.auto-scroller ul li {
 }
 .bg-color--green--accent--25pct {
   background-color: rgba(173, 164, 0, 0.25);
+}
+.bg-color--green--tint {
+  background-color: #f4f3de;
 }
 .color--yellow--lightest {
   color: #f9f4e7;
@@ -7577,6 +7562,9 @@ div.auto-scroller ul li {
 .bg-color--yellow--accent--25pct {
   background-color: rgba(255, 184, 28, 0.25);
 }
+.bg-color--yellow--tint {
+  background-color: #fff6e1;
+}
 .color--blue--lightest {
   color: #edf3f4;
 }
@@ -7658,6 +7646,9 @@ div.auto-scroller ul li {
 .bg-color--blue--accent--25pct {
   background-color: rgba(0, 165, 189, 0.25);
 }
+.bg-color--blue--tint {
+  background-color: #def3f6;
+}
 .color--orange--lightest {
   color: #f8f1eb;
 }
@@ -7738,6 +7729,9 @@ div.auto-scroller ul li {
 }
 .bg-color--orange--accent--25pct {
   background-color: rgba(246, 134, 31, 0.25);
+}
+.bg-color--orange--tint {
+  background-color: #feefe2;
 }
 .cycle2-slideshow,
 .cycle2-slideshow * {
@@ -7899,14 +7893,17 @@ div.auto-scroller ul li {
     right: 4px;
   }
 }
-/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*** ║ #### CUSTOM LAYOUTS #########################################################################║
-*** ╠==============================================================================================╣
-*** ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.        ║
-*** ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
-**/
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §1: ID-specific styles
+/*! ================================================================================================
+*** CUSTOM STYLE SHEET for the WSU Distinguished Scholarships Program
+*** ================================================================================================
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
+***
+***   CONTENTS: CSS compiled from Less language extension of CSS; only used on the Distinguished
+***     Scholarships program website.
+***
+***   GIT REPOSITORY: https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu
+***     See git repository for fully documented, precompiled source code.
+*** ================================================================================================
 **/
 #binder {
   border-right: 1px solid rgba(0, 0, 0, 0.6667);
@@ -7923,9 +7920,6 @@ div.auto-scroller ul li {
   background-position: right bottom;
   background-attachment: fixed;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §2: Body styling
-**/
 @media all and (max-width: 1440px) {
   body {
     background: #000;
@@ -7946,16 +7940,10 @@ div.auto-scroller ul li {
     background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed 1800px top, #000 url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed 1800px top;
   }
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §3: Main styling
-**/
 main {
   background: #fff url(/wp-content/uploads/sites/50/2015/04/tileable-papar-texture_
 		500x500_opacity-0.5.png) left top repeat;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §4: Header styling
-**/
 header.main-header {
   background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   color: #fff !important;
@@ -7975,9 +7963,6 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §5: Aside styling
-**/
 @media all {
   .column aside {
     line-height: 1.5em;
@@ -8056,9 +8041,6 @@ scholarships_portrait.jpg) center center / 100% auto no-repeat;
 scholarships_landscape.jpg) top center / 100% auto no-repeat;
   }
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §6: Section styling
-**/
 .column section.header-annual-events {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2016/01/wpbg-annual-events.png) no-repeat center;
 }
@@ -8109,9 +8091,6 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
     text-align: center;
   }
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §7: Styling of builder-template photo slideshows
-**/
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before,
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
   content: "Click/tap to learn more >>";
@@ -8165,9 +8144,6 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
     background-position: right center;
   }
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §8: Table styling
-**/
 .column table.calendar {
   border: 1px solid #70031a;
   border-collapse: separate;
@@ -8476,9 +8452,6 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
   border-bottom: 0.0625em solid transparent;
   box-shadow: inset 0 -0.3125em 0 transparent;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §9: Div styling
-**/
 div.calendar-legend {
   position: absolute;
   right: -122px;
@@ -8606,9 +8579,6 @@ div.calendar-legend div.legend-panel.gold a {
 div.calendar-legend div.legend-panel.gold a:hover {
   color: #2a3033;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §10: Paragraph styling
-**/
 .column p.award-quote {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -8634,9 +8604,6 @@ div.calendar-legend div.legend-panel.gold a:hover {
   background-color: #f1e4c4;
   color: #77580c;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §11: Unordered list styling
-**/
 .column ul:not(.content-boxes):not(.application-steps) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
@@ -8679,9 +8646,6 @@ ul.application-steps > li.gutter-sizer {
 ul.application-steps > li.gutter-sizer {
   width: 2%;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §12: Ordered list styling
-**/
 .column ol.massie-project > li {
   font-size: 1.3em;
   clear: both;
@@ -8731,9 +8695,6 @@ ul.application-steps > li.gutter-sizer {
     width: 80px;
   }
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §13: Styles included through Less mixins
-**/
 span.has-tool-tip:after,
 span.has-tooltip:after {
   content: "";
@@ -10035,9 +9996,6 @@ cw_54x64.png) center center / auto 100% no-repeat;
   position: absolute;
   width: 1rem;
 }
-/*!    ··························································································
-***    DSP CUSTOM §13.1: Overrides for mixin-included styles
-**/
 .page.has-short-main-header .row.single.article-header.opportunity-fund {
   height: 450px;
 }
@@ -10153,9 +10111,6 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
 .row.has-linked-columns.linked-announcement + .row.has-recent-updates {
   margin-top: 0;
 }
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §14: Page-specific styles
-**/
 .page.massie-fellowship .massie-project {
   max-width: 800px;
   margin-left: auto;
