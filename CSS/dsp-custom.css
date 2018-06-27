@@ -8484,31 +8484,31 @@ with-drop-shadow_29x32.png);
   list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
 point_gray.png);
 }
-ul.application-steps {
+.application-steps {
   margin-top: 1rem !important;
 }
-ul.application-steps > li {
+.application-steps > li {
   float: left;
   width: 49%;
   min-height: 198px;
   margin-bottom: 2%;
 }
 @media all and (max-width: 693px) {
-  ul.application-steps > li {
+  .application-steps > li {
     width: 98%;
     margin-bottom: 4%;
   }
 }
 @media all and (max-width: 1205px) {
-  ul.application-steps > li {
+  .application-steps > li {
     overflow-x: visible;
   }
 }
-ul.application-steps > li + li {
+.application-steps > li + li {
   margin-top: 0;
 }
-ul.application-steps > li.cascade-sizer,
-ul.application-steps > li.gutter-sizer {
+.application-steps > li.cascade-sizer,
+.application-steps > li.gutter-sizer {
   height: 0;
   min-height: 0;
   padding: 0;
@@ -8516,57 +8516,8 @@ ul.application-steps > li.gutter-sizer {
   background: none;
   box-shadow: none;
 }
-ul.application-steps > li.gutter-sizer {
+.application-steps > li.gutter-sizer {
   width: 2%;
-}
-.column ol.massie-project > li {
-  font-size: 1.3em;
-  clear: both;
-}
-.column ol.massie-project > li:not(:first-child) {
-  padding-top: 1.9rem;
-}
-.column ol.massie-project > li > strong:first-of-type {
-  padding-right: 8;
-  padding-bottom: 4;
-  padding-left: 8;
-  border-radius: 5px;
-  background-color: #b3d4c5;
-  line-height: 1.9em;
-}
-.column ol.massie-project > li > span.description {
-  font-size: 0.76923077em;
-}
-.column ol.massie-project > li > img {
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-.column ol.massie-project > li > img.forces-spacing {
-  margin-bottom: 1rem !important;
-}
-.column ol.massie-project > li > img.forces-spacing {
-  margin-left: 1rem !important;
-}
-@media all {
-  .column ol.massie-project > li > img {
-    width: 128px;
-  }
-}
-@media all and (max-width: 693px) {
-  .column ol.massie-project > li > img {
-    width: 112px;
-  }
-}
-@media all and (max-width: 480px) {
-  .column ol.massie-project > li > img {
-    width: 96px;
-  }
-}
-@media all and (max-width: 360px) {
-  .column ol.massie-project > li > img {
-    width: 80px;
-  }
 }
 span.has-tool-tip:after,
 span.has-tooltip:after {
@@ -9997,6 +9948,55 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
 }
 @media all and (max-width: 480px) {
   .page.massie-fellowship .massie-project img {
+    width: 80px;
+  }
+}
+.column .massie-project > li {
+  font-size: 1.3em;
+  clear: both;
+}
+.column .massie-project > li:not(:first-child) {
+  padding-top: 1.9rem;
+}
+.column .massie-project > li > strong:first-of-type {
+  padding-right: 8;
+  padding-bottom: 4;
+  padding-left: 8;
+  border-radius: 5px;
+  background-color: #b3d4c5;
+  line-height: 1.9em;
+}
+.column .massie-project > li > .description {
+  font-size: 0.76923077em;
+}
+.column .massie-project > li > img {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.column .massie-project > li > img.forces-spacing {
+  margin-bottom: 1rem !important;
+}
+.column .massie-project > li > img.forces-spacing {
+  margin-left: 1rem !important;
+}
+@media all {
+  .column .massie-project > li > img {
+    width: 128px;
+  }
+}
+@media all and (max-width: 693px) {
+  .column .massie-project > li > img {
+    width: 112px;
+  }
+}
+@media all and (max-width: 480px) {
+  .column .massie-project > li > img {
+    width: 96px;
+  }
+}
+@media all and (max-width: 360px) {
+  .column .massie-project > li > img {
     width: 80px;
   }
 }
