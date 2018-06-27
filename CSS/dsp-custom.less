@@ -1,18 +1,48 @@
+/** ┌────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: dsp-custom.less                                                                  │
+*** └────────────────────────────────────────────────────────────────────────────────────────────┘
+**/
+
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
 
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 @import "..\WSU-UE---CSS\cycle2.less";
 
-/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*** ║ #### CUSTOM LAYOUTS #########################################################################║
-*** ╠==============================================================================================╣
-*** ║ The following sections contain layouts specific to distinguishedscholarships.wsu.edu.        ║
-*** ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*! ================================================================================================
+*** CUSTOM STYLE SHEET for the WSU Distinguished Scholarships Program
+*** ================================================================================================
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
+***
+***   CONTENTS: CSS compiled from Less language extension of CSS; only used on the Distinguished
+***     Scholarships program website.
+***
+***   GIT REPOSITORY: https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu
+***     See git repository for fully documented, precompiled source code.
+*** ================================================================================================
 **/
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §1: ID-specific styles
+/**  TABLE OF CONTENTS:
+***  -----------------
+***  §1: ID-specific styles....................................................................45
+***  §2: Body styling..........................................................................64
+***  §3: Main styling..........................................................................95
+***  §4: Header styling.......................................................................104
+***  §5: Aside styling........................................................................134
+***  §6: Section styling......................................................................183
+***  §7: Styling of builder-template photo slideshows.........................................293
+***  §8: Table styling........................................................................358
+***  §9: Div styling..........................................................................699
+***  §10: Paragraph styling...................................................................803
+***  §11: Unordered list styling..............................................................834
+***  §12: Ordered list styling................................................................929
+***  §13: Styles included through Less mixins.................................................971
+***    >>> §13.1: Overrides for mixin-included styles.........................................985
+***  §14: Page-specific styles...............................................................1044
+**/
+
+/** ================================================================================================
+*** §1: ID-specific styles
 **/
 
 #binder {
@@ -30,8 +60,8 @@
 	background-attachment: fixed;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §2: Body styling
+/** ================================================================================================
+*** §2: Body styling
 **/
 
 body {
@@ -61,8 +91,8 @@ body {
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §3: Main styling
+/** ================================================================================================
+*** §3: Main styling
 **/
 
 main {
@@ -70,8 +100,8 @@ main {
 		500x500_opacity-0.5.png) left top repeat;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §4: Header styling
+/** ================================================================================================
+*** §4: Header styling
 **/
 
 header.main-header {
@@ -100,8 +130,8 @@ header.main-header {
 	color: #fff !important;
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §5: Aside styling
+/** ================================================================================================
+*** §5: Aside styling
 **/
 
 .column {
@@ -149,8 +179,8 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §6: Section styling
+/** ================================================================================================
+*** §6: Section styling
 **/
 
 .column {
@@ -259,8 +289,8 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §7: Styling of builder-template photo slideshows
+/** ================================================================================================
+*** §7: Styling of builder-template photo slideshows
 **/
 
 .row.builder-section-banner.has-interaction-message {
@@ -324,8 +354,8 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §8: Table styling
+/** ================================================================================================
+*** §8: Table styling
 **/
 
 .column table.calendar {
@@ -665,8 +695,8 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §9: Div styling
+/** ================================================================================================
+*** §9: Div styling
 **/
 
 div.calendar-legend {
@@ -769,8 +799,8 @@ div.calendar-legend {
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §10: Paragraph styling
+/** ================================================================================================
+*** §10: Paragraph styling
 **/
 
 .column p {
@@ -800,8 +830,8 @@ div.calendar-legend {
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §11: Unordered list styling
+/** ================================================================================================
+*** §11: Unordered list styling
 **/
 
 .column ul:not(.content-boxes):not(.application-steps) {
@@ -848,55 +878,55 @@ ul.application-steps {
 		&.gutter-sizer {
 			width: 2%;
 		}
-		& > h3:first-child {
-			padding: (@v-dflt-spcng / 4);
-			margin: 0;
-			.rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
-			border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
-			border-top-left-radius: 4px;
-			 border-top-right-radius: 4px;
-			color: @hex-dark-blue;
-			text-transform: none;
-			strong {
-				text-transform: uppercase;
-			}
-		}
-		& > h4:nth-child(2) {
-			&:extend(.has-alt-font);
-			padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
-			margin-top: 0;
-			 margin-bottom: 0;
-			.rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
-			font-size: @v-p-sz * 1.1;
-			font-weight: 700;
-			color: @hex-bright-blue;
-			& + * {
-				margin-top: (@v-dflt-spcng / 4);
-			}
-		}
-		& > p {
-			font-size: inherit !important;
-			text-align: left;
-			padding-right: (@v-dflt-spcng / 4);
-			 padding-left: (@v-dflt-spcng / 4);
-			& + ul,
-			& + ol {
-				margin-top: (@v-btm-mrgns * 1 / 3) !important;
-			}
-		}
-		& > * {
-			&:not(:first-child) {
-				margin-top: @v-btm-mrgns;
-			}
-			&:last-child {
-				padding-bottom: (@v-dflt-spcng / 4);
-			}
-		}
+		// & > h3:first-child {
+		// 	padding: (@v-dflt-spcng / 4);
+		// 	margin: 0;
+		// 	.rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
+		// 	border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
+		// 	border-top-left-radius: 4px;
+		// 	 border-top-right-radius: 4px;
+		// 	color: @hex-dark-blue;
+		// 	text-transform: none;
+		// 	strong {
+		// 		text-transform: uppercase;
+		// 	}
+		// }
+		// & > h4:nth-child(2) {
+		// 	&:extend(.has-alt-font);
+		// 	padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
+		// 	margin-top: 0;
+		// 	 margin-bottom: 0;
+		// 	.rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
+		// 	font-size: @v-p-sz * 1.1;
+		// 	font-weight: 700;
+		// 	color: @hex-bright-blue;
+		// 	& + * {
+		// 		margin-top: (@v-dflt-spcng / 4);
+		// 	}
+		// }
+		// & > p {
+		// 	font-size: inherit !important;
+		// 	text-align: left;
+		// 	padding-right: (@v-dflt-spcng / 4);
+		// 	 padding-left: (@v-dflt-spcng / 4);
+		// 	& + ul,
+		// 	& + ol {
+		// 		margin-top: (@v-btm-mrgns * 1 / 3) !important;
+		// 	}
+		// }
+		// & > * {
+		// 	&:not(:first-child) {
+		// 		margin-top: @v-btm-mrgns;
+		// 	}
+		// 	&:last-child {
+		// 		padding-bottom: (@v-dflt-spcng / 4);
+		// 	}
+		// }
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §12: Ordered list styling
+/** ================================================================================================
+*** §12: Ordered list styling
 **/
 
 ol.massie-project {
@@ -937,8 +967,8 @@ ol.massie-project {
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §13: Styles included through Less mixins
+/** ================================================================================================
+*** §13: Styles included through Less mixins
 **/
 
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_
@@ -951,8 +981,8 @@ ol.massie-project {
 .use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-
 cw_54x64.png));
 
-/*!    ··························································································
-***    DSP CUSTOM §13.1: Overrides for mixin-included styles
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §13.1: Overrides for mixin-included styles
 **/
 
 .page.has-short-main-header {
@@ -1010,8 +1040,8 @@ top repeat, rgba(42,48,51,1.00);
 	}
 }
 
-/*! ------------------------------------------------------------------------------------------------
-*** DSP CUSTOM §14: Page-specific styles
+/** ================================================================================================
+*** §14: Page-specific styles
 **/
 
 .page.massie-fellowship {
