@@ -14,11 +14,15 @@
 .@{object} {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	display: grid;
 	grid-template-columns: 10% 70% 20%;
+	grid-template-rows: auto auto;
 	grid-template-columns: 20% calc(60% - 4em) 20%;
-	grid-template-areas: "left-button tagline right-button";
+	grid-template-areas:
+		"left-button tagline right-button"
+		"text text text";
 	grid-column-gap: calc(2em);
 }
 
@@ -41,10 +45,10 @@
 	grid-area: right-button;
 }
 
-.@{object}__left-button,
-.@{object}__right-button {
-	background-color: #981e32;
-	color: white;
+.@{object}__text {
+	flex-basis: 100%;
+	grid-area: tagline;
+	text-align: center;
 }
 
 } //// CLOSE FILE-LEVEL SCOPE //////////////////////////////////////////////////////////////////////
