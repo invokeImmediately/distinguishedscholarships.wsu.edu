@@ -3491,6 +3491,11 @@ ol {
 body.single-post .main-header + .featured-image {
   display: none;
 }
+.widget {
+  border-radius: 5px;
+  background-color: #eff0f1;
+  padding: 1em;
+}
 .wsuwp-json--headlines .content-item-byline-author {
   display: none;
 }
@@ -9949,11 +9954,13 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
 .grid--home-intro {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   display: grid;
   grid-template-columns: 10% 70% 20%;
+  grid-template-rows: auto auto;
   grid-template-columns: 20% calc(56%) 20%;
-  grid-template-areas: "left-button tagline right-button";
+  grid-template-areas: "left-button tagline right-button" "text text text";
   grid-column-gap: calc(2em);
 }
 .grid--home-intro__left-button {
@@ -9972,10 +9979,10 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
   flex-basis: calc(18.66666667%);
   grid-area: right-button;
 }
-.grid--home-intro__left-button,
-.grid--home-intro__right-button {
-  background-color: #981e32;
-  color: white;
+.grid--home-intro__text {
+  flex-basis: 100%;
+  grid-area: tagline;
+  text-align: center;
 }
 .page.massie-fellowship .massie-project {
   max-width: 800px;
