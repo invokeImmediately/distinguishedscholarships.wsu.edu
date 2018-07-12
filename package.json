@@ -32,6 +32,7 @@
     "gulp-insert-lines": "github:invokeimmediately/gulp-insert-lines",
     "gulp-less": "^3.5.0",
     "gulp-regex-replace": "^0.2.3",
-    "gulp-replace": "^0.6.1"
+    "gulp-replace": "^0.6.1",
+    "gulp-uglify": "^3.0.0"
   }
 }
