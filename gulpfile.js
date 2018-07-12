@@ -14,6 +14,7 @@ var insert = require( 'gulp-insert' );
 var insertLines = require( 'gulp-insert-lines' );
 var lessc = require( 'gulp-less' );
 var replace = require( 'gulp-replace' );
+var uglifyJs = require( 'gulp-uglify' );
 
 /* -------------------------------------------------------------------------------------------------
 ** Function declarations
@@ -64,6 +65,7 @@ function getJsBuildSettings() {
 		commentNeedle: /^(\/\*)(?!!)/g,
 		compiledJsFileName: 'dsp-custom-build.js',
 		destFolder: './JS/',
+		minJsFileExtension: '.min.js',
 		replaceCallback: fixFileHeaderComments
 	};
 }
@@ -98,6 +100,9 @@ function setUpJsBuildTask( settings ) {
 		return gulp.src( settings.buildDependenciesList )
 			.pipe( replace( settings.commentNeedle, settings.replaceCallback ) )
 			.pipe( concat( settings.compiledJsFileName ) )
+			.pipe( gulp.dest( settings.destFolder ) )
+			.pipe( uglifyJs() )
+			.pipe( extName( settings.minJsFileExtension ) )
 			.pipe( gulp.dest( settings.destFolder ) );
 	} );	
 }
