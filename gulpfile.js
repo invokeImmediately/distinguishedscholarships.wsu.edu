@@ -15,6 +15,7 @@ var insertLines = require( 'gulp-insert-lines' );
 var lessc = require( 'gulp-less' );
 var replace = require( 'gulp-replace' );
 var uglifyJs = require( 'gulp-uglify' );
+var pump = require( 'pump' );
 
 /* -------------------------------------------------------------------------------------------------
 ** Function declarations
@@ -79,32 +80,45 @@ function fixFileHeaderComments ( match, p1, offset, string ) {
 }
 
 function setUpCssBuildTask( settings ) {
-	gulp.task( 'buildMinCss', function () {
-		return gulp.src( settings.sourceFile )
-			.pipe( lessc( {
-				paths: [settings.dependenciesPath]
-			} ) )
-			.pipe( replace( settings.commentRemovalNeedle, '' ) )
-			.pipe( gulp.dest( settings.destFolder ) )
-			.pipe( gcmq() )
-			.pipe( insertLines( settings.insertLinesSettings ) )
-			.pipe( cleanCss() )
-			.pipe( insert.prepend( settings.minCssFileHeaderStr ) )
-			.pipe( extName( settings.minCssFileExtension ) )
-			.pipe( gulp.dest( settings.destFolder ) );
-	} );		
+	gulp.task( 'buildMinCss', function ( callBack ) {
+		pump( [
+				gulp.src( settings.sourceFile ),
+				lessc( {
+					paths: [settings.dependenciesPath]
+				} ),
+				replace( settings.commentRemovalNeedle, '' ),
+				gulp.dest( settings.destFolder ),
+				gcmq(),
+				insertLines( settings.insertLinesSettings ),
+				cleanCss(),
+				insert.prepend( settings.minCssFileHeaderStr ),
+				extName( settings.minCssFileExtension ),
+				gulp.dest( settings.destFolder )
+			],
+			callBack
+		);
+	} );
 }
 
 function setUpJsBuildTask( settings ) {
-	gulp.task( 'buildMinJs', function () {
-		return gulp.src( settings.buildDependenciesList )
-			.pipe( replace( settings.commentNeedle, settings.replaceCallback ) )
-			.pipe( concat( settings.compiledJsFileName ) )
-			.pipe( gulp.dest( settings.destFolder ) )
-			.pipe( uglifyJs() )
-			.pipe( extName( settings.minJsFileExtension ) )
-			.pipe( gulp.dest( settings.destFolder ) );
-	} );	
+	gulp.task( 'buildMinJs', function ( callBack ) {
+		pump( [
+				gulp.src( settings.buildDependenciesList ),
+				replace( settings.commentNeedle, settings.replaceCallback ),
+				concat( settings.compiledJsFileName ),
+				gulp.dest( settings.destFolder ),
+				uglifyJs( {
+					output: {
+						comments: /^!/
+					},
+					toplevel: true,
+				} ),
+				extName( settings.minJsFileExtension ),
+				gulp.dest( settings.destFolder )
+			],
+			callBack
+		);
+	} );
 }
 
 /* -------------------------------------------------------------------------------------------------
