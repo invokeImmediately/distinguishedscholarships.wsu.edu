@@ -1,15 +1,21 @@
 ﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
 
-/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
+/*! Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
 /*! ================================================================================================
-*** MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites (OUE-MASTER)
+*** MASTER STYLE SHEET for WSU Office of Undergraduate Education (OUE) Websites
 *** ================================================================================================
 ***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
 ***
-***   CONTENTS: CSS compiled from Less language extension of CSS.
+***   SUMMARY: CSS code built from precompiled CSS that was written in the Less language extension
+***     of CSS.
+***
+***   DESCRIPTION: Intended for use with all WSUWP websites associated with the WSU Office of 
+***     Undergraduate Education, a unit within the Office of the Provost. (Please see 
+***     https://web.wsu.edu and https://vpue.wsu.edu/oue for more information.) It is designed to 
+***     be applied via the WSUWP CSS Stylesheet Editor functioning in in add-on mode.
 ***
 ***   GIT REPOSITORY: https://github.com/invokeImmediately/wsu-ue---css/
-***     See git repository for fully documented, precompiled source code.
+***     (Please see above git repository for fully documented, precompiled source code.)
 *** ================================================================================================
 **/
 .has-mono-font {
@@ -1252,20 +1258,10 @@ body.blog .column header.article-header+* {
 	padding-top: 15px;
 }
 
-header.main-header .sup-header-default {
-	margin-bottom: .5rem;
-}
-
-header.main-header .header-group {
-	text-align: inherit;
-}
-
-.column:not(.show-header)>header:first-child {
-	display: none;
-}
-
-.column header:first-child+h1,.column header:first-child+h2.fancy.with-top-border,.column header:first-child+h3.fancy.with-top-border {
-	margin-top: 0;
+.hN--subtitle {
+	display: block;
+	font-size: .4em;
+	line-height: 1.375em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -1446,17 +1442,20 @@ h1,h2,h3 {
 	text-transform: uppercase;
 }
 
-/*!Example from SASS:
-** .person { }
-**  .person__face {
-**    .person--handsome & { }
-**  }
-**.person--handsome { }
-*/
-.hN--subtitle {
-	display: block;
-	font-size: .4em;
-	line-height: 1.375em;
+header.main-header .sup-header-default {
+	margin-bottom: .5rem;
+}
+
+header.main-header .header-group {
+	text-align: inherit;
+}
+
+.column:not(.show-header)>header:first-child {
+	display: none;
+}
+
+.column header:first-child+h1,.column header:first-child+h2.fancy.with-top-border,.column header:first-child+h3.fancy.with-top-border {
+	margin-top: 0;
 }
 
 footer.article-footer div.author-info {
@@ -1692,7 +1691,10 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 }
 
 /*!     ····························································································
-***     >>> §3.1: Style Defaults
+***     >>> §1.1: Inclusional mixins
+**/
+/*!     ····························································································
+***     >>> §2.1: Style Defaults
 **/
 p {
 	font-size: 1em;
@@ -5141,6 +5143,30 @@ div.auto-scroller ul li {
 	margin-top: 0;
 }
 
+.page-header {
+	height: 230px;
+	position: relative;
+	width: 1188px;
+}
+
+.page-header__column-1 {
+	background-color: rgba(0,0,0,.75);
+	bottom: 0;
+	box-sizing: border-box;
+	color: #fff;
+	display: block;
+	left: 0;
+	margin: 0 2rem;
+	padding: .5rem;
+	position: absolute;
+	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
+}
+
+.page-header__text-breadcrumb,.page-header__text-title {
+	color: inherit;
+	text-shadow: inherit;
+}
+
 .width--5pct {
 	width: 5%;
 }
@@ -8381,27 +8407,27 @@ hr.icon--tower::before {
 	display: grid;
 	grid-template-columns: 10% 70% 20%;
 	grid-template-rows: auto auto;
-	grid-template-columns: 20% calc(56%) 20%;
+	grid-template-columns: 20% calc(60% - 4em) 20%;
 	grid-template-areas: "left-button tagline right-button" "text text text";
 	grid-column-gap: calc(2em);
 }
 
 .grid--home-intro__left-button {
 	flex-basis: 18%;
-	flex-basis: calc(18.66666667%);
+	flex-basis: calc(20% - 4em / 3);
 	grid-area: left-button;
 }
 
 .grid--home-intro__tagline {
 	flex-basis: 56%;
-	flex-basis: calc(58.66666667%);
+	flex-basis: calc(60% - 4em / 3);
 	grid-area: tagline;
 	text-align: center;
 }
 
 .grid--home-intro__right-button {
 	flex-basis: 18%;
-	flex-basis: calc(18.66666667%);
+	flex-basis: calc(20% - 4em / 3);
 	grid-area: right-button;
 }
 
