@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-dest": "^0.2.3",
@@ -30,10 +30,10 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-insert": "^0.5.0",
     "gulp-insert-lines": "github:invokeimmediately/gulp-insert-lines",
-    "gulp-less": "^3.5.0",
+    "gulp-less": "^4.0.1",
     "gulp-regex-replace": "^0.2.3",
     "gulp-replace": "^0.6.1",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "pump": "^3.0.0"
   }
 }

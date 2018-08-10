@@ -26,7 +26,9 @@ function getCssBuildSettings() {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-UE---CSS/',
 		destFolder: './CSS/',
-		insertLinesSettings: {
+		fontImportStr: '@import url(\'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Robot\
+o+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n',
+		insertingMediaQuerySectionHeader: {
 			'before': /^@media/,
 			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════\
 ════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ######################\
@@ -36,9 +38,9 @@ function getCssBuildSettings() {
 			'stopAfterFirstMatch': true
 		},
 		minCssFileExtension: '.min.css',
-		minCssFileHeaderStr: '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please\
- see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of s\
-ource code. */\r\n',
+		minCssFileHeaderStr: '/*! Built with the Less CSS preprocessor [http://lesscss.org/]. Pleas\
+e see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of \
+source code. */\r\n',
 		sourceFile: './CSS/dsp-custom.less'
 	};
 }
@@ -87,11 +89,12 @@ function setUpCssBuildTask( settings ) {
 					paths: [settings.dependenciesPath]
 				} ),
 				replace( settings.commentRemovalNeedle, '' ),
+				insert.prepend( settings.fontImportStr ),
+				insert.prepend( settings.minCssFileHeaderStr ),
 				gulp.dest( settings.destFolder ),
 				gcmq(),
-				insertLines( settings.insertLinesSettings ),
+				insertLines( settings.insertingMediaQuerySectionHeader ),
 				cleanCss(),
-				insert.prepend( settings.minCssFileHeaderStr ),
 				extName( settings.minCssFileExtension ),
 				gulp.dest( settings.destFolder )
 			],
