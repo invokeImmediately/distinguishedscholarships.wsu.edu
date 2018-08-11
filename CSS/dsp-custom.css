@@ -6669,22 +6669,34 @@ div.auto-scroller ul li {
   background-position: center center;
   background-size: auto 100%;
 }
+.page-header--h-450px {
+  height: 450px;
+}
 .page-header__column-1 {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.9);
   top: 50%;
   box-sizing: border-box;
   color: #ffffff;
   display: block;
   left: 0;
   margin: 0 2rem;
-  padding: 0.5rem;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.page-header__column-1--tx-bottom {
+  top: 100%;
+  -webkit-transform: translateY(-100%) translateY(-2rem);
+  -moz-transform: translateY(-100%) translateY(-2rem);
+  transform: translateY(-100%) translateY(-2rem);
+}
 .page-header .page-header__column-1 {
   position: absolute;
+}
+.fluid .row.single .column.page-header__column-1 {
+  width: auto;
 }
 .page-header__text-breadcrumb,
 .page-header__text-title,
