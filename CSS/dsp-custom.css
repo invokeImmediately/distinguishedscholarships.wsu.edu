@@ -3551,17 +3551,13 @@ body.single-post .main-header + .featured-image {
 }
 .column .builder-banner-content {
   border: 0;
+  bottom: 0;
   font-size: 1.5rem;
   height: auto;
   line-height: 1.35em;
-  padding: 0 0 10px 0;
-  position: static;
   -webkit-transition: font-size .15s linear, line-height .15s linear;
   -moz-transition: font-size .15s linear, line-height .15s linear;
   transition: font-size .15s linear, line-height .15s linear;
-}
-.column .builder-banner-content:hover {
-  font-size: 2rem;
 }
 .column .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.975);
@@ -3575,15 +3571,19 @@ body.single-post .main-header + .featured-image {
 }
 .column .builder-banner-slide > a {
   border: none;
+  height: 100%;
 }
 .column .builder-banner-slide > a:focus {
   position: absolute;
 }
+.column .builder-banner-slide > a:hover {
+  background-color: transparent;
+}
 .column .builder-banner-slide > a > .builder-banner-content {
   padding-bottom: 0;
 }
-.column .builder-banner-slide > a {
-  height: auto;
+.column .builder-banner-slide:hover .builder-banner-content {
+  font-size: 2rem;
 }
 .column .builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.85);
@@ -3644,7 +3644,7 @@ body.single-post .main-header + .featured-image {
     font-size: 2.1179vw;
     line-height: 2.8592vw;
   }
-  .column .builder-banner-content:hover {
+  .column .builder-banner-slide:hover .builder-banner-content {
     font-size: 2.8239vw;
     line-height: 3.8122vw;
   }
@@ -3660,7 +3660,7 @@ body.single-post .main-header + .featured-image {
     font-size: 2.5784vw;
     line-height: 3.4808vw;
   }
-  .column .builder-banner-content:hover {
+  .builder-banner-slide:hover .builder-banner-content {
     font-size: 3.4379vw;
     line-height: 4.6411vw;
   }
@@ -3670,7 +3670,7 @@ body.single-post .main-header + .featured-image {
     font-size: 5.1568vw;
     line-height: 6.9616vw;
   }
-  .column .builder-banner-content:hover {
+  .builder-banner-slide:hover .builder-banner-content {
     font-size: 6.8758vw;
     line-height: 9.2822vw;
   }
