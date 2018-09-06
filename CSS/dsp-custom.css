@@ -17,11 +17,8 @@
 ***     (Please see above git repository for fully documented, precompiled source code.)
 *** ================================================================================================
 **/
-.has-mono-font {
-  font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: 300;
-}
 .has-dflt-font,
+.ff--sans,
 body,
 .column h1,
 .column h2,
@@ -33,20 +30,29 @@ header.main-header,
 .gform_heading h3.gform_title {
   font-family: 'Open Sans', 'Lucida Sans', sans-serif;
 }
-.has-dflt-font.serif {
+.has-dflt-font.serif,
+.ff--serif {
   font-family: 'Roboto Slab', 'Palatino', serif;
 }
+.has-subst-font.serif,
+.ff--serif-2 {
+  font-family: 'PT Serif', 'Palatino', serif;
+}
 .has-alt-font,
+.ff--condensed,
 .column p.article-tagline.sans,
 .column p.article-tagline.article-tagline--sans,
 span.accentuated-text {
   font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
 }
-.has-subst-font {
+.has-subst-font,
+.ff--condensed-2 {
   font-family: 'Roboto Condensed', 'Lucida Sans', sans-serif;
 }
-.has-subst-font.serif {
-  font-family: 'PT Serif', 'Palatino', serif;
+.has-mono-font,
+.ff--mono {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: 300;
 }
 .initially-hidden,
 .column .initially-hidden {
