@@ -6397,9 +6397,9 @@ div.auto-scroller ul li {
 }
 .page-header__column-1--tx-bottom {
   top: 100%;
-  -webkit-transform: translateY(-100%) translateY(-2rem);
-  -moz-transform: translateY(-100%) translateY(-2rem);
-  transform: translateY(-100%) translateY(-2rem);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .page-header .page-header__column-1 {
   position: absolute;
