@@ -52,7 +52,6 @@ span.accentuated-text {
 .has-mono-font,
 .ff--mono {
   font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: 300;
 }
 .initially-hidden,
 .column .initially-hidden {
@@ -1236,31 +1235,34 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
 }
 .row.single .column,
 .row.halves .column,
-.row.thirds .column,
 .row.quarters .column,
 .row.side-right .column,
-.row.side-left .column {
+.row.side-left .column,
+.row.thirds .column {
   font-size: 1.125rem;
 }
 @media all and (max-width: 1073px) {
   .row.single .column,
   .row.halves .column,
-  .row.thirds .column,
   .row.quarters .column,
   .row.side-right .column,
-  .row.side-left .column {
+  .row.side-left .column,
+  .row.thirds .column {
     font-size: 1rem;
   }
 }
 @media all and (max-width: 791px) {
   .row.single .column,
   .row.halves .column,
-  .row.thirds .column,
   .row.quarters .column,
   .row.side-right .column,
-  .row.side-left .column {
+  .row.side-left .column,
+  .row.thirds .column {
     font-size: 0.9412rem;
   }
+}
+.row:last-child {
+  margin-bottom: 2em;
 }
 aside.shield-themed {
   padding: 0.5rem;
@@ -3387,7 +3389,6 @@ ol {
   border: 1px solid #afb5b7;
   background-color: #d7dadb;
   font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: 300;
   cursor: pointer;
   -webkit-transform: translateY(-100%) translateY(-5px);
   -moz-transform: translateY(-100%) translateY(-5px);
@@ -3732,7 +3733,7 @@ section.pad-top div.column.half-pad {
 }
 .column {
   font-size: 1rem;
-  color: #464e54;
+  color: #2a3033;
 }
 .column:nth-child(1) {
   margin-top: 0;
@@ -5753,7 +5754,6 @@ div.read-more-target {
   font-size: 18px;
   line-height: 16px;
   font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: 300;
   text-align: center;
   background-color: #981e32;
   color: #fff;
