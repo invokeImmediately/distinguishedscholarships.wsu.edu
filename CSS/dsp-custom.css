@@ -1261,9 +1261,6 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     font-size: 0.9412rem;
   }
 }
-.row:last-child {
-  margin-bottom: 2em;
-}
 aside.shield-themed {
   padding: 0.5rem;
   border-left: 4px solid #8d959a;
