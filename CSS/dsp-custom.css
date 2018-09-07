@@ -4956,16 +4956,6 @@ img.symbolic-image {
     width: 96px;
   }
 }
-@media all and (min-width: 481px) {
-  img.show-on-mobile {
-    display: none;
-  }
-}
-@media all and (max-width: 480px) {
-  img.hide-on-mobile {
-    display: none;
-  }
-}
 #binder.fluid.max-1188 .row.halves .column img.auto-scaled {
   display: block;
   max-width: 444px;
@@ -6842,6 +6832,16 @@ div.auto-scroller ul li {
 .display--none,
 .dy--none {
   display: none;
+}
+@media all and (min-width: 481px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
+@media all and (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
 }
 .margin--0mx,
 .ma--0mx {
