@@ -26,7 +26,7 @@ function getCssBuildSettings() {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-UE---CSS/',
 		destFolder: './CSS/',
-		fontImportStr: '@import url(\'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Robot\
+		fontImportStr: '@import url(\'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Robot\
 o+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n',
 		insertingMediaQuerySectionHeader: {
 			'before': /^@media/,
