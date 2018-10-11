@@ -58,9 +58,8 @@ function aPHONP_addHeaderViaLocation( htmlNewsHeader ) {
  */
 function aPHONP_addHeaderViaClassUtilization( htmlNewsHeader ) {
 	var $body = $( 'body' ).first();
-	var $div;
 	if ( $body.hasClass( 'single-post' ) ) {
-		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );		
+		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
 	}
 }
 
