@@ -37,8 +37,9 @@ se see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] 
  source code. */\r\n';
  	var sourceFile = './CSS/dsp-custom.less';
 
-	return new gulpBuilder.CssBuildSettings(commentRemovalNeedle, destFolder, fontImportStr,
-		insertingMediaQuerySectionHeader, minCssFileExtension, minCssFileHeaderStr, sourceFile);
+	return new gulpBuilder.CssBuildSettings(commentRemovalNeedle, dependenciesPath,
+ 		destFolder, fontImportStr, insertingMediaQuerySectionHeader, minCssFileExtension,
+ 		minCssFileHeaderStr, sourceFile);
 }
 
 function getJsBuildSettings() {
