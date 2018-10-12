@@ -47,13 +47,21 @@ $( window ).on( 'load', function () {
  * 
  * @class
  *
- * @param {string} headerSlctr - jQuery selector for the header objects that will be animated.
+ * @param {String} headerSlctr - jQuery selector for the header objects that will be animated.
+ * @param {String} headerSlctr - jQuery selector for a header's container.
+ * @param {Number} speed - The speed of the pan in pixels per second.
+ * @param {Number} numPans - The number (> 0) of times the animation will pan forward and back.
  */
 function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
 
-	initializeHeaders();
+	setUpAnimations();
 
-	function initializeHeaders() {
+	/**
+	 * Set up the panning animations for gallery wall headers.
+	 *
+	 * @private
+	 */
+	function setUpAnimations() {
 		var $headers;
 		var $thisHeader;
 
@@ -61,11 +69,19 @@ function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
 		if ( $headers.length > 0 ) {
 			$headers.each( function() {
 				$thisHeader = $( this );
-				panHeader($thisHeader);
+				panHeader( $thisHeader );
 			} );
 		}		
 	}
 
+	/**
+	 * Cause a gallery wall header to pan back and forth according to prescribed settings.
+	 *
+	 * @private
+	 *
+	 * @param {jquery} $header - The jQuery object corresponding to the header in the DOM to be
+	 *     panned.
+	 */
 	function panHeader( $header ) {
 		var $container
 		var containerWidth;
