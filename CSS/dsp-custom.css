@@ -10213,7 +10213,6 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
   z-index: 2;
 }
 .page-header__gallery-wall-panorama {
-  animation: gallery-pan 30s linear infinite;
   background: url(/wp-content/uploads/sites/50/2018/10/panorama_gallery-wall-2018_3164x450.jpg) no-repeat left center;
   position: absolute;
   left: 0;
@@ -10222,23 +10221,23 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
   height: 450px;
   z-index: 1;
 }
-@keyframes gallery-pan {
-  0% {
-    left: 0;
-  }
-  2% {
-    left: 0;
-  }
-  48% {
-    left: calc(-3164px + 100%);
-  }
-  52% {
-    left: calc(-3164px + 100%);
-  }
-  98% {
-    left: 0;
-  }
-  100% {
-    left: 0;
-  }
-}
+/*@keyframes gallery-pan {
+	0% {
+		left: 0;
+	}
+	2% {
+		left: 0;
+	}
+	48% {
+		left: ~"calc(-3164px + 100%)";
+	}
+	52% {
+		left: ~"calc(-3164px + 100%)";
+	}
+	98% {
+		left: 0;
+	}
+	100% {
+		left: 0;
+	}
+}*/
