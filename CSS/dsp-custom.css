@@ -937,69 +937,55 @@ section.side-right .column.two p {
 main section.row > .column > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-body > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > ul:not(.no-btm-margin),
-main section.row > .column > section > ul:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > ul:not(.no-btm-margin),
 main section.row > .column > section > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-body > section > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > section > ul:not(.no-btm-margin),
-main section.row > .column > section > section > ul:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > section > ul:not(.no-btm-margin),
 main section.row > .column > div > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-body > div > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > div > ul:not(.no-btm-margin),
-main section.row > .column > section > div > ul:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > div > ul:not(.no-btm-margin),
 main section.row > .column > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-body > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > ol:not(.no-btm-margin),
-main section.row > .column > section > ol:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > ol:not(.no-btm-margin),
 main section.row > .column > section > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-body > section > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > section > ol:not(.no-btm-margin),
-main section.row > .column > section > section > ol:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > section > ol:not(.no-btm-margin),
 main section.row > .column > div > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-body > div > ol:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > div > ol:not(.no-btm-margin),
-main section.row > .column > section > div > ol:not(.no-btm-margin),
 main section.row > .column table > tbody > tr > td > div > ol:not(.no-btm-margin),
 main section.row > .column > .gform_wrapper .gfield_html > p:not(:last-child),
 main section.row > .column > article > .article-body > .gform_wrapper .gfield_html > p:not(:last-child),
 main section.row > .column > article > .article-summary > .gform_wrapper .gfield_html > p:not(:last-child),
-main section.row > .column > section > .gform_wrapper .gfield_html > p:not(:last-child),
 main section.row > .column table > tbody > tr > td > .gform_wrapper .gfield_html > p:not(:last-child),
 main section.row > .column > .gform_confirmation_wrapper p:not(:last-child),
 main section.row > .column > article > .article-body > .gform_confirmation_wrapper p:not(:last-child),
 main section.row > .column > article > .article-summary > .gform_confirmation_wrapper p:not(:last-child),
-main section.row > .column > section > .gform_confirmation_wrapper p:not(:last-child),
 main section.row > .column table > tbody > tr > td > .gform_confirmation_wrapper p:not(:last-child) {
   margin-bottom: 1rem;
 }
 main section.row:last-child > .column > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-body > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > ul:last-child,
-main section.row:last-child > .column > .column > section > ul:last-child,
 main section.row:last-child > .column > section > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-body > section > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > section > ul:last-child,
-main section.row:last-child > .column > .column > section > section > ul:last-child,
 main section.row:last-child > .column > div > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-body > div > ul:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > div > ul:last-child,
-main section.row:last-child > .column > .column > section > div > ul:last-child,
 main section.row:last-child > .column > ol:last-child,
 main section.row:last-child > .column > .column > article > .article-body > ol:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > ol:last-child,
-main section.row:last-child > .column > .column > section > ol:last-child,
 main section.row:last-child > .column > section > ol:last-child,
 main section.row:last-child > .column > .column > article > .article-body > section > ol:last-child,
 main section.row:last-child > .column > .column > article > .article-summary > section > ol:last-child,
-main section.row:last-child > .column > .column > section > section > ol:last-child,
 main section.row:last-child > .column > div > ol:last-child,
 main section.row:last-child > .column > .column > article > .article-body > div > ol:last-child,
-main section.row:last-child > .column > .column > article > .article-summary > div > ol:last-child,
-main section.row:last-child > .column > .column > section > div > ol:last-child {
+main section.row:last-child > .column > .column > article > .article-summary > div > ol:last-child {
   margin-bottom: 0;
 }
 @media all and (max-width: 693px) {
@@ -6364,9 +6350,11 @@ div.auto-scroller ul li {
 .page-header--h-450px {
   height: 450px;
 }
+.page-header--h-auto {
+  height: auto;
+}
 .page-header__column-1 {
   background-color: rgba(0, 0, 0, 0.9);
-  top: 50%;
   box-sizing: border-box;
   color: #ffffff;
   display: block;
@@ -6374,6 +6362,7 @@ div.auto-scroller ul li {
   margin: 0;
   padding: 1rem;
   right: 2rem;
+  top: 50%;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -6400,10 +6389,17 @@ div.auto-scroller ul li {
 .page-header .page-header__column-1 {
   position: absolute;
 }
-.fluid .row.single .column.page-header__column-1 {
-  width: auto;
+.page-header .page-header__column-1--p-static {
+  position: static;
+  top: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
 }
-.page-header__text-breadcrumb,
+.fluid .row.single .column.page-header__column-1--p-static {
+  width: 100%;
+}
+.fluid .row.single .page-header__text-breadcrumb,
 .page-header__text-title,
 .page-header__text-subtitle {
   color: inherit;
@@ -10213,7 +10209,7 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
   z-index: 2;
 }
 .page-header__gallery-wall-panorama {
-  background: url(/wp-content/uploads/sites/50/2018/10/panorama_gallery-wall-2018_3164x450.jpg) no-repeat left center;
+  background: url(/wp-content/uploads/sites/50/2018/10/panorama_gallery-wall-2018_3171x450.jpg) no-repeat left center;
   position: absolute;
   left: 0;
   top: 0;
@@ -10221,23 +10217,3 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
   height: 450px;
   z-index: 1;
 }
-/*@keyframes gallery-pan {
-	0% {
-		left: 0;
-	}
-	2% {
-		left: 0;
-	}
-	48% {
-		left: ~"calc(-3164px + 100%)";
-	}
-	52% {
-		left: ~"calc(-3164px + 100%)";
-	}
-	98% {
-		left: 0;
-	}
-	100% {
-		left: 0;
-	}
-}*/
