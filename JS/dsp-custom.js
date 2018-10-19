@@ -84,21 +84,37 @@ function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
 	 */
 	function panHeader( $header ) {
 		var $container
+		var cssData = new CssData( $header );
 		var containerWidth;
 		var headerWidth;
 		var idx;
 		var newLeftPos
 		var panDuration;
+		var stoppingPoint;
+		var stoppingDuration;
 
 		$container = $header.parent( containerSlctr );
 		headerWidth = $header.width();
 		containerWidth = $container.width();
 		newLeftPos = -1 * headerWidth + containerWidth;
 		panDuration = (headerWidth - containerWidth) / speed * 1000;
+		try {
+			stoppingPoint = cssData.getData('stop-at');
+			if (stoppingPoint !== '') {
+				stoppingPoint = parseInt(stoppingPoint, 10) * -1;
+				stoppingDuration = -1 * stoppingPoint / speed * 1000;
+			} else {
+				stoppingPoint = 0;
+			}
+		} catch ( errorMsg ) {
+			console.log( errorMsg );
+			stoppingPoint = 0;
+		}
 		for (idx = 0; idx < numPans; idx++) {
 			$header.animate( { left: newLeftPos }, panDuration ).animate( { left: 0 },
 				panDuration );
 		}
+		$header.animate( { left: stoppingPoint }, stoppingDuration );
 	}
 }
 
