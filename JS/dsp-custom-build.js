@@ -1,144 +1,3 @@
-/*!
- * Site-specific JS for the WSU Distinguished Scholarships website.
- *
- * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
- */
-
-/* -------------------------------------------------------------------------------------------------
-** §1: Main execution
-*/
-
-/**
- * IIFE for main execution.
- */
-( function ( $ ) {
-
-"use strict";
-
-/**
- * jQuery call for executing statements after the DOM has loaded.
- */
-$( function () {
-	var htmlNewsHeader = '<section class="row single gutter pad-top"><div class="column one"><secti\
-on class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We an\
-d Our Students Have Accomplished</h3></div></section></div></section>';
-	
-	// Tweak HTML source to work around some quirks of WordPress setup
-	addPageHeaderOnNewsPages( htmlNewsHeader );
-} );
-
-/**
- * jQuery call for executing statements after the window has finished loading.
- */
-$( window ).on( 'load', function () {
-	var selectors = {};
-	selectors.galleryWall = '.page-header__gallery-wall-panorama';
-	selectors.galleryWallContainer = '.page-header__gallery-wall-wrapper';
-	animateGalleryWallHeader( selectors.galleryWall, selectors.galleryWallContainer, 132, 2 );
-} );
-
-/* -------------------------------------------------------------------------------------------------
-** §2: Class declarations
-*/
-
-/**
- * Create a new instance of an animated gallery wall object, which causes gallery wall headers to
- * pan back and forth.
- * 
- * @class
- *
- * @param {string} headerSlctr - jQuery selector for the header objects that will be animated.
- */
-function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
-
-	initializeHeaders();
-
-	function initializeHeaders() {
-		var $headers;
-		var $thisHeader;
-
-		$headers = $( headerSlctr );
-		if ( $headers.length > 0 ) {
-			$headers.each( function() {
-				$thisHeader = $( this );
-				panHeader($thisHeader);
-			} );
-		}		
-	}
-
-	function panHeader( $header ) {
-		var $container
-		var containerWidth;
-		var headerWidth;
-		var idx;
-		var newLeftPos
-		var panDuration;
-
-		$container = $header.parent( containerSlctr );
-		headerWidth = $header.width();
-		containerWidth = $container.width();
-		newLeftPos = -1 * headerWidth + containerWidth;
-		panDuration = (headerWidth - containerWidth) / speed * 1000;
-		for (idx = 0; idx < numPans; idx++) {
-			$header.animate( { left: newLeftPos }, panDuration ).animate( { left: 0 },
-				panDuration );
-		}
-	}
-}
-
-/* -------------------------------------------------------------------------------------------------
-** §3: Function Declarations
-*/
-
-/**
- * Add page headers to news pages.
- *
- * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
- */
-function addPageHeaderOnNewsPages( htmlNewsHeader ) {
-	aPHONP_addHeaderViaLocation( htmlNewsHeader );
-	aPHONP_addHeaderViaClassUtilization( htmlNewsHeader );
-}
-
-/**
- * Use the browser's location to add a header to news pages.
- *
- * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
- */
-function aPHONP_addHeaderViaLocation( htmlNewsHeader ) {
-	var siteURL = window.location.pathname;
-	switch( siteURL ) {
-		case '/news/':
-			$( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
-			break;
-	}	
-}
-
-/**
- * Inspect the body tag to add a header to news pages when certain classes are in use.
- *
- * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
- */
-function aPHONP_addHeaderViaClassUtilization( htmlNewsHeader ) {
-	var $body = $( 'body' ).first();
-	if ( $body.hasClass( 'single-post' ) ) {
-		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
-	}
-}
-
-/**
- * Set up a horizontal panning animation on the header of gallery wall pages.
- *
- * @param {String} headerSlctr - Selector for the header graphic that will be panned.
- * @param {String} containerSlctr - Selector for the container of the header graphic. This function
- *     assumes it has its overflow CSS property set to hidden.
- */
-function animateGalleryWallHeader( headerSlctr, containerSlctr, duration, numPans ) {
-	var animObj = new AnimatedGalleryWall( headerSlctr, containerSlctr, duration, numPans );
-}
-
-} )( jQuery );
-
 /*!************************************************************************************************
  * jQuery.oue-custom.js: custom JS code common to all WSU Undergraduate Education websites        *
  **************************************************************************************************/
@@ -1624,6 +1483,177 @@ function setupCalendarLegendScrolling($calendars) {
 		}
 	}
 })(jQuery);
+/*!
+ * jQuery.css-data.js
+ * -------------------------------------------------------------------------------------------------
+ * SUMMARY: Declares the CssData class for use on OUE websites.
+ *
+ * DESCRIPTION: Provides 
+ *
+ * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *
+ * REPOSITORY: https://github.com/invokeImmediately/WSU-UE---JS
+ *
+ * LICENSE: ISC - Copyright (c) 2018 Daniel C. Rieck.
+ *
+ *   Permission to use, copy, modify, and/or distribute this software for any purpose with or
+ *   without fee is hereby granted, provided that the above copyright notice and this permission
+ *   notice appear in all copies.
+ *
+ *   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+ *   SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+ *   DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+ *   DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+ *   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ *   PERFORMANCE OF THIS SOFTWARE.
+ */
+
+var CssData = ( function ($) {
+
+var thisFile = 'jQuery.css-data.js';
+
+/**
+ * Interface for interpreting CSS class names as information encodings.
+ *
+ * @param {object} [$targetObj] - A jQuery object containing a single element representing the
+ *     target within the DOM that has data encoded in one or more of its CSS class names.
+ */
+function CssData( $targetObj ) {
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	// PRIVATE PROPERTIES
+	var _$obj = $targetObj;
+	var _argsAreValid = false;
+	var _classList = undefined;
+	var _targetingErrorMask;
+	var _targetingErrorMsgs = [
+			'I was not passed a valid jQuery object representing a target within the DOM.',
+			'I was passed a valid jQuery object purportedly representing a target within the DOM, b\
+ut it did not contain a single element as required.'
+		];
+	var _masterPrefix = 'data-';
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	// CONSTRUCTOR EXECUTION SECTION
+	_ValidateTargetingArgs();
+	_LoadClassList();
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	// PROTECTED METHODS
+
+	/**
+	 * Returns data embedded in an object's CSS class name based on an indicator prefix.
+	 *
+	 * @param {string} dataPrefix - String representing the prefix string that marks a CSS class as
+	 *     an encoding of data (e.g., 'expires-on-').
+	 *
+	 * @throws {string} Parameter dataPrefix must typed as a string.
+	 *
+	 * @return {string} Returns any data encoded within the CSS class list. If no valid data was
+	 *     found, returns an empty string.
+	 */
+	this.getData = function (dataPrefix) {
+		// TODO: Finish writing function.
+		var data = '';
+		var idx;
+		var class_i;
+		var reObj;
+		var matchResult;
+		if ( _argsAreValid && typeof dataPrefix === 'string' ) {
+			reObj = new RegExp( '^' + _masterPrefix + dataPrefix + '-(.*)$' );
+			for ( idx = 0; !matchResult && idx < _classList.length; idx++ ) {
+				class_i = _classList.item(idx);
+				matchResult = reObj.exec( class_i );
+			}
+			if ( matchResult !== null ) {
+				if (matchResult.length === 2) {
+					data = matchResult[1];
+				}
+			}
+			// TODO: Handle additional error states.
+		} else if ( !_argsAreValid ) {
+			_ReportTargetingErrors();
+		} else {
+			throw 'I was expecting to be passed a string for my dataPrefix parameter; instead, I wa\
+s passed something that was typeof ' + typeof dataPrefix + '.';
+			// TODO: Write & apply OueError class.
+//			throw new OueError( thisFile, 'CssData.GetData(…)', 'I was expecting to be passed a str\
+//ing for my dataPrefix parameter; instead, I was passed something that was typeof ' +
+//				typeof dataPrefix + '.', dataPrefix );
+		}
+		return data;
+	}
+
+	/**
+	 * Sets a new target for data extraction.
+	 *
+	 * @param {object} $targetObj - A jQuery object containing a single element representing the
+	 *     target within the DOM that has data encoded in one or more of its CSS class names.
+	 */
+	this.setDomTarget = function ($newObj) {
+		_$obj = $newObj;
+		_ValidateTargetingArgs();
+		_LoadClassList();
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	// PRIVATE METHODS
+
+	/**
+	 * Get a reference to the class list for the jQuery object this instance is associated with.
+	 *
+	 * @access private
+	 */
+	function _LoadClassList() {
+		if ( _argsAreValid ) {
+			_classList = _$obj[0].classList;
+		}
+	}
+
+	/**
+	 * Provides the user with information about any errors encountered during construction of this
+	 * instance.
+	 *
+	 * @access private
+	 */
+	function _ReportTargetingErrors() {
+		var i;
+		var errorMsg;
+
+		if ( !_argsAreValid ) {
+			errorMsg = 'This is an error report from an instance of CssData. I encountered the foll\
+owing problems during an attempt to extract data:';
+			for ( i = 0; i < _targetingErrorMsgs.length; i++ ) {
+				if ( 1 & ( _targetingErrorMask >> i ) ) {
+					errorMsg += '\n' + _targetingErrorMsgs[ i ];
+				}
+			}
+			throw errorMsg;
+		}
+	}
+
+	/**
+	 * Ensures the arguments passed to this instance during its construction are valid.
+	 *
+	 * @access private
+	 */
+	function _ValidateTargetingArgs() {
+		var elemNumIs1;
+		var valid$Obj;
+
+		// Perform validity tests of arguments passed to the constructor.
+		valid$Obj = $.isJQueryObj(_$obj);
+		elemNumIs1 = valid$Obj ? _$obj.length == 1 : false;
+
+		// Set validity flag and error mask based on testing results; report any problems.
+		_argsAreValid = valid$Obj && elemNumIs1;
+		_targetingErrorMask = !valid$Obj | ( ( valid$Obj && !elemNumIs1 ) << 1 );
+	}
+}
+
+return CssData;
+
+} )( jQuery );
+
 /*!
 * jQuery cycle2; version: 2.1.5 build: 20140415
 * http://jquery.malsup.com/cycle2/
@@ -3992,4 +4022,177 @@ $( window ).on( 'load', function () {
 		}
 	} );
 } );
+} )( jQuery );
+
+/*!
+ * Site-specific JS for the WSU Distinguished Scholarships website.
+ *
+ * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
+ */
+
+/* -------------------------------------------------------------------------------------------------
+** §1: Main execution
+*/
+
+/**
+ * IIFE for main execution.
+ */
+( function ( $ ) {
+
+"use strict";
+
+/**
+ * jQuery call for executing statements after the DOM has loaded.
+ */
+$( function () {
+	var htmlNewsHeader = '<section class="row single gutter pad-top"><div class="column one"><secti\
+on class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We an\
+d Our Students Have Accomplished</h3></div></section></div></section>';
+	
+	// Tweak HTML source to work around some quirks of WordPress setup
+	addPageHeaderOnNewsPages( htmlNewsHeader );
+} );
+
+/**
+ * jQuery call for executing statements after the window has finished loading.
+ */
+$( window ).on( 'load', function () {
+	var selectors = {};
+	selectors.galleryWall = '.page-header__gallery-wall-panorama';
+	selectors.galleryWallContainer = '.page-header__gallery-wall-wrapper';
+	animateGalleryWallHeader( selectors.galleryWall, selectors.galleryWallContainer, 132, 2 );
+} );
+
+/* -------------------------------------------------------------------------------------------------
+** §2: Class declarations
+*/
+
+/**
+ * Create a new instance of an animated gallery wall object, which causes gallery wall headers to
+ * pan back and forth.
+ * 
+ * @class
+ *
+ * @param {String} headerSlctr - jQuery selector for the header objects that will be animated.
+ * @param {String} headerSlctr - jQuery selector for a header's container.
+ * @param {Number} speed - The speed of the pan in pixels per second.
+ * @param {Number} numPans - The number (> 0) of times the animation will pan forward and back.
+ */
+function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
+
+	setUpAnimations();
+
+	/**
+	 * Set up the panning animations for gallery wall headers.
+	 *
+	 * @private
+	 */
+	function setUpAnimations() {
+		var $headers;
+		var $thisHeader;
+
+		$headers = $( headerSlctr );
+		if ( $headers.length > 0 ) {
+			$headers.each( function() {
+				$thisHeader = $( this );
+				panHeader( $thisHeader );
+			} );
+		}		
+	}
+
+	/**
+	 * Cause a gallery wall header to pan back and forth according to prescribed settings.
+	 *
+	 * @private
+	 *
+	 * @param {jquery} $header - The jQuery object corresponding to the header in the DOM to be
+	 *     panned.
+	 */
+	function panHeader( $header ) {
+		var $container
+		var cssData = new CssData( $header );
+		var containerWidth;
+		var headerWidth;
+		var idx;
+		var newLeftPos
+		var panDuration;
+		var stoppingPoint;
+		var stoppingDuration;
+
+		$container = $header.parent( containerSlctr );
+		headerWidth = $header.width();
+		containerWidth = $container.width();
+		newLeftPos = -1 * headerWidth + containerWidth;
+		panDuration = (headerWidth - containerWidth) / speed * 1000;
+		try {
+			stoppingPoint = cssData.getData('stop-at');
+			if (stoppingPoint !== '') {
+				stoppingPoint = parseInt(stoppingPoint, 10) * -1;
+				stoppingDuration = -1 * stoppingPoint / speed * 1000;
+			} else {
+				stoppingPoint = 0;
+			}
+		} catch ( errorMsg ) {
+			console.log( errorMsg );
+			stoppingPoint = 0;
+		}
+		for (idx = 0; idx < numPans; idx++) {
+			$header.animate( { left: newLeftPos }, panDuration ).animate( { left: 0 },
+				panDuration );
+		}
+		$header.animate( { left: stoppingPoint }, stoppingDuration );
+	}
+}
+
+/* -------------------------------------------------------------------------------------------------
+** §3: Function Declarations
+*/
+
+/**
+ * Add page headers to news pages.
+ *
+ * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
+ */
+function addPageHeaderOnNewsPages( htmlNewsHeader ) {
+	aPHONP_addHeaderViaLocation( htmlNewsHeader );
+	aPHONP_addHeaderViaClassUtilization( htmlNewsHeader );
+}
+
+/**
+ * Use the browser's location to add a header to news pages.
+ *
+ * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
+ */
+function aPHONP_addHeaderViaLocation( htmlNewsHeader ) {
+	var siteURL = window.location.pathname;
+	switch( siteURL ) {
+		case '/news/':
+			$( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
+			break;
+	}	
+}
+
+/**
+ * Inspect the body tag to add a header to news pages when certain classes are in use.
+ *
+ * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
+ */
+function aPHONP_addHeaderViaClassUtilization( htmlNewsHeader ) {
+	var $body = $( 'body' ).first();
+	if ( $body.hasClass( 'single-post' ) ) {
+		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
+	}
+}
+
+/**
+ * Set up a horizontal panning animation on the header of gallery wall pages.
+ *
+ * @param {String} headerSlctr - Selector for the header graphic that will be panned.
+ * @param {String} containerSlctr - Selector for the container of the header graphic. This function
+ *     assumes it has its overflow CSS property set to hidden.
+ */
+function animateGalleryWallHeader( headerSlctr, containerSlctr, duration, numPans ) {
+	var animObj = new AnimatedGalleryWall( headerSlctr, containerSlctr, duration, numPans );
+}
+
 } )( jQuery );
