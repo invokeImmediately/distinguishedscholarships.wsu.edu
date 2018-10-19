@@ -45,11 +45,11 @@ se see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] 
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./JS/dsp-custom.js',
 			'./WSU-UE---JS/jQuery.oue-custom.js',
 			'./WSU-UE---JS/jQuery.animatedCalendar.js',
 			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
 			'./WSU-UE---JS/jQuery.cookieObjs.js',
+			'./WSU-UE---JS/jQuery.css-data.js',
 			'./WSU-UE---JS/jQuery.cycle2.js',
 			'./WSU-UE---JS/jQuery.forms.js',
 			'../jQuery.AreYouSure/jquery.are-you-sure.js',
@@ -60,7 +60,8 @@ function getJsBuildSettings() {
 			'./WSU-UE---JS/jQuery.textResize.js',
 			'../imagesloaded/imagesloaded.pkgd.min.js',
 			'../masonry/dist/masonry.pkgd.min.js',
-			'./WSU-UE---JS/jQuery.masonry-custom.js'
+			'./WSU-UE---JS/jQuery.masonry-custom.js',
+			'./JS/dsp-custom.js'
 		],
 		commentNeedle: /^(\/\*)(?!!)/g,
 		compiledJsFileName: 'dsp-custom-build.js',
