@@ -840,9 +840,10 @@ section.column-one-with-bottom-margin>.column.one {
 }
 
 section:not(.row).article-header {
+	background-size: auto 100% !important;
 	height: 120px;
 	margin-bottom: 1rem;
-	background-size: auto 100% !important;
+	max-width: 922px;
 }
 
 body.blog section:not(.row).article-header,body.single-post section:not(.row).article-header {
@@ -850,30 +851,22 @@ body.blog section:not(.row).article-header,body.single-post section:not(.row).ar
 }
 
 section:not(.row).article-header .header-content {
+	margin-left: 1rem;
+	margin-right: 1rem;
 	position: relative;
 	top: 50%;
-	margin-right: 1rem;
-	margin-left: 1rem;
 	transform: translateY(-50%);
 }
 
-section:not(.row).article-header .header-content h1 {
-	font-size: 4.118rem;
-	line-height: 1.071em;
-}
-
-section:not(.row).article-header .header-content h2 {
-	margin-bottom: .75rem;
+section:not(.row).article-header .header-content h1,section:not(.row).article-header .header-content h2,section:not(.row).article-header .header-content h3 {
 	font-size: 2.826rem;
 	line-height: .8em;
 	text-transform: uppercase;
 }
 
-section:not(.row).article-header .header-content h3 {
-	margin-top: 0;
-	margin-bottom: 0;
+section:not(.row).article-header .header-content h1+h2,section:not(.row).article-header .header-content h2+h3 {
 	font-size: 1.261rem;
-	text-transform: uppercase;
+	margin-top: .75rem;
 }
 
 section.halves .column p:not([class*=center]) {
@@ -912,11 +905,11 @@ section.side-right .column.two p {
 	color: #fff;
 }
 
-main section.row>.column table>tbody>tr>td>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column table>tbody>tr>td>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column table>tbody>tr>td>div>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>div>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ul:not(.no-btm-margin),main section.row>.column>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-body>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-summary>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-summary>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ul:not(.no-btm-margin),main section.row>.column>div>ol:not(.no-btm-margin),main section.row>.column>div>ul:not(.no-btm-margin),main section.row>.column>ol:not(.no-btm-margin),main section.row>.column>section>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>section>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>section>div>ol:not(.no-btm-margin),main section.row>.column>section>div>ul:not(.no-btm-margin),main section.row>.column>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ol:not(.no-btm-margin),main section.row>.column>section>section>ul:not(.no-btm-margin),main section.row>.column>section>ul:not(.no-btm-margin),main section.row>.column>ul:not(.no-btm-margin) {
+main section.row>.column table>tbody>tr>td>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column table>tbody>tr>td>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column table>tbody>tr>td>div>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>div>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ol:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>section>ul:not(.no-btm-margin),main section.row>.column table>tbody>tr>td>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-body>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-body>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-body>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-body>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>.gform_confirmation_wrapper p:not(:last-child),main section.row>.column>article>.article-summary>.gform_wrapper .gfield_html>p:not(:last-child),main section.row>.column>article>.article-summary>div>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>div>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ol:not(.no-btm-margin),main section.row>.column>article>.article-summary>section>ul:not(.no-btm-margin),main section.row>.column>article>.article-summary>ul:not(.no-btm-margin) {
 	margin-bottom: 1rem;
 }
 
-main section.row:last-child>.column>.column>article>.article-body>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ul:last-child,main section.row:last-child>.column>.column>section>div>ol:last-child,main section.row:last-child>.column>.column>section>div>ul:last-child,main section.row:last-child>.column>.column>section>ol:last-child,main section.row:last-child>.column>.column>section>section>ol:last-child,main section.row:last-child>.column>.column>section>section>ul:last-child,main section.row:last-child>.column>.column>section>ul:last-child,main section.row:last-child>.column>div>ol:last-child,main section.row:last-child>.column>div>ul:last-child,main section.row:last-child>.column>ol:last-child,main section.row:last-child>.column>section>ol:last-child,main section.row:last-child>.column>section>ul:last-child,main section.row:last-child>.column>ul:last-child {
+main section.row:last-child>.column>.column>article>.article-body>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-body>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-body>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>div>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ol:last-child,main section.row:last-child>.column>.column>article>.article-summary>section>ul:last-child,main section.row:last-child>.column>.column>article>.article-summary>ul:last-child {
 	margin-bottom: 0;
 }
 
@@ -2183,14 +2176,11 @@ ol {
 
 .wsuwp-json--headlines .content-item-thumbnail {
 	float: right;
+	margin-bottom: .5em;
+	margin-left: .5em;
 	max-width: 136px;
 	min-width: 96px;
 	width: 28.5%;
-}
-
-.wsuwp-json--headlines .content-item-thumbnail img {
-	margin-bottom: .5em;
-	margin-left: .5em;
 }
 
 .wsuwp-json--headlines .wsuwp-content-syndicate-item {
@@ -4869,9 +4859,12 @@ div.auto-scroller ul li {
 	height: 450px;
 }
 
+.page-header--h-auto {
+	height: auto;
+}
+
 .page-header__column-1 {
 	background-color: rgba(0,0,0,.9);
-	top: 50%;
 	box-sizing: border-box;
 	color: #fff;
 	display: block;
@@ -4879,6 +4872,7 @@ div.auto-scroller ul li {
 	margin: 0;
 	padding: 1rem;
 	right: 2rem;
+	top: 50%;
 	text-shadow: 1px 1px 8px rgba(0,0,0,.9);
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
@@ -4896,11 +4890,19 @@ div.auto-scroller ul li {
 	position: absolute;
 }
 
-.fluid .row.single .column.page-header__column-1 {
-	width: auto;
+.page-header .page-header__column-1--p-static {
+	position: static;
+	top: 0;
+	-webkit-transform: none;
+	-moz-transform: none;
+	transform: none;
 }
 
-.page-header__text-breadcrumb,.page-header__text-subtitle,.page-header__text-title {
+.fluid .row.single .column.page-header__column-1--p-static {
+	width: 100%;
+}
+
+.fluid .row.single .page-header__text-breadcrumb,.page-header__text-subtitle,.page-header__text-title {
 	color: inherit;
 	text-shadow: inherit;
 }
@@ -8259,7 +8261,7 @@ hr.icon--tower::before {
 }
 
 .page-header__gallery-wall-panorama {
-	background: url(/wp-content/uploads/sites/50/2018/10/panorama_gallery-wall-2018_3164x450.jpg) no-repeat left center;
+	background: url(/wp-content/uploads/sites/50/2018/10/panorama_gallery-wall-2018_3171x450.jpg) no-repeat left center;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -9994,10 +9996,10 @@ hr.icon--tower::before {
 	}
 	
 	section:not(.row).article-header .header-content h3 {
-		padding: .1rem .2rem .2rem;
-		background-color: rgba(152,30,50,.95);
 		border: 1px solid #fff;
+		background-color: rgba(152,30,50,.95);
 		color: #fff;
+		padding: .1rem .2rem .2rem;
 		text-shadow: 0 .3333px 0 #afafaf, 0 .6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px .3333px rgba(0,0,0,.1), 0 0 1.6667px rgba(0,0,0,.1), 0 .3333px 1px rgba(0,0,0,.3), 0 1px 1.6667px rgba(0,0,0,.2), 0 1.6667px 3.3333px rgba(0,0,0,.25), 0 3.3333px 3.3333px rgba(0,0,0,.2), 0 6.6667px 6.6667px rgba(0,0,0,.15);
 	}
 	
