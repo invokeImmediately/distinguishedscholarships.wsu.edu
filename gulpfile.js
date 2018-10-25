@@ -12,10 +12,10 @@ var gulpBuilder = require( './WSU-UE---JS/gulpBuilder.js' );
 */
 
 /**
- * 
- * @return {Object}		Collection of objects
+ * Get the settings for a gulp-mediated custom CSS build from Less source files.
+ *
+ * @return {object} - Instance of gulpBuilder.CssBuildSettings.
  */
-
 function getCssBuildSettings() {
 	var commentRemovalNeedle = /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm;
 	var dependenciesPath = './WSU-UE---CSS/';
@@ -42,6 +42,11 @@ se see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] 
  		minCssFileHeaderStr, sourceFile);
 }
 
+/**
+ * Get the settings for a gulp-mediated custom JS build.
+ *
+ * @return {object} - Simple collection of settings for JS builds.
+ */
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
