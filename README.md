@@ -1,5 +1,4 @@
 # distinguishedscholarships.wsu.edu
-Website of the WSU Distinguished Scholarships program
+Project for front-end development of the website of the [WSU Distinguished Scholarships program](https://distinguishedscholarships.wsu.edu).
 
-Repisotory for storing and tracking the LESS, CSS, JS, and HTML5 code from which the WSU
-Distinguished Scholarships Program website is constructed.
+This project stores and tracks the LESS, CSS, JS, and HTML5 code from which the WSU Distinguished Scholarships Program website is constructed via the [WSUWP platform](https://github.com/washingtonstateuniversity/wsuwp-platform).
