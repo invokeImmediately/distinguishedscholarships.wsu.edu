@@ -63,8 +63,6 @@ function getJsBuildSettings() {
 			'../qTip2/dist/jquery.qtip.min.js',
 			'./WSU-UE---JS/jQuery.qTip.js',
 			'./WSU-UE---JS/jQuery.textResize.js',
-			'../imagesloaded/imagesloaded.pkgd.min.js',
-			'../masonry/dist/masonry.pkgd.min.js',
 			'./WSU-UE---JS/jQuery.masonry-custom.js',
 			'./JS/dsp-custom.js'
 		],
