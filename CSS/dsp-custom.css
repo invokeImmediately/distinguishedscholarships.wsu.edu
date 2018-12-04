@@ -6371,7 +6371,9 @@ div.auto-scroller ul li {
   position: absolute;
 }
 .page-header .page-header__column-1--p-static {
+  left: 0;
   position: static;
+  right: 0;
   top: 0;
   -webkit-transform: none;
   -moz-transform: none;
@@ -6581,14 +6583,6 @@ div.auto-scroller ul li {
 .h6-fs {
   font-size: 1.4em;
 }
-/*!     ····························································································
-***     >>> §2.2: Typograhy: Line heights
-***
-***     NOTES:
-***     * See line 24 for explanation of "mx" units.
-***     * Depends on the utiltiy mixin .set-lHeight(...) and the Less variable @lHeight-array, 
-***       which are both defined in utility-mixins.less.
-**/
 .line-height--1000mx,
 .lh--1000mx {
   line-height: 1em;
@@ -6673,9 +6667,6 @@ div.auto-scroller ul li {
 .lh--1500mx {
   line-height: 1.5em;
 }
-/*!     ····························································································
-***     >>> §2.3: Typograhy: Bolding
-**/
 .font-weight--light,
 .fw--light {
   font-weight: 300;
@@ -6696,9 +6687,6 @@ div.auto-scroller ul li {
 .fw--extra-bold {
   font-weight: 800;
 }
-/*!     ····························································································
-***     >>> §2.4: Typograhy: Text transformation
-**/
 .text-transform--none,
 .tt--none {
   text-transform: none;
@@ -6707,9 +6695,6 @@ div.auto-scroller ul li {
 .tt--uppercase {
   text-transform: uppercase;
 }
-/*!     ····························································································
-***     >>> §2.5: Typograhy: Text alignment
-**/
 .text-align--center,
 .ta--center {
   text-align: center;
@@ -6782,9 +6767,6 @@ div.auto-scroller ul li {
 .flt--left {
   float: left;
 }
-/*!     ····························································································
-***     >>> §4.1: Clearing
-**/
 .clear--left,
 .clr--left {
   clear: left;
@@ -6822,6 +6804,33 @@ div.auto-scroller ul li {
   .hide-on-mobile {
     display: none;
   }
+}
+.dy--flex {
+  display: flex;
+}
+.fw--no-wrap {
+  flex-wrap: nowrap;
+}
+.fw--wrap {
+  flex-wrap: wrap;
+}
+.fw--wrap-reverse {
+  flex-wrap: wrap;
+}
+.jc--start {
+  justify-content: start;
+}
+.jc--center {
+  justify-content: center;
+}
+.jc--space-between {
+  justify-content: space-between;
+}
+.jc--space-around {
+  justify-content: space-around;
+}
+.jc--space-evenly {
+  justify-content: space-evenly;
 }
 .margin--0mx,
 .ma--0mx {
@@ -9880,6 +9889,9 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 .wsuwp-content-syndicate-event .content-item-event-venue:before {
   content: "in ";
 }
+.wsuwp-content-syndicate-event .content-item-event-venue:empty {
+  display: none;
+}
 .wsuwp-content-syndicate-list:empty:after {
   content: "None.";
 }
@@ -10119,8 +10131,6 @@ height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/
 }
 .page.massie-fellowship .massie-project {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .page.massie-fellowship .massie-project img {
   margin-left: 1rem;
