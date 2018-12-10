@@ -2985,6 +2985,59 @@ return CssData;
     }
 })(jQuery);
 
+/*!*
+ * jQuery.forms.js
+ * -------------------------------------------------------------------------------------------------
+ * SUMMARY: Enhancements, intended for OUE websites, mediated by jQuery to dynamic behavior of
+ * Gravity Forms.
+ *
+ * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *
+ * REPOSITORY: https://github.com/invokeImmediately/WSU-UE---JS
+ *
+ * LICENSE: ISC - Copyright (c) 2018 Daniel C. Rieck.
+ *
+ *   Permission to use, copy, modify, and/or distribute this software for any purpose with or
+ *   without fee is hereby granted, provided that the above copyright notice and this permission
+ *   notice appear in all copies.
+ *
+ *   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+ *   SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+ *   DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+ *   DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+ *   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ *   PERFORMANCE OF THIS SOFTWARE.
+ */
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// -----------------
+// §1: OUE-Wide Gravity Forms Enhancements......................................................55
+//     §1.1: Document ready bindings............................................................61
+//     §1.2: Binding of Handlers to Window Load.................................................86
+//     §1.3: Window Load Event Bindings.........................................................98
+//     §1.4: Function declarations.............................................................105
+// §2: Optional Gravity Forms Enhancements.....................................................419
+//     §2.1: GfCheckboxValidators class........................................................423
+//         §2.1.1: Private properties..........................................................438
+//         §2.1.2: Public properties...........................................................443
+//         §2.1.3: Privileged methods..........................................................448
+//         §2.1.4: Constructor's main execution section........................................464
+//         §2.1.5: Public methods..............................................................470
+//     §2.2: OueGFs class......................................................................598
+//         §2.2.1: Private properties..........................................................614
+//         §2.2.2: Private methods.............................................................624
+//         §2.2.3: Protected methods...........................................................639
+//         §2.2.4: Constructor's main execution section........................................655
+//     §2.3: WsuIdInputs class.................................................................668
+//         §2.3.1: Private properties..........................................................686
+//         §2.3.2: Private methods.............................................................710
+//         §2.3.3: Protected methods...........................................................765
+//         §2.3.4: Constructor's main execution section........................................779
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §1: OUE-Wide Gravity Forms Enhancements
 
@@ -2996,12 +3049,11 @@ return CssData;
 
 	$( function () {
 		var $requiredFields;
-		var wsuIds;
+		var oueGfs;
 
+		oueGfs = new OueGFs();
+		oueGfs.initialize();
 		if ( $( '.gform_body' ).length > 0 ) {
-			wsuIds = new WsuIdInputs( '.gf-is-wsu-id' );
-			wsuIds.initialize();
-
 			setupActvtrChckbxs( '.oue-gf-actvtr-checkbox' );
 			setupActvtrChain( '.oue-gf-actvtr-chain' );
 			setupUploadChain( '.oue-gf-upload-chain' );
@@ -3353,6 +3405,10 @@ return CssData;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §2: Optional Gravity Forms Enhancements
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// §2.1: GfCheckboxValidators
+
 /**
  * Gravity Form Checkbox Validators interface.
  *
@@ -3364,18 +3420,19 @@ return CssData;
  */
 var GfCheckboxValidators = ( function( $ ) {
 	function GfCheckboxValidators( sels ) {
+
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE PROPERTIES
+		// §2.1.1: Private properties
 
 		var _$form;
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PUBLIC PROPERTIES
+		// §2.1.2: Public properties
 
 		this.sels = sels;
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PRIVILEGED METHODS
+		// §2.1.3: Privileged methods
 
 		this.get$form = function () {
 			return _$form;
@@ -3391,12 +3448,13 @@ var GfCheckboxValidators = ( function( $ ) {
 		}
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// MAIN CONSTRUCTOR EXECUTION
+		// §2.1.4: Constructor's main execution section
+
 		this.findForm();
 	}
 
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHODS
+	////////////////////////////////////////////////////////////////////////////////////////////
+	// §2.1.5: Public methods
 
 	/**
 	 * Finish the process of hiding validator fields from the user.
@@ -3523,6 +3581,79 @@ var GfCheckboxValidators = ( function( $ ) {
 	return GfCheckboxValidators;
 } )( jQuery );
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+// §2.2: OueGFs
+
+/**
+ * Interface for adding enhancements to Gravity Forms found on OUE websites.
+ *
+ * @class
+ */
+
+var OueGFs = ( function( $ ) {
+
+	/**
+	 * Constructor for OueGFs.
+	 */
+	function OueGFs() {
+
+		////////////////////////////////////////////////////////////////////////////////////////////
+		// §2.2.1: Private properties
+
+		/**
+		 * Collection of selectors used to find form elements in the DOM.
+		 *
+		 * @private
+		 */
+		var _sels;
+
+		////////////////////////////////////////////////////////////////////////////////////////////
+		// §2.2.2: Private methods
+
+		/**
+		 * Initialize inputs accepting WSU ID numbers.
+		 *
+		 * @private
+		 */
+		function _initWsuIdInputs() {
+			var wsuIds;
+
+			wsuIds = new WsuIdInputs( _sels.wsuIds );
+			wsuIds.initialize();			
+		}
+
+		////////////////////////////////////////////////////////////////////////////////////////////
+		// §2.2.3: Protected methods
+
+		/**
+		 * Initialize Gravity Forms found on the page.
+		 *
+		 * Meant to be called after the DOM has loaded.
+		 *
+		 * @protected
+		 */
+		this.initialize = function () {
+			if ( $( _sels.gforms ).length ) {
+				_initWsuIdInputs();
+			}
+		}
+
+		////////////////////////////////////////////////////////////////////////////////////////////
+		// §2.2.4: Constructor's main execution section
+
+		_sels = {
+			gforms: '.gform_wrapper',
+			wsuIds: '.gf-is-wsu-id'
+		};
+	}
+
+	return OueGFs;
+
+} )( jQuery );
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// §2.3: WsuIdInputs
+
 /**
  * Provides RegEx mediated validation of gravity form inputs that accept WSU ID numbers.
  *
@@ -3533,26 +3664,67 @@ var WsuIdInputs = ( function ( $ ) {
 	/**
 	 * Constructor for WsuIdInputs class.
 	 *
-	 * @param {object} sels - Selectors required for setting up validation.
-	 * @param {string} sels.gfield - Selects the Gravity Form field containing the input in which
-	 *     the WSU ID number is to be entered.
+	 * @param {string} selGField - Selects the Gravity Form field containing the input in which the
+	 *     WSU ID number will be entered.
 	 */
 	function WsuIdInputs( selGfield ) {
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE PROPERTIES
+		// §2.3.1: Private properties
 
-		var _sels = {};
-		_sels.gform = '.gform_wrapper';
-		_sels.gfield = selGfield;
-		_sels.inputs = "input[type='text']";
-		var _keyCodes = [ 8, 9, 20, 35, 36, 37, 39, 46, 110, 144 ];
-		var _reFinalPattern = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
+		/**
+		 * The collection of selectors used to find inputs accepting WSU ID numbers in the DOM.
+		 *
+		 * @private
+		 */
+		var _sels;
+
+		/**
+		 * Key codes for acceptable keystrokes when a WSU ID input has focus.
+		 *
+		 * @private
+		 */
+		var _keyCodes;
+
+		/**
+		 * Regular expression pattern representing valid complete or incomple WSU ID input.
+		 *
+		 * @private
+		 */
+		var _reFinalPattern;
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE METHODS
+		// §2.3.2: Private methods
 
-		// TODO: Add inline documentation.
+		/**
+		 * Handler for blur events triggered in inputs accepting WSU ID numbers.
+		 *
+		 * @private
+		 *
+		 * @param {Event} e - Contains information about the blur event.
+		 */
+
+		function _onBlur( e ) {
+			var $this = $( this );
+			var inputText = $this.val();
+
+			if ( inputText != '' ) {
+				if ( _reFinalPattern.exec( inputText ) == null ) {
+					$this.val( '' );
+					alert( 'The WSU ID you entered did not follow the correct pattern; please try a\
+gain. When the leading zero is included, WSU ID numbers are 9 digits long. You can also drop the le\
+ading zero and enter in 8 digits.' );
+				}
+			}
+		}
+
+		/**
+		 * Handler for keydown events triggered in inputs accepting WSU ID numbers.
+		 *
+		 * @private
+		 *
+		 * @param {Event} e - Contains information about the keydown event.
+		 */
 		function _onKeydown( e ) {
 			var $this = $( this );
 			var inputText = $this.val();
@@ -3566,7 +3738,13 @@ var WsuIdInputs = ( function ( $ ) {
 			}
 		}
 
-		// TODO: Add inline documentation.
+		/**
+		 * Handler for paste events triggered in inputs accepting WSU ID numbers.
+		 *
+		 * @private
+		 *
+		 * @param {Event} e - Contains information about the paste event.
+		 */
 		function _onPaste( e ) {
 			var $this = $( this );
 			var clipboardData = e.originalEvent.clipboardData || window.clipboardData;
@@ -3597,16 +3775,31 @@ d.' );
 		}
 
 		////////////////////////////////////////////////////////////////////////////////////////////
-		// PROTECTED METHODS
+		// §2.3.3: Protected methods
 
-		// TODO: Inline documentation
+		/**
+		 * Initializes RegEx mediated validation of inputs accepting WSU ID numbers.
+		 *
+		 * @protected
+		 */
 		this.initialize = function () {
 			var $forms = $( _sels.gform );
 			var inputSel = _sels.gfield + ' ' + _sels.inputs;
 
-			$forms.on( 'keydown', inputSel, _onKeyDown );
+			$forms.on( 'blur', inputSel, _onBlur );
+			$forms.on( 'keydown', inputSel, _onKeydown );
 			$forms.on( 'paste', inputSel, _onPaste );
 		}
+
+		////////////////////////////////////////////////////////////////////////////////////////////
+		// §2.3.4: Constructor's main execution section
+
+		_sels = {};
+		_sels.gform = '.gform_wrapper';
+		_sels.gfield = selGfield;
+		_sels.inputs = "input[type='text']";
+		_keyCodes = [ 8, 9, 20, 35, 36, 37, 39, 46, 110, 144 ];
+		_reFinalPattern = /(?:^[0-9]{8}$)|(?:^0[0-9]{8}$)/;
 	}
 
 	return WsuIdInputs;
