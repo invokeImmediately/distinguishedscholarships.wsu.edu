@@ -6,6 +6,7 @@
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
 
+@import "..\WSU-UE---CSS\variables.less";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 @import "..\WSU-UE---CSS\cycle2.less";
 
@@ -731,7 +732,7 @@ with-drop-shadow_29x32.png);
 	&.event-details {
 		width: 92%;
 		padding: 8px;
-		.margin-centered;
+		.mh--auto;
 		border: 1px solid @hex-darker-yellow;
 		border-radius: 10px;
 		background-color: @hex-lightest-yellow;
@@ -893,7 +894,8 @@ top repeat, rgba(42,48,51,1.00);
 	.massie-project {
 		max-width: 800px;
 		img {
-			.spaces-lft-half;
+			.ml--1000mx;
+
 			@media all and (max-width: @large-mobile-screen-width) {
 				width: 80px;
 			}
@@ -921,8 +923,9 @@ top repeat, rgba(42,48,51,1.00);
 		}
 		& > img {
 			margin-top: 0.4rem;
-			.spaces-btm-half;
-			.spaces-lft-half;
+			.mb--1000mx;
+			.ml--1000mx;
+
 			@media all {
 				width: 128px;
 				@media (max-width: @column-floating-threshold) {
