@@ -2145,9 +2145,11 @@ ol {
 .wsuwp-json--headlines .wsuwp-content-syndicate-list {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.9em;
   list-style-type: none;
   padding: 0;
+}
+.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-list {
+  font-size: 0.9em;
 }
 .wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
   padding-bottom: 2em;
