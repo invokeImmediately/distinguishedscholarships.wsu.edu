@@ -3407,7 +3407,7 @@ a.vpue-tooltip span b {
   -webkit-box-shadow: inset -1px 1px 0 #fff;
   -moz-box-shadow: inset 0 1px 0 #fff;
   -o-box-shadow: inset 0 1px 0 #fff;
-  /*display: none;*/
+  /**isplay: none;**/
 }
 a.vpue-tooltip > span {
   background: #eddccc;
@@ -3481,6 +3481,9 @@ body.user-is-tabbing .column a:focus::after {
   top: 100%;
   transform: translate(-50%, -100%) translateY(2px);
   transition: all .25s ease;
+}
+.column a.non-text-link.--not-baseline::before {
+  transform: translate(-50%, -100%) translateY(8px);
 }
 .column a.non-text-link img {
   border-bottom: 3px solid #fff;
