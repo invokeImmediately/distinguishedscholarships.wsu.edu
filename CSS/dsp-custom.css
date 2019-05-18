@@ -487,17 +487,6 @@ section.side-right .column.two p {
 main .row {
   font-size: 1rem;
 }
-main .row > .column table > tbody > tr > td > p:last-child,
-main .row > .column table > tbody > tr > td > section > p:last-child,
-main .row > .column table > tbody > tr > td > div > p:last-child,
-main .row > .column table > tbody > tr > td > ul:last-child,
-main .row > .column table > tbody > tr > td > section > ul:last-child,
-main .row > .column table > tbody > tr > td > div > ul:last-child,
-main .row > .column table > tbody > tr > td > ol:last-child,
-main .row > .column table > tbody > tr > td > section > ol:last-child,
-main .row > .column table > tbody > tr > td > div > ol:last-child {
-  margin-bottom: 0;
-}
 .h1-header + section.pad-top .column {
   padding-top: 2rem;
 }
@@ -653,17 +642,17 @@ aside.widget_archive label.screen-reader-text {
   display: none;
 }
 .column aside.article-sidebar {
+  background: #f8f1eb;
+  border: 1px solid #6d441f;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #464e54;
   float: right;
-  width: 33%;
-  min-width: 230px;
-  padding: 0.8rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
-  border: 1px solid #6d441f;
-  background: #f8f1eb;
-  color: #464e54;
-  font-size: 0.8rem;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  min-width: 230px;
+  padding: 0.8rem;
+  width: 33%;
 }
 .column aside.article-sidebar:first-child + h1,
 .column aside.article-sidebar:first-child + h2,
@@ -688,13 +677,13 @@ aside.widget_archive label.screen-reader-text {
   padding-bottom: 0;
 }
 .column aside.article-sidebar h2 + hr {
-  margin-top: 0.25rem;
   background-color: rgba(70, 78, 84, 0.75);
+  margin-top: 0.25rem;
 }
 .column aside.article-sidebar h3 {
   font-size: 1.275rem;
-  margin-top: 1.2rem;
   margin-bottom: 0;
+  margin-top: 1.2rem;
 }
 .column aside.article-sidebar h3:first-child {
   margin-top: 0;
@@ -708,12 +697,13 @@ aside.widget_archive label.screen-reader-text {
 @media all and (max-width: 693px) {
   .row.single .column aside.article-sidebar {
     position: absolute;
-    top: 0px;
     right: -2rem;
+    top: 0px;
     width: 230px;
     transform-origin: 100% 0% 0;
     transform: rotate(-90deg) translateY(-2rem);
     transition: transform .25s ease-out;
+    z-index: 99352;
   }
   .row.single .column aside.article-sidebar:hover {
     transform: none;
@@ -3436,7 +3426,7 @@ a.vpue-tooltip span b {
   background-color: rgba(198, 12, 48, 0.15);
   border-color: #c60c30;
   border-radius: 0;
-  box-shadow: inset 0 -2px 0 transparent;
+  box-shadow: inset 0 -1px 0 transparent;
   text-shadow: 1px 1px 2px rgba(152, 30, 50, 0.3);
 }
 .column a.gform_anchor {
@@ -3500,6 +3490,7 @@ body.user-is-tabbing .column a:focus::after {
 }
 .column a.non-text-link:hover img,
 .column .article-thumbnail a:hover img {
+  border-color: #f45372;
   box-shadow: 0 3px #f45372;
 }
 .column a.non-text-link.--not-baseline::before,
@@ -3569,8 +3560,8 @@ span.has-tool-tip,
 span.has-tooltip {
   position: relative;
   margin-bottom: -3px;
-  border-bottom: 1px dotted rgba(0, 165, 189, 0.25);
-  color: #00a5bd;
+  border-bottom: 1px dotted rgba(0, 70, 189, 0.85);
+  color: #0046bd;
   transition-property: color, background, border-color;
   -webkit-transition-property: color, background, border-color;
   transition-duration: 0.3s, 0.3s, 0.3s;
@@ -3580,9 +3571,9 @@ span.has-tooltip {
 }
 span.has-tool-tip:hover,
 span.has-tooltip:hover {
-  background-color: rgba(0, 165, 189, 0.2);
-  border-color: rgba(0, 165, 189, 0.67);
-  color: #2f5055;
+  background-color: rgba(88, 149, 255, 0.1);
+  border-color: rgba(88, 149, 255, 0.85);
+  color: #5895ff;
 }
 @media all and (max-width: 989px) {
   span.hides-with-spine {
@@ -5637,22 +5628,22 @@ div.auto-scroller ul li {
 }
 @media all and (min-width: 481px) {
   .show-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (max-width: 480px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (min-width: 792px) {
   .show-on-tablet {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (max-width: 791px) {
   .hide-on-tablet {
-    display: none;
+    display: none !important;
   }
 }
 .dy--flex {
