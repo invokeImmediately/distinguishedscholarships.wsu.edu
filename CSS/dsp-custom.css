@@ -5048,8 +5048,8 @@ div.auto-scroller ul li {
   background-color: #2f3438;
   padding-bottom: 0.75em;
 }
-.on-this-page .column {
-  background-color: inherit;
+.on-this-page.single .column {
+  float: left !important;
 }
 .on-this-page__heading {
   color: #fff;
@@ -5077,7 +5077,7 @@ div.auto-scroller ul li {
   box-shadow: none;
   color: white;
   display: inline-block;
-  padding: 14px 16px;
+  padding: 5px 12px;
   text-align: center;
 }
 .on-this-page__menu-item a:hover {
@@ -5087,7 +5087,7 @@ div.auto-scroller ul li {
 }
 @media all and (max-width: 791px) {
   .on-this-page__menu-item a {
-    padding: 8px 10px;
+    padding: 4px 10px;
     font-size: 0.85em;
   }
 }
@@ -5369,6 +5369,9 @@ div.auto-scroller ul li {
 }
 .mw--80ch {
   max-width: 80ch;
+}
+.w--auto {
+  width: auto !important;
 }
 .font-size--400mx,
 .fs--400mx {
@@ -6081,6 +6084,9 @@ div.auto-scroller ul li {
 .va--top {
   vertical-align: top;
 }
+.bgc--transparent {
+  background-color: transparent;
+}
 .c--gray--lightest {
   color: #eff0f1;
 }
@@ -6480,8 +6486,7 @@ header.main-header {
 }
 @media all and (max-width: 1208px) {
   header.main-header {
-    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
-50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   }
 }
 .main-header sub:not(.unset),
@@ -6541,29 +6546,25 @@ header.main-header {
 @media screen {
   .column aside.decoration.international-scholarships {
     padding-bottom: 45.0622%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-
-scholarships_portrait.jpg) center center / auto 100%;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center / auto 100%;
   }
 }
 @media screen and (max-width: 480px) {
   .column aside.decoration.international-scholarships {
     padding-bottom: 38%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_
-international-scholarships_landscape.jpg) top center / 100% auto;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center / 100% auto;
   }
 }
 @media screen {
   .column aside.decoration.daca-scholarships {
     padding-bottom: 43.8023%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
-scholarships_portrait.jpg) center center / 100% auto no-repeat;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center / 100% auto no-repeat;
   }
 }
 @media screen and (max-width: 480px) {
   .column aside.decoration.daca-scholarships {
     padding-bottom: 38%;
-    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
-scholarships_landscape.jpg) top center / 100% auto no-repeat;
+    background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center / 100% auto no-repeat;
   }
 }
 .column section.header-annual-events {
@@ -6616,13 +6617,16 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
     text-align: center;
   }
 }
+.row.halves.article-header.fulbright {
+  height: 124px;
+}
 .row.halves.article-header.fulbright .column.one {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0)), linear-gradient(to right, #dc7a05, #dc7a05);
 }
 .row.halves.article-header.fulbright .column.two {
   background-color: #375e4c;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: contain;
 }
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:before,
 .row.builder-section-banner.has-interaction-message .builder-section-content.cycle-slideshow:after {
@@ -6636,8 +6640,7 @@ scholarships_landscape.jpg) top center / 100% auto no-repeat;
   font-size: 12px;
   line-height: 1em;
   color: #fff;
-  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
-with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
+  background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top / auto 32px no-repeat;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
@@ -8255,72 +8258,8 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 .wsuwp-content-syndicate-list:empty::after {
   content: "None.";
 }
-#on-this-page {
-  background-color: #2f3438;
-}
-#on-this-page .column {
-  background-color: inherit;
-}
-#on-this-page h2 {
-  color: #fff;
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
-}
-#on-this-page ul {
-  background-color: inherit;
-  border-left: 1px solid #2f3438;
-  border-top: 1px solid #2f3438;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-}
-#on-this-page li {
-  float: left;
-  list-style-image: none;
-  margin-top: 0 !important;
-  padding: 0;
-}
-#on-this-page li a {
-  color: white;
-  background-color: #464e54;
-  border-bottom: 1px solid #2f3438;
-  border-radius: 0;
-  border-right: 1px solid #2f3438;
-  box-shadow: none;
-  display: inline-block;
-  padding: 14px 16px;
-  text-align: center;
-}
-#on-this-page li a:hover {
-  background-color: #23272a;
-  border-color: #2f3438;
-  text-shadow: none;
-}
-@media all and (max-width: 791px) {
-  #on-this-page li a {
-    padding: 8px 10px;
-  }
-}
-.back-to-otp {
-  font-size: 0.9em !important;
-  position: relative;
-  padding-left: 1rem;
-}
-.back-to-otp:before {
-  background: url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-c
-w_54x64.png) center center / auto 100% no-repeat;
-  content: "";
-  height: 0.9rem;
-  left: -1rem;
-  left: calc(-1rem - 3px);
-  position: absolute;
-  width: 1rem;
-}
 hr.icon--crest::before {
-  background: url(/wp-content/uploads/sites/50/2018/07/icon_wsu-shield_crim
-son.png);
+  background: url(/wp-content/uploads/sites/50/2018/07/icon_wsu-shield_crimson.png);
   content: "";
   height: 18px;
   left: 16px;
@@ -8329,8 +8268,7 @@ son.png);
   width: 16px;
 }
 hr.icon--tower::before {
-  background: url(/wp-content/uploads/sites/50/2018/07/icon_bryan-tower_ren
-dered.png);
+  background: url(/wp-content/uploads/sites/50/2018/07/icon_bryan-tower_rendered.png);
   content: "";
   height: 25px;
   position: absolute;
@@ -8342,8 +8280,7 @@ dered.png);
   height: 450px;
 }
 .page.has-short-main-header header.main-header {
-  background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-
-short-main-headers-2.png) no-repeat right center, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+  background: url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 }
 .page.has-short-main-header header.main-header .sub-header-default,
 .page.has-short-main-header header.main-header .sub-header {
@@ -8351,8 +8288,7 @@ short-main-headers-2.png) no-repeat right center, url(/wp-content/uploads/sites/
 }
 @media all and (max-width: 580px) {
   .page.has-short-main-header header.main-header {
-    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-
-height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+    background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top / 48px auto, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
   }
 }
 .row.has-linked-columns.linked-announcement {
