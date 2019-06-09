@@ -133,8 +133,7 @@ header.main-header {
 	}
 	@media all and (max-width: 1208px) {
 		background: 
-			url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_
-50px-height-2.png) no-repeat right top,
+			url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top,
 			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
 				left top repeat, rgba(42,48,51,1.00);
 	}
@@ -168,24 +167,20 @@ header.main-header {
 			&.international-scholarships {
 				@media screen {
 					padding-bottom: 45.0622%;
-					background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-
-scholarships_portrait.jpg) center center/auto 100%;
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_portrait.jpg) center center/auto 100%;
 					@media (max-width: @large-mobile-screen-width) {
 						padding-bottom: 38%;
-						background: url(/wp-content/uploads/sites/50/2017/03/decoration_
-international-scholarships_landscape.jpg) top center/100% auto;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_international-scholarships_landscape.jpg) top center/100% auto;
 					}
 				}
 			}
 			&.daca-scholarships {
 				@media screen {
 					padding-bottom: 43.8023%;
-					background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
-scholarships_portrait.jpg) center center/100% auto no-repeat;
+					background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center/100% auto no-repeat;
 					@media (max-width: @large-mobile-screen-width) {
 						padding-bottom: 38%;
-						background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-
-scholarships_landscape.jpg) top center/100% auto no-repeat;
+						background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center/100% auto no-repeat;
 					}
 				}
 			}
@@ -304,6 +299,12 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 }
 
 // Component-based article header banners
+.row.halves.article-header {
+	&.fulbright {
+		height: 124px;
+	}
+}
+
 .column {
 	// Explore Awards / Fulbright 
 	.row.halves.article-header.fulbright &.one {
@@ -313,7 +314,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 	.row.halves.article-header.fulbright &.two {
 			background-color: #375e4c;
 			background-repeat: no-repeat;
-			background-size: 100% auto;
+			background-size: contain;
 	}
 }
 
@@ -338,8 +339,7 @@ scholarships_landscape.jpg) top center/100% auto no-repeat;
 			font-size: 12px;
 			line-height: 1em;
 			color: @hex-white;
-			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_
-with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
+			background: transparent url(/wp-content/uploads/sites/50/2017/07/icon_click-or-tap_with-drop-shadow_29x32.png) right top/auto @icon-height no-repeat;
 			& { text-shadow: 1px 1px 2px @rgba; .getRgbaStr(@hex-black, 0.5); }
 			z-index: @z-index;
 		}
@@ -822,14 +822,12 @@ point_gray.png);
 
 .use-events-calendar("Distinguished Scholarships Program");
 
-.use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-c
-w_54x64.png));
+// .use-on-this-page-sections(url(/wp-content/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-c
+// w_54x64.png));
 
-.declare-hr-icon-class(~"icon--crest", url(/wp-content/uploads/sites/50/2018/07/icon_wsu-shield_crim
-son.png), 16px, 18px, 16px, -7px, "left");
+.declare-hr-icon-class(~"icon--crest", url(/wp-content/uploads/sites/50/2018/07/icon_wsu-shield_crimson.png), 16px, 18px, 16px, -7px, "left");
 
-.declare-hr-icon-class(~"icon--tower", url(/wp-content/uploads/sites/50/2018/07/icon_bryan-tower_ren
-dered.png), 16px, 25px, 16px, -18px, "right");
+.declare-hr-icon-class(~"icon--tower", url(/wp-content/uploads/sites/50/2018/07/icon_bryan-tower_rendered.png), 16px, 25px, 16px, -18px, "right");
 
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §8.1: Overrides for mixin-included styles
@@ -845,10 +843,8 @@ dered.png), 16px, 25px, 16px, -18px, "right");
 	}
 	header.main-header {
 		background: 
-			url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-
-short-main-headers-2.png) no-repeat right center,
-			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
-				left top repeat, rgba(42,48,51,1.00);
+			url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center,
+			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 		.sub-header-default,
 		.sub-header {
 			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8), 
@@ -858,10 +854,8 @@ short-main-headers-2.png) no-repeat right center,
 		}
 		@media all and (max-width: 580px) {
 			background: 
-				url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-
-height-2.png) no-repeat right top/48px auto,
-				url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left 
-top repeat, rgba(42,48,51,1.00);
+				url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top/48px auto,
+				url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 		}
 	}
 }
