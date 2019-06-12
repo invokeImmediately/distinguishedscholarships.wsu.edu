@@ -1253,14 +1253,6 @@ header.main-header .header-group {
     transform: translateX(-50%);
   }
 }
-.column:not(.show-header) > header:first-child {
-  display: none;
-}
-.column header:first-child + h1,
-.column header:first-child + h2.fancy.with-top-border,
-.column header:first-child + h3.fancy.with-top-border {
-  margin-top: 0;
-}
 footer.article-footer div.author-info {
   display: none;
 }
@@ -7303,13 +7295,15 @@ span.has-tooltip:hover:after {
 }
 .column a.recommend-button,
 .column a.glass-button {
-  display: block;
-  position: relative;
   padding: 1em;
   border-radius: 7px;
   border-bottom: none;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
+}
+.column a.recommend-button:hover,
+.column a.glass-button:hover {
+  border-radius: 7px;
 }
 .column a.recommend-button::before,
 .column a.glass-button::before {
@@ -7374,6 +7368,10 @@ span.has-tooltip:hover:after {
   box-sizing: border-box;
   width: 100%;
   width: calc(100% - 55px - 1em);
+}
+.recommend-button,
+.glass-button {
+  display: block;
 }
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
