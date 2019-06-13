@@ -5091,22 +5091,29 @@ div.auto-scroller ul li {
 }
 .on-this-page__menu-item.--related a {
   position: relative;
+  margin-right: 5px;
+}
+.on-this-page__menu-item.--related a::before,
+.on-this-page__menu-item.--related a::after {
+  content: "";
+  border-top: 3px solid #464e54;
+  position: absolute;
+  top: 50%;
+  width: 5px;
 }
 .on-this-page__menu-item.--related a::before {
-  content: "";
-  border-bottom: 1px solid #8d959a;
-  border-top: 1px solid #8d959a;
-  bottom: -1px;
-  left: -8px;
-  position: absolute;
-  right: -8px;
-  top: -1px;
+  right: 0;
+  transform: translateX(5px);
 }
-.on-this-page__menu-item.--related.--start a::before {
+.on-this-page__menu-item.--related a::after {
   left: 0;
+  transform: translateX(-5px);
+}
+.on-this-page__menu-item.--related.--start a::after {
+  content: none;
 }
 .on-this-page__menu-item.--related.--end a::before {
-  right: 0;
+  content: none;
 }
 .on-this-page__menu-item.--shifted {
   margin-left: 14px;
@@ -6485,6 +6492,11 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
+.on-this-page .fulbright {
+  background-position: 98% top;
+  background-repeat: no-repeat;
+  background-size: auto 175%;
+}
 @media all {
   .column aside {
     line-height: 1.5em;
@@ -6613,10 +6625,10 @@ header.main-header {
   height: 124px;
 }
 .row.halves.article-header.fulbright .column.one {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0)), linear-gradient(to right, #dc7a05, #dc7a05);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0)), linear-gradient(to right, #08a9e0, #08a9e0);
 }
 .row.halves.article-header.fulbright .column.two {
-  background-color: #375e4c;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -7372,6 +7384,7 @@ span.has-tooltip:hover:after {
 .recommend-button,
 .glass-button {
   display: block;
+  position: relative;
 }
 .column table.award-recipients {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
