@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  "https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif";
 
 /*! Built with the Less CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
 /*! ================================================================================================
@@ -939,14 +939,6 @@ header.main-header .sup-header-default {
 
 header.main-header .header-group {
 	text-align: inherit;
-}
-
-.column:not(.show-header)>header:first-child {
-	display: none;
-}
-
-.column header:first-child+h1,.column header:first-child+h2.fancy.with-top-border,.column header:first-child+h3.fancy.with-top-border {
-	margin-top: 0;
 }
 
 footer.article-footer div.author-info {
@@ -4307,25 +4299,33 @@ div.auto-scroller ul li {
 
 .on-this-page__menu-item.--related a {
 	position: relative;
+	margin-right: 5px;
+}
+
+.on-this-page__menu-item.--related a::after,.on-this-page__menu-item.--related a::before {
+	content: "";
+	border-top: 3px solid #464e54;
+	position: absolute;
+	top: 50%;
+	width: 5px;
 }
 
 .on-this-page__menu-item.--related a::before {
-	content: "";
-	border-bottom: 1px solid #8d959a;
-	border-top: 1px solid #8d959a;
-	bottom: -1px;
-	left: -8px;
-	position: absolute;
-	right: -8px;
-	top: -1px;
+	right: 0;
+	transform: translateX(5px);
 }
 
-.on-this-page__menu-item.--related.--start a::before {
+.on-this-page__menu-item.--related a::after {
 	left: 0;
+	transform: translateX(-5px);
+}
+
+.on-this-page__menu-item.--related.--start a::after {
+	content: none;
 }
 
 .on-this-page__menu-item.--related.--end a::before {
-	right: 0;
+	content: none;
 }
 
 .on-this-page__menu-item.--shifted {
@@ -5993,6 +5993,12 @@ header.main-header {
 	color: #fff !important;
 }
 
+.on-this-page .fulbright {
+	background-position: 98% top;
+	background-repeat: no-repeat;
+	background-size: auto 175%;
+}
+
 .column aside p,.column aside ul {
 	font-size: inherit;
 }
@@ -6067,16 +6073,16 @@ header.main-header {
 	background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) no-repeat center;
 }
 
-.row.halves.article-header.fulbright {
+.row.halves.article-header.fulbright,.row.single.article-header.fulbright {
 	height: 124px;
 }
 
 .row.halves.article-header.fulbright .column.one {
-	background: linear-gradient(to right,rgba(0,0,0,.9),rgba(0,0,0,.9) 50%,rgba(0,0,0,.5) 95%,rgba(0,0,0,0)), linear-gradient(to right,#dc7a05,#dc7a05);
+	background: linear-gradient(to right,rgba(0,0,0,.9),rgba(0,0,0,.9) 50%,rgba(0,0,0,.5) 95%,rgba(0,0,0,0)), linear-gradient(to right,#08a9e0,#08a9e0);
 }
 
 .row.halves.article-header.fulbright .column.two {
-	background-color: #375e4c;
+	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -6585,21 +6591,26 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	padding-top: 0;
 }
 
-.row.halves.article-header {
+.row.article-header {
 	height: 230px;
 }
 
-.row.halves.article-header .column.one {
+.row.article-header .column.one,.row.article-header .column.two {
+	background-position: center center;
+	background-size: cover;
 	height: 100%;
-	left: 0;
 	padding-left: 0;
 	padding-right: 0;
 	position: absolute;
-	right: 40%;
 	width: auto;
 }
 
-.row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
+.row.article-header .column.one {
+	left: 0;
+	right: 40%;
+}
+
+.row.article-header .column.one header:first-child+*,.row.article-header .column.one>:first-child {
 	left: 2rem;
 	position: absolute;
 	right: 2rem;
@@ -6607,18 +6618,18 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	transform: translateY(-50%);
 }
 
-.row.halves.article-header .column.one header:first-child+*>:last-child,.row.halves.article-header .column.one>:first-child>:last-child {
+.row.article-header .column.one header:first-child+*>:last-child,.row.article-header .column.one>:first-child>:last-child {
 	margin-bottom: 0 !important;
 }
 
-.row.halves.article-header .column.one h1 {
+.row.article-header .column.one h1 {
 	color: #fff;
 	line-height: .95em;
 	margin: 0;
 	text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
 }
 
-.row.halves.article-header .column.one h1+.subtitle {
+.row.article-header .column.one h1+.subtitle {
 	color: #fff;
 	font-size: 1.25em;
 	font-weight: 700;
@@ -6627,81 +6638,40 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	text-transform: uppercase;
 }
 
-.row.halves.article-header .column.one .parent-page {
+.row.article-header .column.one .parent-page {
 	color: #eff0f1;
 	margin-bottom: .125em;
 }
 
-.row.halves.article-header .column.one>:not(:first-child):not(header:first-child+*) {
+.row.article-header .column.one>:not(:first-child):not(header:first-child+*) {
 	display: none;
 }
 
-.row.halves.article-header .column.one>:not(h1):not(div) {
+.row.article-header .column.one>:not(h1):not(div) {
 	display: none;
 }
 
-.row.halves.article-header .column.two {
+.row.article-header .column.two {
 	background-color: #8d959a;
-	background-position: center center;
-	background-size: cover;
-	height: 100%;
 	left: 60%;
 	margin-top: 0 !important;
-	position: absolute;
 	right: 0;
-	width: auto;
 }
 
-.row.single.article-header {
-	height: 340px;
-}
-
-.row.single.article-header .column {
-	background-color: #8d959a;
-	background-position: center center;
-	background-size: cover;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-.row.single.article-header .column.show-header>header {
-	bottom: 0;
-	box-sizing: border-box;
-	left: 0;
-	padding: 2rem 2rem 0;
-	position: absolute;
-	width: 100%;
-}
-
-.row.single.article-header .column.show-header>header>* {
-	background-color: rgba(0,0,0,.75);
-	color: #fff;
-	margin: 0;
-	padding: .25em;
-	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
-}
-
-.row.single.article-header .column.show-header>header>* .subtitle {
-	background-color: rgba(0,0,0,.75);
-	display: block;
-	font-size: .5em;
-	line-height: 1.1em;
-	margin-top: .25em;
-	padding: .25em;
-	text-transform: none;
+.row.article-header.single .column.one {
+	right: 0;
 }
 
 .column a.glass-button,.column a.recommend-button {
-	display: block;
-	position: relative;
 	padding: 1em;
 	border-radius: 7px;
 	border-bottom: none;
 	box-shadow: 0 2px 2px rgba(0,0,0,.5);
 	transition: all .3s ease;
+}
+
+.column a.glass-button:hover,.column a.recommend-button:hover {
+	border-radius: 7px;
 }
 
 .column a.glass-button::before,.column a.recommend-button::before {
@@ -6764,6 +6734,11 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	box-sizing: border-box;
 	width: 100%;
 	width: calc(100% - 55px - 1em);
+}
+
+.glass-button,.recommend-button {
+	display: block;
+	position: relative;
 }
 
 .column table.award-recipients {
@@ -7975,7 +7950,7 @@ hr.icon--tower::before {
 		border-radius: 15px;
 	}
 	
-	.row.halves.article-header .column.one .parent-page {
+	.row.article-header .column.one .parent-page {
 		font-size: 3.25vw;
 	}
 }
@@ -8033,19 +8008,19 @@ hr.icon--tower::before {
 		margin-bottom: 4%;
 	}
 	
-	.row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
+	.row.article-header .column.one header:first-child+*,.row.article-header .column.one>:first-child {
 		right: 1rem;
 	}
 	
-	.row.halves.article-header .column.one h1 {
+	.row.article-header .column.one h1 {
 		font-size: 6.5vw;
 	}
 	
-	.row.halves.article-header .column.one h1+.subtitle {
+	.row.article-header .column.one h1+.subtitle {
 		font-size: 4vw;
 	}
 	
-	.row.halves.article-header .column.one,.row.halves.article-header .column.two {
+	.row.article-header .column.one,.row.article-header .column.two {
 		clear: none;
 		float: left;
 	}
@@ -8148,7 +8123,7 @@ hr.icon--tower::before {
 		background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_landscape.jpg) top center/100% auto no-repeat;
 	}
 	
-	.row.halves.article-header .column.one {
+	.row.article-header .column.one {
 		right: 0;
 		height: 50%;
 		top: 50%;
@@ -8283,23 +8258,18 @@ hr.icon--tower::before {
 		background-position: right center;
 	}
 	
-	.row.halves.article-header {
+	.row.article-header {
 		height: 340px;
 	}
 	
-	.row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
+	.row.article-header .column.one header:first-child+*,.row.article-header .column.one>:first-child {
 		left: 1rem;
 	}
 	
-	.row.halves.article-header .column.two {
+	.row.article-header .column.two {
 		height: 50%;
 		left: 0;
 		top: 0;
-	}
-	
-	.row.single.article-header .column.show-header>header {
-		padding-left: .5rem;
-		padding-right: .5rem;
 	}
 	
 	.column table.award-recipients {
@@ -8427,7 +8397,7 @@ hr.icon--tower::before {
 		font-size: .77602241em;
 	}
 	
-	.row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
+	.row.article-header .column.one header:first-child+*,.row.article-header .column.one>:first-child {
 		left: .5rem;
 	}
 	
@@ -8948,26 +8918,26 @@ hr.icon--tower::before {
 		background: url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 	}
 	
-	.row.halves.article-header {
+	.row.article-header {
 		height: auto;
 	}
 	
-	.row.halves.article-header .column.one {
+	.row.article-header .column.one {
 		position: static;
 		height: auto;
 		padding: 2rem;
 	}
 	
-	.row.halves.article-header .column.one h1 {
+	.row.article-header .column.one h1 {
 		color: #000;
 		text-shadow: none;
 	}
 	
-	.row.halves.article-header .column.one .parent-page {
+	.row.article-header .column.one .parent-page {
 		color: #000;
 	}
 	
-	.row.halves.article-header .column.two {
+	.row.article-header .column.two {
 		display: none;
 	}
 }
@@ -8983,14 +8953,14 @@ hr.icon--tower::before {
 		background: url(/wp-content/uploads/sites/50/2017/03/decoration_daca-scholarships_portrait.jpg) center center/100% auto no-repeat;
 	}
 	
-	.row.halves.article-header .column.one {
+	.row.article-header .column.one {
 		background: #5e6a71;
 		background: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.4) 50%,rgba(0,0,0,.1)), linear-gradient(to right,#5e6a71,#5e6a71);
 	}
 }
 
 @media all and print {
-	.row.halves.article-header .column.one header:first-child+*,.row.halves.article-header .column.one>:first-child {
+	.row.article-header .column.one header:first-child+*,.row.article-header .column.one>:first-child {
 		position: static;
 		transform: none;
 	}
