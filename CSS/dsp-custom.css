@@ -998,7 +998,7 @@ h3.solid,
 h4.solid,
 h5.solid,
 h6.solid {
-  padding: 0.1em 0.25em 0.11em 5px;
+  padding: 0.15em 0.25em 0.2em 5px;
   position: relative;
 }
 h1.solid::before,
@@ -1008,7 +1008,7 @@ h4.solid::before,
 h5.solid::before,
 h6.solid::before {
   content: "";
-  bottom: 0;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
@@ -1050,8 +1050,8 @@ h3.white-text.solid.black-background::before,
 h4.white-text.solid.black-background::before,
 h5.white-text.solid.black-background::before,
 h6.white-text.solid.black-background::before {
-  border-top: 2px solid #000000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #000;
+  border-top: 2px solid #000;
 }
 h1.white-text.solid.dark-crimson-background,
 h2.white-text.solid.dark-crimson-background,
@@ -1088,7 +1088,7 @@ h3.white-text.solid.crimson-background::before,
 h4.white-text.solid.crimson-background::before,
 h5.white-text.solid.crimson-background::before,
 h6.white-text.solid.crimson-background::before {
-  border-bottom: 1px solid rgba(79, 16, 26, 0.5);
+  border-bottom: 1px solid #4f101a;
   border-top: 2px solid #4f101a;
 }
 h1.gray-text,
