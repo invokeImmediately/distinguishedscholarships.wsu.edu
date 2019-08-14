@@ -1008,8 +1008,8 @@ h4.solid::before,
 h5.solid::before,
 h6.solid::before {
   content: "";
+  bottom: 0;
   left: 0;
-  height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
@@ -5050,7 +5050,7 @@ div.auto-scroller ul li {
   transform: none;
 }
 .fluid .row.single .column.page-header__column-1--p-static {
-  width: 100%;
+  width: 100% !important;
 }
 .fluid .row.single .page-header__text-breadcrumb,
 .page-header__text-title,
