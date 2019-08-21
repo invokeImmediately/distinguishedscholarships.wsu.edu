@@ -2834,7 +2834,7 @@ span.callout.top:after {
   color: #000;
 }
 .interactively-flipped-panels .container .panel-wrapper .panel.yellow div.rear {
-  background-color: #77580c;
+  background-color: #715409;
   color: #fff;
 }
 .interactively-flipped-panels .container .panel-wrapper .panel.yellow div.front {
@@ -7036,10 +7036,10 @@ with-drop-shadow_29x32.png);
   padding: 8px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #77580c;
+  border: 1px solid #715409;
   border-radius: 10px;
   background-color: #f1e4c4;
-  color: #77580c;
+  color: #715409;
 }
 .column ul:not(.content-boxes):not(.application-steps) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
@@ -7999,7 +7999,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 }
 #tribe-events .workshop-note {
   font-size: 0.9em;
-  color: #9e7510;
+  color: #715409;
 }
 .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-] > a,
 .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a,
@@ -8305,7 +8305,7 @@ hr.icon--tower::before {
 .row.has-linked-columns.linked-announcement .column:hover > :first-child:not(header),
 .row.has-linked-columns.linked-announcement .column:hover > header:first-child + *,
 .row.has-linked-columns.linked-announcement .column:hover > .shift-to-bottom:first-of-type {
-  color: #77580c;
+  color: #715409;
   text-shadow: 0 0 18px #fff;
 }
 .row.has-linked-columns.linked-announcement + .row.has-recent-updates {
