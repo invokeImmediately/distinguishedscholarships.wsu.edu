@@ -3411,9 +3411,9 @@ a.vpue-tooltip span b {
 .column a {
   border: 1px solid transparent;
   border-bottom-color: #981e32;
-  border-bottom-left-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
-  box-shadow: inset 0 -2px 0 rgba(198, 12, 48, 0.5);
+  border-bottom-left-radius: 0.15em;
+  border-bottom-right-radius: 0.15em;
+  box-shadow: inset 0 -1px 0 rgba(152, 30, 50, 0.25);
   text-decoration: none;
   transition: all .25s ease;
 }
