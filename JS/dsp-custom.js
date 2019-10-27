@@ -19,12 +19,15 @@
  * jQuery call for executing statements after the DOM has loaded.
  */
 $( function () {
+	// Tweak HTML source to work around some quirks of WordPress setup
 	var htmlNewsHeader = '<section class="row single gutter pad-top"><div class="column one"><secti\
 on class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We an\
 d Our Students Have Accomplished</h3></div></section></div></section>';
-	
-	// Tweak HTML source to work around some quirks of WordPress setup
 	addPageHeaderOnNewsPages( htmlNewsHeader );
+
+	// Set up the site's sub header element to automatically resize
+	// var subHeaderResizer = new TextAutoResizers( '.sub-header', 198, '.main-header .header-group' );
+	// subHeaderResizer.initTextAutoResizing();
 } );
 
 /**
