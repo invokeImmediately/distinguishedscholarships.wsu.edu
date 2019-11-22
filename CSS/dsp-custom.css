@@ -1574,6 +1574,13 @@ hr {
   overflow: visible;
   position: relative;
 }
+hr.bc--crimson {
+  border-bottom: 1px solid rgba(198, 12, 48, 0.25);
+  border-top: 1px solid #981e32;
+}
+hr.spacer {
+  border: none;
+}
 hr.subSection,
 hr.sub-section {
   width: 85%;
@@ -1583,9 +1590,6 @@ hr.sub-section {
   border-top: 1px dashed rgba(94, 106, 113, 0.5);
   border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
   text-align: center;
-}
-hr.spacer {
-  border: none;
 }
 hr.thicker {
   border-top-width: 2px;
