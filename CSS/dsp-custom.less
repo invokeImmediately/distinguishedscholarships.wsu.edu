@@ -1,6 +1,36 @@
-/** ┌────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: dsp-custom.less                                                                  │
-*** └────────────────────────────────────────────────────────────────────────────────────────────┘
+/** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: dsp-custom.less                                                                    │
+*** │                                                                                              │
+*** │ See persistent section header comment below (§2) for additional information and license.     │
+*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
+***  TABLE OF CONTENTS:
+***  ────────────────────────────────────────────────────────────────────────────────────────────
+***  §1: Build entry point from DAESA's CSS development project................................33
+***  §2: Persistent section header comment for unit specific styling...........................44
+***  §3: Distinguished Scholarships website backgrounds........................................61
+***    >>> §3.1: Spine binder..................................................................65
+***    >>> §3.2: Spine jacket..................................................................78
+***    >>> §3.3: Page body.....................................................................88
+***    >>> §3.4: Main content section.........................................................119
+***    >>> §3.5: Main header..................................................................128
+***    >>> §3.6: On this page sections........................................................157
+***  §4: Aside styling........................................................................169
+***  §5: Article header backgrounds...........................................................214
+***  §6: Styling of builder-template photo slideshows.........................................345
+***  §7: Table styling........................................................................409
+***  §8: Paragraph styling....................................................................750
+***  §9: Unordered list styling...............................................................781
+***  §10: Styles included through Less mixins.................................................832
+***    >>> §10.1: Overrides for mixin-included styles.........................................856
+***  §11: Page-specific styles................................................................911
+***    >>> §11.1: Home page...................................................................915
+***    >>> §11.2: Massie fellowship...........................................................921
+***    >>> §11.3: Gallery wall................................................................977
+***  ───────────────────────────────────────────────────────────────────────────────────────────────
+**/
+
+/** ================================================================================================
+*** §1: Build entry point from DAESA's CSS development project
 **/
 
 @grid-behavior: "hybrid";
@@ -10,49 +40,47 @@
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 @import "..\WSU-UE---CSS\cycle2.less";
 
+/** ================================================================================================
+*** §2: Persistent section header comment for unit specific styling
+**/
+
 /*! ================================================================================================
-*** CUSTOM STYLE SHEET for the WSU Distinguished Scholarships Program
+*** Distinguished Scholarships Program Styling Section
 *** ================================================================================================
-***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
+***   SUMMARY: The following section consists of CSS code designed for use on the WSU Distinguished
+***     Scholarships website that was built from precompiled CSS written in the Less language
+***     extension of CSS.
 ***
-***   CONTENTS: CSS compiled from Less language extension of CSS; only used on the Distinguished
-***     Scholarships program website.
+***   DESCRIPTION: Fully documented, precompiled source code from which this section of the
+***     custom stylesheet was built is developed and maintained on the following GitHub project:
+***     https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu/
+***
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
 ***
 ***   GIT REPOSITORY: https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu
 ***     See git repository for fully documented, precompiled source code.
+***
+***   LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+***
+***     Permission to use, copy, modify, and/or distribute this software for any purpose with or
+***     without fee is hereby granted, provided that the above copyright notice and this permission
+***     notice appear in all copies.
+***
+***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
+***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+***     OR PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
 
-/**  ───────────────────────────────────────────────────────────────────────────────────────────────
-***  TABLE OF CONTENTS:
-***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Backgrounds...........................................................................51
-***    >>> §1.1: Spine binder..................................................................55
-***    >>> §1.2: Spine jacket..................................................................68
-***    >>> §1.3: Page body.....................................................................78
-***    >>> §1.4: Main content section.........................................................109
-***    >>> §1.5: Main header..................................................................118
-***  §2: Aside styling........................................................................148
-***  §3: Article header backgrounds...........................................................197
-***  §4: Styling of builder-template photo slideshows.........................................321
-***  §5: Table styling........................................................................386
-***  §6: Paragraph styling....................................................................727
-***  §7: Unordered list styling...............................................................758
-***  §8: Styles included through Less mixins..................................................809
-***    >>> §8.1: Overrides for mixin-included styles..........................................835
-***  §9: Page-specific styles.................................................................894
-***    >>> §9.1: Home page....................................................................898
-***    >>> §9.2: Massie fellowship............................................................904
-***    >>> §9.3: Gallery wall.................................................................960
-***  ───────────────────────────────────────────────────────────────────────────────────────────────
-**/
-
 /** ================================================================================================
-*** §1: Backgrounds
+*** §3: Distinguished Scholarships website backgrounds
 **/
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.1: Spine binder
+***   >>> §3.1: Spine binder
 **/
 
 #binder {
@@ -65,7 +93,7 @@
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.2: Spine jacket
+***   >>> §3.2: Spine jacket
 **/
 
 #jacket {
@@ -75,7 +103,7 @@
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.3: Page body
+***   >>> §3.3: Page body
 **/
 
 body {
@@ -83,30 +111,30 @@ body {
 		background: @hex-black;
 	}
 	@media all and (min-width: (@widescreen-background-width+1)) and (max-width: @wuxga-width) {
-		background: 
+		background:
 			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png)
 				repeat-y fixed right top,
 			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg)
 				repeat-y fixed right top;
 	}
 	@media all and (min-width: (@wuxga-width+1)) and (max-width: @wqxga-width) {
-		background: 
-			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) 
+		background:
+			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png)
 				repeat-y fixed right top,
-			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) 
+			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg)
 				repeat-y fixed right top;
 	}
 	@media all and (min-width: (@wqxga-width+1)) {
-		background: 
-			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) 
+		background:
+			url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png)
 				repeat-y fixed 1800px top,
-			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) 
+			@hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg)
 				repeat-y fixed 1800px top;
 	}
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.4: Main content section
+***   >>> §3.4: Main content section
 **/
 
 main {
@@ -115,26 +143,26 @@ main {
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.5: Main header
+***   >>> §3.5: Main header
 **/
 
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: 
-		url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) 
+	background:
+		url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png)
 			no-repeat right bottom,
-		url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+		url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png)
 			left top repeat, rgba(42,48,51,1.00);
 	color: #fff !important;
 	@media print {
-		background: url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+		background: url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png)
 			left top repeat,
 		  rgba(42,48,51,1.00);
 	}
 	@media all and (max-width: 1208px) {
-		background: 
+		background:
 			url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top,
-			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) 
+			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png)
 				left top repeat, rgba(42,48,51,1.00);
 	}
 }
@@ -144,7 +172,7 @@ header.main-header {
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §1.6: On this page sections
+***   >>> §3.6: On this page sections
 **/
 
 .on-this-page {
@@ -156,7 +184,7 @@ header.main-header {
 }
 
 /** ================================================================================================
-*** §2: Aside styling
+*** §4: Aside styling
 **/
 
 .column {
@@ -201,7 +229,7 @@ header.main-header {
 }
 
 /** ================================================================================================
-*** §3: Article header backgrounds
+*** §5: Article header backgrounds
 **/
 
 .column {
@@ -247,58 +275,58 @@ header.main-header {
 					no-repeat center;
 		}
 		&.header-from-the-director {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png)
 					no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-				url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png) 
+				url(/wp-content/uploads/sites/50/2015/10/wpbg-from-the-director-v01.png)
 					no-repeat center;
 		}
 		&.header-massie-fellowship {
-			background: 
-				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) 
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png)
 					no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-				url(/wp-content/uploads/sites/50/2016/09/wpbg-massie-fellowship.png) 
+				url(/wp-content/uploads/sites/50/2016/09/wpbg-massie-fellowship.png)
 					no-repeat center;
 		}
 		&.header-meet-our-director {
-			background: 
-				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) 
+			background:
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png)
 					no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
 				url(/wp-content/uploads/sites/50/2016/01/wpbg-seehafer-bio.png) no-repeat center;
 		}
 		&.header-newsEvents {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
 				url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 		}
 		&.header-prepare {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
 				url(/wp-content/uploads/sites/50/2015/06/wpbg-prepare-v4.png) no-repeat center;
 		}
 		&.header-resources {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
 				url(/wp-content/uploads/sites/50/2015/06/wpbg-resources-v2.png) no-repeat center;
 		}
 		&.header-scholarship-list {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-				url(/wp-content/uploads/sites/50/2017/01/wpbg-scholarship-list.png) 
+				url(/wp-content/uploads/sites/50/2017/01/wpbg-scholarship-list.png)
 					no-repeat center;
 		}
 		&.header-wsuRecipients {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
 				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-				url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png) 
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-wsu-recipients-v2.png)
 					no-repeat center;
 		}
 		div.header-content.large-format-friendly {
@@ -319,7 +347,7 @@ header.main-header {
 }
 
 .column {
-	// Explore Awards / Fulbright 
+	// Explore Awards / Fulbright
 	.row.halves.article-header.fulbright &.one {
 			background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.9) 50%, rgba(0,0,0,.5) 95%, rgba(0,0,0,0)), linear-gradient(to right, #08a9e0, #08a9e0);
 	}
@@ -332,7 +360,7 @@ header.main-header {
 }
 
 /** ================================================================================================
-*** §4: Styling of builder-template photo slideshows
+*** §6: Styling of builder-template photo slideshows
 **/
 
 .row.builder-section-banner.has-interaction-message {
@@ -396,7 +424,7 @@ with-drop-shadow_29x32.png);
 }
 
 /** ================================================================================================
-*** §5: Table styling
+*** §7: Table styling
 **/
 
 .column table.calendar {
@@ -480,23 +508,23 @@ with-drop-shadow_29x32.png);
 				color: @hex-white;
 			}
 			p > a {
-				border-bottom: 0.0625em solid rgba(red(@hex-white), green(@hex-white), 
+				border-bottom: 0.0625em solid rgba(red(@hex-white), green(@hex-white),
 					blue(@hex-white), .3);
-				box-shadow: inset 0 -0.3125em 0 rgba(red(@hex-white), green(@hex-white), 
+				box-shadow: inset 0 -0.3125em 0 rgba(red(@hex-white), green(@hex-white),
 					blue(@hex-white), .3);
 				color: @hex-white;
 				.transition("color .4s linear, border .4s ease-in, box-shadow .4s ease-in");
 				&:hover {
-					text-shadow: 0.0625em 0.0625em 0.0625em rgba(red(@hex-white), 
+					text-shadow: 0.0625em 0.0625em 0.0625em rgba(red(@hex-white),
 						green(@hex-white), blue(@hex-white), .3);
 				}
 			}
 			&.gray {
 				background-color: #67767b;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#2a3033), green(#2a3033), 
+					border-bottom: 0.0625em solid rgba(red(#2a3033), green(#2a3033),
 						blue(#2a3033), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#2a3033), green(#2a3033), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#2a3033), green(#2a3033),
 						blue(#2a3033), .3);
 					&:hover {
 						border-bottom: 0.0625em solid transparent;
@@ -512,9 +540,9 @@ with-drop-shadow_29x32.png);
 			&.crimson {
 				background-color: #be1a40;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#da91a5), green(#da91a5), 
+					border-bottom: 0.0625em solid rgba(red(#da91a5), green(#da91a5),
 						blue(#da91a5), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#da91a5), green(#da91a5), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#da91a5), green(#da91a5),
 						blue(#da91a5), .3);
 					&:hover {
 						background-color: rgba(219, 146, 166, 0.2);
@@ -530,9 +558,9 @@ with-drop-shadow_29x32.png);
 			&.orange {
 				background-color: #e95b34;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#492e14), green(#492e14), 
+					border-bottom: 0.0625em solid rgba(red(#492e14), green(#492e14),
 						blue(#492e14), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#492e14), green(#492e14), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#492e14), green(#492e14),
 						blue(#492e14), .3);
 					&:hover {
 						background-color: rgba(73, 46, 20, 0.2);
@@ -548,9 +576,9 @@ with-drop-shadow_29x32.png);
 			&.olive {
 				background-color: #9b8b28;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#e9e03c), green(#e9e03c), 
+					border-bottom: 0.0625em solid rgba(red(#e9e03c), green(#e9e03c),
 						blue(#e9e03c), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#e9e03c), green(#e9e03c), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#e9e03c), green(#e9e03c),
 						blue(#e9e03c), .3);
 					&:hover {
 						background-color: rgba(233, 244, 60, 0.2);
@@ -566,9 +594,9 @@ with-drop-shadow_29x32.png);
 			&.blue {
 				background-color: #127286;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#06c6ce), green(#06c6ce), 
+					border-bottom: 0.0625em solid rgba(red(#06c6ce), green(#06c6ce),
 						blue(#06c6ce), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#06c6ce), green(#06c6ce), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#06c6ce), green(#06c6ce),
 						blue(#06c6ce), .3);
 					&:hover {
 						background-color: rgba(6, 198, 206, 0.2);
@@ -584,10 +612,10 @@ with-drop-shadow_29x32.png);
 			&.dark-gray {
 				background-color: #373940;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe),
 
 						blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe),
 
 						blue(#b5babe), .3);
 					&:hover {
@@ -604,10 +632,10 @@ with-drop-shadow_29x32.png);
 			&.dark-brown {
 				background-color: #480f13;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#cb9b6e), green(#cb9b6e), 
+					border-bottom: 0.0625em solid rgba(red(#cb9b6e), green(#cb9b6e),
 
 						blue(#cb9b6e), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#cb9b6e), green(#cb9b6e), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#cb9b6e), green(#cb9b6e),
 
 						blue(#cb9b6e), .3);
 					&:hover {
@@ -624,9 +652,9 @@ with-drop-shadow_29x32.png);
 			&.brown {
 				background-color: #723f1f;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#ddbea1), green(#ddbea1), 
+					border-bottom: 0.0625em solid rgba(red(#ddbea1), green(#ddbea1),
 						blue(#ddbea1), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#ddbea1), green(#ddbea1), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#ddbea1), green(#ddbea1),
 						blue(#ddbea1), .3);
 					&:hover {
 						background-color: rgba(221, 190, 161, 0.2);
@@ -640,12 +668,12 @@ with-drop-shadow_29x32.png);
 				}
 			}
 			&.dark-gray.brown {
-				background: linear-gradient(to bottom, rgba(red(#373940), green(#373940), 
+				background: linear-gradient(to bottom, rgba(red(#373940), green(#373940),
 					blue(#373940), 1.0), rgba(red(#723f1f), green(#723f1f), blue(#723f1f), 1.0));
 				p > a:first-child {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe),
 						blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe),
 						blue(#b5babe), .3);
 					&:hover {
 						background-color: rgba(181, 186, 190, 0.2);
@@ -661,9 +689,9 @@ with-drop-shadow_29x32.png);
 			&.dark-olive {
 				background-color: #453a16;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#ada400), green(#ada400), 
+					border-bottom: 0.0625em solid rgba(red(#ada400), green(#ada400),
 						blue(#ada400), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#ada400), green(#ada400), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#ada400), green(#ada400),
 						blue(#ada400), .3);
 					&:hover {
 						background-color: rgba(173, 164, 0, 0.2);
@@ -679,9 +707,9 @@ with-drop-shadow_29x32.png);
 			&.dark-blue {
 				background-color: #12313c;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#00a5bd), green(#00a5bd), 
+					border-bottom: 0.0625em solid rgba(red(#00a5bd), green(#00a5bd),
 						blue(#00a5bd), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#00a5bd), green(#00a5bd), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#00a5bd), green(#00a5bd),
 						blue(#00a5bd), .3);
 					&:hover {
 						background-color: rgba(0, 165, 189, 0.2);
@@ -697,9 +725,9 @@ with-drop-shadow_29x32.png);
 			&.black {
 				background-color: #0f0f10;
 				p > a {
-					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe), 
+					border-bottom: 0.0625em solid rgba(red(#b5babe), green(#b5babe),
 						blue(#b5babe), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#b5babe), green(#b5babe),
 						blue(#b5babe), .3);
 					&:hover {
 						background-color: rgba(181, 186, 190, 0.2);
@@ -720,9 +748,9 @@ with-drop-shadow_29x32.png);
 				}
 				p > a {
 					color: #2a3033;
-					border-bottom: 0.0625em solid rgba(red(#68777e), green(#68777e), 
+					border-bottom: 0.0625em solid rgba(red(#68777e), green(#68777e),
 						blue(#68777e), .3);
-					box-shadow: inset 0 -0.3125em 0 rgba(red(#68777e), green(#68777e), 
+					box-shadow: inset 0 -0.3125em 0 rgba(red(#68777e), green(#68777e),
 						blue(#68777e), .3);
 					&:hover {
 						color: #68777e;
@@ -737,7 +765,7 @@ with-drop-shadow_29x32.png);
 }
 
 /** ================================================================================================
-*** §6: Paragraph styling
+*** §8: Paragraph styling
 **/
 
 .column p {
@@ -768,7 +796,7 @@ with-drop-shadow_29x32.png);
 }
 
 /** ================================================================================================
-*** §7: Unordered list styling
+*** §9: Unordered list styling
 **/
 
 .column ul:not(.content-boxes):not(.application-steps) {
@@ -819,7 +847,7 @@ point_gray.png);
 }
 
 /** ================================================================================================
-*** §8: Styles included through Less mixins
+*** §10: Styles included through Less mixins
 **/
 
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/50/2016/10/icon_indicator_tool-tip-info_1
@@ -843,7 +871,7 @@ point_gray.png);
 .declare-hr-icon-class(~"icon--tower", url(/wp-content/uploads/sites/50/2018/07/icon_bryan-tower_rendered.png), 16px, 25px, 16px, -18px, "right");
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §8.1: Overrides for mixin-included styles
+***   >>> §10.1: Overrides for mixin-included styles
 **/
 
 .page.has-short-main-header {
@@ -855,18 +883,18 @@ point_gray.png);
 		}
 	}
 	header.main-header {
-		background: 
+		background:
 			url(/wp-content/uploads/sites/50/2017/10/Distinguished-Scholarships-Logo-sm-WP_for-short-main-headers-2.png) no-repeat right center,
 			url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 		.sub-header-default,
 		.sub-header {
-			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8), 
+			@new-fnt-sclng-fctrs: 1.0, @v-scl-dwn, 1.0, pow(@v-scl-dwn, 6), pow(@v-scl-dwn, 8),
 				pow(@v-scl-dwn, 10);
 			.has-responsive-font((2.5rem * 16 / 17), 0.9em, @new-fnt-sclng-fctrs);
 			margin-top: -5px;
 		}
 		@media all and (max-width: 580px) {
-			background: 
+			background:
 				url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top/48px auto,
 				url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);
 		}
@@ -898,17 +926,17 @@ point_gray.png);
 }
 
 /** ================================================================================================
-*** §9: Page-specific styles
+*** §11: Page-specific styles
 **/
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §9.1: Home page
+***   >>> §11.1: Home page
 **/
 
 @import ".\dsp-custom_home-intro.less";
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §9.2: Massie fellowship
+***   >>> §11.2: Massie fellowship
 **/
 
 .page.massie-fellowship {
@@ -964,7 +992,7 @@ point_gray.png);
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §9.3: Gallery Wall
+***   >>> §11.3: Gallery Wall
 **/
 
 .page-header__gallery-wall-wrapper {
