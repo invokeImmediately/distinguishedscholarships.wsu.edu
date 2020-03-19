@@ -1,6 +1,5 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&display=swap';
 
-/*! Built with the Less CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for a repository of source code. */
 /*! ================================================================================================
 *** WSU DAESA Styling Section
 *** ================================================================================================
@@ -31,23 +30,15 @@
 ***     OR PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
-.column,.column h1,.column h2,.column h3,.column h4,.ff--sans,.gform_heading h3.gform_title,.has-dflt-font,body,header.main-header {
+.column,.column h4,.ff--sans,.has-dflt-font,body,header.main-header {
 	font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
 }
 
-.ff--serif,.has-dflt-font.serif {
-	font-family: 'Roboto Slab', 'Palatino Linotype', Palatino, serif;
-}
-
-.ff--serif-2,.has-subst-font.serif {
+.ff--serif,.ff--serif-2,.has-dflt-font.serif,.has-subst-font.serif {
 	font-family: 'PT Serif', 'Palatino Linotype', Palatino, serif;
 }
 
-.article-tagline.article-tagline--sans,.article-tagline.sans,.ff--condensed,.has-alt-font,span.accentuated-text {
-	font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
-}
-
-.ff--condensed-2,.has-subst-font {
+.article-tagline.article-tagline--sans,.article-tagline.sans,.ff--condensed,.ff--condensed-2,.has-alt-font,.has-subst-font,span.accentuated-text {
 	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 }
 
@@ -519,33 +510,9 @@ body.blog .article-summary aside {
 	display: none;
 }
 
-.column h1 {
-	font-weight: 700;
-}
-
-.column h1.centered {
-	text-align: center;
-}
-
-.column h2 {
-	font-weight: 700;
-}
-
 .column h2.article-title {
 	font-size: .82823529em;
 	line-height: 1.1em;
-}
-
-.column h2.centered {
-	text-align: center;
-}
-
-.column h2.narrower-top-margin {
-	margin-top: 1.25rem;
-}
-
-.column h2.no-top-margin {
-	margin-top: 0;
 }
 
 .column.show-header.has-fancy-header>header:first-child>h2 {
@@ -591,19 +558,7 @@ h2.article-title a {
 	border-bottom: none;
 }
 
-.column h3.centered,.gform_heading h3.gform_title.centered {
-	text-align: center;
-}
-
-.column h3.gray,.gform_heading h3.gform_title.gray {
-	color: #464e54;
-}
-
-.column h3.no-top-margin,.gform_heading h3.gform_title.no-top-margin {
-	margin-top: 0;
-}
-
-.column h3.lowercase,.column.show-header.has-lowercase-header>header:first-child>h3,.gform_heading h3.gform_title.lowercase {
+.column.show-header.has-lowercase-header>header:first-child>h3 {
 	text-transform: none;
 }
 
@@ -649,19 +604,17 @@ h2.article-title a {
 	color: #464e54;
 }
 
-.column h1.crimson,.column h2.crimson {
-	color: #981e32;
-}
-
 .hN--subtitle {
 	display: block;
-	font-size: .4em;
+	font-size: .6em;
 	line-height: 1.375em;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	padding: 0;
+	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+	font-weight: 700;
 	margin: 0;
+	padding: 0;
 }
 
 *+h1,*+h2,*+h3,*+h4,*+h5,*+h6 {
@@ -3877,7 +3830,7 @@ div.auto-scroller ul li {
 	color: #fff;
 	font-size: 1.1em;
 	font-weight: 700;
-	font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 	margin-bottom: 0;
 	margin-top: 0;
 	margin-left: -1rem;
@@ -6216,7 +6169,7 @@ main {
 }
 
 header.main-header {
-	background: url(/wp-content/uploads/sites/50/2015/02/Distinguished-Scholarships-Logo-sm-WP.png) no-repeat right bottom, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+	background: url(https://s3.wp.wsu.edu/uploads/sites/50/2019/12/Distinguished-Scholarships-Logo_70x70px.png) no-repeat right 1rem center, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 	color: #fff !important;
 }
 
@@ -7807,10 +7760,33 @@ hr.icon--tower::before {
 	z-index: 1;
 }
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*   ║ MEDIA QUERIES ####################################################################################################### ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+/*! ================================================================================================
+*** Media queries section
+*** ================================================================================================
+***   SUMMARY: Media queries built from precompiled CSS written in the Less language extension of
+***    CSS. Queries in this section are a combination of those designed for use on DAESA websites***
+    and those intended specifically for use on the Distinguished Scholarships program website.
+***
+***   DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
+***    stylesheet was built is developed and maintained on the following two GitHub projects:
+***    https://github.com/invokeImmediately/WSU-UE---CSS/
+***    https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu/
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+***
+***   LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+***
+***     Permission to use, copy, modify, and/or distribute this software for any purpose with or
+***     without fee is hereby granted, provided that the above copyright notice and this permission
+***     notice appear in all copies.
+***
+***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
+***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+***     OR PERFORMANCE OF THIS SOFTWARE.
+*** ================================================================================================
+**/
 @media all and (min-width:481px) {
 	.interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
 		transition-property: opacity, z-index;
@@ -8072,7 +8048,7 @@ hr.icon--tower::before {
 
 @media all and (max-width:1208px) {
 	header.main-header {
-		background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
+		background: url(https://s3.wp.wsu.edu/uploads/sites/50/2019/12/Distinguished-Scholarships-Logo_50x50px.png) no-repeat right .5rem top .5rem, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 	}
 }
 
@@ -9083,7 +9059,7 @@ hr.icon--tower::before {
 	}
 	
 	.article-header:not(.row) .header-content h1,.article-header:not(.row) .header-content h2 {
-		font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+		font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 		color: #fff;
 	}
 	
