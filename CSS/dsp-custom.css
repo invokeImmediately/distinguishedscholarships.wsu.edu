@@ -4628,16 +4628,20 @@ div.auto-scroller ul li {
   line-height: 1rem;
 }
 .on-this-page {
-  background-color: #2f3438;
   padding-bottom: 0.75em;
+}
+.on-this-page:not(.on-this-page--colored) {
+  background-color: #e4e6e7;
 }
 .on-this-page.single .column {
   float: left !important;
 }
 .on-this-page__heading {
-  color: #fff;
   font-size: 1.7rem;
   padding-bottom: 0.66666667rem;
+}
+:not(.on-this-page--colored) .on-this-page__heading {
+  color: #2f3438;
 }
 .on-this-page__menu {
   background-color: inherit;
@@ -4667,6 +4671,9 @@ div.auto-scroller ul li {
   border-color: #ffffff;
   border-width: 1px;
   text-decoration: underline;
+}
+.on-this-page__menu-item a:not(:focus) {
+  outline: 1px solid black;
 }
 @media all and (max-width: 791px) {
   .on-this-page__menu-item a {
