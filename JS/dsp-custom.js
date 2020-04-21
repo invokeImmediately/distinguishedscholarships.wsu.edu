@@ -20,9 +20,11 @@
  */
 $( function () {
 	// Tweak HTML source to work around some quirks of WordPress setup
-	var htmlNewsHeader = '<section class="row single gutter pad-top"><div class="column one"><secti\
-on class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We an\
-d Our Students Have Accomplished</h3></div></section></div></section>';
+	var htmlNewsHeader = '<section id="news-section-header" class="row single article-header'
+		+ ' article-header--colored h--192px"><div style="" class="column one black-back"><div'
+		+ ' class="gray-er-text wrapper"><ol class="breadcrumb-list"><li'
+		+ ' class="breadcrumb-list__breadcrumb"><a class="breadcrumb-list__link"'
+		+ ' href="/">Home</a></li></ol><h1 class="tt--uppercase">News</h1></div></div></section>';
 	addPageHeaderOnNewsPages( htmlNewsHeader );
 
 	// Set up the site's sub header element to automatically resize
@@ -126,13 +128,16 @@ function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
 */
 
 /**
- * Add page headers to news pages.
+ * Inspect the body tag to add a header to news pages when certain classes are in use.
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addPageHeaderOnNewsPages( htmlNewsHeader ) {
-	aPHONP_addHeaderViaLocation( htmlNewsHeader );
-	aPHONP_addHeaderViaClassUtilization( htmlNewsHeader );
+function addNewsHeaderViaClassUtilization( htmlNewsHeader ) {
+	var $body = $( 'body' ).first();
+	if ( $body.hasClass( 'single-post' ) || ( $body.hasClass( 'archive' ) &&
+			( $body.hasClass( 'category' ) ||  $body.hasClass( 'tag' ) ) ) ) {
+		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
+	}
 }
 
 /**
@@ -140,7 +145,7 @@ function addPageHeaderOnNewsPages( htmlNewsHeader ) {
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function aPHONP_addHeaderViaLocation( htmlNewsHeader ) {
+function addNewsHeaderViaLocation( htmlNewsHeader ) {
 	var siteURL = window.location.pathname;
 	switch( siteURL ) {
 		case '/news/':
@@ -150,15 +155,13 @@ function aPHONP_addHeaderViaLocation( htmlNewsHeader ) {
 }
 
 /**
- * Inspect the body tag to add a header to news pages when certain classes are in use.
+ * Add page headers to news pages.
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function aPHONP_addHeaderViaClassUtilization( htmlNewsHeader ) {
-	var $body = $( 'body' ).first();
-	if ( $body.hasClass( 'single-post' ) ) {
-		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
-	}
+function addPageHeaderOnNewsPages( htmlNewsHeader ) {
+	addNewsHeaderViaLocation( htmlNewsHeader );
+	addNewsHeaderViaClassUtilization( htmlNewsHeader );
 }
 
 /**
