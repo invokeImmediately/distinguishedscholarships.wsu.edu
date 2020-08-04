@@ -2,7 +2,7 @@
  * gulpfile.js
  * -------------------------------------------------------------------------------------------------
  * SUMMARY: Gulp automation task definition file for setting up tasks that build CSS and JS
- * files for use on the WSUWP website of the WSU Distinguished Scholarships program.
+ *   files for use on the WSUWP website of the WSU Distinguished Scholarships program.
  *
  * DESCRIPTION: This gulp automation task definition file is designed for use on the following
  *   project that is maintained on GitHub:
@@ -30,8 +30,8 @@
 // §1: Gulp task dependencies..................................................................42
 // §2: Specificiation of build settings .......................................................47
 //   §2.1: getCssBuildSettings()...............................................................50
-//   §2.2: getJsBuildSettings()...............................................................103
-// §3: Entry point: Set up of build taks......................................................138
+//   §2.2: getJsBuildSettings()...............................................................111
+// §3: Entry point: Set up of build taks......................................................146
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -58,9 +58,10 @@ function getCssBuildSettings() {
 	var commentRemovalNeedle = /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm;
 	var dependenciesPath = './WSU-UE---CSS/';
 	var destFolder = './CSS/';
-	var fontImportStr = '@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:300,300i' +
-		',400,400i,600,600i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700' +
-		'i|Roboto+Mono:400,400i,700,700i&display=swap\');\r\n';
+	var fontImportStr = '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wg' +
+		'ht@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700' +
+		';1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mon' +
+		'o:ital,wght@0,400;0,700;1,400;1,700&display=swap\');\r\n';
 	var insertingMediaQuerySectionHeader = {
 			'before': /^@media/,
 			'lineBefore': '/*! ==================================================================' +
@@ -92,11 +93,18 @@ function getCssBuildSettings() {
 		};
 	var minCssFileExtension = '.min.css';
 	var minCssFileHeaderStr = '';
- 	var sourceFile = './CSS/dsp-custom.less';
+	var sourceFile = './CSS/dsp-custom.less';
 
-	return new gulpBuilder.CssBuildSettings(commentRemovalNeedle, dependenciesPath,
- 		destFolder, fontImportStr, insertingMediaQuerySectionHeader, minCssFileExtension,
- 		minCssFileHeaderStr, sourceFile);
+	return new gulpBuilder.CssBuildSettings(
+		commentRemovalNeedle,
+		dependenciesPath,
+		destFolder,
+		fontImportStr,
+		insertingMediaQuerySectionHeader,
+		minCssFileExtension,
+		minCssFileHeaderStr,
+		sourceFile
+	);
 }
 
 ////////
