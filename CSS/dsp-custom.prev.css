@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&display=swap';
+﻿@import  'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 /*! ================================================================================================
 *** WSU DAESA Styling Section
@@ -35,7 +35,7 @@
 }
 
 .ff--serif,.ff--serif-2,.has-dflt-font.serif,.has-subst-font.serif {
-	font-family: 'PT Serif', 'Palatino Linotype', Palatino, serif;
+	font-family: 'Cormorant Garamond', Palatino, serif;
 }
 
 .ff--condensed,.ff--condensed-2,.has-alt-font,.has-subst-font,span.accentuated-text {
@@ -911,7 +911,7 @@ p~p {
 	padding-bottom: 0;
 }
 
-.column *+p:not([class*=margined-]) {
+*+p:not([class]) {
 	margin-top: 1em;
 }
 
@@ -971,7 +971,7 @@ ul {
 	line-height: inherit;
 }
 
-.column *+ul:not([class*=margined-]) {
+.column *+ul:not([class]) {
 	margin-top: 1em;
 }
 
@@ -979,7 +979,7 @@ ul {
 	padding-top: 0;
 }
 
-.column ol ul,.column p+ul:not([class*=margined-]),.column ul ul {
+.column ol ul,.column p+ul:not([class]),.column ul ul {
 	margin-top: .5em;
 }
 
@@ -1014,7 +1014,7 @@ ol {
 	list-style-type: lower-roman;
 }
 
-.column *+ol:not([class*=margined-]) {
+.column *+ol:not([class]) {
 	margin-top: 1em;
 }
 
@@ -1022,7 +1022,7 @@ ol {
 	padding-top: 0;
 }
 
-.column ol ol,.column p+ol:not([class*=margined-]),.column ul ol {
+.column ol ol,.column p+ol:not([class]),.column ul ol {
 	margin-top: .5em;
 }
 
@@ -1259,11 +1259,17 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	font-weight: 700;
 }
 
+.article-sub-heading {
+	border-bottom: 1px solid rgba(127,127,127,.2);
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
 .article-summary {
 	line-height: 1.5em;
 }
 
-.article-summary .article-media-contacts,.article-summary .article-sidebar,.article-summary .photo-caption,.article-summary img,.article-summary object,.article-summary>h3 {
+.article-summary .article-media-contacts,.article-summary .article-sidebar,.article-summary .article-sub-heading,.article-summary .photo-caption,.article-summary figure:not(.article-thumbnail),.article-summary img,.article-summary object,.article-summary>h3 {
 	display: none;
 }
 
@@ -1279,6 +1285,10 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	font-size: .9em;
 }
 
+*+.single-post .article-media-contacts {
+	margin-top: 1em;
+}
+
 .single-post .column .article-media-contacts+:not(.article-media-contacts) {
 	border-top: 1px solid rgba(127,127,127,.2);
 	padding-top: 15px;
@@ -1288,7 +1298,7 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	display: none;
 }
 
-.single-post .article-header,.single-post .article-header .article-title,.summary-divided .article-header,.summary-divided .article-header .article-title {
+.single-post .article-header .article-title,.single-post .article-header:not(.row),.summary-divided .article-header .article-title,.summary-divided .article-header:not(.row) {
 	margin-bottom: 15px;
 }
 
@@ -1309,7 +1319,7 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 }
 
 .widget.widget_recent_entries ul li {
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 }
 
 .widget.widget_recent_entries .post-date:before {
@@ -2229,6 +2239,43 @@ main>.page>.row:last-child>.column:last-child {
 
 .column .article-thumbnail a,.non-text-link {
 	display: inline-block;
+}
+
+.overlay-link {
+	display: block;
+}
+
+.column a.overlay-link {
+	border: none;
+	box-shadow: none;
+	position: relative;
+}
+
+.overlay-link:after,.overlay-link:before {
+	content: "";
+	position: absolute;
+	transition: opacity .4s;
+}
+
+.overlay-link:after {
+	background: rgba(202,18,55,.33) url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/overlay-link_open-sans-0xbb.svg) center/8rem no-repeat;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	top: 0;
+	width: 100%;
+}
+
+.overlay-link:before {
+	background: url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/link-icon_with-shadow_v3.svg) center/contain no-repeat;
+	bottom: 2rem;
+	height: 4rem;
+	right: 2rem;
+	width: 4rem;
+}
+
+.overlay-link:focus:after,.overlay-link:hover:after {
+	opacity: 1;
 }
 
 .column h1 a:not(.non-text-link),.column h2 a:not(.non-text-link),.column h3 a:not(.non-text-link),.column h4 a:not(.non-text-link),.column h5 a:not(.non-text-link),.column h6 a:not(.non-text-link),.gform_heading h3.gform_title a:not(.non-text-link) {
@@ -3386,35 +3433,35 @@ div.auto-scroller ul li {
 	list-style-image: none;
 }
 
-.style--card {
-	box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.22);
-	border-radius: 4px;
+.daesa-card,.style--card {
+	box-shadow: 0 12px 16px 2px rgba(0,0,0,.03), 0 5px 22px 4px rgba(0,0,0,.03), 0 6px 13px 0 rgba(0,0,0,.02);
+	border-radius: 5px;
 	box-sizing: border-box;
 	padding: 1rem;
 }
 
-.style--card--raised {
-	border: 1px solid #3b4042;
-	box-shadow: 0 4px 8px 1px rgba(0,0,0,.22);
-	border-radius: 4px;
+.daesa-card--raised,.style--card--raised {
+	border: 1px solid rgba(59,64,66,.15);
+	box-shadow: 0 12px 16px 2px rgba(0,0,0,.03), 0 5px 22px 4px rgba(0,0,0,.03), 0 6px 13px 0 rgba(0,0,0,.02);
+	border-radius: 5px;
 	box-sizing: border-box;
 	padding: 1rem;
 }
 
-.style--card__title {
+.daesa-card__title,.style--card__title {
 	color: #2a3033;
 	margin-left: -1rem;
 	margin-right: -1rem;
 	padding: .5rem 1rem;
 }
 
-.style--card__title:first-child {
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+.daesa-card__title:first-child,.style--card__title:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	margin-top: -1rem;
 }
 
-.style--card__sub-title {
+.daesa-card__sub-title,.style--card__sub-title {
 	background-color: #5e5e5e;
 	color: #fff;
 	font-size: 1.1em;
@@ -3429,7 +3476,7 @@ div.auto-scroller ul li {
 	word-spacing: 1px;
 }
 
-.style--card__title+.style--card__sub-title {
+.daesa-card__title+.daesa-card__sub-title,.style--card__title+.style--card__sub-title {
 	margin-top: 0;
 }
 
@@ -3731,6 +3778,26 @@ div.auto-scroller ul li {
 	font-weight: 700;
 	position: absolute;
 	transform: translateX(-100%) translateX(-.5em);
+}
+
+.text-list--double-spaced .text-list__item {
+	padding: 0 0 .9em;
+}
+
+.text-list--double-spaced .text-list__item:last-child {
+	padding: 0 0 .3em;
+}
+
+.text-list--flush-left {
+	padding-left: 1.5em;
+}
+
+.bs--border-box {
+	box-sizing: border-box;
+}
+
+.bs--content-box {
+	box-sizing: content-box;
 }
 
 .w--5pct {
@@ -5450,114 +5517,6 @@ div.auto-scroller ul li {
 	background-color: transparent;
 }
 
-.c--gray--lightest {
-	color: #eff0f1;
-}
-
-.c--gray--lighter {
-	color: #d7dadb;
-}
-
-.c--gray--light {
-	color: #b5babe;
-}
-
-.c--gray--lightish {
-	color: #8d959a;
-}
-
-.c--gray--darkish {
-	color: #5e5e5e;
-}
-
-.c--gray--dark {
-	color: #3b4042;
-}
-
-.c--gray--darker {
-	color: #2a3033;
-}
-
-.c--gray--darkest {
-	color: #000;
-}
-
-.c--gray--accent {
-	color: #fff;
-}
-
-.bgc--gray--lightest {
-	background-color: #eff0f1;
-}
-
-.bgc--gray--lightest--25pct {
-	background-color: rgba(239,240,241,.25);
-}
-
-.bgc--gray--lighter {
-	background-color: #d7dadb;
-}
-
-.bgc--gray--lighter--25pct {
-	background-color: rgba(215,218,219,.25);
-}
-
-.bgc--gray--light {
-	background-color: #b5babe;
-}
-
-.bgc--gray--light--25pct {
-	background-color: rgba(181,186,190,.25);
-}
-
-.bgc--gray--lightish {
-	background-color: #8d959a;
-}
-
-.bgc--gray--lightish--25pct {
-	background-color: rgba(141,149,154,.25);
-}
-
-.bgc--gray--darkish {
-	background-color: #5e5e5e;
-}
-
-.bgc--gray--darkish--25pct {
-	background-color: rgba(94,94,94,.25);
-}
-
-.bgc--gray--dark {
-	background-color: #3b4042;
-}
-
-.bgc--gray--dark--25pct {
-	background-color: rgba(59,64,66,.25);
-}
-
-.bgc--gray--darker {
-	background-color: #2a3033;
-}
-
-.bgc--gray--darker--25pct {
-	background-color: rgba(42,48,51,.25);
-}
-
-.bgc--gray--darkest {
-	background-color: #000;
-}
-
-.bgc--gray--darkest--25pct {
-	background-color: rgba(0,0,0,.25);
-}
-
-.bgc--gray--accent {
-	background-color: #fff;
-}
-
-.bgc--gray--accent--25pct {
-	background-color: rgba(255,255,255,.25);
-}
-
 .c--crimson--lightest {
 	color: #dc4e65;
 }
@@ -5668,22 +5627,6 @@ div.auto-scroller ul li {
 
 .bgc--crimson--tint {
 	background-color: #f2e2e4;
-}
-
-.bgc--green--tint {
-	background-color: #f4f3de;
-}
-
-.bgc--yellow--tint {
-	background-color: #fff6e1;
-}
-
-.bgc--blue--tint {
-	background-color: #def3f6;
-}
-
-.bgc--orange--tint {
-	background-color: #feefe2;
 }
 
 .cycle2-slideshow,.cycle2-slideshow * {
@@ -7143,7 +7086,7 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 	display: none;
 }
 
-.tribe-theme-spine.events-archive .article-header,.tribe_events-template-default .article-header,.tribe_venue-template-default .article-header {
+.tribe-theme-spine.events-archive .article-header:not(.row),.tribe_events-template-default .article-header:not(.row),.tribe_venue-template-default .article-header:not(.row) {
 	display: none;
 }
 
@@ -7629,6 +7572,10 @@ hr.icon--tower::before {
 		display: none;
 	}
 	
+	.hide-when-floating-columns {
+		display: none !important;
+	}
+	
 	.row.has-linked-columns:not(.gutter) .column:not(:first-child) {
 		border-left: 1px solid rgba(255,255,255,.7);
 	}
@@ -7698,19 +7645,19 @@ hr.icon--tower::before {
 		font-size: 2.35294118rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.3416em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.2em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: 1.1292em;
 	}
 	
@@ -7718,19 +7665,19 @@ hr.icon--tower::before {
 		font-size: 13.416px;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: 1.118em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: 1em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .941em;
 	}
 	
@@ -7750,10 +7697,6 @@ hr.icon--tower::before {
 }
 
 @media all and (min-width:1205px) {
-	.builder-banner-slide:hover .builder-banner-content {
-		font-size: 2rem;
-	}
-	
 	#binder.max-1386 .row.has-linked-columns:not(.gutter).halves {
 		padding-bottom: 0 !important;
 	}
@@ -7766,6 +7709,12 @@ hr.icon--tower::before {
 	#binder.max-1386 .row.has-linked-columns:not(.gutter).quarters .column {
 		padding-bottom: 0 !important;
 		height: 293px;
+	}
+}
+
+@media all and (min-width:1386px) {
+	.builder-banner-slide:hover .builder-banner-content {
+		font-size: 2rem;
 	}
 }
 
@@ -7786,19 +7735,19 @@ hr.icon--tower::before {
 	}
 }
 
-@media all and (max-width:1208px) {
-	header.main-header {
-		background: url(https://s3.wp.wsu.edu/uploads/sites/50/2019/12/Distinguished-Scholarships-Logo_50x50px.png) no-repeat right .5rem top .5rem, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
-	}
-}
-
-@media all and (max-width:1205px) {
+@media all and (max-width:1386px) {
 	ul.cascaded-layout.blank>li {
 		overflow-x: visible;
 	}
 	
 	.application-steps>li {
 		overflow-x: visible;
+	}
+}
+
+@media all and (max-width:1208px) {
+	header.main-header {
+		background: url(https://s3.wp.wsu.edu/uploads/sites/50/2019/12/Distinguished-Scholarships-Logo_50x50px.png) no-repeat right .5rem top .5rem, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, #2a3033;
 	}
 }
 
@@ -7918,6 +7867,10 @@ hr.icon--tower::before {
 	
 	span.hides-with-rghtclmn {
 		display: none;
+	}
+	
+	.show-when-floating-columns {
+		display: none !important;
 	}
 	
 	.application-steps>li {
@@ -8311,19 +8264,19 @@ hr.icon--tower::before {
 		font-size: 2.07529412rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.0584em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.0584em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.0584em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: .9888em;
 	}
 	
@@ -8344,19 +8297,19 @@ hr.icon--tower::before {
 		margin-left: .5rem;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: .882em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: .882em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: .882em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .824em;
 	}
 	
@@ -8420,19 +8373,19 @@ hr.icon--tower::before {
 		font-size: 2.21411765rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.2em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.0584em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: 1.0584em;
 	}
 	
@@ -8440,19 +8393,19 @@ hr.icon--tower::before {
 		font-size: 12px;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: 1em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: .882em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .882em;
 	}
 	
@@ -8474,19 +8427,19 @@ hr.icon--tower::before {
 		font-size: 2.21411765rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.3416em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.0584em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: 1.0584em;
 	}
 	
@@ -8494,19 +8447,19 @@ hr.icon--tower::before {
 		font-size: 13.416px;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: 1.118em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: .882em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .882em;
 	}
 	
@@ -8528,19 +8481,19 @@ hr.icon--tower::before {
 		font-size: 2.35294118rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.2em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.2em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: 1.1292em;
 	}
 	
@@ -8548,19 +8501,19 @@ hr.icon--tower::before {
 		font-size: 12px;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: 1em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: 1em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .941em;
 	}
 	
@@ -8582,19 +8535,19 @@ hr.icon--tower::before {
 		font-size: 2.21411765rem;
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.1292em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		font-size: 1.1292em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		font-size: 1.0584em;
 	}
 	
@@ -8615,19 +8568,19 @@ hr.icon--tower::before {
 		margin-left: 1rem;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		font-size: .941em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		font-size: .941em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		font-size: .882em;
 	}
 	
@@ -8640,7 +8593,7 @@ hr.icon--tower::before {
 	}
 }
 
-@media all and (max-width:1204px) and (min-width:990px) {
+@media all and (max-width:1385px) and (min-width:990px) {
 	.builder-banner-content {
 		font-size: 2.1179vw;
 		line-height: 2.8592vw;
@@ -8838,19 +8791,19 @@ hr.icon--tower::before {
 		text-shadow: 0 .3333px 0 #77898b, 0 .6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px .3333px rgba(0,0,0,.1), 0 0 1.6667px rgba(0,0,0,.1), 0 .3333px 1px rgba(0,0,0,.3), 0 1px 1.6667px rgba(0,0,0,.2), 0 1.6667px 3.3333px rgba(0,0,0,.25), 0 3.3333px 3.3333px rgba(0,0,0,.2), 0 6.6667px 6.6667px rgba(0,0,0,.15);
 	}
 	
-	.single .article-deck {
+	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		line-height: 1.5em;
 	}
 	
-	.halves .article-deck,.mimic-two-column-sections .article-deck,.side-left .article-deck,.side-right .article-deck {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
 		line-height: 1.5em;
 	}
 	
-	.thirds .article-deck {
+	.row.thirds .article-deck {
 		line-height: 1.5em;
 	}
 	
-	.quarters .article-deck {
+	.row.quarters .article-deck {
 		line-height: 1.5em;
 	}
 	
@@ -8858,19 +8811,19 @@ hr.icon--tower::before {
 		line-height: 12px;
 	}
 	
-	.single .column {
+	.row.side-left .column.two,.row.side-right .column.one,.row.single .column {
 		line-height: 1.5em;
 	}
 	
-	.halves .column,.mimic-two-column-sections .column,.side-left .column,.side-right .column {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
 		line-height: 1.5em;
 	}
 	
-	.thirds .column {
+	.row.thirds .column {
 		line-height: 1.5em;
 	}
 	
-	.quarters .column {
+	.row.quarters .column {
 		line-height: 1.5em;
 	}
 	
