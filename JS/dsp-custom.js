@@ -145,11 +145,11 @@ function addNewsHeaderViaClassUtilization( htmlNewsHeader ) {
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addNewsHeaderViaLocation( htmlNewsHeader ) {
+function addNewsHeaderViaLocation( markup ) {
 	var siteURL = window.location.pathname;
 	switch( siteURL ) {
 		case '/news/':
-			$( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
+			$( '.column.one' ).first().parent( '.row' ).before( markup );
 			break;
 	}	
 }
