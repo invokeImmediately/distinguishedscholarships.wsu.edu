@@ -26,6 +26,7 @@
 ***    >>> §11.1: Home page...................................................................930
 ***    >>> §11.2: Massie fellowship...........................................................936
 ***    >>> §11.3: Gallery wall................................................................992
+***    >>> §11.4: About Us....................................................................992
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -37,6 +38,7 @@
 @oue-rules-wrapper: ~"";
 
 @import "..\WSU-UE---CSS\variables.less";
+@use-design__people-lists: true;
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 @import "..\WSU-UE---CSS\cycle2.less";
 
@@ -1010,3 +1012,173 @@ point_gray.png);
 	height: 450px;
 	z-index: 1;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §11.4: About Us
+**/
+
+@rs-daesa-staff-list: {
+	.daesa-staff-list,
+	.daesa-staff-list__unit-people {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		max-width: none;
+		padding-left: 0;
+	}
+
+	.daesa-staff-list__staff-member {
+		box-sizing: border-box;
+
+		@media screen and (min-width: @desktop-width) {
+			flex-basis: 33%;
+
+			&:nth-child(3n) {
+				padding-left: 1.33rem;
+			}
+
+			&:nth-child(3n + 1) {
+				padding-right: 1.33rem;
+			}
+
+			&:nth-child(3n + 2) {
+				padding-left: .67rem;
+				padding-right: .67rem;
+			}
+		}
+
+		@media screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)) {
+			flex-basis: 50%;
+
+			&:nth-child(2n) {
+				padding-left: 1rem;
+			}
+
+			&:nth-child(2n + 1) {
+				padding-right: 1rem;
+			}
+		}
+
+		@media screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+			flex-basis: 50%;
+
+			&:nth-child(2n) {
+				padding-left: .5rem;
+			}
+
+			&:nth-child(2n + 1) {
+				padding-right: .5rem;
+			}
+		}
+
+		@media screen and (max-width: 396px) {
+			flex-basis: 100%;
+		}
+
+		&--in-half-column-unit {
+			@media screen and (min-width: @desktop-width),
+			screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)),
+			screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+				flex-basis: 100%;
+				max-width: 370.58px;
+			}
+
+			@media screen and (min-width: @desktop-width) {
+				&:nth-child(3n),
+				&:nth-child(3n + 1),
+				&:nth-child(3n + 2) {
+					padding: 0;
+				}
+			}
+
+			@media screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)),
+			screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+				&:nth-child(2n),
+				&:nth-child(2n + 1) {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.daesa-staff-list__staff-email,
+	.daesa-staff-list__staff-name,
+	.daesa-staff-list__staff-phone,
+	.daesa-staff-list__staff-title,
+	.daesa-staff-list__unit-address,
+	.daesa-staff-list__unit-building {
+		display: inline-block;
+		margin-left: 1rem;
+		text-indent: -1rem;
+	}
+
+	.daesa-staff-list__staff-member {
+		@media screen and (min-width: @desktop-width) {
+			&:nth-child(3) ~ & {
+				margin-top: 2rem;
+			}
+		}
+
+		@media screen and (max-width: (@desktop-width - 1)) and (min-width: 397px) {
+			&:nth-child(2) ~ & {
+				margin-top: 2rem;
+			}
+		}
+
+		@media screen and (max-width: 396px) {
+			& ~ & {
+				margin-top: 2rem;
+			}
+		}
+	}
+
+	.daesa-staff-list__staff-name {
+		.fw--semi-bold;
+	}
+
+	.daesa-staff-list__staff-phone {
+		.daesa-staff-list__staff-email ~ & {
+			margin-top: .3em;
+		}
+	}
+
+	.daesa-staff-list__staff-photo {
+		border-bottom: 4px solid #a31d36;
+		padding-bottom: 2px;
+	}
+
+	.daesa-staff-list__unit {
+		box-sizing: border-box;
+
+		&--half-column  {
+			flex-basis: 50%;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				flex-basis: 100%;
+			}
+		}
+
+		&--left {
+			padding-right: 1rem;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				padding-right: 0;
+			}
+		}
+
+		&--right {
+			padding-left: 1rem;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.daesa-staff-list__unit-people {
+		.column & {
+			margin-top: 2rem;
+		}
+	}
+}
+@rs-daesa-staff-list();
