@@ -4895,11 +4895,38 @@ $( window ).on( 'load', function () {
 } );
 } )( jQuery );
 
-/*!
- * Site-specific JS for the WSU Distinguished Scholarships website.
+/*!*************************************************************************************************
+ * github.com/invokeImmediately/distinguishedscholarships.wsu.edu/JS/dsp-custom.js ↓↓↓
+ * -------------------------------------------------------------------------------------------------
+ * SUMMARY: Site-specific JS for the WSU Distinguished Scholarships website.
  *
- * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
- */
+ * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *
+ * LICENSE: MIT - Copyright (c) 2020 Washington State University
+ *
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *   and associated documentation files (the “Software”), to deal in the Software without
+ *   restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+ *   Software is furnished to do so, subject to the following conditions:
+ *
+ *   The above copyright notice and this permission notice shall be included in all copies or
+ *   substantial portions of the Software.
+ *
+ *   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ **************************************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// -----------------
+//   §1: Main execution.......................................................................35
+//   §2: Class declarations...................................................................70
+//   §3: Function Declarations...............................................................151
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* -------------------------------------------------------------------------------------------------
 ** §1: Main execution
@@ -4917,16 +4944,13 @@ $( window ).on( 'load', function () {
  */
 $( function () {
 	// Tweak HTML source to work around some quirks of WordPress setup
-	var htmlNewsHeader = '<section id="news-section-header" class="row single article-header'
-		+ ' article-header--colored h--192px"><div style="" class="column one black-back"><div'
-		+ ' class="gray-er-text wrapper"><ol class="breadcrumb-list"><li'
-		+ ' class="breadcrumb-list__breadcrumb"><a class="breadcrumb-list__link"'
-		+ ' href="/">Home</a></li></ol><h1 class="tt--uppercase">News</h1></div></div></section>';
-	addPageHeaderOnNewsPages( htmlNewsHeader );
-
-	// Set up the site's sub header element to automatically resize
-	// var subHeaderResizer = new TextAutoResizers( '.sub-header', 198, '.main-header .header-group' );
-	// subHeaderResizer.initTextAutoResizing();
+	addPageHeaderOnNewsPages( {
+		htmlNewsHeader: '<section id="news-section-header" class="row single article-header artic' +
+			'le-header--colored h--192px"><div style="" class="column one black-back"><div class=' +
+			'"gray-er-text wrapper"><ol class="breadcrumb-list"><li class="breadcrumb-list__bread' +
+			'crumb"><a class="breadcrumb-list__link" href="/">Home</a></li></ol><h1 class="tt--up' +
+			'percase">News</h1></div></div></section>'
+	} );
 } );
 
 /**
@@ -5029,11 +5053,11 @@ function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addNewsHeaderViaClassUtilization( htmlNewsHeader ) {
+function addNewsHeaderViaClassUtilization( markup ) {
 	var $body = $( 'body' ).first();
 	if ( $body.hasClass( 'single-post' ) || ( $body.hasClass( 'archive' ) &&
 			( $body.hasClass( 'category' ) ||  $body.hasClass( 'tag' ) ) ) ) {
-		$body.find( '.column.one' ).first().parent( '.row' ).before( htmlNewsHeader );
+		$body.find( '.column.one' ).first().parent( '.row' ).before( markup );
 	}
 }
 
@@ -5042,7 +5066,7 @@ function addNewsHeaderViaClassUtilization( htmlNewsHeader ) {
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addNewsHeaderViaLocation( markup ) {
+function addPageHeaderViaLocation( markup ) {
 	var siteURL = window.location.pathname;
 	switch( siteURL ) {
 		case '/news/':
@@ -5056,9 +5080,10 @@ function addNewsHeaderViaLocation( markup ) {
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addPageHeaderOnNewsPages( htmlNewsHeader ) {
-	addNewsHeaderViaLocation( htmlNewsHeader );
-	addNewsHeaderViaClassUtilization( htmlNewsHeader );
+function addPageHeaderOnNewsPages( params ) {
+	var headerMarkup = params.htmlNewsHeader;
+	addPageHeaderViaLocation( headerMarkup );
+	addNewsHeaderViaClassUtilization( headerMarkup );
 }
 
 /**
