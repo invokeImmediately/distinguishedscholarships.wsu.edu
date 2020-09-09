@@ -4924,17 +4924,13 @@ $( window ).on( 'load', function () {
 // TABLE OF CONTENTS
 // -----------------
 //   §1: Main execution.......................................................................35
-//   §2: Class declarations...................................................................70
-//   §3: Function Declarations...............................................................151
+//   §2: Class declarations...................................................................74
+//   §3: Function Declarations...............................................................154
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/* -------------------------------------------------------------------------------------------------
-** §1: Main execution
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §1: Main execution
 
-/**
- * IIFE for main execution.
- */
 ( function ( $ ) {
 
 "use strict";
@@ -4944,12 +4940,20 @@ $( window ).on( 'load', function () {
  */
 $( function () {
 	// Tweak HTML source to work around some quirks of WordPress setup
+	addPageHeaderOnCalendarPages( {
+		htmlCalendarHeader: '<section id="calendar-section-header" class="row single article-head' +
+			'er article-header--colored h--192px"><div style="" class="column one black-back"><di' +
+			'v class="gray-er-text wrapper"><ol class="breadcrumb-list"><li class="breadcrumb-lis' +
+			't__breadcrumb"><a class="breadcrumb-list__link" href="/">Distinguished Scholarships<' +
+			'/a></li></ol><h1 class="tt--uppercase">Calendar <span class="dy--block fs--600mx lh-' +
+			'-1000mx">of Workshops &amp; Events</span></h1></div></div></section>'
+	} );
 	addPageHeaderOnNewsPages( {
 		htmlNewsHeader: '<section id="news-section-header" class="row single article-header artic' +
 			'le-header--colored h--192px"><div style="" class="column one black-back"><div class=' +
 			'"gray-er-text wrapper"><ol class="breadcrumb-list"><li class="breadcrumb-list__bread' +
-			'crumb"><a class="breadcrumb-list__link" href="/">Home</a></li></ol><h1 class="tt--up' +
-			'percase">News</h1></div></div></section>'
+			'crumb"><a class="breadcrumb-list__link" href="/">Distinguished Scholarships</a></li>' +
+			'</ol><h1 class="tt--uppercase">News</h1></div></div></section>'
 	} );
 } );
 
@@ -4963,9 +4967,8 @@ $( window ).on( 'load', function () {
 	animateGalleryWallHeader( selectors.galleryWall, selectors.galleryWallContainer, 132, 2 );
 } );
 
-/* -------------------------------------------------------------------------------------------------
-** §2: Class declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §2: Class declarations
 
 /**
  * Create a new instance of an animated gallery wall object, which causes gallery wall headers to
@@ -5044,14 +5047,27 @@ function AnimatedGalleryWall( headerSlctr, containerSlctr, speed, numPans ) {
 	}
 }
 
-/* -------------------------------------------------------------------------------------------------
-** §3: Function Declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §3: Function Declarations
 
 /**
  * Inspect the body tag to add a header to news pages when certain classes are in use.
  *
- * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
+ * @param {String} markup - The HTML comprising the page header to be added to the DOM.
+ */
+function addCalendarHeaderViaClassUtilization( markup ) {
+	var $body = $( 'body' ).first();
+	if ( $body.hasClass( 'single-tribe_events' ) ||
+			$body.hasClass( 'post-type-archive-tribe_events' ) ||
+			$body.hasClass( 'tribe_venue-template-default' ) ) {
+		$body.find( '.column.one' ).first().parent( '.row' ).before( markup );
+	}
+}
+
+/**
+ * Inspect the body tag to add a header to news pages when certain classes are in use.
+ *
+ * @param {String} markup - The HTML comprising the page header to be added to the DOM.
  */
 function addNewsHeaderViaClassUtilization( markup ) {
 	var $body = $( 'body' ).first();
@@ -5062,17 +5078,25 @@ function addNewsHeaderViaClassUtilization( markup ) {
 }
 
 /**
- * Use the browser's location to add a header to news pages.
+ * Use the browser's location to add a header to news pages, which lack them by default.
+ *
+ * @param {String} markup - The HTML comprising the page header to be added to the DOM.
+ */
+function addNewsHeaderViaLocation( markup ) {
+	var siteURL = window.location.pathname;
+	if ( siteURL == '/news/' ) {
+		$( '.column.one' ).first().parent( '.row' ).before( markup );
+	}
+}
+
+/**
+ * Add page headers to news pages.
  *
  * @param {String} htmlNewsHeader - The HTML comprising the page header to be added to the DOM.
  */
-function addPageHeaderViaLocation( markup ) {
-	var siteURL = window.location.pathname;
-	switch( siteURL ) {
-		case '/news/':
-			$( '.column.one' ).first().parent( '.row' ).before( markup );
-			break;
-	}	
+function addPageHeaderOnCalendarPages( params ) {
+	var headerMarkup = params.htmlCalendarHeader;
+	addCalendarHeaderViaClassUtilization( headerMarkup );
 }
 
 /**
@@ -5082,7 +5106,7 @@ function addPageHeaderViaLocation( markup ) {
  */
 function addPageHeaderOnNewsPages( params ) {
 	var headerMarkup = params.htmlNewsHeader;
-	addPageHeaderViaLocation( headerMarkup );
+	addNewsHeaderViaLocation( headerMarkup );
 	addNewsHeaderViaClassUtilization( headerMarkup );
 }
 
