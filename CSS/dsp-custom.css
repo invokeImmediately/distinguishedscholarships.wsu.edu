@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /*! ================================================================================================
-*** WSU DAESA Styling Section
+*** Styling Applied to All DAESA Websites
 *** ================================================================================================
 *** SUMMARY: The following section of this stylesheet contains CSS code written for use on all
 ***   websites designed, built, and maintained by the Divsion of Academic Engagement and Student
@@ -15,18 +15,22 @@
 ***     
 *** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
 ***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
+*** LICENSE: MIT — Copyright (c) 2020 Washington State University.
 ***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***   and associated documentation files (the “Software”), to deal in the Software without
+***   restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+***   Software is furnished to do so, subject to the following conditions:
 ***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
+***   The above copyright notice and this permission notice shall be included in all copies or
+***   substantial portions of the Software.
+***
+***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+***   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+***   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 *** ================================================================================================
 **/
 
@@ -1667,6 +1671,147 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 
 .wsuwp-json--headlines.layout--2-columns * + .wsuwp-content-syndicate-item {
   margin-top: 0;
+}
+
+.daesa-news-summary {
+  display: none;
+}
+
+.daesa-news-feed {
+  max-width: none;
+}
+
+.daesa-news-feed .content-item-byline-author {
+  display: none;
+}
+
+.daesa-news-feed .content-item-byline-date,
+.daesa-news-feed .content-item-thumbnail,
+.daesa-news-feed .content-item-title {
+  display: block;
+}
+
+.daesa-news-feed .content-item-byline-date {
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.daesa-news-feed .content-item-byline-date:before {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/date.svg) center / 100% no-repeat;
+  content: "";
+  display: inline-block;
+  height: 0.75rem;
+  margin: 0 0.375rem -0.0625rem 0;
+  width: 0.75rem;
+}
+
+.daesa-news-feed .content-item-thumbnail {
+  background: #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+  background: linear-gradient(90deg, transparent, #a60f2d 18%, #a60f2d 82%, transparent), #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+}
+
+.daesa-news-feed .content-item-thumbnail img {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: block;
+  margin: 0 auto;
+}
+
+.daesa-news-feed .content-item-excerpt > *:not(.daesa-news-summary):not(.content-item-read-story) {
+  display: none;
+}
+
+.daesa-news-feed .content-item-read-story {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+.daesa-news-feed .content-item-title {
+  margin: 0.5em 0;
+}
+
+.daesa-news-feed .daesa-news-summary {
+  display: block;
+}
+
+.daesa-news-feed .wsuwp-content-syndicate-item {
+  flex-basis: 30%;
+  padding-bottom: 2rem;
+}
+
+.daesa-news-feed .wsuwp-content-syndicate-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 0.5em;
+  max-width: none;
+  padding: 0 1em 0 0;
+}
+
+.daesa-news-feed a {
+  font-weight: bold;
+}
+
+.daesa-news-feed a:after {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
+  content: "";
+  height: 1em;
+  margin: 0 0 -0.05em 0.1em;
+  position: absolute;
+  width: 1em;
+}
+
+.daesa-news-feed a:not(:hover) {
+  border-bottom: 3px solid transparent;
+  box-shadow: none;
+  color: black;
+}
+
+.daesa-news-feed--gray .content-item-thumbnail {
+  background: #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+  background: linear-gradient(90deg, transparent, #b5babe 18%, #b5babe 82%, transparent), #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+}
+
+.daesa-news-feed--1-col .wsuwp-content-syndicate-item {
+  flex-basis: 100%;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item {
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n) {
+  padding-left: 1rem;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n + 1) {
+  padding-right: 1rem;
+}
+
+.blog .column .article-title,
+.archive.category .column .article-title,
+.archive.tag .column .article-title {
+  padding-right: 1rem;
+}
+
+.blog .column .article-title a,
+.archive.category .column .article-title a,
+.archive.tag .column .article-title a {
+  text-decoration: none;
+}
+
+.blog .column .article-title a:after,
+.archive.category .column .article-title a:after,
+.archive.tag .column .article-title a:after {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/60% no-repeat;
+  content: "";
+  height: 1em;
+  margin: 0 0 -0.05em 0.1em;
+  position: absolute;
+  width: 1em;
 }
 
 .award-banner {
@@ -6838,11 +6983,11 @@ with-drop-shadow_29x32.png);
   color: #715409;
 }
 
-.column ul:not(.content-boxes):not(.application-steps) li {
+.column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
 
-.column ul:not(.content-boxes):not(.application-steps).gray-bullets li {
+.column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list).gray-bullets li {
   list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-
 point_gray.png);
 }
@@ -7611,6 +7756,24 @@ span.has-tooltip:hover:after {
   border-top: 10px solid #ffffff;
 }
 
+.recurring-info-tooltip,
+.tribe-events-calendar .tribe-events-tooltip,
+.tribe-events-shortcode.view-week .tribe-events-tooltip,
+.tribe-events-week .tribe-events-tooltip {
+  padding: 0.75em 1em;
+}
+
+.recurring-info-tooltip .workshop-note,
+.tribe-events-calendar .tribe-events-tooltip .workshop-note,
+.tribe-events-shortcode.view-week .tribe-events-tooltip .workshop-note,
+.tribe-events-week .tribe-events-tooltip .workshop-note {
+  display: none;
+}
+
+.single-tribe_events .tribe-events-single-event-title {
+  line-height: 1.2em;
+}
+
 .single-tribe_venue .tribe-events-venue-meta .tribe-venue-name::before {
   content: "Events by Venue: ";
 }
@@ -7645,8 +7808,19 @@ span.has-tooltip:hover:after {
   color: #c60c30;
 }
 
+.tribe-events-loop .type-tribe_events + .type-tribe_events {
+  border-top: 1px solid #eff0f1;
+  padding-top: 1.5em;
+}
+
 .tribe-events-sub-nav {
   max-width: none;
+}
+
+.tribe_events-template-default .article-header:not(.row),
+.tribe_venue-template-default .article-header:not(.row),
+.tribe-theme-spine.events-archive .article-header:not(.row) {
+  display: none;
 }
 
 .tribe-related-events-thumbnail {
@@ -7689,27 +7863,23 @@ span.has-tooltip:hover:after {
   display: none;
 }
 
-.wsuwp-content-syndicate-list:empty::after {
-  content: "None.";
+.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group {
+  width: calc(90%);
+  width: calc(100% - 2rem);
 }
 
-.recurring-info-tooltip,
-.tribe-events-calendar .tribe-events-tooltip,
-.tribe-events-shortcode.view-week .tribe-events-tooltip,
-.tribe-events-week .tribe-events-tooltip {
-  padding: 0.75em 1em;
+.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header,
+.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header-default {
+  color: transparent !important;
 }
 
-.recurring-info-tooltip .workshop-note,
-.tribe-events-calendar .tribe-events-tooltip .workshop-note,
-.tribe-events-shortcode.view-week .tribe-events-tooltip .workshop-note,
-.tribe-events-week .tribe-events-tooltip .workshop-note {
-  display: none;
+.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header::before {
+  content: "Distinguished Scholarships Program";
+  position: absolute;
+  color: #fff;
 }
 
-.tribe_events-template-default .article-header:not(.row),
-.tribe_venue-template-default .article-header:not(.row),
-.tribe-theme-spine.events-archive .article-header:not(.row) {
+.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header a {
   display: none;
 }
 
@@ -7746,23 +7916,8 @@ span.has-tooltip:hover:after {
   margin-right: 3%;
 }
 
-body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group {
-  width: calc(90%);
-  width: calc(100% - 2rem);
-}
-
-body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header {
-  color: transparent !important;
-}
-
-body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header::before {
-  content: "Distinguished Scholarships Program";
-  position: absolute;
-  color: #fff;
-}
-
-body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-group .sub-header a {
-  display: none;
+.wsuwp-content-syndicate-list:empty::after {
+  content: "None.";
 }
 
 #tribe-bar-views a {
@@ -8145,6 +8300,37 @@ hr.icon--tower::before {
   margin-top: 2rem;
 }
 
+.more-news__associated-unit {
+  color: #525A62;
+}
+
+.column a.more-news__headline {
+  font-weight: 600;
+}
+
+.column a.more-news__headline:after {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
+  content: "";
+  height: 1em;
+  margin: 0 0 -0.05em 0.1em;
+  position: absolute;
+  width: 1em;
+}
+
+.column a.more-news__headline:not(:hover) {
+  border-bottom: 3px solid transparent;
+  box-shadow: none;
+  color: black;
+}
+
+ul .more-news__list-entry {
+  padding-bottom: 0;
+}
+
+ul .more-news__list-entry:not(:first-child) {
+  margin-top: 2rem;
+}
+
 /*! ================================================================================================
 *** Media queries section
 *** ================================================================================================
@@ -8513,6 +8699,18 @@ hr.icon--tower::before {
 
   .column table.calendar td p {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .daesa-news-feed .content-item-thumbnail {
+    background: transparent;
+  }
+
+  .daesa-news-feed .content-item-thumbnail img {
+    border-left: none;
+    border-right: none;
+    margin: 0;
   }
 }
 

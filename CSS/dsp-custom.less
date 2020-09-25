@@ -27,6 +27,7 @@
 ***    >>> §11.2: Massie fellowship...........................................................936
 ***    >>> §11.3: Gallery wall................................................................992
 ***    >>> §11.4: About Us....................................................................992
+***    >>> §11.5: Homepage more news..........................................................000
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -39,6 +40,7 @@
 
 @import "..\WSU-UE---CSS\variables.less";
 @use-design__people-lists: true;
+@use-design__insider-news-feeds: true;
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 @import "..\WSU-UE---CSS\cycle2.less";
 
@@ -798,7 +800,7 @@ with-drop-shadow_29x32.png);
 *** §9: Unordered list styling
 **/
 
-.column ul:not(.content-boxes):not(.application-steps) {
+.column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list) {
 	li {
 		list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 	}
@@ -1182,3 +1184,45 @@ point_gray.png);
 	}
 }
 @rs-daesa-staff-list();
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §11.5: Homepage more news
+**/
+
+@rs-more-news: {
+	.more-news__associated-unit {
+		color: #525A62;
+	}
+
+	.more-news__headline {
+		.column a& {
+			font-weight: 600;
+
+			&:after {
+				background: ~"url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat";
+				content: "";
+				height: 1em;
+				margin: 0 0 -.05em .1em;
+				position: absolute;
+				width: 1em;
+			}
+
+			&:not(:hover) {
+				border-bottom: 3px solid transparent;
+				box-shadow: none;
+				color: black;
+			}
+		}
+	}
+
+	.more-news__list-entry {
+		ul & {
+			padding-bottom: 0;
+
+			&:not(:first-child) {
+				margin-top: 2rem;
+			}
+		}
+	}
+};
+@rs-more-news();
