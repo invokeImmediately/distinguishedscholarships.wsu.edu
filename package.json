@@ -34,5 +34,8 @@
     "gulp-replace": "^0.6.1",
     "gulp-uglify": "^3.0.2",
     "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-terser": "^1.4.0"
   }
 }
