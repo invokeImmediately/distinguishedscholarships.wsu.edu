@@ -10,28 +10,32 @@
  *
  * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  *
- * LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
+ * LICENSE: MIT - Copyright (c) 2020 Washington State University
  *
- *   Permission to use, copy, modify, and/or distribute this software for any purpose with or
- *   without fee is hereby granted, provided that the above copyright notice and this permission
- *   notice appear in all copies.
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
+ *   and associated documentation files (the “Software”), to deal in the Software without 
+ *   restriction, including without limitation the rights to use, copy, modify, merge, publish, 
+ *   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+ *   Software is furnished to do so, subject to the following conditions:
  *
- *   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
- *   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
- *   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
- *   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
- *   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
- *   PERFORMANCE OF THIS SOFTWARE.
+ *   The above copyright notice and this permission notice shall be included in all copies or 
+ *   substantial portions of the Software.
+ *
+ *   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING 
+ *   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+ *   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+ *   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................42
-// §2: Specificiation of build settings .......................................................47
-//   §2.1: getCssBuildSettings()...............................................................50
-//   §2.2: getJsBuildSettings()...............................................................111
-// §3: Entry point: Set up of build taks......................................................146
+// §1: Gulp task dependencies..................................................................46
+// §2: Specificiation of build settings .......................................................51
+//   §2.1: getCssBuildSettings()...............................................................54
+//   §2.2: getJsBuildSettings()...............................................................106
+// §3: Entry point: Set up of build taks......................................................141
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -41,7 +45,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §1: Gulp task dependencies
 
-var gulpBuilder = require( './WSU-UE---JS/gulpBuilder.js' );
+const gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §2: Specificiation of build settings 
@@ -55,14 +59,15 @@ var gulpBuilder = require( './WSU-UE---JS/gulpBuilder.js' );
  * @return {object} - Instance of gulpBuilder.CssBuildSettings.
  */
 function getCssBuildSettings() {
-	var commentRemovalNeedle = /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm;
-	var dependenciesPath = './WSU-UE---CSS/';
-	var destFolder = './CSS/';
-	var fontImportStr = '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wg' +
-		'ht@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700' +
-		';1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mon' +
-		'o:ital,wght@0,400;0,700;1,400;1,700&display=swap\');\r\n';
-	var insertingMediaQuerySectionHeader = {
+	return new gulpBuilder.CssBuildSettings( {
+		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
+		dependenciesPath: './WSU-UE---CSS/',
+		destFolder: './CSS/',
+		fontImportStr: '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,' +
+			'wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,7' +
+			'00;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+M' +
+			'ono:ital,wght@0,400;0,700;1,400;1,700&display=swap\');\r\n',
+		insertingMediaQuerySectionHeader: {
 			'before': /^@media/,
 			'lineBefore': '/*! ==================================================================' +
 				'==============================\r\n*** Media queries section\r\n*** =============' +
@@ -90,21 +95,11 @@ function getCssBuildSettings() {
 				'  OR PERFORMANCE OF THIS SOFTWARE.\r\n*** ======================================' +
 				'==========================================================\r\n**/',
 			'stopAfterFirstMatch': true
-		};
-	var minCssFileExtension = '.min.css';
-	var minCssFileHeaderStr = '';
-	var sourceFile = './CSS/dsp-custom.less';
-
-	return new gulpBuilder.CssBuildSettings(
-		commentRemovalNeedle,
-		dependenciesPath,
-		destFolder,
-		fontImportStr,
-		insertingMediaQuerySectionHeader,
-		minCssFileExtension,
-		minCssFileHeaderStr,
-		sourceFile
-	);
+		},
+		minCssFileExtension: '.min.css',
+		minCssFileHeaderStr: '',
+		sourceFile: './CSS/dsp-custom.less'
+	} );
 }
 
 ////////
@@ -118,20 +113,20 @@ function getCssBuildSettings() {
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./WSU-UE---JS/jQuery.oue-custom.js',
-			'./WSU-UE---JS/jQuery.animatedCalendar.js',
-			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
-			'./WSU-UE---JS/jQuery.cookieObjs.js',
-			'./WSU-UE---JS/jQuery.css-data.js',
-			'./WSU-UE---JS/jQuery.cycle2.js',
-			'./WSU-UE---JS/jQuery.forms.js',
+			'./WSU-DAESA-JS/jQuery.oue-custom.js',
+			'./WSU-DAESA-JS/jQuery.animatedCalendar.js',
+			'./WSU-DAESA-JS/jQuery.autoScrollingImages.js',
+			'./WSU-DAESA-JS/jQuery.cookieObjs.js',
+			'./WSU-DAESA-JS/jQuery.css-data.js',
+			'./WSU-DAESA-JS/jQuery.cycle2.js',
+			'./WSU-DAESA-JS/jQuery.forms.js',
 			'../jQuery.AreYouSure/jquery.are-you-sure.js',
-			'./WSU-UE---JS/jQuery.are-you-sure.js',
-			'./WSU-UE---JS/jquery.media.js',
+			'./WSU-DAESA-JS/jQuery.are-you-sure.js',
+			'./WSU-DAESA-JS/jquery.media.js',
 			'../qTip2/dist/jquery.qtip.min.js',
-			'./WSU-UE---JS/jQuery.qTip.js',
-			'./WSU-UE---JS/jQuery.textResize.js',
-			'./WSU-UE---JS/jQuery.masonry-custom.js',
+			'./WSU-DAESA-JS/jQuery.qTip.js',
+			'./WSU-DAESA-JS/jQuery.textResize.js',
+			'./WSU-DAESA-JS/jQuery.masonry-custom.js',
 			'./JS/dsp-custom.js'
 		],
 		commentNeedle: /^(\/\*)(?!!)/g,
@@ -147,5 +142,7 @@ function getJsBuildSettings() {
 
 gulpBuilder.setUpCssBuildTask( getCssBuildSettings() );
 gulpBuilder.setUpJsBuildTask( getJsBuildSettings() );
+gulpBuilder.setUpHelpTask();
+gulpBuilder.setUpDefaultTask();
 
 } )();
