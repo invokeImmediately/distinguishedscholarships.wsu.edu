@@ -1,37 +1,36 @@
 ﻿@import  'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 /*! ================================================================================================
-*** Styling Applied to All DAESA Websites
+*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-*** SUMMARY: The following section of this stylesheet contains CSS code written for use on all
-***   websites designed, built, and maintained by the Divsion of Academic Engagement and Student
-***   Achievement (DAESA) in the Office of the Provost at Washington State University (WSU).
+*** The following section of this stylesheet contains CSS code written for use on all websites
+***   designed, built, and maintained by the Divsion of Academic Engagement and Student Achievement
+***   (DAESA) in the Office of the Provost at Washington State University (WSU).
 ***
-*** DESCRIPTION: The CSS code in the following section was generated from precompiled CSS written in
-***   the Less language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet
-***   Editor functioning in add-on mode.
+*** The CSS code in the following section was generated from precompiled CSS written in the Less
+***   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
+***   functioning in add-on mode.
 ***
-***   Please refer to the GitHub proejct at https://github.com/invokeImmediately/WSU-UE---CSS/ for
-***   fully documented, precompiled source code.  
-***     
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** Please refer to the linked GitHub project for fully documented, precompiled source code.
 ***
-*** LICENSE: MIT — Copyright (c) 2020 Washington State University.
-***
+*** @link https://github.com/invokeImmediately/WSU-DAESA-CSS
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2021 Washington State University
 ***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-***   and associated documentation files (the “Software”), to deal in the Software without
-***   restriction, including without limitation the rights to use, copy, modify, merge, publish,
-***   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
-***   Software is furnished to do so, subject to the following conditions:
-***
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
 ***   The above copyright notice and this permission notice shall be included in all copies or
-***   substantial portions of the Software.
-***
-***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-***   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-***   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-***   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-***   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 .column,.ff--sans,.has-dflt-font,body,header.main-header {
@@ -2302,15 +2301,12 @@ main>.page>.row:last-child>.column:last-child {
 }
 
 .column a {
-	border: 1px solid transparent;
-	border-bottom-color: #981e32;
-	border-left: 0;
-	border-right: 0;
+	border-bottom: 1px solid #981e32;
 	text-decoration: none;
-	transition: color .4s, background .4s, border .1s;
+	transition: color .2s ease, background .2s ease, border-width .05s;
 }
 
-.column a:hover {
+.column a:focus,.column a:hover {
 	background-color: rgba(198,12,48,.15);
 	border-bottom-width: 3px;
 	border-color: #c60c30;
@@ -2429,6 +2425,47 @@ main>.page>.row:last-child>.column:last-child {
 .column .article-footer a:hover,.column h1 a:not(.non-text-link):hover,.column h2 a:not(.non-text-link):hover,.column h3 a:not(.non-text-link):hover,.column h4 a:not(.non-text-link):hover,.column h5 a:not(.non-text-link):hover,.column h6 a:not(.non-text-link):hover,.gform_heading h3.gform_title a:not(.non-text-link):hover {
 	border-bottom: 4px solid #c60c30;
 	text-decoration: none;
+}
+
+.simple-button {
+	border-radius: 4px;
+	display: inline-block;
+	margin-bottom: 9px;
+	padding: .5rem 1rem;
+}
+
+.simple-button:not(:hover) {
+	background-color: #eff0f1;
+	border: 1px solid #a60f2d;
+	box-shadow: 0 12px 16px 2px rgba(0,0,0,.03), 0 5px 22px 4px rgba(0,0,0,.03), 0 6px 13px 0 rgba(0,0,0,.02);
+}
+
+.simple-button:hover {
+	background-color: #eff0f1;
+	border: 1px solid #ca1237;
+	box-shadow: 0 12px 16px 2px rgba(202,18,55,.05), 0 5px 22px 4px rgba(202,18,55,.05), 0 6px 13px 0 rgba(202,18,55,.02);
+}
+
+.column .simple-button:hover {
+	border-bottom-width: 1px;
+	text-shadow: none;
+}
+
+.simple-button.simple-button--crimson:not(:hover) {
+	background-color: #a60f2d;
+	border: 0;
+	color: #fff;
+}
+
+.simple-button.simple-button--crimson:hover {
+	background-color: #ca1237;
+	border: 0;
+	box-shadow: 0 5px 18px rgba(202,18,55,.4);
+	color: #fff;
+}
+
+.column .simple-button.simple-button--crimson:hover {
+	border-bottom-width: 0;
 }
 
 strong.opening-line {
@@ -4700,8 +4737,16 @@ div.auto-scroller ul li {
 	margin-top: 1em;
 }
 
+.column *+.sv--1250mx {
+	margin-top: 1.25em;
+}
+
 .column *+.sv--1500mx {
 	margin-top: 1.5em;
+}
+
+.column *+.sv--1750mx {
+	margin-top: 1.75em;
 }
 
 .column *+.sv--2000mx {
@@ -4985,6 +5030,26 @@ div.auto-scroller ul li {
 	margin-top: 1em;
 }
 
+.ma--1250mx {
+	margin: 1.25em;
+}
+
+.mb--1250mx {
+	margin-bottom: 1.25em;
+}
+
+.ml--1250mx {
+	margin-left: 1.25em;
+}
+
+.mr--1250mx {
+	margin-right: 1.25em;
+}
+
+.mt--1250mx {
+	margin-top: 1.25em;
+}
+
 .ma--1500mx {
 	margin: 1.5em;
 }
@@ -5003,6 +5068,26 @@ div.auto-scroller ul li {
 
 .mt--1500mx {
 	margin-top: 1.5em;
+}
+
+.ma--1750mx {
+	margin: 1.75em;
+}
+
+.mb--1750mx {
+	margin-bottom: 1.75em;
+}
+
+.ml--1750mx {
+	margin-left: 1.75em;
+}
+
+.mr--1750mx {
+	margin-right: 1.75em;
+}
+
+.mt--1750mx {
+	margin-top: 1.75em;
 }
 
 .ma--2000mx {
@@ -6713,7 +6798,6 @@ span.has-tool-tip:hover:after,span.has-tooltip:hover:after {
 
 .column a.glass-button.yellow,.column a.recommend-button.yellow {
 	background-color: #ffb81c;
-	color: #000;
 }
 
 .column a.glass-button.yellow:hover,.column a.recommend-button.yellow:hover {
@@ -7904,7 +7988,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -7924,7 +8008,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -8565,6 +8649,11 @@ ul .more-news__list-entry:not(:first-child) {
 		padding-right: .5rem;
 	}
 	
+	.main-header .header-group.guttered {
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+	
 	.page-header__column-1 {
 		left: .5rem;
 		right: .5rem;
@@ -8577,14 +8666,14 @@ ul .more-news__list-entry:not(:first-child) {
 	}
 	
 	.main-header .sub-header,.main-header .sub-header-default {
-		font-size: 2.07529412rem;
+		font-size: 1.6rem;
 	}
 	
 	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.0584em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.0584em;
 	}
 	
@@ -8617,7 +8706,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: .882em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .882em;
 	}
 	
@@ -8674,6 +8763,11 @@ ul .more-news__list-entry:not(:first-child) {
 		padding-right: 1rem;
 	}
 	
+	.main-header .header-group.guttered {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	
 	.page-header__column-1 {
 		left: 1rem;
 		right: 1rem;
@@ -8686,14 +8780,14 @@ ul .more-news__list-entry:not(:first-child) {
 	}
 	
 	.main-header .sub-header,.main-header .sub-header-default {
-		font-size: 2.21411765rem;
+		font-size: 2.11764706rem;
 	}
 	
 	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8713,7 +8807,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -8740,14 +8834,14 @@ ul .more-news__list-entry:not(:first-child) {
 	}
 	
 	.main-header .sub-header,.main-header .sub-header-default {
-		font-size: 2.21411765rem;
+		font-size: 2.11764706rem;
 	}
 	
 	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8767,7 +8861,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -8801,7 +8895,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -8821,7 +8915,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -8848,14 +8942,14 @@ ul .more-news__list-entry:not(:first-child) {
 	}
 	
 	.main-header .sub-header,.main-header .sub-header-default {
-		font-size: 2.21411765rem;
+		font-size: 1.78823529rem;
 	}
 	
 	.row.side-left .article-deck.two,.row.side-right .article-deck.one,.row.single .article-deck {
 		font-size: 1.1292em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8888,7 +8982,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: .941em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -9120,7 +9214,7 @@ ul .more-news__list-entry:not(:first-child) {
 
 @media all {
 	.main-header .sub-header,.main-header .sub-header-default {
-		line-height: .9em;
+		line-height: 1em;
 	}
 	
 	.article-header:not(.row) .header-content h1,.article-header:not(.row) .header-content h2 {
@@ -9158,7 +9252,7 @@ ul .more-news__list-entry:not(:first-child) {
 		line-height: 1.5em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		line-height: 1.5em;
 	}
 	
@@ -9178,7 +9272,7 @@ ul .more-news__list-entry:not(:first-child) {
 		line-height: 1.5em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		line-height: 1.5em;
 	}
 	
