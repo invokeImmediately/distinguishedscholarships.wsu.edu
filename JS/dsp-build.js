@@ -3669,19 +3669,23 @@ var WsuIdInputs = ( function ( $ ) {
 					var $editorForm = $( this ).find( 'iframe' );
 					$editorForm.each( function () {
 						var $editorBody = $( this ).contents().find( '#tinymce' );
-						$editorBody.css( 'fontFamily', '"Open sans", sans-serif' );
+						// $editorBody.css( 'fontFamily', '"Open sans", sans-serif' );
+						$editorBody.css( 'fontFamily', '"Montserrat", sans-serif' );
 						if ( $editorBody.text().replace( /\n|\uFEFF/g, '' ) == ''  ) {
-							$editorBody.css( 'background', '#fff linear-gradient(to bottom,' +
-								' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
+							// $editorBody.css( 'background', '#fff linear-gradient(to bottom,' +
+							// 	' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
+							$editorBody.css( 'border-left', '2px solid #a60f2d' );
 						}
 						$editorBody.focus( function () {
-							$( this ).css( 'background', '#fff' );
+							// $( this ).css( 'background', '#fff' );
+							$( this ).css( 'border-left', '2px solid transparent' );
 						} );
 						$editorBody.blur( function () {
 							var $this = $( this );
 							if ( $this.text().replace( /\n|\uFEFF/g, '' ) == '' ) {
-								$this.css( 'background', '#fff linear-gradient(to bottom,' +
-									' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
+								// $this.css( 'background', '#fff linear-gradient(to bottom,' +
+								// 	' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
+								$this.css( 'border-left', '2px solid #a60f2d' );
 							}
 						} );
 					} );
