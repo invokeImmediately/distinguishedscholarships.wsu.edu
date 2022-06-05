@@ -1,4 +1,4 @@
-﻿@import  "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+﻿@import  'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 /*! ================================================================================================
  *  █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
@@ -15,7 +15,7 @@
  *
  *  Please refer to the linked GitHub project for fully documented, precompiled source code.
  *
- *  @version 1.2.0-rc0.0.2
+ *  @version 1.2.0-rc0.0.5
  *
  *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS
  *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
@@ -417,141 +417,6 @@ main .row {
 
 .h1-header+section.pad-top.tall .column {
 	padding-top: 4rem;
-}
-
-aside.shield-themed {
-	padding: .5rem;
-	border-left: 4px solid #8d959a;
-	background: #eff0f1;
-	color: #3b4042;
-	font-size: .925rem;
-}
-
-aside.shield-themed.floats-left {
-	float: left;
-}
-
-aside.shield-themed.floats-right {
-	float: right;
-}
-
-aside.shield-themed>h1:first-child,aside.shield-themed>h2:first-child,aside.shield-themed>h3:first-child,aside.shield-themed>h4:first-child,aside.shield-themed>h5:first-child,aside.shield-themed>h6:first-child,aside.shield-themed>header:first-child>* {
-	box-sizing: content-box;
-	width: 100%;
-	padding: .5rem;
-	margin-top: -.5rem;
-	margin-left: -.5rem;
-	margin-bottom: .5rem;
-	background-color: #a60f2d;
-	color: #fff;
-}
-
-aside.shield-themed p+* {
-	margin-top: 1em;
-}
-
-aside.shield-themed p+.has-learn-more-link {
-	margin-top: .33333333em;
-}
-
-aside.shield-themed:not(:last-child) {
-	margin-bottom: 2rem;
-}
-
-.column aside.article-sidebar {
-	background: #f8f1eb;
-	border: 1px solid #6d441f;
-	box-shadow: 1px 1px 2px rgba(0,0,0,.5);
-	color: #464e54;
-	float: right;
-	font-size: .8rem;
-	margin-bottom: 1rem;
-	margin-left: 1rem;
-	min-width: 230px;
-	padding: .8rem;
-	width: 33%;
-}
-
-.column aside.article-sidebar:first-child+h1,.column aside.article-sidebar:first-child+h2,.column aside.article-sidebar:first-child+h3,.column aside.article-sidebar:first-child+h4 {
-	margin-top: 0;
-}
-
-.column aside.article-sidebar ol,.column aside.article-sidebar p,.column aside.article-sidebar ul {
-	font-size: inherit;
-	line-height: normal;
-}
-
-.column aside.article-sidebar p {
-	text-align: left;
-}
-
-.column aside.article-sidebar p:not(:last-child) {
-	margin-bottom: .8rem;
-}
-
-.column aside.article-sidebar ol,.column aside.article-sidebar ul {
-	padding-bottom: 0;
-}
-
-.column aside.article-sidebar h2+hr {
-	background-color: rgba(70,78,84,.75);
-	margin-top: .25rem;
-}
-
-.column aside.article-sidebar h3 {
-	font-size: 1.275rem;
-	margin-bottom: 0;
-	margin-top: 1.2rem;
-}
-
-.column aside.article-sidebar h3:first-child {
-	margin-top: 0;
-}
-
-.column aside.article-sidebar h4 {
-	font-size: 1.05rem;
-}
-
-.column aside.article-sidebar h4:first-child {
-	margin-top: 0;
-}
-
-.column>aside.quote,body.single-post #wsuwp-main .row .column.one aside {
-	float: right;
-	clear: right;
-	padding: .5rem;
-	margin-left: .5rem;
-	border-left: 4px solid #b5babe;
-	background: #d7dadb;
-	font-size: .9rem;
-}
-
-.column>aside.quote.full-width,body.single-post #wsuwp-main .row .column.one aside.full-width {
-	width: 94%;
-	width: calc(100% - .5rem * 2);
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-}
-
-.column>aside.quote:not(.full-width),body.single-post #wsuwp-main .row .column.one aside:not(.full-width) {
-	width: 33%;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}
-
-.column>aside.quote>h2:first-child,.column>aside.quote>h3:first-child,.column>aside.quote>h4:first-child,body.single-post #wsuwp-main .row .column.one aside>h2:first-child,body.single-post #wsuwp-main .row .column.one aside>h3:first-child,body.single-post #wsuwp-main .row .column.one aside>h4:first-child {
-	padding: .5rem;
-	margin: -.5rem;
-	background-color: #a60f2d;
-	color: #fff;
-}
-
-.column>aside.quote>h2:first-child+*,.column>aside.quote>h3:first-child+*,.column>aside.quote>h4:first-child+*,body.single-post #wsuwp-main .row .column.one aside>h2:first-child+*,body.single-post #wsuwp-main .row .column.one aside>h3:first-child+*,body.single-post #wsuwp-main .row .column.one aside>h4:first-child+* {
-	margin-top: 1rem;
-}
-
-body.blog .article-summary aside {
-	display: none;
 }
 
 .column h2.article-title {
@@ -3616,8 +3481,8 @@ div.auto-scroller ul li {
 	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 	margin-bottom: 0;
 	margin-top: 0;
-	margin-left: -1rem;
-	margin-right: -1rem;
+	margin-left: -.5rem;
+	margin-right: -.5rem;
 	letter-spacing: 1px;
 	padding: .5rem 1rem;
 	word-spacing: 1px;
@@ -6284,51 +6149,51 @@ div.auto-scroller ul li {
 	color: #fff7f4;
 }
 
-.goldfinch-back {
+.sunshine-back {
 	background-color: #f3e700;
 }
 
-.goldfinch-text {
+.sunshine-text {
 	color: #f3e700;
 }
 
-.goldfinch-light-back {
+.sunshine-light-back {
 	background-color: #fffef1;
 }
 
-.goldfinch-light-text {
+.sunshine-light-text {
 	color: #fffef1;
 }
 
-.vineyard-back {
+.spring-back {
 	background-color: #aadc24;
 }
 
-.vineyard-text {
+.spring-text {
 	color: #aadc24;
 }
 
-.vineyard-light-back {
+.spring-light-back {
 	background-color: #f7fcea;
 }
 
-.vineyard-light-text {
+.spring-light-text {
 	color: #f7fcea;
 }
 
-.pacific-sky-back {
+.sky-back {
 	background-color: #5bc3f5;
 }
 
-.pacific-sky-text {
+.sky-text {
 	color: #5bc3f5;
 }
 
-.pacific-sky-light-back {
+.sky-light-back {
 	background-color: #f3fbfe;
 }
 
-.pacific-sky-light-text {
+.sky-light-text {
 	color: #f3fbfe;
 }
 
@@ -6521,9 +6386,9 @@ div.auto-scroller ul li {
 }
 
 /*! ================================================================================================
- *  █▀▀▄ ▀█▀ ▄▀▀▀▐▀█▀▌▀█▀ ▐▀▀▄ █▀▀▀ █  █ ▀█▀ ▄▀▀▀ █  █ █▀▀▀ █▀▀▄   ▄▀▀▀ ▄▀▀▀ █  █ ▄▀▀▄ █    
+ *  █▀▀▄ ▀█▀ ▄▀▀▀▐▀█▀▌▀█▀ ▐▀▀▄ █▀▀▀ █  █ ▀█▀ ▄▀▀▀ █  █ █▀▀▀ █▀▀▄   ▄▀▀▀ ▄▀▀▀ █  █ ▄▀▀▄ █
  *  █  █  █  ▀▀▀█  █   █  █  ▐ █ ▀▄ █  █  █  ▀▀▀█ █▀▀█ █▀▀  █  █   ▀▀▀█ █    █▀▀█ █  █ █  ▄ ▀
- *  ▀▀▀  ▀▀▀ ▀▀▀   █  ▀▀▀ ▀  ▐ ▀▀▀▀  ▀▀  ▀▀▀ ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀    ▀▀▀   ▀▀▀ █  ▀  ▀▀  ▀▀▀  
+ *  ▀▀▀  ▀▀▀ ▀▀▀   █  ▀▀▀ ▀  ▐ ▀▀▀▀  ▀▀  ▀▀▀ ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀    ▀▀▀   ▀▀▀ █  ▀  ▀▀  ▀▀▀
  *
  *       ▄▀▀▄ █▀▀▄ ▄▀▀▀ █  █ ▀█▀ █▀▀▄ ▄▀▀▀   █▀▀▄ █▀▀▄ ▄▀▀▄ █▀▀▀ █▀▀▄ ▄▀▀▄ ▐▀▄▀▌
  *     ▀ █▄▄█ █▄▄▀ ▀▀▀█ █▀▀█  █  █▄▄▀ ▀▀▀█   █▄▄▀ █▄▄▀ █  █ █ ▀▄ █▄▄▀ █▄▄█ █ ▀ ▌
@@ -6545,7 +6410,7 @@ div.auto-scroller ul li {
  *
  *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  *  @link https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu/
- *  @license MIT — Copyright (c) 2022 Washington State University.
+ *  @license MIT — Copyright (c) 2021 Washington State University.
  *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  *      and associated documentation files (the “Software”), to deal in the Software without
  *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
@@ -7099,12 +6964,8 @@ header.main-header {
 	color: #715409;
 }
 
-.column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list):not(.minimalist-list) li {
+.column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list) li {
 	list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
-}
-
-.minimalist-list > li {
-	list-style-type: none;
 }
 
 .column ul:not(.content-boxes):not(.application-steps):not(.more-news):not(.wsuwp-content-syndicate-list).gray-bullets li {
@@ -8348,7 +8209,7 @@ ul .more-news__list-entry:not(:first-child) {
  *    - https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu/
  *
  *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
- *  @license: MIT - Copyright (c) 2022 Washington State University
+ *  @license: MIT - Copyright (c) 2021 Washington State University
  *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  *      and associated documentation files (the "Software"), to deal in the Software without
  *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
@@ -8406,10 +8267,6 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	section.thirds img.show-when-stacked {
 		display: none;
-	}
-	
-	aside.shield-themed.floats-left,aside.shield-themed.floats-right {
-		width: 33.3333%;
 	}
 	
 	section.row.side-right .column.one h2.fancy,section.row.side-right .column.one h3.fancy,section.side-right .column.one h2.fancy,section.side-right .column.one h3.fancy {
@@ -8699,28 +8556,6 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	.row:not(.pad-top).halves .one~.column,.row:not(.pad-top).quarters .one~.column,.row:not(.pad-top).side-left .one~.column,.row:not(.pad-top).side-right .one~.column,.row:not(.pad-top).thirds .one~.column {
 		margin-top: 2rem;
-	}
-	
-	.row.single .column aside.article-sidebar {
-		position: absolute;
-		right: -2rem;
-		top: 0;
-		width: 230px;
-		transform-origin: 100% 0 0;
-		transform: rotate(-90deg) translateY(-2rem);
-		transition: transform .25s ease-out;
-		z-index: 99352;
-	}
-	
-	.row.single .column aside.article-sidebar:hover {
-		transform: none;
-	}
-	
-	.column>aside.quote:not(.full-width),body.single-post #wsuwp-main .row .column.one aside:not(.full-width) {
-		width: 94%;
-		width: calc(100% - .5rem * 2);
-		margin-top: 1rem;
-		margin-bottom: 2rem;
 	}
 	
 	ul.cascaded-layout.blank>li {
