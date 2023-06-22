@@ -4,12 +4,12 @@
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
 FOR THE DSP WEBSITE
 -------------------
-@version 1.0.0
+@version 1.1.0
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/…
     …invokeImmediately)
-@license MIT - Copyright © 2021
+@license MIT - Copyright © 2022
   Washington State University
   https://mit-license.org/
 ***************************************/
@@ -22,6 +22,41 @@ FOR THE DSP WEBSITE
 
 #tribe-events-pg-template .tribe-events-content ul li {
   margin-bottom: 0;
+}
+
+#tribe-bar-form {
+  background-color: white;
+}
+
+/*!*************************************
+ * PADDING FIX FOR EVENTS CALENDAR
+ * @author Daniel Rieck
+ **************************************/
+
+#tribe-events-pg-template .tribe-events-before-html {
+  padding-top: 2rem;
+}
+
+@media all and (min-width: 481px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media all and (max-width: 480px) and (min-width: 361px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+}
+
+
+@media all and (max-width: 360px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
 }
 
 /*!*************************************
@@ -176,4 +211,148 @@ FOR THE DSP WEBSITE
 .tribe-events-list .tribe-events-read-more {
   font-style: italic;
   font-weight:400
+}
+
+/*!***
+ * Homepage news feed.
+ *
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ */
+
+.daesa-news-feed .content-item-excerpt {
+  font-size: .9em;
+}
+
+/*!***
+ * Flipped content styling.
+ *
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ */
+
+.content-flipper {
+  padding-right: 2rem;
+  position: relative;
+}
+
+.content-flipper:hover,
+.content-flipper:focus {
+  color: #ca1237;
+}
+
+.content-flipper:before,
+.content-flipper:after {
+  color: inherit;
+  content: "";
+  filter: invert(0%) sepia(0%) saturate(4166%) hue-rotate(145deg) brightness(101%) contrast(67%);
+  height: 1.5rem;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+}
+
+.content-flipper:before {
+  background: url(https://daesa.wsu.edu/documents/2021/09/genericons-neue_expand.svg);
+  transition: opacity .2s ease;
+}
+
+.content-flipper:after {
+  background: url(https://daesa.wsu.edu/documents/2021/09/genericons-neue_collapse.svg);
+  transition: opacity .4s cubic-bezier( 1, 0, 0.34, 0.3 );
+  transition: opacity .2s ease;
+}
+
+.content-flipper[aria-pressed=false]:before {
+  opacity: 1;
+  transition: opacity .4s cubic-bezier( 1, 0, 0.34, 0.3 );
+}
+
+.content-flipper[aria-pressed=true]:after {
+  opacity: 1;
+  transition: opacity .4s cubic-bezier( 1, 0, 0.34, 0.3 );
+}
+
+.content-flipper:hover:after,
+.content-flipper:focus:after,
+.content-flipper:hover:before,
+.content-flipper:focus:before {
+  filter: invert(16%) sepia(94%) saturate(3860%) hue-rotate(339deg) brightness(80%) contrast(98%);
+}
+
+/*!***
+ * Simple application steps.
+ *
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ */
+.simple-application-steps ol li {
+  list-style-image: none !important;
+  list-style-type: decimal;
+}
+
+.simple-application-steps > li {
+  margin-top: 2rem;
+}
+
+.simple-application-steps > li:last-child {
+  margin-bottom: 1.5rem;
+}
+
+/*!***
+ * Massie application form
+ */
+
+#gform_wrapper_8.gravity-theme {
+    background-color: white;
+    padding: 2rem 2rem 0;
+    margin-top: 0;
+}
+
+.gfield.uses-rich-editor .tmce-active .mce-menubar {
+   display: none;
+}
+ .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Insert/edit image (Shift+Alt+M)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align left (Shift+Alt+L)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align center (Shift+Alt+C)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align right (Shift+Alt+R)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align left (Shift+Alt+L)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Table"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Show blocks"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Source code"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Text color"], .gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Toolbar Toggle (Shift+Alt+Z)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Insert/edit image (Shift+Alt+M)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align left (Shift+Alt+L)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align center (Shift+Alt+C)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align right (Shift+Alt+R)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align left (Shift+Alt+L)"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Table"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Show blocks"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Source code"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Text color"], .gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Toolbar Toggle (Shift+Alt+Z)"] {
+   display: none;
+}
+ .gfield.uses-rich-editor .tmce-active .mce-statusbar {
+   display: none;
+}
+ .gfield.uses-rich-editor .wp-editor-container {
+   border-color: #717171 !important;
+}
+ .gfield.uses-rich-editor iframe {
+   width: 100% !important;
+}
+ .gfield.uses-rich-editor span.gp-word-count-label {
+   margin-top: 0 !important;
+}
+
+/*!***
+ * Image sizing fix on news posts.
+ */
+
+@media only screen and (min-width: 1404px) {
+  .single-post img.size-medium {
+    max-width: 356px !important;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1403px) {
+  .single-post img.size-medium {
+    float: none;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 396px !important;
+  }
+}
+
+/*! ---»  FIX FOR FUZZY DOWNSAMPLED IMAGES ON CHROME  «--- */
+
+body {
+  image-rendering: -webkit-optimize-contrast;
 }
