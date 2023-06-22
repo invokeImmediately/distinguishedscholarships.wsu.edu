@@ -3368,7 +3368,7 @@ div.auto-scroller ul li {
 
 .daesa-news-feed--2-col .wsuwp-content-syndicate-item {
 	box-sizing: border-box;
-	flex-basis: 50%;
+	flex-basis: 47%;
 }
 
 .daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n) {
@@ -8515,14 +8515,17 @@ ul .more-news__list-entry:not(:first-child) {
 }
 
 @media only screen and (max-width:791px) {
-	.daesa-news-feed .content-item-thumbnail {
-		background: 0 0;
-	}
-	
 	.daesa-news-feed .content-item-thumbnail img {
-		border-left: none;
-		border-right: none;
-		margin: 0;
+		border-left-color: rgba(0,0,0,.25);
+		border-right-color: rgba(0,0,0,.25);
+	}
+
+	.daesa-news-feed .wsuwp-content-syndicate-item {
+		flex-basis: 45%;
+	}
+
+	.daesa-news-feed .wsuwp-content-syndicate-list {
+		justify-content: space-evenly;
 	}
 }
 
@@ -8878,6 +8881,12 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	.column .massie-project>li>img {
 		width: 96px;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.daesa-news-feed .wsuwp-content-syndicate-item {
+		flex-basis: 100%;
 	}
 }
 
